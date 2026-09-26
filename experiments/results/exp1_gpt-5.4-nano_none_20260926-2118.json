@@ -1,0 +1,508 @@
+{
+  "summary": {
+    "model": "gpt-5.4-nano",
+    "effort": "none",
+    "trials": 1,
+    "max_attempts": 3,
+    "runs": 15,
+    "api_errors": 0,
+    "first_try_accuracy": 0.9333333333333333,
+    "verified_accuracy": 1.0,
+    "wrong_without_verification": 1,
+    "blocked_after_max_attempts": 0,
+    "avg_attempts": 1.0666666666666667,
+    "first_try_error_types": {
+      "오답": 2
+    },
+    "usage": {
+      "calls": 16,
+      "input_tokens": 4306,
+      "output_tokens": 1630
+    },
+    "elapsed_sec": 22.5
+  },
+  "runs": [
+    {
+      "problem_id": "F1",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "다항식 x^2+5x+6은 두 수의 곱이 6이고 합이 5가 되도록 분해할 수 있다. 2와 3을 사용하면 된다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-7x+12는 곱이 12이고 합이 -7이 되는 두 수를 찾는다. -3과 -4의 곱이 12, 합이 -7이므로 이들을 이용해 인수분해한다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-x-6은 두 수의 곱이 -6이고 합이 -1이 되도록 찾는다. 그 두 수는 -3과 2이므로 식을 묶는다.",
+              "answer": "(x+2)(x-3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 완전제곱의 차 형태로 볼 수 있다. 따라서 a^2-b^2=(a-b)(a+b)에 따라 인수분해한다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+6x+9는 완전제곱식의 형태 x^2+2ax+a^2와 비교한다. 6x에 대응하는 2a는 6이므로 a=3이고, 따라서 a^2=9이 되어 그대로 완전제곱임을 확인한다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2+7x+3을 (ax+b)(cx+d) 꼴로 인수분해한다. 앞의 계수는 2와 1이므로 (2x+b)(x+d)로 놓는다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수를 먼저 묶어 3x^2와 -6x의 최대공약수를 찾는다. 3x를 묶으면 3x(x-2)로 정리된다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-5x+6=0의 두 수를 찾아 곱이 6이고 합이 -5가 되도록 한다. 그러면 이차식을 두 인수의 곱으로 분해할 수 있다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x-2)(x-3)=0에서 각 인수는 0이 되어야 한다. 따라서 x-2=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+x-12에서 곱이 -12이고 합이 1이 되도록 두 수를 찾는다. 그 두 수로 이차식을 인수분해한다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 (x+4)(x-3)=0에서 각 인수를 0으로 둔다. x+4=0, x-3=0을 풀어 해를 구한다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-4x+4는 완전제곱식 형태이다. 따라서 (x-2)^2로 인수분해된다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 (x-2)^2=0에서 x-2=0이다. 따라서 중근은 x=2 한 번만 쓴다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-16은 제곱의 차이이므로 인수분해할 수 있다. 16은 4^2이므로 (x-4)(x+4) 형태가 된다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 AB=0을 적용한다. (x-4)=0 또는 (x+4)=0을 각각 풀면 된다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3=0을 인수분해한다. 곱이 2·(-3)=-6이고 합이 -5가 되도록 두 수를 찾아 식을 두 항으로 묶는다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (2x+1)(x-3)=0에서 각 인수가 0이 될 때를 이용한다. 2x+1=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "-1/2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-3x는 x를 공통인수로 묶어 인수분해할 수 있다. 공통인수 x를 먼저 밖으로 빼면 곱의 형태가 된다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 AB=0을 이용해 각 인수를 0으로 둔다. x=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 0,
+      "first_try_correct": false,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "0"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 b=-2, a=1, 판별식 0을 대입한다. 중근이므로 같은 해를 한 번만 제시한다.",
+              "answer": "1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "값이 다름"
+            },
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "맞는 해가 없음"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 a=1, b=-2, c=-1, 판별식 8을 대입한다. 따라서 해는 서로 다른 두 값이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식은 b^2-4ac로 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식을 x=(-b±sqrt(b^2-4ac))/(2a)로 사용한다. b=4, a=1, 판별식=12를 대입해 두 해를 구한다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

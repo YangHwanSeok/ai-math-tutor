@@ -1,0 +1,47 @@
+{
+  "expand": {
+    "name": "다항식의 전개",
+    "grade": "중3",
+    "prerequisites": []
+  },
+  "linear_eq": {
+    "name": "일차방정식의 풀이",
+    "grade": "중1",
+    "prerequisites": []
+  },
+  "common_factor": {
+    "name": "공통인수를 이용한 인수분해",
+    "grade": "중3",
+    "prerequisites": ["expand"]
+  },
+  "factor_formula": {
+    "name": "인수분해 공식 (완전제곱식, 합차)",
+    "grade": "중3",
+    "prerequisites": ["expand"]
+  },
+  "factor_trinomial": {
+    "name": "x²+(a+b)x+ab 꼴의 인수분해",
+    "grade": "중3",
+    "prerequisites": ["expand"]
+  },
+  "factor_general": {
+    "name": "ax²+bx+c 꼴의 인수분해",
+    "grade": "중3",
+    "prerequisites": ["factor_trinomial"]
+  },
+  "zero_product": {
+    "name": "AB=0의 성질",
+    "grade": "중3",
+    "prerequisites": ["linear_eq"]
+  },
+  "quad_by_factoring": {
+    "name": "인수분해를 이용한 이차방정식의 풀이",
+    "grade": "중3",
+    "prerequisites": ["factor_trinomial", "zero_product"]
+  },
+  "quad_formula": {
+    "name": "근의 공식을 이용한 이차방정식의 풀이",
+    "grade": "중3",
+    "prerequisites": ["factor_formula", "linear_eq"]
+  }
+}

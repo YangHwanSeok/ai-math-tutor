@@ -1,0 +1,177 @@
+{
+  "problem_id": "E1",
+  "completed": true,
+  "learner": {
+    "concept_states": {
+      "factor_trinomial": "보충 필요"
+    },
+    "hint_level": 3
+  },
+  "usage": {
+    "calls": 14,
+    "input_tokens": 6886,
+    "output_tokens": 1536
+  },
+  "turns": [
+    {
+      "role": "tutor",
+      "text": "이 식은 x^2+(a+b)x+ab 꼴로 볼 수 있어요. 먼저 6을 만들 수 있는 두 수를 떠올려 보고, 그 두 수의 합이 -5가 되는지도 확인해 보세요. 그 두 수를 찾으면 좌변을 (x+ )(x+ ) 꼴로 바꿀 수 있어요.",
+      "info": {
+        "hint_level": 2,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "모르겠어요",
+      "info": {
+        "intent": "dont_know",
+        "math": "",
+        "result": {
+          "step": 0,
+          "severity": "먼 오답",
+          "error": "무응답",
+          "diagnosis": null,
+          "detail": "답을 제시하지 않음"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "먼저 전개를 떠올려 보자: (x+2)(x+3)을 곱하면 x^2+5x+6이 돼요. 즉, 인수분해할 때는 두 수의 곱이 6이 되고, 두 수를 더했을 때 가운데 항의 계수가 되도록 찾는 거예요. 그렇다면 6을 만들면서 합이 -5가 되는 두 수는 무엇일까요?",
+      "info": {
+        "hint_level": 1,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "(x-1)(x-6) 인가요?",
+      "info": {
+        "intent": "answer",
+        "math": "(x-1)(x-6)",
+        "result": {
+          "step": 0,
+          "severity": "부분",
+          "error": "오답",
+          "diagnosis": "합 조건 누락",
+          "detail": "학생 답을 전개하면 x**2 - 7*x + 6. 일차항 계수만 다름 (곱 조건은 만족, 합 조건 불만족)"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "곱은 맞지만 합이 -5가 되어야 해요. (x-1)(x-6)을 전개하면 가운데 항이 왜 -7x가 되는지 한번 확인해 볼래요? 6을 만들면서 합이 -5가 되는 두 수를 다시 찾아보자.",
+      "info": {
+        "hint_level": 1,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "그럼 (x+2)(x+3)?",
+      "info": {
+        "intent": "answer",
+        "math": "(x+2)(x+3)",
+        "result": {
+          "step": 0,
+          "severity": "경미",
+          "error": "부호 실수",
+          "diagnosis": null,
+          "detail": "학생 답을 전개하면 x**2 + 5*x + 6. 계수의 크기는 같고 부호만 다름"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋은 시도예요. 지금은 두 수를 찾을 때 곱이 6이 되는 것만 보지 말고, 더했을 때 가운데 항의 계수와 부호가 어떻게 되는지도 함께 확인해 보세요. 전개해 보면 부호가 왜 달라지는지 볼 수 있으니, (x-1)(x-6)을 직접 곱해 가운데 항이 어떻게 나오는지 먼저 확인해 볼까요?",
+      "info": {
+        "hint_level": 1,
+        "step": 0,
+        "leak_regenerated": true,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "(x-2)(x-3)",
+      "info": {
+        "intent": "answer",
+        "math": "(x-2)(x-3)",
+        "result": {
+          "step": 0,
+          "severity": "정답",
+          "error": "없음",
+          "diagnosis": null,
+          "detail": "정답"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋아요, 이제 그 식이 (x-2)(x-3)=0 형태가 되었어요. AB=0의 성질을 쓰려면 각 괄호를 각각 0으로 두면 되는데, x-2=0과 x-3=0에서 x는 각각 얼마가 될까요?",
+      "info": {
+        "hint_level": 2,
+        "step": 1,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "x=-2, x=-3",
+      "info": {
+        "intent": "answer",
+        "math": "x=-2, x=-3",
+        "result": {
+          "step": 1,
+          "severity": "경미",
+          "error": "부호 실수",
+          "diagnosis": null,
+          "detail": "해의 크기는 맞지만 부호가 반대인 해가 있음"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "부호를 한 번만 다시 확인해 볼까요? x-2=0이면 x를 0으로 만들려면 2를 어느 쪽으로 옮겨야 하는지, x-3=0도 같은 방식으로 생각해 보세요. 두 식에서 각각 x가 무엇이 되는지 다시 써 볼래요?",
+      "info": {
+        "hint_level": 2,
+        "step": 1,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "아 x=2, x=3",
+      "info": {
+        "intent": "answer",
+        "math": "x=2, x=3",
+        "result": {
+          "step": 1,
+          "severity": "정답",
+          "error": "없음",
+          "diagnosis": null,
+          "detail": "정답"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋아요, 핵심을 잘 잡았어요. 이제 x^2-5x+6=0을 어떻게 인수분해하고, AB=0의 성질을 어떻게 써서 풀었는지 네 말로 한 번만 정리해 볼래요?",
+      "info": {
+        "hint_level": 3,
+        "step": 2,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "problem_id": "E1",
+  "completed": true,
+  "learner": {
+    "concept_states": {
+      "factor_trinomial": "이해",
+      "zero_product": "이해"
+    },
+    "hint_level": 4
+  },
+  "usage": {
+    "calls": 12,
+    "input_tokens": 5428,
+    "output_tokens": 1009
+  },
+  "turns": [
+    {
+      "role": "tutor",
+      "text": "이 식은 x^2 + (a+b)x + ab 꼴로 볼 수 있어요. 여기서는 ab = 6, a+b = -5가 되도록 a와 b를 찾아보면 됩니다. 어떤 두 수를 곱하면 6이고 더하면 -5가 될까요?",
+      "info": {
+        "hint_level": 2,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "그냥 답 알려주세요",
+      "info": {
+        "intent": "ask_answer",
+        "math": "",
+        "result": null
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "두 수를 찾는 데서, 곱이 6이 되는 짝들을 먼저 떠올려 보세요. 그중에서 합이 -5가 되려면 부호는 어떻게 되어야 할까요?",
+      "info": {
+        "hint_level": 2,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "답만 알려달라니까요",
+      "info": {
+        "intent": "ask_answer",
+        "math": "",
+        "result": null
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "곱해서 6이 되는 수 짝을 떠올려 보세요: 1과 6, 2와 3이 있지요. 여기에 음수를 붙이면 합이 -5가 될 가능성이 있어요. 그럼 두 수의 합이 -5가 되도록 부호를 어떻게 정해야 할까요?",
+      "info": {
+        "hint_level": 2,
+        "step": 0,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "음 곱해서 6이고 더해서 -5면... -2랑 -3?",
+      "info": {
+        "intent": "answer",
+        "math": "-2랑 -3",
+        "result": {
+          "step": 0,
+          "severity": "채점 불가",
+          "error": "해석 불가",
+          "diagnosis": null,
+          "detail": "수식으로 해석할 수 없는 입력"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋아요, 곱해서 6이고 더해서 -5가 되는 두 수를 찾는 방향은 맞아요. 이제 그 두 수를 a, b라고 두고 x^2 + (a+b)x + ab 꼴에 맞게 x^2 - 5x + 6과 비교해 보세요. a와 b의 부호가 어떻게 되어야 하는지만 한 번 더 생각해 볼까요?",
+      "info": {
+        "hint_level": 2,
+        "step": 0,
+        "leak_regenerated": true,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "(x-2)(x-3)",
+      "info": {
+        "intent": "answer",
+        "math": "(x-2)(x-3)",
+        "result": {
+          "step": 0,
+          "severity": "정답",
+          "error": "없음",
+          "diagnosis": null,
+          "detail": "정답"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋아요, 이제 (x-2)(x-3)=0에서 AB=0의 성질을 써 보면 돼요. 두 괄호 중 하나를 0으로 두면 되는데, 먼저 x-2=0과 x-3=0 중 하나를 골라 풀어볼까요?",
+      "info": {
+        "hint_level": 3,
+        "step": 1,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    },
+    {
+      "role": "student",
+      "text": "x=2 또는 x=3",
+      "info": {
+        "intent": "answer",
+        "math": "x=2 또는 x=3",
+        "result": {
+          "step": 1,
+          "severity": "정답",
+          "error": "없음",
+          "diagnosis": null,
+          "detail": "정답"
+        }
+      }
+    },
+    {
+      "role": "tutor",
+      "text": "좋아요, 이제 거의 다 끝냈어요. x=2와 x=3이 나오는 과정을 스스로 한 번 짧게 정리해 볼래요? 예를 들면 ‘식의 인수분해 -> AB=0의 성질 -> 각 인수를 0으로 두기’ 순서로 말해 보면 돼요.",
+      "info": {
+        "hint_level": 4,
+        "step": 2,
+        "leak_regenerated": false,
+        "leak_after_regen": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,2383 @@
+{
+  "summary": {
+    "model": "gpt-5.4-nano",
+    "effort": "none",
+    "trials": 5,
+    "max_attempts": 3,
+    "runs": 75,
+    "api_errors": 0,
+    "first_try_accuracy": 0.96,
+    "verified_accuracy": 1.0,
+    "wrong_without_verification": 3,
+    "blocked_after_max_attempts": 0,
+    "avg_attempts": 1.04,
+    "first_try_error_types": {
+      "부호 실수": 2,
+      "오답": 4
+    },
+    "usage": {
+      "calls": 78,
+      "input_tokens": 20684,
+      "output_tokens": 8044
+    },
+    "elapsed_sec": 115.9
+  },
+  "runs": [
+    {
+      "problem_id": "F1",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+5x+6은 두 수의 곱이 6이고 합이 5가 되도록 찾는다. 가능한 수는 2와 3이므로 이를 이용해 인수분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "항등식 x^2+5x+6을 두 일차식의 곱 형태 (x+a)(x+b)로 놓는다. 곱하면 x^2+(a+b)x+ab가 되므로 a+b=5, ab=6을 찾는다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+5x+6에서 곱이 6이고 합이 5가 되는 두 수를 찾는다. (2와 3을 고르면 2+3=5, 2·3=6이 된다.)",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+5x+6의 곱이 6이고 합이 5가 되는 두 수를 찾는다. 그 두 수는 2와 3이므로 중간항을 2x+3x로 바꿔 인수분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+5x+6은 곱이 6이고 합이 5가 되는 두 수를 찾는다. 이를 이용해 이차식을 두 이항식의 곱으로 분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-7x+12에서 곱이 12이고 합이 -7이 되는 두 수를 찾는다. -3과 -4를 선택하면 -3+(-4)=-7, (-3)(-4)=12이므로 두 항으로 분해된다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-7x+12는 곱이 12이고 합이 -7이 되는 두 수를 찾는다. -3과 -4를 쓰면 곱이 12, 합이 -7이 되어 식을 두 인수의 곱으로 나타낼 수 있다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "항등식 x^2-7x+12는 두 수의 곱이 12이고, 합이 -7이 되도록 찾는다. 해당하는 두 수는 -3과 -4이다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-7x+12는 일차식의 곱으로 나타낼 형태입니다. 두 수를 찾아 (x-a)(x-b)=x^2-(a+b)x+ab 가 되도록 합니다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "다항식 x^2-7x+12는 곱이 12이고 합이 -7이 되도록 두 수를 찾는다. -3과 -4의 곱은 12, 합은 -7이므로 이를 이용해 인수분해한다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-x-6은 두 수를 곱하면 -6이고, 더하면 -1이 되는 형태로 분해한다. 그 두 수는 -3과 2이므로 식을 묶어 인수분해한다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2 - x - 6에서 곱이 -6이고 합이 -1이 되는 두 수를 찾는다. -3과 2의 곱은 -6이고 합은 -1이므로 두 수를 이용해 인수분해한다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-x-6에서 두 수를 찾아 곱이 -6이고 합이 -1이 되게 한다. 조건을 만족하는 수는 -3과 2이므로 식을 두 이항의 곱으로 나타낸다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "항의 두 수를 찾아 x^2 - x - 6을 인수분해한다. 곱이 -6이고 합이 -1인 두 수는 -3과 2이므로 (x-3)(x+2)로 묶는다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "항등식 x^2-x-6 = (x+a)(x+b)로 두고, 상수항 ab = -6, 합 a+b = -1을 만족하는 두 수를 찾는다. 이를 만족하는 a, b는 -3과 2이므로 그대로 곱해 준다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2-9는 x^2-3^2 꼴이므로 차의 제곱 공식 a^2-b^2=(a-b)(a+b)를 적용한다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 완전제곱의 차 형태이므로 a^2-b^2=(a-b)(a+b)를 이용한다. 여기서 a=x, b=3이다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 제곱의 차 형태로, a^2-b^2 = (a-b)(a+b) 이다. 여기서 a=x, b=3이므로 식을 (x-3)(x+3)로 인수분해한다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 제곱의 차 형태이므로 a^2-b^2 = (a-b)(a+b)를 사용한다. 여기서 a=x, b=3으로 두어 인수분해한다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 제곱의 차 꼴 x^2-a^2 형태이다. 따라서 x^2-9=(x-3)(x+3)로 인수분해된다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2+6x+9는 완전제곱꼴인지를 확인한다. x^2+6x+9는 (x+3)(x+3)로 묶을 수 있다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+6x+9는 완전제곱꼴로 인식한다. (x+3)^2를 전개하면 x^2+6x+9가 된다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2+6x+9는 2차식이고, x^2의 계수는 1이며 상수항은 9이다. (x+a)^2 = x^2+2ax+a^2 형태를 비교하면 2a=6이므로 a=3이다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+6x+9는 일단 완전제곱꼴 형태로 확인한다. x^2+6x+9 = x^2+2·x·3+3^2 이므로 (x+3)^2로 인수분해된다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2+6x+9는 완전제곱꼴 x^2+2·3·x+3^2 형태이다. 따라서 (x+3)^2로 인수분해된다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2+7x+3을 (ax+b)(cx+d) 꼴로 인수분해한다. 2x^2의 계수로부터 a와 c를 2와 1로 두고, 상수항 곱이 3이며 중간항 합이 7이 되도록 맞춘다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2+7x+3을 인수분해하기 위해 곱이 2·3=6이고 합이 7이 되도록 하는 두 수를 찾는다. 그 두 수는 6과 1이므로 중간항 7x를 6x와 x로 나눠 식을 묶는다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "다항식 2x^2+7x+3은 2x와 3을 곱해 6이 되고, 합이 7이 되는 두 수를 찾는다. 이를 이용해 중간항을 분해한 뒤 묶어 인수분해한다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이 식 2x^2+7x+3의 인수분해를 위해 곱이 2*3=6이고 합이 7이 되는 두 수를 찾는다. 그 두 수는 6과 1이므로 항을 2x^2+6x+x+3으로 묶어 분해한다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2+7x+3를 인수분해하려면 곱이 2x^2가 되면서 합이 7x가 되는 두 수를 찾는다. 또한 상수항 3을 만족해야 한다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "먼저 공통인수를 찾기 위해 3x^2-6x에서 3x를 묶는다. 그러면 남은 식을 정리해 인수분해 형태로 만든다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수를 먼저 묶어 3x^2와 -6x에서 공통으로 3x를 찾는다. 그 다음 괄호 안의 이차식은 x-2 형태로 정리한다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수 3x를 먼저 묶어서 식을 정리한다. 3x^2-6x = 3x(x-2)로 인수분해된다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수를 먼저 묶는다. 3x^2-6x에서 3x를 묶으면 나머지는 x-2가 된다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수를 먼저 찾아 묶는다. 3x^2와 -6x 모두 3x를 공통으로 가지므로 3x를 밖으로 묶는다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-5x+6은 두 수의 곱이 6이고 합이 -5가 되도록 찾아 인수분해한다. 이를 만족하는 수는 -2와 -3이다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x-2)(x-3)=0에서 AB=0의 성질을 이용해 각각 0을 대입한다. x-2=0이면 x=2, x-3=0이면 x=3이다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2-5x+6은 곱이 6이고 합이 -5가 되도록 두 수를 찾아 인수분해한다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x-2)(x-3)=0에서 AB=0의 성질을 이용해 x-2=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-5x+6은 두 수의 곱이 6이고 합이 -5가 되도록 인수분해한다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x-2)(x-3)=0에서 각 인수가 0이 될 때의 x 값을 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2-5x+6을 두 수의 곱이 6이고 합이 -5가 되도록 인수분해한다. -2와 -3을 이용한다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x-2)(x-3)=0에서 각 인수가 0이 되면 근이 된다. x-2=0, x-3=0을 각각 풀어 해를 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-5x+6은 두 수의 곱이 6이고 합이 -5가 되도록 인수분해할 수 있다. 따라서 (x-2)(x-3)로 묶인다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "인수분해된 식이 0이 되므로 (x-2)(x-3)=0에서 각 인수를 0으로 두면 된다. x-2=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 0,
+      "first_try_correct": false,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2+x-12는 두 수의 곱이 -12이고 합이 1이 되도록 찾아 인수분해한다. 그 두 수를 이용해 식을 (x-4)(x+3) 꼴로 만든다.",
+              "answer": "(x-4)(x+3)"
+            },
+            {
+              "work": "인수분해된 식이 0이 되는 조건은 각 인수에 대해 AB=0을 적용하는 것이다. 즉 x-4=0 또는 x+3=0을 풀어 해를 구한다.",
+              "answer": "4, -3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "경미",
+              "error": "부호 실수",
+              "diagnosis": null,
+              "detail": "학생 답을 전개하면 x**2 - x - 12. 계수의 크기는 같고 부호만 다름"
+            },
+            {
+              "severity": "경미",
+              "error": "부호 실수",
+              "diagnosis": null,
+              "detail": "해의 크기는 맞지만 부호가 반대인 해가 있음"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2+x-12에서 곱이 -12이고 합이 1이 되는 두 수를 찾으면 4와 -3이다. 따라서 x^2+x-12=(x+4)(x-3)로 인수분해된다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 AB=0을 적용해 x+4=0 또는 x-3=0을 푼다. 각각의 해를 구해 쉼표로 나열한다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+x-12=0에서 두 수를 찾아 곱이 -12이고 합이 1이 되게 한다. 그러면 식을 두 이항의 곱 형태로 바꿀 수 있다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x+4)(x-3)=0에서 AB=0을 적용해 각 인수가 0이 되는 경우를 찾는다. x+4=0 또는 x-3=0을 풀면 해가 나온다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+x-12=0에서 상수항 -12를 만들고, 합이 1이 되는 두 수를 찾는다. 그 두 수로 이차식을 인수분해한다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x+4)(x-3)=0에서 각 인수를 0으로 둔다. 즉 x+4=0, x-3=0을 각각 풀어 해를 구한다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2+x-12=0에서 상수항 -12를 두 수로 곱하고, 합이 1이 되도록 한다. 이를 이용해 좌변을 곱의 꼴로 만든다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x+4)(x-3)=0에서 각 인수를 0으로 둔다. x+4=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+x-12=0에서 두 수를 찾아 x항과 곱이 -12가 되도록 인수분해한다. (x에 더해지는 항의 합이 1이 되도록 한다.)",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (x+4)(x-3)=0에서 각 괄호를 0으로 두어 해를 구한다. x+4=0과 x-3=0을 각각 풀면 된다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-4x+4는 이차식에서 가운데 항의 절반인 2를 기준으로 완전제곱꼴로 묶을 수 있다. 따라서 좌변은 같은 두 이항의 곱(제곱) 형태로 인수분해된다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "인수분해된 식 (x-2)^2=0에서 (x-2)=0이므로 x=2이다. 이 해는 중근이므로 1번만 제시한다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-4x+4는 완전제곱꼴로 묶을 수 있다. 이를 인수분해하면 같은 항으로 묶여 제곱 형태가 된다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "인수분해된 식 (x-2)^2=0에서 제곱근을 같게 하면 된다. 따라서 x-2=0이 되어 해를 구한다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-4x+4는 완전제곱꼴 형태로 인수분해할 수 있다. 따라서 (x-2)^2로 묶인다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "(x-2)^2=0이므로 x-2=0이다. 중근이므로 해는 한 번만 제시한다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 이차식 x^2-4x+4는 완전제곱꼴 형태이다. 가운데항 -4x는 -2x와 -2x로 만들 수 있고, 상수 4는 2^2와 일치한다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "인수분해 결과가 (x-2)^2=0이므로 (x-2)=0에서 해를 구한다. 이때 해는 중근이다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2-4x+4는 완전제곱꼴로 만들 수 있으므로 인수분해한다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "(x-2)^2=0 이므로 x-2=0에서 해를 구하면 된다. 중근이므로 해는 한 번만 쓴다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "등식 x^2-16=0에서 x^2-16은 제곱의 차이이므로 (x-4)(x+4)로 인수분해한다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "(x-4)(x+4)=0에서 AB=0의 성질에 따라 x-4=0 또는 x+4=0을 풀어 해를 구한다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-16은 완전제곱의 차이 꼴이므로 (x^2-4^2) 형태로 보고 인수분해할 수 있다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "인수분해된 식 (x-4)(x+4)=0에서 각 인수를 0으로 두어 해를 구한다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-16은 차이의 제곱으로 보고 두 인수의 곱으로 나타낼 수 있다. 16은 4^2이므로 (x-4)(x+4)로 인수분해된다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 AB=0에 의해 각 인수를 0으로 두고 해를 구한다. x-4=0이면 x=4, x+4=0이면 x=-4이다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2-16은 차의 제곱 꼴이므로 인수분해할 수 있다. x^2-16=(x-4)(x+4)로 바꾼다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "인수분해된 식 (x-4)(x+4)=0에서 AB=0의 성질을 이용하면 각 인수가 0일 때 해가 된다. x-4=0 또는 x+4=0을 풀어 x=4, x=-4를 얻는다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-16은 차이의 제곱 형태이므로 (x^2-4^2)로 보고 인수분해한다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "인수분해한 식 (x-4)(x+4)=0에서 AB=0을 적용하면 x-4=0 또는 x+4=0을 각각 풀면 된다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3=0에서 x항의 계수와 상수항을 만족하도록 인수분해한다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (2x+1)(x-3)=0에서 각 인수를 0으로 두어 해를 구한다.",
+              "answer": "3, -1/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3=0에서 곱이 -6이고 합이 -5가 되도록 수를 찾는다. 따라서 (2x+1)(x-3)=0로 인수분해된다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (2x+1)(x-3)=0에서 각 인수가 0이 되는 경우를 구한다. 2x+1=0과 x-3=0을 각각 풀면 된다.",
+              "answer": "3, -1/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3=0에서 계수들을 곱해 서로 맞는 두 수를 찾는다. 2x^2-5x-3은 (2x+1)(x-3)의 형태로 정리된다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식에서 AB=0 성질을 적용해 각각 0이 되는 해를 구한다. 2x+1=0 또는 x-3=0을 풀면 해가 나온다.",
+              "answer": "-1/2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3=0에서 계수들을 보면 (2x+1)(x-3) 꼴로 인수분해할 수 있다. 실제로 곱해 보면 2x^2-6x+x-3=2x^2-5x-3이 된다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (2x+1)(x-3)=0에서 각 인수의 값이 0이면 된다. 즉 2x+1=0 또는 x-3=0을 풀어 해를 구한다.",
+              "answer": "3, -1/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 이차방정식 2x^2-5x-3=0에서 공통인수 없이 인수분해를 한다. 곱이 -6이고 합이 -5가 되도록 두 수를 찾아 식을 곱 형태로 만든다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "인수분해된 식 (2x+1)(x-3)=0에서 AB=0 성질을 이용해 각각이 0일 때의 x를 구한다. 2x+1=0과 x-3=0을 풀어 해를 얻는다.",
+              "answer": "3, -1/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-3x에서 공통인 x를 묶어 인수분해한다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수분해된 식 x(x-3)=0에서 AB=0의 성질을 이용해 x=0 또는 x-3=0을 구한다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-3x에서 공통인 x를 묶어 인수분해한다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수분해된 식에서 AB=0을 적용해 각 인수가 0이 되는 경우를 찾는다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "등식 x^2-3x=0에서 공통인 인수 x를 묶어 이차식을 인수분해한다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수분해된 식 x(x-3)=0에서 AB=0의 성질을 이용하면 각 인수가 0일 때 해가 된다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-3x에서 공통인 x를 묶어 인수분해할 수 있다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수 x(x-3)=0에서 AB=0에 의해 x=0 또는 x-3=0이므로 각 해를 구한다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2-3x=0에서 공통인 x를 묶어 인수분해한다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "인수분해된 식이 0이므로 AB=0의 성질을 적용해 x=0 또는 x-3=0을 구한다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 0,
+      "first_try_correct": false,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식은 b^2-4ac로 계산한다.",
+              "answer": "0"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 사용한다. 판별식이 0이므로 한 번의 중근으로 해가 구해진다.",
+              "answer": "1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "값이 다름"
+            },
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "맞는 해가 없음"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac= (-2)^2-4·1·(-1)을 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)을 사용한다. 여기서 -b=2, sqrt(8)=2sqrt(2)이므로 해는 (2±2sqrt(2))/2=1±sqrt(2)이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=( -b ± sqrt(b^2-4ac) )/(2a)를 사용한다. b^2-4ac=8, a=1, b=-2이므로 x= (2 ± sqrt(8))/2로 정리한다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=( -b ± sqrt(b^2-4ac) )/(2a)를 이용한다. b=-2, a=1, 판별식 8을 대입하여 두 해를 구한다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 3,
+      "first_try_correct": false,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "0"
+            },
+            {
+              "work": "판별식이 0이므로 근은 근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 대입해 구한다. sqrt(0)=0이므로 같은 값의 중근 1개가 나온다.",
+              "answer": "1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "값이 다름"
+            },
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "맞는 해가 없음"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac = (-2)^2 - 4·1·(-1)을 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "판별식이 8이므로 근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 a=1, b=-2, b^2-4ac=8을 대입한다. 따라서 x=(2±sqrt(8))/2 = (2±2sqrt(2))/2 이라서 해는 1+sqrt(2), 1-sqrt(2)이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 a=1, b=-2, c=-1, 판별식 8을 대입한다. 이를 간단히 정리해 두 해를 구한다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 0,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식은 b^2-4ac를 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)을 사용한다. b=4, a=1, 판별식이 12이므로 해를 각각 구한다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 1,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 a=1, b=4, 판별식 12를 대입한다. 정리해서 두 해를 구한다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 2,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 따라서 판별식 b^2-4ac를 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 사용한다. b=4, a=1, 판별식이 12이므로 x=(-4±sqrt(12))/2이고, sqrt(12)=2sqrt(3)으로 정리하면 x=-2±sqrt(3)이다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 3,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식은 b^2-4ac이므로 값을 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)에 a=1, b=4, c=1, 판별식 12를 대입한다. 정리하면 해는 -2±sqrt(3)이다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 4,
+      "first_try_correct": true,
+      "verified": true,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식 b^2-4ac를 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 사용한다. b^2-4ac=12이므로 x=(-4±sqrt(12))/2를 정리한다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "id": "F1", "type": "factor", "difficulty": 1,
+    "statement": "x^2+5x+6을 인수분해하시오.",
+    "expression": "x^2+5x+6",
+    "concepts": ["factor_trinomial"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_trinomial", "check": {"type": "factor", "expected": "(x+2)(x+3)"}}
+    ]
+  },
+  {
+    "id": "F2", "type": "factor", "difficulty": 1,
+    "statement": "x^2-7x+12를 인수분해하시오.",
+    "expression": "x^2-7x+12",
+    "concepts": ["factor_trinomial"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_trinomial", "check": {"type": "factor", "expected": "(x-3)(x-4)"}}
+    ]
+  },
+  {
+    "id": "F3", "type": "factor", "difficulty": 1,
+    "statement": "x^2-x-6을 인수분해하시오.",
+    "expression": "x^2-x-6",
+    "concepts": ["factor_trinomial"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_trinomial", "check": {"type": "factor", "expected": "(x-3)(x+2)"}}
+    ]
+  },
+  {
+    "id": "F4", "type": "factor", "difficulty": 1,
+    "statement": "x^2-9를 인수분해하시오.",
+    "expression": "x^2-9",
+    "concepts": ["factor_formula"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_formula", "check": {"type": "factor", "expected": "(x+3)(x-3)"}}
+    ]
+  },
+  {
+    "id": "F5", "type": "factor", "difficulty": 1,
+    "statement": "x^2+6x+9를 인수분해하시오.",
+    "expression": "x^2+6x+9",
+    "concepts": ["factor_formula"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_formula", "check": {"type": "factor", "expected": "(x+3)^2"}}
+    ]
+  },
+  {
+    "id": "F6", "type": "factor", "difficulty": 2,
+    "statement": "2x^2+7x+3을 인수분해하시오.",
+    "expression": "2x^2+7x+3",
+    "concepts": ["factor_general"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "factor_general", "check": {"type": "factor", "expected": "(2x+1)(x+3)"}}
+    ]
+  },
+  {
+    "id": "F7", "type": "factor", "difficulty": 1,
+    "statement": "3x^2-6x를 인수분해하시오.",
+    "expression": "3x^2-6x",
+    "concepts": ["common_factor"],
+    "steps": [
+      {"goal": "인수분해하기", "concept": "common_factor", "check": {"type": "factor", "expected": "3x(x-2)"}}
+    ]
+  },
+  {
+    "id": "E1", "type": "solve", "difficulty": 1, "method": "factoring",
+    "statement": "이차방정식 x^2-5x+6=0을 푸시오.",
+    "expression": "x^2-5x+6",
+    "concepts": ["quad_by_factoring", "factor_trinomial", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "factor_trinomial", "check": {"type": "factor", "expected": "(x-2)(x-3)"}},
+      {"goal": "AB=0의 성질로 해 구하기", "concept": "zero_product", "check": {"type": "roots", "expected": ["2", "3"]}}
+    ]
+  },
+  {
+    "id": "E2", "type": "solve", "difficulty": 1, "method": "factoring",
+    "statement": "이차방정식 x^2+x-12=0을 푸시오.",
+    "expression": "x^2+x-12",
+    "concepts": ["quad_by_factoring", "factor_trinomial", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "factor_trinomial", "check": {"type": "factor", "expected": "(x+4)(x-3)"}},
+      {"goal": "AB=0의 성질로 해 구하기", "concept": "zero_product", "check": {"type": "roots", "expected": ["-4", "3"]}}
+    ]
+  },
+  {
+    "id": "E3", "type": "solve", "difficulty": 2, "method": "factoring",
+    "statement": "이차방정식 x^2-4x+4=0을 푸시오.",
+    "expression": "x^2-4x+4",
+    "concepts": ["quad_by_factoring", "factor_formula", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "factor_formula", "check": {"type": "factor", "expected": "(x-2)^2"}},
+      {"goal": "해 구하기 (중근)", "concept": "zero_product", "check": {"type": "roots", "expected": ["2"]}}
+    ]
+  },
+  {
+    "id": "E4", "type": "solve", "difficulty": 1, "method": "factoring",
+    "statement": "이차방정식 x^2-16=0을 푸시오.",
+    "expression": "x^2-16",
+    "concepts": ["quad_by_factoring", "factor_formula", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "factor_formula", "check": {"type": "factor", "expected": "(x+4)(x-4)"}},
+      {"goal": "AB=0의 성질로 해 구하기", "concept": "zero_product", "check": {"type": "roots", "expected": ["-4", "4"]}}
+    ]
+  },
+  {
+    "id": "E5", "type": "solve", "difficulty": 2, "method": "factoring",
+    "statement": "이차방정식 2x^2-5x-3=0을 푸시오.",
+    "expression": "2x^2-5x-3",
+    "concepts": ["quad_by_factoring", "factor_general", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "factor_general", "check": {"type": "factor", "expected": "(2x+1)(x-3)"}},
+      {"goal": "AB=0의 성질로 해 구하기", "concept": "zero_product", "check": {"type": "roots", "expected": ["-1/2", "3"]}}
+    ]
+  },
+  {
+    "id": "E6", "type": "solve", "difficulty": 1, "method": "factoring",
+    "statement": "이차방정식 x^2-3x=0을 푸시오.",
+    "expression": "x^2-3x",
+    "concepts": ["quad_by_factoring", "common_factor", "zero_product"],
+    "steps": [
+      {"goal": "좌변을 인수분해하기", "concept": "common_factor", "check": {"type": "factor", "expected": "x(x-3)"}},
+      {"goal": "AB=0의 성질로 해 구하기", "concept": "zero_product", "check": {"type": "roots", "expected": ["0", "3"]}}
+    ]
+  },
+  {
+    "id": "E7", "type": "solve", "difficulty": 3, "method": "formula",
+    "statement": "이차방정식 x^2-2x-1=0을 푸시오.",
+    "expression": "x^2-2x-1",
+    "concepts": ["quad_formula"],
+    "steps": [
+      {"goal": "판별식 b^2-4ac의 값 구하기", "concept": "quad_formula", "check": {"type": "value", "expected": "8"}},
+      {"goal": "근의 공식으로 해 구하기", "concept": "quad_formula", "check": {"type": "roots", "expected": ["1+sqrt(2)", "1-sqrt(2)"]}}
+    ]
+  },
+  {
+    "id": "E8", "type": "solve", "difficulty": 3, "method": "formula",
+    "statement": "이차방정식 x^2+4x+1=0을 푸시오.",
+    "expression": "x^2+4x+1",
+    "concepts": ["quad_formula"],
+    "steps": [
+      {"goal": "판별식 b^2-4ac의 값 구하기", "concept": "quad_formula", "check": {"type": "value", "expected": "12"}},
+      {"goal": "근의 공식으로 해 구하기", "concept": "quad_formula", "check": {"type": "roots", "expected": ["-2+sqrt(3)", "-2-sqrt(3)"]}}
+    ]
+  }
+]
