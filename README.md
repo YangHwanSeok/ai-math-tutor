@@ -7,8 +7,9 @@
 
 ```
 mathtutor/            # 튜터 본체 (Python 패키지)
+data/                 # 개념 그래프, 문제 은행
+experiments/          # 실험 스크립트와 결과
 tests/                # pytest 테스트
-docs/research-notes/  # 연구 노트 (날짜별)
 ```
 
 ## 새 PC에서 시작하기
@@ -26,5 +27,5 @@ python -m pytest
 ## 노트북 ↔ 데스크톱 작업 규칙
 
 - 작업 시작 전: `git pull`
-- 작업 종료 전: 연구 노트 갱신 → `git add` → `git commit` → `git push`
-- `.env`(API 키)는 git에 올라가지 않으므로 PC마다 따로 만든다.
+- 작업 종료 전: `git add` → `git commit` → `git push`
+- `.env`(API 키)와 `docs/`(연구 노트·보고서)는 git에 올라가지 않으므로 PC마다 따로 관리한다.
