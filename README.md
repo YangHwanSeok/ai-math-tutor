@@ -40,9 +40,3 @@ python -m experiments.exp3_leakage            # 실험 3: 정답 요구 시 정�
 ```
 
 실험 결과는 `experiments/results/`에 JSON으로 저장된다.
-
-## 노트북 ↔ 데스크톱 작업 규칙
-
-- 작업 시작 전: `git pull`
-- 작업 종료 전: `git add` → `git commit` → `git push`
-- `.env`(API 키)와 `docs/`(연구 노트·보고서)는 git에 올라가지 않으므로 PC마다 따로 관리한다.
