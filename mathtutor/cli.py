@@ -53,7 +53,7 @@ def main() -> None:
     out.write_text(json.dumps({
         "problem_id": args.problem_id, "completed": session.done,
         "learner": {"concept_states": learner.concept_states, "hint_level": learner.hint_level},
-        "usage": asdict(usage), "turns": [asdict(t) for t in session.turns],
+        "usage": usage.to_dict(), "turns": [asdict(t) for t in session.turns],
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"대화 기록 저장: {out}")
 

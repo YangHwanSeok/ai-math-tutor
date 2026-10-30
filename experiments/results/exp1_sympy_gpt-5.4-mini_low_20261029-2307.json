@@ -1,0 +1,3621 @@
+{
+  "summary": {
+    "model": "gpt-5.4-mini",
+    "effort": "low",
+    "method": "sympy",
+    "trials": 3,
+    "max_attempts": 3,
+    "runs": 111,
+    "api_errors": 0,
+    "first_try_accuracy": 0.9819819819819819,
+    "delivered_correct_rate": 1.0,
+    "delivered_wrong_rate": 0.0,
+    "blocked_rate": 0.0,
+    "wrong_without_verification": 2,
+    "delivered_wrong": 0,
+    "blocked_after_max_attempts": 0,
+    "avg_attempts": 1.018018018018018,
+    "first_try_error_types": {
+      "오답": 2
+    },
+    "usage": {
+      "calls": 113,
+      "input_tokens": 28540,
+      "output_tokens": 12801
+    },
+    "elapsed_sec": 35.3
+  },
+  "runs": [
+    {
+      "problem_id": "F1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+5x+6에서 곱이 6이고 합이 5인 두 수를 찾으면 2와 3이다. 따라서 중항을 이용해 인수분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2+5x+6에서 곱이 6이고 합이 5인 두 수를 찾으면 2와 3이다. 따라서 이를 이용해 인수분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2+5x+6에서 곱이 6이고 합이 5인 두 수를 찾는다. 2와 3이므로 이를 이용해 인수분해한다.",
+              "answer": "(x+2)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "곱이 12이고 합이 -7인 두 수를 찾으면 -3과 -4이다. 이를 이용해 이차식을 인수분해한다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2-7x+12에서 곱이 12이고 합이 -7인 두 수를 찾으면 -3과 -4입니다. 따라서 이차식을 두 일차식의 곱으로 나타냅니다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F2",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2-7x+12에서 곱이 12이고 합이 -7인 두 수를 찾으면 -3과 -4이다. 따라서 이차식을 두 일차식의 곱으로 나타낸다.",
+              "answer": "(x-3)(x-4)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-x-6에서 곱이 -6이고 합이 -1인 두 수를 찾으면 -3과 2이다. 따라서 중간항을 나누어 인수분해한다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 x^2-x-6에서 곱이 -6이고 합이 -1인 두 수를 찾으면 -3과 2이다. 따라서 중간항을 이용해 인수분해한다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "곱해서 -6, 더해서 -1이 되는 두 수는 -3과 2이다. 따라서 이차식은 두 일차식의 곱으로 인수분해된다.",
+              "answer": "(x-3)(x+2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 두 제곱의 차이이므로 a^2-b^2=(a-b)(a+b) 공식을 사용할 수 있다. 여기서 a=x, b=3이다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 두 제곱의 차이이므로 a^2-b^2=(a-b)(a+b)를 이용한다. 여기서 a=x, b=3이다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-9는 두 제곱의 차이이므로 x^2-3^2로 볼 수 있다. 따라서 공식 a^2-b^2=(a-b)(a+b)를 이용해 인수분해한다.",
+              "answer": "(x-3)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2+6x+9는 완전제곱식인지 확인하면, x^2+2·x·3+3^2의 형태입니다. 따라서 인수분해하면 됩니다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2+6x+9는 완전제곱식이다. x^2+2·3·x+3^2의 꼴로 볼 수 있으므로 인수분해하면 된다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F5",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2+6x+9는 완전제곱식으로 볼 수 있습니다. x^2+2·3·x+3^2의 꼴이므로 인수분해하면 됩니다.",
+              "answer": "(x+3)^2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "2x^2+7x+3을 (2x+a)(x+b) 꼴로 인수분해한다. 곱이 3이고 합이 7이 되는 수는 6과 1이므로 2x^2+7x+3=(2x+1)(x+3)이다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2+7x+3에서 앞의 계수와 뒤의 상수항을 곱하면 6이고, 합이 7이 되는 두 수는 6과 1이다. 따라서 가운데 항을 6x와 x로 나누어 묶어준다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F6",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "2x^2+7x+3을 (2x+a)(x+b) 형태로 인수분해할 수 있는지 살펴본다. ab=3이고 2b+a=7이 되도록 하면 a=1, b=3이 맞는다.",
+              "answer": "(2x+1)(x+3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수 3x를 묶습니다. 3x^2-6x=3x(x-2)입니다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수 3x를 먼저 묶습니다. 3x^2-6x = 3x(x-2)입니다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "F7",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수 3x를 먼저 묶으면 3x^2-6x = 3x(x-2)이다.",
+              "answer": "3x(x-2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2-5x+6은 두 수의 곱이 6이고 합이 -5가 되는 -2, -3을 이용해 인수분해할 수 있다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "(x-2)(x-3)=0이므로 AB=0의 성질에 따라 각 인수를 0으로 두어 해를 구한다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변의 상수 6을 곱해서 6이 되고 합이 -5가 되는 두 수는 -2와 -3이다. 따라서 이차식을 인수분해하면 된다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "각 인수가 0이 되도록 두고 풀면 x-2=0 또는 x-3=0이다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변 x^2-5x+6을 곱해서 6이 되고 합해서 -5가 되는 두 수 -2, -3을 이용해 인수분해한다.",
+              "answer": "(x-2)(x-3)"
+            },
+            {
+              "work": "(x-2)(x-3)=0이므로 AB=0의 성질에 따라 각 인수를 0으로 놓아 푼다.",
+              "answer": "2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "식 x^2+x-12를 곱해서 0이 되는 두 수를 찾으면, 4와 -3이므로 인수분해할 수 있다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "각 인수가 0이 되도록 두 경우를 풀면 된다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+x-12의 좌변을 곱의 형태로 나타내기 위해, 곱해서 -12가 되고 더해서 1이 되는 두 수를 찾는다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "(x+4)(x-3)=0이므로 AB=0의 성질을 적용하면 각 인수가 0이어야 한다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E2",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 식 x^2+x-12을 인수분해하면, 두 수의 곱이 -12이고 합이 1인 4와 -3을 찾을 수 있다.",
+              "answer": "(x+4)(x-3)"
+            },
+            {
+              "work": "곱이 0이 되려면 각 인수가 0이어야 하므로 x+4=0 또는 x-3=0이다.",
+              "answer": "-4, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변 x^2-4x+4는 완전제곱식이므로 인수분해한다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "(x-2)^2=0이므로 x-2=0, 따라서 해는 중근 2이다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변 x^2-4x+4는 완전제곱식이므로 인수분해한다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "(x-2)^2=0이므로 x-2=0이고, 해는 중근 2이다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변을 완전제곱식으로 인수분해한다. x^2-4x+4 = (x-2)^2 이다.",
+              "answer": "(x-2)^2"
+            },
+            {
+              "work": "(x-2)^2=0 이므로 x-2=0, 따라서 해는 x=2이다. 중근이므로 한 번만 쓴다.",
+              "answer": "2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변 x^2-16은 두 제곱의 차이이므로 (x-4)(x+4)로 인수분해한다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "(x-4)(x+4)=0 이므로 AB=0의 성질에 따라 x-4=0 또는 x+4=0이다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변 x^2-16은 차의 제곱 공식 a^2-b^2=(a-b)(a+b)를 이용해 인수분해한다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "AB=0이면 A=0 또는 B=0이므로 x-4=0, x+4=0을 각각 풀어 해를 구한다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-16는 차의 제곱으로 볼 수 있으므로 x^2-4^2의 형태로 인수분해한다.",
+              "answer": "(x-4)(x+4)"
+            },
+            {
+              "work": "곱이 0이 되려면 각각의 인수 중 하나가 0이어야 하므로 x-4=0 또는 x+4=0을 푼다.",
+              "answer": "4, -4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3을 인수분해하면 (2x+1)(x-3)이다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "AB=0이므로 2x+1=0 또는 x-3=0이다. 따라서 해는 x=-1/2, 3이다.",
+              "answer": "-1/2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 이차방정식 2x^2-5x-3을 곱해서 -6, 더해서 -5가 되는 수를 이용해 인수분해한다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "각 인수가 0이 되는 경우를 각각 구한다.",
+              "answer": "x=-1/2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E5",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차식 2x^2-5x-3에서 곱이 -6, 합이 -5가 되는 두 수는 -6과 1이므로 가운데항을 나누어 묶어 인수분해한다.",
+              "answer": "(2x+1)(x-3)"
+            },
+            {
+              "work": "각 인수가 0이 되는 값을 구하면 2x+1=0 또는 x-3=0이다.",
+              "answer": "-1/2, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "공통인수 x를 묶으면 x^2-3x = x(x-3)이다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "x(x-3)=0이므로 x=0 또는 x-3=0이다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변에서 공통인수 x를 묶으면 x^2-3x = x(x-3)이다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "x(x-3)=0이므로 AB=0의 성질에 따라 x=0 또는 x-3=0이다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E6",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "좌변에서 공통인수 x를 묶으면 x^2-3x = x(x-3)이다.",
+              "answer": "x(x-3)"
+            },
+            {
+              "work": "곱이 0이 되려면 x=0 또는 x-3=0이어야 한다.",
+              "answer": "0, 3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식은 b^2-4ac로 구한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 적용하면 x=(2±sqrt(8))/2=1±sqrt(2)이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이므로 판별식은 b^2-4ac이다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 대입하면 x=(2±sqrt(8))/2=1±sqrt(2)이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E7",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2-2x-1=0에서 a=1, b=-2, c=-1이다. 판별식은 b^2-4ac로 계산한다.",
+              "answer": "8"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 적용하면 x=(2±sqrt(8))/2=1±sqrt(2)이다.",
+              "answer": "1+sqrt(2), 1-sqrt(2)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이므로 판별식은 b^2-4ac로 구한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 적용하면 x=(-4±sqrt(12))/2이다. 이를 정리하면 두 해는 -2+sqrt(3), -2-sqrt(3)이다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "이차방정식 x^2+4x+1=0에서 a=1, b=4, c=1이다. 판별식은 b^2-4ac로 구한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 사용한다. x=(-4±sqrt(12))/2=-2±sqrt(3)이다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "E8",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "판별식은 b^2-4ac에 대입하여 4^2-4·1·1을 계산한다.",
+              "answer": "12"
+            },
+            {
+              "work": "근의 공식 x=(-b±sqrt(b^2-4ac))/(2a)를 사용한다. 따라서 x=(-4±sqrt(12))/2=-2±sqrt(3)이다.",
+              "answer": "-2+sqrt(3), -2-sqrt(3)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+2)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "x^2+(b+2)x+2b"
+            },
+            {
+              "work": "x^2+ax+6과 계수를 비교하면 a=b+2, 2b=6이므로 b=3, a=5이다.",
+              "answer": "a=5, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+2)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "x^2+(b+2)x+2b"
+            },
+            {
+              "work": "x^2+ax+6과 계수를 비교하면 a=b+2, 2b=6이므로 b=3, a=5이다.",
+              "answer": "a=5, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+2)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "x^2+(b+2)x+2b"
+            },
+            {
+              "work": "x^2+ax+6과 계수를 비교하면 a=b+2, 2b=6이므로 b=3, a=5이다.",
+              "answer": "a=5, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+3)(x+b)를 전개하면 x(x+b)+3(x+b)이므로, x^2+bx+3x+3b로 정리된다.",
+              "answer": "x^2+(b+3)x+3b"
+            },
+            {
+              "work": "x^2+ax-12와 x^2+(b+3)x+3b의 계수를 비교하면 a=b+3, 3b=-12이다. 따라서 b=-4, a=-1이다.",
+              "answer": "a=-1, b=-4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+3)(x+b)를 전개하면 x(x+b)+3(x+b)이다.",
+              "answer": "x^2+(b+3)x+3b"
+            },
+            {
+              "work": "x^2+ax-12와 계수를 비교하면 a=b+3, 3b=-12이다. 따라서 b=-4이고, a=-1이다.",
+              "answer": "a=-1, b=-4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U2",
+      "trial": 2,
+      "first_try_correct": false,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(x+3)(x+b)를 곱해 전개한다.",
+              "answer": "x^2+(b+3)x+3b"
+            },
+            {
+              "work": "x^2+ax-12와 비교하면 x의 계수는 a=b+3, 상수항은 3b=-12이다. 이를 풀어 b를 구한 뒤 a를 구한다.",
+              "answer": "a=7, b=-4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "부분",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "b의 값은 맞고 a의 값은 틀림 (조건식 2개 중 1개 만족)"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "(x+3)(x+b)를 곱해 전개한다.",
+              "answer": "x^2+(b+3)x+3b"
+            },
+            {
+              "work": "x^2+ax-12와 비교하면 x의 계수는 a=b+3, 상수항은 3b=-12이다. 이를 풀어 b를 구한 뒤 a를 구한다.",
+              "answer": "a=-1, b=-4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(2x+1)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "2x^2+(2b+1)x+b"
+            },
+            {
+              "work": "같은 차수의 계수를 비교하면 2b+1=a, b=3이므로 b=3을 먼저 구하고 이를 대입해 a=7을 얻는다.",
+              "answer": "a=7, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(2x+1)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "2x^2+(2b+1)x+b"
+            },
+            {
+              "work": "2x^2+ax+3와 계수를 비교하면 2b+1=a이고 b=3이다. 이를 a=2b+1에 대입하면 a=7이다.",
+              "answer": "a=7, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "(2x+1)(x+b)를 분배법칙으로 전개한다.",
+              "answer": "2x^2+(2b+1)x+b"
+            },
+            {
+              "work": "주어진 식 2x^2+ax+3과 계수를 비교하면 x의 계수는 a=2b+1, 상수항은 b=3이다. 이를 대입하면 a=2(3)+1=7이다.",
+              "answer": "a=7, b=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-8x+a가 완전제곱식이 되려면 (x-p)^2=x^2-2px+p^2의 꼴이어야 한다. x의 계수 비교로 -2p=-8이므로 p=4이고, 따라서 a=p^2=16이다.",
+              "answer": "a=16"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-8x+a가 완전제곱식이 되려면 x^2-8x의 중간항을 반영해 (x-4)^2=x^2-8x+16이 되어야 한다. 따라서 상수 a는 16이다.",
+              "answer": "a=16"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "U4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x^2-8x+a가 완전제곱식이 되려면 x^2-8x의 중간항을 완성해야 한다. x^2-8x=(x-4)^2-16이므로, 전체 식이 완전제곱식이 되기 위해서는 a가 16이어야 한다.",
+              "answer": "a=16"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 x+y=5와 x-y=1을 더하면 y가 소거된다. 2x=6이므로 x=3이다.",
+              "answer": "3"
+            },
+            {
+              "work": "x=3을 x+y=5에 대입하면 y=2이다. 따라서 두 미지수의 값은 x=3, y=2이다.",
+              "answer": "x=3, y=2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 x+y=5와 x-y=1을 더하면 y가 없어지고 2x=6이 된다. 따라서 x=3이다.",
+              "answer": "3"
+            },
+            {
+              "work": "x=3을 x+y=5에 대입하면 3+y=5이므로 y=2이다.",
+              "answer": "x=3, y=2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 x+y=5와 x-y=1을 더하면 y가 없어지고 2x=6이 된다.",
+              "answer": "3"
+            },
+            {
+              "work": "x=3을 x+y=5에 대입하면 y=2이다.",
+              "answer": "x=3, y=2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 2x+y=7, x-y=2를 더하면 y가 없어집니다. 3x=9이므로 x를 구합니다.",
+              "answer": "3"
+            },
+            {
+              "work": "구한 x=3을 x-y=2에 대입하면 3-y=2입니다. 따라서 y=1입니다.",
+              "answer": "x=3, y=1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 2x+y=7, x-y=2를 더하면 y가 없어집니다. 3x=9이므로 x=3입니다.",
+              "answer": "3"
+            },
+            {
+              "work": "x=3을 x-y=2에 대입하면 3-y=2입니다. 따라서 y=1이고, x의 값은 3입니다.",
+              "answer": "x=3, y=1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S2",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "두 식 2x+y=7, x-y=2를 더하면 y가 소거되어 3x=9가 된다. 따라서 x=3이다.",
+              "answer": "3"
+            },
+            {
+              "work": "x=3을 x-y=2에 대입하면 3-y=2가 되고, y=1이다.",
+              "answer": "x=3, y=1"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x=2y를 3x+2y=12에 대입하면 3(2y)+2y=12가 된다. 이를 정리하면 8y=12이므로 y의 값은 12/8=3/2이다.",
+              "answer": "3/2"
+            },
+            {
+              "work": "y=3/2를 x=2y에 대입하면 x=2×(3/2)=3이다. 따라서 두 미지수의 값은 x=3, y=3/2이다.",
+              "answer": "x=3, y=3/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x=2y를 3x+2y=12에 대입하면 3(2y)+2y=12가 된다. 이를 풀면 8y=12이므로 y의 값을 구할 수 있다.",
+              "answer": "3/2"
+            },
+            {
+              "work": "y=3/2를 x=2y에 대입하면 x=2×3/2=3이다. 따라서 두 미지수의 값을 정리한다.",
+              "answer": "x=3, y=3/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "x=2y를 3x+2y=12에 대입하면 3(2y)+2y=12가 된다. 이를 정리하면 8y=12이므로 y를 구할 수 있다.",
+              "answer": "3/2"
+            },
+            {
+              "work": "y=3/2를 x=2y에 대입하면 x=2×3/2=3이다. 따라서 x와 y의 값은 각각 3, 3/2이다.",
+              "answer": "x=3, y=3/2"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "첫째 식 y=2x-1을 둘째 식 3x+y=9에 대입한다. 3x+(2x-1)=9에서 5x-1=9, 따라서 5x=10이다.",
+              "answer": "2"
+            },
+            {
+              "work": "x=2를 첫째 식 y=2x-1에 대입한다. y=2(2)-1=3이므로 x와 y의 값을 구할 수 있다.",
+              "answer": "x=2, y=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "첫째 식 y=2x-1을 둘째 식 3x+y=9에 대입하면 3x+(2x-1)=9가 된다. 이를 풀면 5x-1=9, 5x=10이므로 x=2이다.",
+              "answer": "2"
+            },
+            {
+              "work": "x=2를 y=2x-1에 대입하면 y=2(2)-1=3이다.",
+              "answer": "x=2, y=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "첫 번째 식 y=2x-1을 두 번째 식 3x+y=9에 대입한다. 그러면 3x+(2x-1)=9이므로 5x=10이다.",
+              "answer": "2"
+            },
+            {
+              "work": "x=2를 y=2x-1에 대입하면 y=2(2)-1=3이다.",
+              "answer": "x=2, y=3"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S5",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "사과 x개, 배 y개라 하면 전체 개수와 가격 조건으로 연립방정식을 세운다. x+y=10, 500x+800y=6200을 풀면 x=6, y=4이다.",
+              "answer": "x=6, y=4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S5",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "사과와 배의 개수를 각각 x, y라고 하면, 합이 10개이므로 x+y=10이고, 가격의 합이 6200원이므로 500x+800y=6200이다. 이를 풀면 x=6, y=4이다.",
+              "answer": "x=6, y=4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "S5",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "사과의 개수를 x, 배의 개수를 y라 두면 x+y=10, 500x+800y=6200의 연립방정식을 세울 수 있다. 첫째 식을 500배한 뒤 둘째 식과 비교하면 y의 값을 구할 수 있다.",
+              "answer": "x=6, y=4"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료 3, 7, 8, 5, 7의 합은 30이고, 자료의 개수는 5개이므로 평균은 30÷5이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 합을 구한 뒤 자료의 개수 5로 나누면 된다. 3+7+8+5+7=30이므로 평균은 30÷5이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 합을 구하면 3+7+8+5+7=30이다. 이를 자료의 개수 5로 나누면 평균이 된다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 자료를 크기순으로 나열하면 2, 4, 6, 7, 9이다. 가운데 값이 중앙값이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료를 작은 수부터 나열하면 2, 4, 6, 7, 9이다. 가운데 있는 값이 중앙값이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST2",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료를 크기순으로 정렬하면 2, 4, 6, 7, 9이다. 가운데에 있는 값이 중앙값이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 자료를 작은 수부터 순서대로 나열하면 1, 4, 6, 7, 9, 12이다. 자료의 개수가 6개이므로 가운데 두 수 6과 7의 평균을 구한다.",
+              "answer": "6.5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료를 크기순으로 정렬하면 1, 4, 6, 7, 9, 12이다. 자료가 6개이므로 가운데 두 수 6과 7의 평균이 중앙값이다.",
+              "answer": "6.5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료를 작은 수부터 순서대로 정리하면 1, 4, 6, 7, 9, 12이다. 자료의 개수가 짝수이므로 가운데 두 수 6과 7의 평균을 구한다.",
+              "answer": "6.5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "각 자료의 출현 횟수를 세어 보면 5가 3번으로 가장 많이 나옵니다.",
+              "answer": "5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "주어진 자료에서 가장 자주 나타나는 수를 세어 본다. 5가 3번으로 가장 많이 나오므로 최빈값이다.",
+              "answer": "5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "각 자료가 나온 횟수를 세면 5가 3번으로 가장 많이 나옵니다.",
+              "answer": "5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST5",
+      "trial": 0,
+      "first_try_correct": false,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료 2, 4, 6, 8, 10의 합을 구해 5로 나누어 평균을 구한다.",
+              "answer": "6"
+            },
+            {
+              "work": "각 자료와 평균의 차를 제곱해 모두 더한 뒤, 자료의 개수 5로 나누어 분산을 구한다.",
+              "answer": "28/5"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "먼 오답",
+              "error": "오답",
+              "diagnosis": null,
+              "detail": "값이 다름"
+            }
+          ],
+          "correct": false
+        },
+        {
+          "steps": [
+            {
+              "work": "자료 2, 4, 6, 8, 10의 합은 30이므로 5로 나누면 평균은 6이다.",
+              "answer": "6"
+            },
+            {
+              "work": "각 자료와 평균의 차를 제곱하면 16, 4, 0, 4, 16이고, 이를 모두 더한 40을 5로 나누면 분산은 8이다.",
+              "answer": "8"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST5",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 합은 2+4+6+8+10=30이므로, 자료의 개수 5로 나누면 평균은 6이다.",
+              "answer": "6"
+            },
+            {
+              "work": "각 자료와 평균의 차를 제곱해 더하면 16+4+0+4+16=40이다. 이를 자료의 개수 5로 나누면 분산은 8이다.",
+              "answer": "8"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST5",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 합은 2+4+6+8+10=30이므로, 평균은 30÷5이다.",
+              "answer": "6"
+            },
+            {
+              "work": "각 자료와 평균의 차를 제곱해 더하면 16+4+0+4+16=40이다. 이를 자료의 개수 5로 나누면 분산이 된다.",
+              "answer": "8"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST6",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 평균은 (1+3+5+7+9)/5 = 5이다. 각 자료와 평균의 차의 제곱을 더하면 16+4+0+4+16 = 40이므로, 분산은 40/5 = 8이다.",
+              "answer": "8"
+            },
+            {
+              "work": "표준편차는 분산의 양의 제곱근이므로 sqrt(8)이다.",
+              "answer": "sqrt(8)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST6",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 평균은 (1+3+5+7+9)/5 = 5이다. 각 자료의 편차 제곱은 16, 4, 0, 4, 16이고, 이를 모두 더해 40이므로 분산은 40/5 = 8이다.",
+              "answer": "8"
+            },
+            {
+              "work": "표준편차는 분산의 양의 제곱근이므로 sqrt(8)이다.",
+              "answer": "sqrt(8)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "ST6",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "자료의 평균은 (1+3+5+7+9)/5=5이다. 각 자료와 평균의 차의 제곱을 더하면 16+4+0+4+16=40이므로 분산은 40/5=8이다.",
+              "answer": "8"
+            },
+            {
+              "work": "표준편차는 분산의 양의 제곱근이므로 sqrt(8)이다.",
+              "answer": "sqrt(8)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G1",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형의 내각의 합은 180°이다. 따라서 나머지 한 내각은 180° - 50° - 60°로 구한다.",
+              "answer": "70"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G1",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형의 내각의 합은 180°이다. 따라서 나머지 한 내각은 180°-50°-60°로 구한다.",
+              "answer": "70"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G1",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형의 내각의 합은 180°이다. 따라서 나머지 한 내각은 180° - 50° - 60°로 구한다.",
+              "answer": "70"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G2",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "정육각형은 변의 수가 6이므로 내각의 합은 (6-2)×180°이다.",
+              "answer": "720"
+            },
+            {
+              "work": "내각의 합 720°를 6개로 나누면 한 내각의 크기를 구할 수 있다.",
+              "answer": "120"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G2",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "정육각형은 변의 수가 6이므로 내각의 합은 (6-2)×180°로 구한다.",
+              "answer": "720"
+            },
+            {
+              "work": "내각의 합 720°를 6으로 나누면 한 내각의 크기를 구할 수 있다.",
+              "answer": "120"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G2",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "정육각형은 변의 개수가 6개이므로, 내각의 크기의 합은 (6-2)×180°로 구한다.",
+              "answer": "720"
+            },
+            {
+              "work": "내각의 합 720°를 6개로 나누면 한 내각의 크기를 구할 수 있다.",
+              "answer": "120"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            },
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G3",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형이므로 피타고라스 정리를 사용한다. 빗변의 길이를 c라 하면 c^2 = 6^2 + 8^2 = 36 + 64 = 100이므로 c = 10이다.",
+              "answer": "10"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G3",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형이므로 피타고라스 정리를 사용한다. 빗변의 길이를 c라 하면 c^2 = 6^2 + 8^2 = 36 + 64 = 100이므로 c = 10이다.",
+              "answer": "10"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G3",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형이므로 피타고라스 정리를 사용한다. 빗변의 길이는 sqrt(6^2+8^2)=sqrt(36+64)=sqrt(100)=10이다.",
+              "answer": "10"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G4",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형에서 빗변과 한 변의 길이가 주어졌으므로 피타고라스 정리를 사용한다. 나머지 한 변의 길이는 sqrt(13^2-5^2)=sqrt(169-25)=sqrt(144)이다.",
+              "answer": "12"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G4",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형에서 빗변과 한 변이 주어졌으므로 피타고라스 정리를 사용한다. 나머지 한 변의 길이는 sqrt(13^2-5^2)=sqrt(169-25)=sqrt(144)=12이다.",
+              "answer": "12"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G4",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형에서 빗변과 한 변의 길이가 주어졌으므로 피타고라스 정리를 사용한다. 나머지 한 변의 길이는 sqrt(13^2-5^2)=sqrt(169-25)=sqrt(144)이다.",
+              "answer": "12"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G5",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형이므로 피타고라스 정리를 사용한다. 빗변의 길이는 sqrt(2^2+3^2)=sqrt(4+9)=sqrt(13)이다.",
+              "answer": "sqrt(13)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G5",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형이므로 피타고라스 정리를 쓴다. 빗변의 길이는 sqrt(2^2+3^2)=sqrt(13)이다.",
+              "answer": "sqrt(13)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G5",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "직각삼각형에서 빗변의 길이는 피타고라스 정리를 이용해 구한다. 따라서 빗변의 길이 = sqrt(2^2+3^2) = sqrt(13)이다.",
+              "answer": "sqrt(13)"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G6",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형 ABC와 DEF의 닮음비가 2:3이므로, 대응변의 길이도 2:3의 비를 이룹니다. AB=4cm가 2에 해당하므로 DE는 3에 해당하는 길이입니다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G6",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형 ABC와 DEF는 닮음이고 닮음비가 2:3이므로, AB:DE = 2:3이다. AB=4cm이므로 DE = 4×3/2 = 6cm이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G6",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "삼각형 ABC와 삼각형 DEF의 닮음비가 2:3이므로 대응변의 길이도 2:3의 비를 이룬다. AB=4cm가 2에 해당하므로 DE는 3에 해당하는 길이이다.",
+              "answer": "6"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G7",
+      "trial": 0,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "닮음비가 2:3이므로 넓이의 비는 2^2:3^2 = 4:9이다. 작은 삼각형의 넓이가 8cm²이므로 큰 삼각형의 넓이는 8×9/4 = 18cm²이다.",
+              "answer": "18"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G7",
+      "trial": 1,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "닮음비가 2:3이므로 넓이의 비는 2^2:3^2 = 4:9이다. 작은 삼각형의 넓이가 8cm^2이므로 큰 삼각형의 넓이는 8×9/4 = 18이다.",
+              "answer": "18"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "problem_id": "G7",
+      "trial": 2,
+      "first_try_correct": true,
+      "accepted": true,
+      "delivered_correct": true,
+      "delivered_wrong": false,
+      "attempts": [
+        {
+          "steps": [
+            {
+              "work": "닮음비가 2:3이므로 넓이의 비는 2^2:3^2 = 4:9이다. 작은 삼각형 넓이 8cm^2에 9/4를 곱하면 큰 삼각형의 넓이를 구할 수 있다.",
+              "answer": "18"
+            }
+          ],
+          "results": [
+            {
+              "severity": "정답",
+              "error": "없음",
+              "diagnosis": null,
+              "detail": "정답"
+            }
+          ],
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

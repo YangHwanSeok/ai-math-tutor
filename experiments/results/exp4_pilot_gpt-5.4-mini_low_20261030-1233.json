@@ -1,0 +1,2750 @@
+{
+  "meta": {
+    "model": "gpt-5.4-mini",
+    "effort": "low",
+    "reps": 3,
+    "retry_message": "틀렸어. 다시 풀어 볼래?",
+    "usage": {
+      "calls": 358,
+      "input_tokens": 177631,
+      "output_tokens": 53558
+    },
+    "elapsed_sec": 126.2
+  },
+  "summary": {
+    "trials": 89,
+    "errors": 1,
+    "pre": {
+      "bug": 0.6629,
+      "correct": 0.3371,
+      "other": 0.0,
+      "unparseable": 0.0
+    },
+    "given_pre_bug": {
+      "n": 59,
+      "retry": {
+        "bug": 0.0169,
+        "correct": 0.9831,
+        "other": 0.0,
+        "unparseable": 0.0
+      },
+      "control_p2": {
+        "bug": 0.2542,
+        "correct": 0.7458,
+        "other": 0.0,
+        "unparseable": 0.0
+      },
+      "explained_p2": {
+        "bug": 0.0,
+        "correct": 0.9831,
+        "other": 0.0169,
+        "unparseable": 0.0
+      }
+    },
+    "by_misconception": {
+      "factor_sign": {
+        "pre_bug": 0.3889,
+        "control_p2_correct": 0.4286,
+        "explained_p2_correct": 1.0
+      },
+      "root_sign": {
+        "pre_bug": 0.0,
+        "control_p2_correct": null,
+        "explained_p2_correct": null
+      },
+      "divide_by_x": {
+        "pre_bug": 0.9444,
+        "control_p2_correct": 1.0,
+        "explained_p2_correct": 1.0
+      },
+      "positive_sqrt_only": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.6471,
+        "explained_p2_correct": 1.0
+      },
+      "nonzero_product": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.7222,
+        "explained_p2_correct": 0.9444
+      }
+    }
+  },
+  "trials": [
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-0",
+      "p2": "factor_sign-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 7이 되고 곱해서 12가 되는 두 수를 찾으면 3과 4예요. 그래서 인수분해하면 (x-3)(x-4)입니다.",
+          "answer": "(x-3)(x-4)"
+        },
+        "retry": {
+          "message": "아, 맞아요. 더해서 7이고 곱해서 12가 되는 수는 3과 4예요. 그래서 인수분해는 (x+3)(x+4)입니다.",
+          "answer": "(x+3)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 -6이 되고 곱해서 8이 되는 두 수는 -2와 -4예요. 그래서 인수분해하면 (x+2)(x+4)입니다.",
+          "answer": "(x+2)(x+4)"
+        },
+        "explained_p2": {
+          "message": "더해서 -6이 되고 곱해서 8이 되는 두 수는 -2와 -4예요. 부호 그대로 넣으면 (x-2)(x-4)이고, 전개해 보면 x^2-6x+8이 맞아요.",
+          "answer": "(x-2)(x-4)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-0",
+      "p2": "factor_sign-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 7, 곱해서 12가 되는 수는 3과 4예요. 그래서 인수분해하면 (x-3)(x-4)입니다.",
+          "answer": "(x-3)(x-4)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 썼네요. 더해서 7이고 곱해서 12가 되는 수는 3과 4라서, x^2+7x+12는 (x+3)(x+4)예요.",
+          "answer": "(x+3)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 -6, 곱해서 8이 되는 수는 -2와 -4예요. 그래서 인수분해하면 (x+2)(x+4)입니다.",
+          "answer": "(x+2)(x+4)"
+        },
+        "explained_p2": {
+          "message": "더해서 -6, 곱해서 8이 되는 수는 -2와 -4예요. 부호 그대로 넣으면 (x-2)(x-4)이고, 전개하면 x^2-6x+8이 됩니다.",
+          "answer": "(x-2)(x-4)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-0",
+      "p2": "factor_sign-1",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 7, 곱해서 12인 두 수를 찾으면 3과 4예요. 그래서 x^2+7x+12는 (x+3)(x+4)로 인수분해할 수 있어요.",
+          "answer": "(x+3)(x+4)"
+        },
+        "retry": {
+          "message": "아, 답만 써야 했는데 설명까지 해서 헷갈리게 했네요. 다시 쓰면 더해서 7, 곱해서 12인 두 수는 3과 4라서 인수분해 결과는 (x+3)(x+4)예요.",
+          "answer": "(x+3)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 -6, 곱해서 8인 두 수는 -2와 -4예요. 그래서 (x-(-2))(x-(-4))로 쓰면 돼요.",
+          "answer": "(x+2)(x+4)"
+        },
+        "explained_p2": {
+          "message": "더해서 -6, 곱해서 8인 두 수는 -2와 -4예요. 부호 그대로 괄호에 넣으면 (x-2)(x-4)이고, 전개해도 x^2-6x+8이 돼요.",
+          "answer": "(x-2)(x-4)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-1",
+      "p2": "factor_sign-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -6, 곱해서 8이 되는 두 수를 찾으면 -2와 -4예요. 그래서 인수분해하면 (x+2)(x+4)입니다.",
+          "answer": "(x+2)(x+4)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 생각했네요. 더해서 -6, 곱해서 8이 되는 수는 -2와 -4예요. 그래서 인수분해하면 (x-2)(x-4)입니다.",
+          "answer": "(x-2)(x-4)"
+        },
+        "control_p2": {
+          "message": "더해서 2, 곱해서 -15가 되는 두 수는 5와 -3이에요. 그래서 인수분해하면 (x+5)(x-3)입니다.",
+          "answer": "(x+5)(x-3)"
+        },
+        "explained_p2": {
+          "message": "더해서 2, 곱해서 -15가 되는 두 수는 5와 -3이야. 그래서 찾은 수를 그대로 넣으면 (x+5)(x-3)이고, 전개해도 x^2+2x-15가 돼.",
+          "answer": "(x+5)(x-3)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-1",
+      "p2": "factor_sign-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -6, 곱해서 8이 되는 수를 찾으면 -2와 -4예요. 그래서 인수분해하면 (x-2)(x-4)입니다.",
+          "answer": "(x-2)(x-4)"
+        },
+        "retry": {
+          "message": "더해서 -6, 곱해서 8이 되는 수는 -2와 -4예요. 그러면 (x-(-2))(x-(-4))니까 (x+2)(x+4)로 써야 해요.",
+          "answer": "(x+2)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 2, 곱해서 -15가 되는 수를 찾으면 5와 -3이에요. 그래서 인수분해하면 (x+5)(x-3)입니다.",
+          "answer": "(x+5)(x-3)"
+        },
+        "explained_p2": {
+          "message": "더해서 2, 곱해서 -15인 두 수는 5와 -3이에요. 부호 그대로 괄호에 넣으면 (x+5)(x-3)이고, 전개해 보면 x^2+2x-15가 돼요.",
+          "answer": "(x+5)(x-3)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-1",
+      "p2": "factor_sign-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -6이고 곱해서 8이 되는 수는 -2와 -4예요. 그래서 x^2-6x+8은 (x-2)(x-4)로 인수분해할 수 있어요.",
+          "answer": "(x-2)(x-4)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 썼어요. 더해서 -6, 곱해서 8이 되는 수는 -2와 -4이니까, 인수분해는 (x+2)(x+4)예요.",
+          "answer": "(x+2)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 2이고 곱해서 -15가 되는 수는 5와 -3이에요. 그래서 이 식은 (x+5)(x-3)으로 인수분해할 수 있어요.",
+          "answer": "(x+5)(x-3)"
+        },
+        "explained_p2": {
+          "message": "더해서 2, 곱해서 -15인 두 수는 5와 -3이에요. 찾은 두 수를 부호 그대로 넣으면 (x+5)(x-3)이고, 전개해 보면 x^2+2x-15가 맞아요.",
+          "answer": "(x+5)(x-3)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-2",
+      "p2": "factor_sign-3",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 2가 되고 곱해서 -15가 되는 수는 5와 -3이에요. 그래서 인수분해하면 (x+5)(x-3)입니다.",
+          "answer": "(x+5)(x-3)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 썼네요. 더해서 2, 곱해서 -15가 되는 수는 5와 -3이니까 (x-5)(x+3)예요.",
+          "answer": "(x-5)(x+3)"
+        },
+        "control_p2": {
+          "message": "더해서 -1이 되고 곱해서 -12가 되는 수는 -4와 3이에요. 그래서 인수분해하면 (x-4)(x+3)입니다.",
+          "answer": "(x-4)(x+3)"
+        },
+        "explained_p2": {
+          "message": "더해서 -1, 곱해서 -12인 두 수는 3과 -4예요. 그래서 부호 그대로 넣으면 (x+3)(x-4)이고, 전개해 보면 x^2-x-12가 맞아요.",
+          "answer": "(x+3)(x-4)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-2",
+      "p2": "factor_sign-3",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 2이고 곱해서 -15인 두 수는 5와 -3이야. 그래서 인수분해하면 (x+5)(x-3)이 돼.",
+          "answer": "(x+5)(x-3)"
+        },
+        "retry": {
+          "message": "다시 생각해 봤는데, 더해서 2이고 곱해서 -15인 수는 5와 -3이야. 그래서 인수분해는 (x+5)(x-3)이 맞아.",
+          "answer": "(x+5)(x-3)"
+        },
+        "control_p2": {
+          "message": "더해서 -1이고 곱해서 -12인 두 수는 -4와 3이야. 그래서 인수분해하면 (x-4)(x+3)이 돼.",
+          "answer": "(x-4)(x+3)"
+        },
+        "explained_p2": {
+          "message": "더해서 -1이고 곱해서 -12인 두 수는 -4와 3이야. 부호 그대로 넣으면 (x-4)(x+3)이고, 전개해 보면 x^2-x-12가 돼.",
+          "answer": "(x-4)(x+3)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-2",
+      "p2": "factor_sign-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 2, 곱해서 -15가 되는 수는 5와 -3이야. 그래서 (x-p)(x-q)로 쓰면 (x-5)(x+3)이야.",
+          "answer": "(x-5)(x+3)"
+        },
+        "retry": {
+          "message": "아, 내가 괄호를 잘못 썼네. 더해서 2, 곱해서 -15가 되는 수는 5와 -3이니까 (x+5)(x-3)로 인수분해돼.",
+          "answer": "(x+5)(x-3)"
+        },
+        "control_p2": {
+          "message": "더해서 -1, 곱해서 -12가 되는 수는 -4와 3이야. 그래서 인수분해하면 (x-4)(x+3)이야.",
+          "answer": "(x-4)(x+3)"
+        },
+        "explained_p2": {
+          "message": "더해서 -1, 곱해서 -12가 되는 두 수는 3과 -4야. 찾은 두 수를 부호 그대로 넣으면 (x+3)(x-4)이고, 전개해 보면 x^2-x-12가 돼.",
+          "answer": "(x+3)(x-4)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-3",
+      "p2": "factor_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -1, 곱해서 -12가 되는 수는 -4와 3이에요. 그래서 x^2-x-12는 (x-4)(x+3)로 인수분해돼요.",
+          "answer": "(x-4)(x+3)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 썼네요. 더해서 -1, 곱해서 -12가 되는 수는 -4와 3이라서 (x-(-4))(x-3)로 써야 해요.",
+          "answer": "(x+4)(x-3)"
+        },
+        "control_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 수는 4와 5예요. 그래서 식은 (x-4)(x-5)로 인수분해돼요.",
+          "answer": "(x-4)(x-5)"
+        },
+        "explained_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 수는 4와 5예요. 그래서 부호를 그대로 넣어서 (x+4)(x+5)로 써요. 전개하면 x^2+9x+20이 맞아요.",
+          "answer": "(x+4)(x+5)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-3",
+      "p2": "factor_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -1, 곱해서 -12가 되는 두 수를 찾으면 -4와 3이에요. 그래서 x^2-x-12는 (x-(-4))(x-3)처럼 보일 수 있는데, 정리하면 (x-4)(x+3)입니다.",
+          "answer": "(x-4)(x+3)"
+        },
+        "retry": {
+          "message": "더해서 -1, 곱해서 -12가 되는 두 수는 3과 -4예요. 그래서 인수분해하면 (x-3)(x+4)입니다.",
+          "answer": "(x-3)(x+4)"
+        },
+        "control_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 두 수는 4와 5예요. 그래서 인수분해하면 (x+4)(x+5)입니다.",
+          "answer": "(x+4)(x+5)"
+        },
+        "explained_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 두 수는 4와 5예요. 찾은 두 수를 부호 그대로 괄호 안에 넣으면 (x+4)(x+5)이고, 전개하면 x^2+9x+20이 맞아요.",
+          "answer": "(x+4)(x+5)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-3",
+      "p2": "factor_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -1, 곱해서 -12가 되는 수를 찾으면 -4와 3이야. 그래서 식은 (x-4)(x+3)로 인수분해돼.",
+          "answer": "(x-4)(x+3)"
+        },
+        "retry": {
+          "message": "아, 내가 답 형식을 잘못 썼네. 더해서 -1, 곱해서 -12가 되는 수는 -4와 3이니까 인수분해는 (x-4)(x+3)이야.",
+          "answer": "(x-4)(x+3)"
+        },
+        "control_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 수를 찾으면 4와 5야. 그래서 인수분해하면 (x+4)(x+5)야.",
+          "answer": "(x+4)(x+5)"
+        },
+        "explained_p2": {
+          "message": "더해서 9, 곱해서 20이 되는 두 수는 4와 5야. 부호를 그대로 넣으면 (x+4)(x+5)이고, 전개해 보면 x^2+9x+20이 맞아.",
+          "answer": "(x+4)(x+5)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-4",
+      "p2": "factor_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 9이고 곱해서 20이 되는 두 수는 4와 5예요. 그래서 x^2+9x+20은 (x+4)(x+5)로 인수분해돼요.",
+          "answer": "(x+4)(x+5)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 봤어요. 문제의 식에 맞춰서 더해서 9, 곱해서 20이 되는 4와 5를 넣으면 (x-4)(x-5)예요.",
+          "answer": "(x-4)(x-5)"
+        },
+        "control_p2": {
+          "message": "더해서 -8이고 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 (x-(-3))(x-(-5))로 쓰면 돼요.",
+          "answer": "(x+3)(x+5)"
+        },
+        "explained_p2": {
+          "message": "더해서 -8이고 곱해서 15인 두 수는 -3과 -5예요. 부호 그대로 넣으면 (x-3)(x-5)이고, 전개하면 x^2-8x+15가 돼요.",
+          "answer": "(x-3)(x-5)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-4",
+      "p2": "factor_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 9가 되고 곱해서 20이 되는 두 수를 찾으면 4와 5예요. 그래서 x^2+9x+20은 (x+4)(x+5)로 인수분해돼요.",
+          "answer": "(x+4)(x+5)"
+        },
+        "retry": {
+          "message": "다시 확인해도 더해서 9가 되고 곱해서 20이 되는 두 수는 4와 5예요. 그래서 인수분해하면 (x+4)(x+5)예요.",
+          "answer": "(x+4)(x+5)"
+        },
+        "control_p2": {
+          "message": "더해서 -8이 되고 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 인수분해하면 (x-3)(x-5)예요.",
+          "answer": "(x-3)(x-5)"
+        },
+        "explained_p2": {
+          "message": "더해서 -8이 되고 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 x^2-8x+15는 (x-3)(x-5)로 인수분해돼요.",
+          "answer": "(x-3)(x-5)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-4",
+      "p2": "factor_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 9, 곱해서 20이 되는 두 수는 4와 5예요. 그래서 주어진 식은 (x+4)(x+5)로 인수분해할 수 있어요.",
+          "answer": "(x+4)(x+5)"
+        },
+        "retry": {
+          "message": "더해서 9, 곱해서 20이 되는 수는 4와 5예요. 그래서 인수분해하면 (x+4)(x+5)예요.",
+          "answer": "(x+4)(x+5)"
+        },
+        "control_p2": {
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3과 -5예요. 그래서 인수분해하면 (x+3)(x+5)예요.",
+          "answer": "(x+3)(x+5)"
+        },
+        "explained_p2": {
+          "message": "더해서 -8, 곱해서 15가 되는 두 수는 -3과 -5예요. 부호 그대로 넣으면 (x-3)(x-5)이고, 전개해 보면 x^2-8x+15가 맞아요.",
+          "answer": "(x-3)(x-5)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-5",
+      "p2": "factor_sign-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3과 -5예요. 그래서 (x-(-3))(x-(-5))로 쓰면 됩니다.",
+          "answer": "(x+3)(x+5)"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 생각했어요. (x-3)(x-5)로 곱하면 x^2-8x+15가 됩니다.",
+          "answer": "(x-3)(x-5)"
+        },
+        "control_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 수는 3과 4예요. 그래서 (x-3)(x-4)로 인수분해할 수 있어요.",
+          "answer": "(x-3)(x-4)"
+        },
+        "explained_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3과 4예요. 부호 그대로 넣으면 (x+3)(x+4)가 됩니다.",
+          "answer": "(x+3)(x+4)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-5",
+      "p2": "factor_sign-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -8, 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 (x-(-3))(x-(-5))로 쓸 수 있어요.",
+          "answer": "(x+3)(x+5)"
+        },
+        "retry": {
+          "message": "더해서 -8, 곱해서 15가 되는 두 수는 -3과 -5가 아니라 -3과 -5로 보면 안 되고, 실제로는 -3과 -5를 쓰면 전개가 달라져요. 다시 확인해 보면 더해서 -8, 곱해서 15가 되는 수는 -3과 -5가 맞아서 식은 (x-3)(x-5)예요.",
+          "answer": "(x-3)(x-5)"
+        },
+        "control_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3과 4예요. 그래서 x^2+7x+12는 (x+3)(x+4)로 인수분해돼요.",
+          "answer": "(x+3)(x+4)"
+        },
+        "explained_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3과 4예요. 부호 그대로 넣으면 (x+3)(x+4)이고, 전개하면 x^2+7x+12가 돼요.",
+          "answer": "(x+3)(x+4)"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "factor_sign",
+      "p1": "factor_sign-5",
+      "p2": "factor_sign-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3과 -5예요. 그래서 (x-(-3))(x-(-5))로 쓸 수 있어요.",
+          "answer": "(x+3)(x+5)"
+        },
+        "retry": {
+          "message": "아, 더해서 -8이고 곱해서 15인 수는 -3, -5예요. 그래서 인수분해하면 (x-3)(x-5)입니다.",
+          "answer": "(x-3)(x-5)"
+        },
+        "control_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 수는 3과 4예요. 그래서 인수분해하면 (x-3)(x-4)입니다.",
+          "answer": "(x-3)(x-4)"
+        },
+        "explained_p2": {
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3과 4예요. 부호 그대로 넣으면 (x+3)(x+4)가 되고, 전개하면 x^2+7x+12가 맞아요.",
+          "answer": "(x+3)(x+4)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-0",
+      "p2": "root_sign-1",
+      "labels": {
+        "pre": "correct",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+3x+2를 인수분해하면 (x+1)(x+2)=0이 돼요. 그래서 괄호 안의 수를 반대로 해서 해를 구하면 돼요.",
+          "answer": "-1, -2"
+        },
+        "retry": {
+          "message": "인수분해하면 (x+1)(x+2)=0이에요. 제가 알고 있는 방법대로는 괄호 안의 수 1, 2가 해예요.",
+          "answer": "1, 2"
+        },
+        "control_p2": {
+          "message": "인수분해하면 (x-5)(x-2)=0이에요. 제가 알고 있는 방법대로는 괄호 안의 수 5, 2가 해예요.",
+          "answer": "5, 2"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 괄호 안을 0으로 만드는 x를 찾는 거였네요. x^2-7x+10은 (x-5)(x-2)=0으로 인수분해되니까 해를 구해 보면 돼요.",
+          "answer": "5, 2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-0",
+      "p2": "root_sign-1",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2+3x+2는 (x+1)(x+2)=0으로 인수분해돼요. 그래서 x+1=0 또는 x+2=0이니까 해는 -1, -2예요.",
+          "answer": "-1, -2"
+        },
+        "retry": {
+          "message": "다시 인수분해해 보면 x^2+3x+2=(x+1)(x+2)예요. 그래서 각각 0이 되는 x를 찾으면 돼요.",
+          "answer": "-1, -2"
+        },
+        "control_p2": {
+          "message": "x^2-7x+10은 (x-5)(x-2)로 인수분해돼요. 그래서 각각 0이 되는 값을 찾으면 해는 5, 2예요.",
+          "answer": "5, 2"
+        },
+        "explained_p2": {
+          "message": "아, 맞네. 괄호를 0으로 만드는 x를 찾아야 해. 그래서 x^2-7x+10을 (x-2)(x-5)=0으로 인수분해하면, x=2 또는 x=5야.",
+          "answer": "2, 5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-0",
+      "p2": "root_sign-1",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "이차방정식 x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이에요. 그래서 괄호 안의 수를 각각 해로 보면 됩니다.",
+          "answer": "-1, -2"
+        },
+        "retry": {
+          "message": "아, 제가 괄호 안의 수를 그대로 해로 적으면 안 되고, 부호를 바꿔서 생각해야 했네요. x^2+3x+2=0은 (x+1)(x+2)=0이니까 해는 -1, -2예요.",
+          "answer": "-1, -2"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2-7x+10=(x-5)(x-2)예요. 그래서 해는 5와 2입니다.",
+          "answer": "5, 2"
+        },
+        "explained_p2": {
+          "message": "아, 맞다. (x+1)(x+4)=0이면 x=-1, -4처럼 괄호 안을 0으로 만드는 값이 해예요. 그럼 x^2-7x+10=0은 인수분해해서 (x-5)(x-2)=0이니까 해를 구하면 돼요.",
+          "answer": "2, 5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-1",
+      "p2": "root_sign-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "이 식은 인수분해하면 x^2-7x+10=(x-5)(x-2)=0이 돼요. 괄호 안의 수가 그대로 해이니까 해는 5와 2예요.",
+          "answer": "5, 2"
+        },
+        "retry": {
+          "message": "아, 제가 답 쓰는 형식을 조금 잘못했네요. 인수분해하면 (x-5)(x-2)=0이라서 해는 2와 5예요.",
+          "answer": "2, 5"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2+x-6=(x+3)(x-2)=0이에요. 그러니까 해는 -3이랑 2예요.",
+          "answer": "-3, 2"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x+3)(x-2)=0으로 인수분해하면 각 괄호가 0이 되는 x를 찾으면 돼요. 그래서 해를 구한 다음 원래 식에 넣어 보면 0이 되는지 확인할 수 있어요.",
+          "answer": "-3, 2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-1",
+      "p2": "root_sign-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "인수분해하면 x^2-7x+10=(x-5)(x-2)=0이야. 그래서 괄호 안의 수가 해가 되니까 x=5, 2야.",
+          "answer": "5, 2"
+        },
+        "retry": {
+          "message": "다시 풀어보면 x^2-7x+10은 (x-5)(x-2)=0으로 인수분해돼. 그래서 해는 2와 5야. 이번엔 순서만 바꿔서 써볼게.",
+          "answer": "2, 5"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2+x-6=(x+3)(x-2)=0이야. 그래서 괄호 안의 수가 해가 되니까 -3, 2야.",
+          "answer": "-3, 2"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x+1)(x+4)=0이면 x=-1, -4가 맞아. 그래서 이번 식도 인수분해해서 풀어 볼게. x^2+x-6=(x+3)(x-2)이니까 해는 -3이랑 2야.",
+          "answer": "-3, 2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-1",
+      "p2": "root_sign-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "인수분해하면 x^2-7x+10=(x-5)(x-2)예요. 그래서 각 괄호를 0으로 두면 해는 5와 2예요.",
+          "answer": "5, 2"
+        },
+        "retry": {
+          "message": "인수분해하면 x^2-7x+10=(x-5)(x-2)=0이 돼요. 그래서 해는 5와 2인데, 보통 작은 수부터 쓰면 2, 5예요.",
+          "answer": "2, 5"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2+x-6=(x+3)(x-2)예요. 그래서 각 괄호를 0으로 두면 해는 -3과 2예요.",
+          "answer": "-3, 2"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x+3)(x-2)=0으로 인수분해되니까 x+3=0 또는 x-2=0이야. 그래서 해는 -3, 2예요.",
+          "answer": "-3, 2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-2",
+      "p2": "root_sign-3",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+x-6을 인수분해하면 (x+3)(x-2)=0이 돼요. 그래서 각 괄호를 0으로 두면 해를 구할 수 있어요.",
+          "answer": "-3, 2"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 x^2+x-6은 (x+3)(x-2)=0으로 인수분해돼요. 그래서 해는 x=-3, x=2예요.",
+          "answer": "-3, 2"
+        },
+        "control_p2": {
+          "message": "x^2-2x-8을 인수분해하면 (x-4)(x+2)=0이에요. 그래서 각 괄호를 0으로 두면 해를 바로 찾을 수 있어요.",
+          "answer": "4, -2"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요! 괄호 안을 0으로 만드는 x가 해예요. 그래서 x^2-2x-8을 인수분해해서 확인해 볼게요.",
+          "answer": "4, -2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-2",
+      "p2": "root_sign-3",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "인수분해하면 x^2+x-6=(x+3)(x-2)예요. 그래서 각 괄호를 0으로 두면 해를 바로 찾을 수 있어요.",
+          "answer": "-3, 2"
+        },
+        "retry": {
+          "message": "아, 제가 괄호를 잘못 확인했어요. x^2+x-6=(x+3)(x-2) 이므로 해는 x=-3, 2예요.",
+          "answer": "-3, 2"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2-2x-8=(x-4)(x+2)예요. 그래서 각 괄호를 0으로 두면 해는 4, -2예요.",
+          "answer": "4, -2"
+        },
+        "explained_p2": {
+          "message": "아, 그렇구나. (x+1)(x+4)=0이면 x+1=0, x+4=0으로 두는 게 맞네. 그럼 x^2-2x-8=0도 인수분해해서 해를 찾을게.",
+          "answer": "-2, 4"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-2",
+      "p2": "root_sign-3",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+x-6을 인수분해하면 (x+3)(x-2)=0이 돼요. 그래서 각 괄호 안의 수를 해로 보면 됩니다.",
+          "answer": "-3, 2"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 인수분해는 (x+3)(x-2)=0이에요. 그래서 해는 -3, 2입니다.",
+          "answer": "-3, 2"
+        },
+        "control_p2": {
+          "message": "x^2-2x-8을 인수분해하면 (x-4)(x+2)=0이에요. 그래서 각 괄호를 0으로 두면 해를 찾을 수 있어요.",
+          "answer": "4, -2"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 괄호 안을 0으로 만드는 x를 찾아야 하네요. x^2-2x-8은 (x-4)(x+2)=0으로 인수분해되니까 해는 4, -2예요.",
+          "answer": "4, -2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-3",
+      "p2": "root_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2-2x-8은 인수분해하면 (x-4)(x+2)=0이 돼요. 그래서 괄호 안의 수가 해라서 x=4, -2예요.",
+          "answer": "-2, 4"
+        },
+        "retry": {
+          "message": "다시 풀어보면 x^2-2x-8=0은 (x-4)(x+2)=0으로 인수분해돼요. 그래서 해는 4, -2예요.",
+          "answer": "-2, 4"
+        },
+        "control_p2": {
+          "message": "x^2+8x+15는 인수분해하면 (x+3)(x+5)=0이에요. 그래서 괄호 안의 수가 해라서 -3, -5예요.",
+          "answer": "-3, -5"
+        },
+        "explained_p2": {
+          "message": "아, 맞아. (x+1)(x+4)=0이면 각각 0이 되게 하는 x를 찾아야 해. 그래서 이번 식도 인수분해해서 해를 구해볼게.",
+          "answer": "-5, -3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-3",
+      "p2": "root_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식을 인수분해하면 x^2-2x-8=(x-4)(x+2)로 볼 수 있어요. 그래서 각 괄호를 0으로 두면 해를 찾을 수 있어요.",
+          "answer": "4, -2"
+        },
+        "retry": {
+          "message": "다시 인수분해해 보면 x^2-2x-8=(x-4)(x+2)예요. 그래서 해는 4와 -2입니다.",
+          "answer": "4, -2"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2+8x+15=(x+3)(x+5)예요. 그래서 각 괄호를 0으로 두면 해를 구할 수 있어요.",
+          "answer": "-3, -5"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x+3)(x+5)=0으로 인수분해되니까 x+3=0 또는 x+5=0이어야 해요. 그래서 해는 x=-3, x=-5예요.",
+          "answer": "-3, -5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-3",
+      "p2": "root_sign-4",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2-2x-8을 인수분해하면 (x-4)(x+2)=0이 돼요. 그래서 괄호 안의 수를 그대로 보면 해는 4, -2예요.",
+          "answer": "4, -2"
+        },
+        "retry": {
+          "message": "아, 답 쓰는 형식이 조금 어긋났나 봐요. 다시 쓰면 x^2-2x-8=(x-4)(x+2)로 인수분해되고, 그래서 해는 4랑 -2예요.",
+          "answer": "4, -2"
+        },
+        "control_p2": {
+          "message": "x^2+8x+15는 인수분해하면 (x+3)(x+5)=0이 돼요. 그러니까 괄호 안의 수를 그대로 보면 해는 -3, -5예요.",
+          "answer": "-3, -5"
+        },
+        "explained_p2": {
+          "message": "아, 그렇네. (x+1)(x+4)=0이면 각각 0이 되게 하는 x를 찾아야 해. x^2+8x+15=0도 인수분해하면 (x+3)(x+5)=0이라서 해는 -3, -5야.",
+          "answer": "-3, -5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-4",
+      "p2": "root_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+8x+15는 인수분해하면 (x+3)(x+5)=0이 돼요. 그래서 각 괄호를 0으로 놓으면 해는 -3, -5예요.",
+          "answer": "-3, -5"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 봤네요. x^2+8x+15는 (x+3)(x+5)=0으로 인수분해돼서 x는 -3, -5예요.",
+          "answer": "-3, -5"
+        },
+        "control_p2": {
+          "message": "x^2-9x+14는 (x-7)(x-2)=0으로 인수분해돼요. 그래서 해는 7, 2예요.",
+          "answer": "7, 2"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 괄호 안의 수 자체가 해가 아니라, 각각을 0으로 만드는 x가 해예요. x^2-9x+14=0은 (x-7)(x-2)=0으로 인수분해되니까 해는 7, 2예요.",
+          "answer": "7, 2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-4",
+      "p2": "root_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+8x+15=0을 인수분해하면 (x+3)(x+5)=0이 돼요. 그래서 각 괄호 안이 0이 되는 값을 찾으면 해는 -3, -5예요.",
+          "answer": "-3, -5"
+        },
+        "retry": {
+          "message": "아, 제가 부호를 잘못 봤네요. x^2+8x+15=0은 (x+3)(x+5)=0으로 인수분해되니까 해는 x=-3, x=-5예요.",
+          "answer": "-3, -5"
+        },
+        "control_p2": {
+          "message": "x^2-9x+14=0은 (x-7)(x-2)=0으로 인수분해돼요. 그래서 해는 7, 2예요.",
+          "answer": "7, 2"
+        },
+        "explained_p2": {
+          "message": "아, 그렇네! 괄호 안의 수 자체가 아니라, 괄호를 0으로 만드는 x를 찾아야 해. x^2-9x+14=0을 인수분해하면 (x-7)(x-2)=0이니까 해는 7과 2야.",
+          "answer": "7, 2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-4",
+      "p2": "root_sign-5",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2+8x+15는 (x+3)(x+5)로 인수분해돼요. 그래서 각각 0이 되게 하는 값을 찾으면 해를 구할 수 있어요.",
+          "answer": "-3, -5"
+        },
+        "retry": {
+          "message": "아, 제가 답을 잘못 적었네요. x^2+8x+15=(x+3)(x+5) 이라서 x+3=0, x+5=0으로 풀면 돼요.",
+          "answer": "-3, -5"
+        },
+        "control_p2": {
+          "message": "x^2-9x+14는 (x-7)(x-2)로 인수분해돼요. 그래서 괄호 안의 수가 해예요.",
+          "answer": "7, 2"
+        },
+        "explained_p2": {
+          "message": "말해 준 대로 생각해 보니까, 괄호 안의 수가 해가 아니라 괄호를 0으로 만드는 x가 해예요. 그래서 x^2-9x+14를 (x-7)(x-2)=0으로 보고 풀면 돼요.",
+          "answer": "2, 7"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "p1": "root_sign-5",
+      "p2": "root_sign-0",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "이 식은 인수분해하면 (x-7)(x-2)=0이 돼요. 그래서 괄호 안의 수를 각각 해로 보면 됩니다.",
+          "answer": "2, 7"
+        },
+        "retry": {
+          "message": "아, 인수분해는 맞는데 해를 쓰는 순서를 다시 확인해볼게요. x^2-9x+14=0은 (x-7)(x-2)=0이라서 해는 7, 2예요.",
+          "answer": "7, 2"
+        },
+        "control_p2": {
+          "message": "인수분해하면 (x+1)(x+2)=0이 돼요. 그래서 괄호 안을 0으로 만드는 값이 해예요.",
+          "answer": "-1, -2"
+        },
+        "explained_p2": {
+          "message": "아, 그러면 괄호를 0으로 만드는 x를 해라고 보면 되네요. x^2+3x+2는 (x+1)(x+2)=0으로 인수분해할 수 있으니까, x=-1 또는 x=-2예요.",
+          "answer": "-1, -2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "p1": "root_sign-5",
+      "p2": "root_sign-0",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2-9x+14=0을 인수분해하면 (x-7)(x-2)=0이 돼요. 그래서 괄호 안의 수가 해예요.",
+          "answer": "7, 2"
+        },
+        "retry": {
+          "message": "아, 내가 인수분해를 할 때 부호를 잘못 봤어. x^2-9x+14=0은 (x-7)(x-2)=0이니까 x가 7이랑 2일 때 성립해.",
+          "answer": "2, 7"
+        },
+        "control_p2": {
+          "message": "x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이 돼요. 그래서 각 괄호 안의 수를 반대로 해서 해를 구하면 돼요.",
+          "answer": "-1, -2"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. (x+1)(x+4)=0이면 각 괄호를 0으로 만드는 x를 찾아야 하네요. 그러면 x^2+3x+2=0은 (x+1)(x+2)=0으로 인수분해돼요.",
+          "answer": "-1, -2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "root_sign",
+      "p1": "root_sign-5",
+      "p2": "root_sign-0",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "인수분해하면 x^2-9x+14=(x-7)(x-2)예요. 그래서 괄호 안의 수가 해가 되니까 7, 2입니다.",
+          "answer": "7, 2"
+        },
+        "retry": {
+          "message": "아, 순서를 잘못 썼네. x^2-9x+14는 (x-2)(x-7)=0으로 인수분해돼서 해는 2, 7이야.",
+          "answer": "2, 7"
+        },
+        "control_p2": {
+          "message": "인수분해하면 x^2+3x+2=(x+1)(x+2)예요. 그래서 괄호 안의 수가 해라서 -1, -2입니다.",
+          "answer": "-1, -2"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x+1)(x+4)=0이면 각각 0이 되게 하는 x를 찾아야 하니까 해는 -1, -4예요. 그러면 x^2+3x+2=0도 인수분해해서 풀어 볼게요.",
+          "answer": "-1, -2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-0",
+      "p2": "divide_by_x-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=7이 돼요. 그래서 해는 7이에요.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, x로 나누는 과정에서 x=0인 경우를 빠뜨렸네요. x^2=7x는 x(x-7)=0이니까 해는 0과 7이에요.",
+          "answer": "0, 7"
+        },
+        "control_p2": {
+          "message": "식이 x(x-6)=0이라서 x=0이거나 x=6이에요. 중근은 아니니까 둘 다 써야 해요.",
+          "answer": "0, 6"
+        },
+        "explained_p2": {
+          "message": "아, 그렇네. x로 바로 나누면 0이 될 수도 있으니까 조심해야 해요. 그래서 x^2-6x=0을 x(x-6)=0으로 묶어서 풀면 x=0 또는 x=6이에요.",
+          "answer": "0, 6"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-0",
+      "p2": "divide_by_x-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=7이 돼요. 그래서 해는 7입니다.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, x로 나눌 때 x=0인 경우를 빼먹으면 안 되네요. x^2=7x를 정리하면 x(x-7)=0이어서 x=0 또는 x=7이에요.",
+          "answer": "0, 7"
+        },
+        "control_p2": {
+          "message": "식에서 x를 묶으면 x(x-6)=0이 돼요. 그래서 x=0 또는 x=6이에요.",
+          "answer": "0, 6"
+        },
+        "explained_p2": {
+          "message": "x^2-6x=0이니까 한쪽으로 모아서 x(x-6)=0으로 인수분해하면 돼요. 그래서 x=0 또는 x=6이에요.",
+          "answer": "0, 6"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-0",
+      "p2": "divide_by_x-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=7이 돼요. 그래서 해는 7입니다.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 x^2=7x를 x^2-7x=0으로 보고, x(x-7)=0이니까 해는 0이랑 7이에요.",
+          "answer": "0, 7"
+        },
+        "control_p2": {
+          "message": "x^2-6x=0이니까 x를 묶으면 x(x-6)=0이에요. 그래서 해는 0, 6입니다.",
+          "answer": "0, 6"
+        },
+        "explained_p2": {
+          "message": "이제는 x로 나누지 않고 한쪽으로 모아서 인수분해할게요. x^2-6x=0을 x(x-6)=0으로 만들면 x=0 또는 x=6입니다.",
+          "answer": "0, 6"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-1",
+      "p2": "divide_by_x-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식을 x^2=6x로 보고 양변을 x로 나누면 x=6이 나와요. 그래서 해는 6입니다.",
+          "answer": "6"
+        },
+        "retry": {
+          "message": "아, 0도 해가 될 수 있네요. x^2-6x=0에서 x를 묶으면 x(x-6)=0이니까, 해는 0하고 6이에요.",
+          "answer": "0, 6"
+        },
+        "control_p2": {
+          "message": "2x^2=10x에서 양변을 2x로 나누면 x=5가 나와요. 또 x를 묶어서 2x(x-5)=0이니까 x=0도 해예요.",
+          "answer": "0, 5"
+        },
+        "explained_p2": {
+          "message": "양변을 한쪽으로 모으면 2x^2-10x=0이에요. 여기서 2x(x-5)=0으로 인수분해하면 x=0 또는 x=5가 나와요.",
+          "answer": "0, 5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-1",
+      "p2": "divide_by_x-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식에 x가 들어 있으니까 양변을 x로 나누면 x-6=0이 돼요. 그래서 x=6입니다.",
+          "answer": "6"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0일 때를 빠뜨릴 수 있네요. 그래서 x^2-6x=0을 x(x-6)=0으로 보고, 해는 0과 6입니다.",
+          "answer": "0, 6"
+        },
+        "control_p2": {
+          "message": "양변을 x로 나누면 2x=10이 돼서 x=5가 나와요. 그리고 x=0일 때도 식이 성립하니까 해는 0, 5예요.",
+          "answer": "0, 5"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. x로 바로 나누면 안 될 수 있네요. 이번에는 2x^2-10x=0으로 옮기고 2x(x-5)=0으로 인수분해하면 돼요.",
+          "answer": "0, 5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-1",
+      "p2": "divide_by_x-2",
+      "labels": {
+        "pre": "correct",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식이 0이 되려면 x를 묶어서 생각해보면 돼. x=0일 때도 성립하고, x로 나누면 x-6=0이라서 x=6이 나와.",
+          "answer": "0, 6"
+        },
+        "retry": {
+          "message": "아, 내가 x로만 나누는 방식으로 생각해서 0인 경우를 놓쳤네. 식을 x(x-6)=0으로 보면 x=0 또는 x=6이야.",
+          "answer": "0, 6"
+        },
+        "control_p2": {
+          "message": "식을 2x^2=10x에서 양변을 2x로 나누면 x=5가 나와. 또 x=0도 대입하면 성립해.",
+          "answer": "0, 5"
+        },
+        "explained_p2": {
+          "message": "양변을 한쪽으로 모으면 2x^2-10x=0이야. 여기서 2x(x-5)=0으로 인수분해하면 x=0 또는 x=5야.",
+          "answer": "0, 5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-2",
+      "p2": "divide_by_x-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 2x=10이 돼요. 그래서 x=5예요.",
+          "answer": "5"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0인 경우를 빠뜨릴 수 있네요. 그래서 2x^2=10x를 한쪽으로 모으면 2x^2-10x=0이고, x를 묶어서 2x(x-5)=0이 돼요. 그러면 x=0 또는 x=5예요.",
+          "answer": "0, 5"
+        },
+        "control_p2": {
+          "message": "식을 한쪽으로 모으면 x^2+5x=0이에요. x를 묶으면 x(x+5)=0이 되니까 x=0 또는 x=-5예요.",
+          "answer": "0, -5"
+        },
+        "explained_p2": {
+          "message": "아, 맞아. x로 나누면 0일 수도 있는 해를 놓칠 수 있네. 그래서 x^2+5x=0을 한쪽으로 모아서 x(x+5)=0으로 인수분해하면 돼.",
+          "answer": "0, -5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-2",
+      "p2": "divide_by_x-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 2x=10이 돼요. 그래서 x=5예요.",
+          "answer": "5"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0일 때는 빠질 수 있겠네요. 그래서 2x^2=10x를 정리하면 해가 0과 5예요.",
+          "answer": "0, 5"
+        },
+        "control_p2": {
+          "message": "양변을 x로 나누면 x+5=0이 돼서 x=-5예요. 그런데 x=0일 때도 식이 성립하니까 해는 0과 -5예요.",
+          "answer": "0, -5"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. x=0일 수도 있어서 바로 나누면 안 되겠다. 이번에는 x^2+5x=0을 한쪽으로 모아서 x(x+5)=0으로 만들면 돼.",
+          "answer": "0, -5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-2",
+      "p2": "divide_by_x-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 2x=10이 돼요. 그래서 x=5입니다.",
+          "answer": "5"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 2x^2=10x를 2x^2-10x=0으로 보고, x를 묶으면 2x(x-5)=0이라서 x=0 또는 x=5예요.",
+          "answer": "0, 5"
+        },
+        "control_p2": {
+          "message": "x^2+5x=0에서 x를 묶으면 x(x+5)=0이에요. 그래서 x=0 또는 x=-5예요.",
+          "answer": "0, -5"
+        },
+        "explained_p2": {
+          "message": "알겠어. 이번엔 한쪽으로 모아서 인수분해해 볼게요. x^2+5x=0이니까 x(x+5)=0이라서 x=0 또는 x=-5예요.",
+          "answer": "0, -5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-3",
+      "p2": "divide_by_x-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식에 x가 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.",
+          "answer": "-5"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0일 때를 놓칠 수 있네요. 식을 x(x+5)=0으로 보면 x=0 또는 x+5=0이에요.",
+          "answer": "0, -5"
+        },
+        "control_p2": {
+          "message": "양변을 4x로 나누면 x=3이 돼요. 그런데 x=0도 되는지 확인해 보면 0=0이라서 해가 맞아요.",
+          "answer": "0, 3"
+        },
+        "explained_p2": {
+          "message": "양변을 한쪽으로 모으면 4x^2-12x=0이에요. 4x로 묶으면 4x(x-3)=0이니까 x=0 또는 x=3이에요.",
+          "answer": "0, 3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-3",
+      "p2": "divide_by_x-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.",
+          "answer": "-5"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 x^2+5x=0을 x(x+5)=0으로 보고 풀면 x=0 또는 x=-5예요.",
+          "answer": "0, -5"
+        },
+        "control_p2": {
+          "message": "양변을 4x로 나누면 x=3이 나와요. 그런데 x=0인 경우도 빠질 수 있으니까 따로 확인하면 0도 해예요.",
+          "answer": "0, 3"
+        },
+        "explained_p2": {
+          "message": "알겠어. 이번에는 한쪽으로 모아서 묶어 볼게요. 4x^2-12x=0이니까 4x(x-3)=0이고, 그래서 x=0 또는 x=3이에요.",
+          "answer": "0, 3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-3",
+      "p2": "divide_by_x-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식에 x가 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.",
+          "answer": "-5"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0일 때를 놓칠 수 있네요. 그래서 x(x+5)=0으로 보고 풀어야 해요.",
+          "answer": "0, -5"
+        },
+        "control_p2": {
+          "message": "양변을 4x로 나누면 x=3이 나와요. 그런데 x=0일 때도 확인해야 해서 해는 0, 3이에요.",
+          "answer": "0, 3"
+        },
+        "explained_p2": {
+          "message": "양변을 한쪽으로 모으면 4x^2-12x=0이에요. 여기서 4x(x-3)=0으로 인수분해하면 x=0 또는 x=3이에요.",
+          "answer": "0, 3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-4",
+      "p2": "divide_by_x-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 4x=12가 돼. 그래서 x=3이야.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "아, 생각해 보니까 양변을 x로 나누면 x=0일 때를 놓칠 수 있네. 그래서 4x^2=12x를 4x^2-12x=0으로 보고, x를 묶으면 4x(x-3)=0이야.",
+          "answer": "0, 3"
+        },
+        "control_p2": {
+          "message": "양변을 한쪽으로 모으면 x^2+3x=0이야. 여기서 x를 묶으면 x(x+3)=0이라서 x=0 또는 x=-3이야.",
+          "answer": "0, -3"
+        },
+        "explained_p2": {
+          "message": "아, 맞아. x로 나누면 x=0인 경우를 놓칠 수 있네. 이번엔 x^2+3x=0으로 옮겨서 x(x+3)=0으로 풀면 돼.",
+          "answer": "0, -3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-4",
+      "p2": "divide_by_x-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 4x=12가 돼요. 그래서 x=3이에요.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0인 경우를 놓칠 수 있네요. 식을 정리하면 4x^2-12x=0이고, 4x(x-3)=0이 돼요. 그래서 해는 0, 3이에요.",
+          "answer": "0, 3"
+        },
+        "control_p2": {
+          "message": "식을 한쪽으로 모으면 x^2+3x=0이에요. 그래서 x(x+3)=0이 되고, 해는 x=0 또는 x=-3이에요.",
+          "answer": "0, -3"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. x로 나누면 x=0을 놓칠 수 있으니까 한쪽으로 옮겨서 풀어야 해요. x^2=-3x는 x^2+3x=0이고, x(x+3)=0이라서 해는 0과 -3이에요.",
+          "answer": "0, -3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-4",
+      "p2": "divide_by_x-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 4x=12가 돼요. 그래서 x=3이에요.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 4x^2=12x를 4x^2-12x=0으로 보고, 4x(x-3)=0이니까 해는 0, 3이에요.",
+          "answer": "0, 3"
+        },
+        "control_p2": {
+          "message": "양변을 한쪽으로 모으면 x^2+3x=0이에요. 여기서 x를 묶으면 x(x+3)=0이라서 해는 0, -3이에요.",
+          "answer": "0, -3"
+        },
+        "explained_p2": {
+          "message": "이제는 양변을 한쪽으로 모아서 풀어볼게요. x^2+3x=0 이니까 x(x+3)=0 이고, 그래서 x=0 또는 x=-3이에요.",
+          "answer": "0, -3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-5",
+      "p2": "divide_by_x-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=-3이 됩니다. 그래서 해는 -3입니다.",
+          "answer": "-3"
+        },
+        "retry": {
+          "message": "아, x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 x^2+3x=0으로 보고 x(x+3)=0이라서 해는 0, -3입니다.",
+          "answer": "0, -3"
+        },
+        "control_p2": {
+          "message": "양변을 한쪽으로 모으면 x^2-7x=0입니다. 그래서 x(x-7)=0이 되고, 해는 0과 7입니다.",
+          "answer": "0, 7"
+        },
+        "explained_p2": {
+          "message": "이제는 x로 나누지 않고 한쪽으로 옮겨서 풀어야겠어요. x^2-7x=0으로 만든 다음 x(x-7)=0으로 인수분해하면 됩니다. 그래서 해는 0, 7이에요.",
+          "answer": "0, 7"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-5",
+      "p2": "divide_by_x-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3입니다.",
+          "answer": "-3"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 x^2+3x=0으로 옮기고 x(x+3)=0으로 보면 돼요. 해는 0, -3입니다.",
+          "answer": "0, -3"
+        },
+        "control_p2": {
+          "message": "양변을 한쪽으로 모으면 x^2-7x=0이에요. x로 묶으면 x(x-7)=0이니까 해는 0, 7이에요.",
+          "answer": "0, 7"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. x로 바로 나누면 x=0인 경우를 놓칠 수 있네요. 그래서 x^2-7x=0으로 옮겨서 x(x-7)=0으로 인수분해하면 돼요.",
+          "answer": "0, 7"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-5",
+      "p2": "divide_by_x-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3입니다.",
+          "answer": "-3"
+        },
+        "retry": {
+          "message": "아, 양변을 x로 나누면 x=0인 경우를 빼먹을 수 있네요. 그래서 x^2+3x=0으로 고쳐서 보면 해는 x=0, -3이에요.",
+          "answer": "0, -3"
+        },
+        "control_p2": {
+          "message": "양변을 한쪽으로 모으면 x^2-7x=0이에요. 그래서 x(x-7)=0이니까 해는 0, 7입니다.",
+          "answer": "0, 7"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. x가 0일 수도 있으니까 바로 x로 나누면 안 되네요. x^2=7x는 한쪽으로 옮겨서 x^2-7x=0, 그래서 x(x-7)=0으로 풀면 돼요.",
+          "answer": "0, 7"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-0",
+      "p2": "positive_sqrt_only-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2=16이니까 제곱해서 16이 되는 수를 찾으면 돼요. 4^2=16이므로 x=4예요.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 제곱해서 16이 되는 수는 4만이 아니라 -4도 있어요. 그래서 해는 4와 -4예요.",
+          "answer": "4, -4"
+        },
+        "control_p2": {
+          "message": "식 x^2-49=0을 정리하면 x^2=49예요. 49가 되게 하는 수는 7과 -7이니까 해는 두 개예요.",
+          "answer": "7, -7"
+        },
+        "explained_p2": {
+          "message": "x^2-49=0이면 x^2=49로 옮길 수 있어요. 제곱해서 49가 되는 수는 7과 -7이니까 해는 두 개예요.",
+          "answer": "7, -7"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-0",
+      "p2": "positive_sqrt_only-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2=16이니까 제곱해서 16이 되는 수를 찾으면 돼요. 4^2=16이므로 x=4예요.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "x^2=16이면 제곱해서 16이 되는 수를 찾으면 돼요. 4^2=16이니까 x=4예요.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "x^2-49=0이니까 x^2=49로 바꿀 수 있어요. 49의 제곱근은 7이니까 x=7이에요.",
+          "answer": "7"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 제곱해서 49가 되는 수는 7과 -7 두 개예요. 그래서 x^2=49로 바꾼 다음 x=7 또는 x=-7로 풀면 돼요.",
+          "answer": "7, -7"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-0",
+      "p2": "positive_sqrt_only-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2=16이니까 제곱해서 16이 되는 수를 찾으면 돼요. 4의 제곱이 16이므로 x=4예요.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 x^2=16은 4만 있는 게 아니라 -4도 제곱하면 16이 되네요. 그래서 해는 4, -4예요.",
+          "answer": "4, -4"
+        },
+        "control_p2": {
+          "message": "x^2-49=0이면 x^2=49로 옮길 수 있어요. 49가 되게 하는 수는 7과 -7이니까 해는 두 개예요.",
+          "answer": "7, -7"
+        },
+        "explained_p2": {
+          "message": "아, 제곱해서 49가 되는 수는 7만 있는 게 아니라 -7도 있네요. 그래서 x^2=49로 보고 x=7 또는 x=-7이에요.",
+          "answer": "7, -7"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-1",
+      "p2": "positive_sqrt_only-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2-49=0이니까 x^2=49로 고치면 돼요. 제곱해서 49가 되는 수는 7이니까 x=7입니다.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, x^2=49이면 7만 있는 게 아니라 -7도 같이 되네요. 그래서 x=7, x=-7입니다.",
+          "answer": "7, -7"
+        },
+        "control_p2": {
+          "message": "(x-2)^2=9이니까 x-2=3 또는 x-2=-3으로 볼 수 있어요. 그래서 x=5, x=-1입니다.",
+          "answer": "5, -1"
+        },
+        "explained_p2": {
+          "message": "맞아요, 제곱해서 9가 되는 수는 3과 -3이니까 (x-2)=3 또는 (x-2)=-3으로 풀면 돼요. 그래서 x=5 또는 x=-1입니다.",
+          "answer": "5, -1"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-1",
+      "p2": "positive_sqrt_only-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2-49=0에서 x^2=49로 만들 수 있어요. 제곱해서 49가 되는 수는 7이니까 x=7입니다.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, x^2=49이면 제곱해서 49가 되는 수가 7뿐만 아니라 -7도 있어요. 그래서 해는 7, -7입니다.",
+          "answer": "7, -7"
+        },
+        "control_p2": {
+          "message": "(x-2)^2=9이니까 x-2=3 또는 x-2=-3으로 두고 풀 수 있어요. 그래서 x=5, x=-1입니다.",
+          "answer": "5, -1"
+        },
+        "explained_p2": {
+          "message": "맞아요. (x-2)^2=9이니까 x-2=3 또는 x-2=-3으로 풀면 돼요. 그래서 x=5 또는 x=-1입니다.",
+          "answer": "5, -1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-1",
+      "p2": "positive_sqrt_only-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "식 x^2-49=0을 정리하면 x^2=49예요. 제곱해서 49가 되는 수는 7이니까 x=7입니다.",
+          "answer": "7"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 x^2=49이면 7만 있는 게 아니라 -7도 제곱하면 49가 돼요. 그래서 해는 7과 -7입니다.",
+          "answer": "-7, 7"
+        },
+        "control_p2": {
+          "message": "(x-2)^2=9이니까 x-2=3 또는 x-2=-3으로 볼 수 있어요. 그래서 x=5, x=-1이에요.",
+          "answer": "-1, 5"
+        },
+        "explained_p2": {
+          "message": "아, 제곱근을 구할 때는 ±를 같이 생각해야 하네요. (x-2)^2=9 이니까 x-2=3 또는 x-2=-3으로 풀면 돼요. 그래서 x는 5 또는 -1입니다.",
+          "answer": "5, -1"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-2",
+      "p2": "positive_sqrt_only-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x-2)^2=9 이니까 x-2는 9의 제곱근인 3이라고 보면 돼요. 그래서 x=5예요.",
+          "answer": "5"
+        },
+        "retry": {
+          "message": "아, 제가 (x-2)^2=9에서 x-2를 3으로만 생각했네요. 제곱해서 9가 되는 수는 3과 -3이니까, x-2=3 또는 x-2=-3이에요.",
+          "answer": "5, -1"
+        },
+        "control_p2": {
+          "message": "(x+1)^2=4 이니까 x+1은 4의 제곱근인 2 또는 -2예요. 그래서 x=1 또는 x=-3이에요.",
+          "answer": "1, -3"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 제곱하면 양수와 음수 둘 다 될 수 있으니까 ±를 같이 생각해야 하네요. 그러면 (x+1)^2=4에서 x+1=2 또는 x+1=-2로 풀면 돼요.",
+          "answer": "1, -3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-2",
+      "error": "JSONDecodeError('Extra data: line 1 column 112 (char 111)')"
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-2",
+      "p2": "positive_sqrt_only-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x-2)^2=9 이니까 x-2=3으로 두고 풀면 돼요. 그래서 x=5예요.",
+          "answer": "5"
+        },
+        "retry": {
+          "message": "아, (x-2)^2=9이면 제곱해서 9가 되는 수가 3이랑 -3이네요. 그래서 x-2=3 또는 x-2=-3으로 풀면 돼요.",
+          "answer": "5, -1"
+        },
+        "control_p2": {
+          "message": "(x+1)^2=4 이면 x+1이 2가 되거나 -2가 되네요. 그래서 x=1, x=-3이에요.",
+          "answer": "1, -3"
+        },
+        "explained_p2": {
+          "message": "(x+1)^2=4 이니까 x+1=2 또는 x+1=-2로 둘 수 있어요. 그래서 x=1 또는 x=-3이에요.",
+          "answer": "1, -3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-3",
+      "p2": "positive_sqrt_only-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x+1)^2=4이니까 제곱해서 4가 되는 수는 2라고 보고 x+1=2로 풀어요. 그래서 x=1입니다.",
+          "answer": "1"
+        },
+        "retry": {
+          "message": "아, 4는 제곱해서 4가 되는 수가 2뿐만 아니라 -2도 있네요. 그래서 x+1=2 또는 x+1=-2로 풀어야 해요.",
+          "answer": "1, -3"
+        },
+        "control_p2": {
+          "message": "2x^2=18이면 양변을 2로 나눠서 x^2=9가 돼요. 9가 되는 수는 3과 -3이니까 x는 3, -3입니다.",
+          "answer": "3, -3"
+        },
+        "explained_p2": {
+          "message": "2x^2=18이니까 양변을 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3과 -3이니까 해는 3, -3입니다.",
+          "answer": "3, -3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-3",
+      "p2": "positive_sqrt_only-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x+1)^2=4 이니까 x+1=2로 두고 풀면 돼요. 그래서 x=1이 나와요.",
+          "answer": "1"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 (x+1)^2=4에서 제곱해서 4가 되는 수는 2랑 -2예요. 그래서 x+1=2 또는 x+1=-2로 두고 풀면 돼요.",
+          "answer": "1, -3"
+        },
+        "control_p2": {
+          "message": "2x^2=18이니까 양변을 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3이니까 x=3이에요.",
+          "answer": "3"
+        },
+        "explained_p2": {
+          "message": "2x^2=18이면 먼저 양변을 2로 나눠서 x^2=9가 돼요. 그러면 x는 3 또는 -3이에요.",
+          "answer": "3, -3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-3",
+      "p2": "positive_sqrt_only-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x+1)^2=4 이니까 x+1=2로 두고 풀면 돼요. 그래서 x=1이에요.",
+          "answer": "1"
+        },
+        "retry": {
+          "message": "아, 4의 제곱근은 2 하나만이 아니라 2랑 -2도 있네요. 그래서 x+1=2 또는 x+1=-2로 두고 풀어야 해요. 그러면 x=1, -3이에요.",
+          "answer": "1, -3"
+        },
+        "control_p2": {
+          "message": "2x^2=18이면 양변을 2로 나누어서 x^2=9가 돼요. 제곱해서 9가 되는 수는 3이니까 x=3이에요.",
+          "answer": "3"
+        },
+        "explained_p2": {
+          "message": "아, 그러면 제곱해서 9가 되는 수는 3이랑 -3이니까 그렇게 풀면 되겠네요. 2x^2=18에서 양변을 2로 나누면 x^2=9예요.",
+          "answer": "3, -3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-4",
+      "p2": "positive_sqrt_only-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3이니까 x=3입니다.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "아, 제가 양변의 제곱근을 하나만 생각했네요. 2x^2=18에서 먼저 2로 나누면 x^2=9이고, 제곱해서 9가 되는 수는 3과 -3이니까 x=3, -3입니다.",
+          "answer": "3, -3"
+        },
+        "control_p2": {
+          "message": "양변에 제곱근을 생각하면 x-3=5 또는 x-3=-5예요. 그래서 x=8, -2입니다.",
+          "answer": "8, -2"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. (x-3)^2=25이면 x-3=5 또는 x-3=-5로 봐야 해요. 그래서 x=8 또는 x=-2가 돼요.",
+          "answer": "8, -2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-4",
+      "p2": "positive_sqrt_only-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3이니까 x=3입니다.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "양변을 2로 나누면 x^2=9예요. 그런데 제곱해서 9가 되는 수는 3과 -3이니까 x=3, -3입니다.",
+          "answer": "3, -3"
+        },
+        "control_p2": {
+          "message": "왼쪽이 (x-3)^2이니까 x-3=5로 두면 돼요. 그래서 x=8이에요.",
+          "answer": "8"
+        },
+        "explained_p2": {
+          "message": "아, 맞아. 제곱해서 25가 되는 수는 5만이 아니라 -5도 있네. 그래서 x-3=5 또는 x-3=-5로 풀어서 x=8 또는 x=-2야.",
+          "answer": "8, -2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-4",
+      "p2": "positive_sqrt_only-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "양변을 2로 나누면 x^2=9가 돼요. 제곱해서 9가 되는 수는 3이니까 x=3입니다.",
+          "answer": "3"
+        },
+        "retry": {
+          "message": "아, 2x^2=18이면 먼저 2로 나눠서 x^2=9가 돼요. 그러면 제곱해서 9가 되는 수는 3뿐만 아니라 -3도 있으니까 둘 다 해예요.",
+          "answer": "3, -3"
+        },
+        "control_p2": {
+          "message": "(x-3)^2=25이니까 x-3=5 또는 x-3=-5예요. 그래서 x는 8, -2입니다.",
+          "answer": "8, -2"
+        },
+        "explained_p2": {
+          "message": "(x-3)^2=25 이니까 x-3=5 또는 x-3=-5로 풀면 돼요. 그래서 x=8, x=-2예요.",
+          "answer": "8, -2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-5",
+      "p2": "positive_sqrt_only-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x-3)^2=25니까 x-3=5로 두고 풀면 돼요. 그래서 x=8이에요.",
+          "answer": "8"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 (x-3)^2=25는 제곱해서 25가 되는 수가 5랑 -5 둘 다 있네요. 그래서 x-3=5 또는 x-3=-5로 풀어야 해요.",
+          "answer": "8, -2"
+        },
+        "control_p2": {
+          "message": "x^2=16은 제곱해서 16이 되는 수를 찾으면 돼요. 그래서 x=4 또는 x=-4예요.",
+          "answer": "4, -4"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. 제곱해서 16이 되는 수는 4와 -4 둘 다야. 그래서 x^2=16이면 x=4 또는 x=-4야.",
+          "answer": "4, -4"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-5",
+      "p2": "positive_sqrt_only-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x-3)^2=25 이니까 x-3 = sqrt(25) = 5로 풀면 돼요. 그래서 x = 8이에요.",
+          "answer": "8"
+        },
+        "retry": {
+          "message": "아, 제가 한쪽만 생각했네요. (x-3)^2=25이면 제곱해서 25가 되는 수가 5랑 -5라서, x-3=5 또는 x-3=-5예요. 그래서 x는 8, -2예요.",
+          "answer": "8, -2"
+        },
+        "control_p2": {
+          "message": "x^2=16이면 제곱해서 16이 되는 수가 4니까 x=4예요.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. 제곱해서 16이 되는 수는 4랑 -4 둘 다야. 그래서 x^2=16의 해는 x=4, x=-4야.",
+          "answer": "4, -4"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-5",
+      "p2": "positive_sqrt_only-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(x-3)^2=25 이니까 x-3=5로 두고 풀면 돼요. 그래서 x=8이에요.",
+          "answer": "8"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 (x-3)^2=25라서 x-3이 5인 경우 말고 -5인 경우도 있어요. 그래서 x는 8, -2예요.",
+          "answer": "8, -2"
+        },
+        "control_p2": {
+          "message": "x^2=16이면 제곱해서 16이 되는 수를 생각하면 4예요. 그래서 x=4로 풀면 돼요.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "제곱해서 16이 되는 수는 4랑 -4예요. 그래서 x=4 또는 x=-4입니다.",
+          "answer": "4, -4"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-0",
+      "p2": "nonzero_product-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각각의 괄호를 6과 같게 두고 풀면 돼요. x-1=6 또는 x-2=6이니까 x=7, 8이에요.",
+          "answer": "7, 8"
+        },
+        "retry": {
+          "message": "아, 제가 전에 잘못 풀었어요. 식을 정리하면 (x-1)(x-2)=6이라서 x^2-3x+2=6, 그래서 x^2-3x-4=0이 돼요. 이걸 풀면 x=4 또는 x=-1이에요.",
+          "answer": "4, -1"
+        },
+        "control_p2": {
+          "message": "식을 정리하면 x^2-x-12=0이 돼요. 이건 (x-4)(x+3)=0으로 묶을 수 있어서 x=4 또는 x=-3이에요.",
+          "answer": "4, -3"
+        },
+        "explained_p2": {
+          "message": "맞아, 곱이 12라고 해서 바로 x-1=12로 둘 수는 없네. 먼저 식을 0으로 만들면 x^2-x-12=0이고, 인수분해하면 (x-4)(x+3)=0이야. 그래서 해는 4, -3이야.",
+          "answer": "4, -3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-0",
+      "p2": "nonzero_product-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 6과 같게 놓고 풀면 돼요. x-1=6이면 x=7이고, x-2=6이면 x=8이에요.",
+          "answer": "7, 8"
+        },
+        "retry": {
+          "message": "아, 제가 전에 잘못 풀었어요. 식을 정리하면 x^2-3x+2=6, 그래서 x^2-3x-4=0이 돼요. 이건 (x-4)(x+1)=0이라서 해는 4, -1이에요.",
+          "answer": "4, -1"
+        },
+        "control_p2": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같게 놓고 풀면 돼요. x=12 또는 x-1=12라서 x=13이에요.",
+          "answer": "12, 13"
+        },
+        "explained_p2": {
+          "message": "아, 그렇네. 곱이 12라고 해서 바로 각 괄호를 12와 같게 놓을 수는 없으니까 먼저 전개해서 0으로 만들어야 해요. x(x-1)=12를 정리하면 x^2-x-12=0이고, (x-4)(x+3)=0이 돼요.",
+          "answer": "4, -3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-0",
+      "p2": "nonzero_product-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 6과 같게 놓고 풀면 돼요. x-1=6이면 x=7, x-2=6이면 x=8이에요. 그래서 해는 7과 8입니다.",
+          "answer": "7, 8"
+        },
+        "retry": {
+          "message": "아, 곱셈 꼴이라고 바로 각 괄호를 6과 같게 두면 안 되네요. 식을 전개해서 다시 풀어보면 x^2-3x-4=0이 되고, (x-4)(x+1)=0이라서 해는 4와 -1이에요.",
+          "answer": "4, -1"
+        },
+        "control_p2": {
+          "message": "전개해서 풀어보면 x^2-x=12라서 x^2-x-12=0이 돼요. 인수분해하면 (x-4)(x+3)=0이니까 해는 4, -3이에요.",
+          "answer": "4, -3"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 12인 경우를 그냥 괄호마다 12로 두면 안 되는구나. 먼저 전개해서 x^2-x-12=0으로 만든 다음 인수분해하면 돼요. 그래서 x=4 또는 x=-3이에요.",
+          "answer": "4, -3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-1",
+      "p2": "nonzero_product-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변 12랑 같게 놓고 풀면 돼요. 그래서 x=12 또는 x-1=12라서 x=13이에요.",
+          "answer": "12, 13"
+        },
+        "retry": {
+          "message": "아, 제가 아까는 곱셈 꼴을 잘못 적용했어요. x(x-1)=12를 정리하면 x^2-x-12=0이고, (x-4)(x+3)=0이 돼요. 그래서 해는 4랑 -3이에요.",
+          "answer": "4, -3"
+        },
+        "control_p2": {
+          "message": "식은 x(x+2)=8이라서 정리하면 x^2+2x-8=0이에요. 인수분해하면 (x+4)(x-2)=0이니까 해는 2, -4예요.",
+          "answer": "2, -4"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 8일 때는 그냥 각 괄호를 8이랑 같게 두면 안 되는 거였네요. 그래서 먼저 전개해서 정리한 다음에 풀어야 해요. \nx(x+2)=8을 정리하면 x^2+2x-8=0이고, 인수분해하면 (x+4)(x-2)=0이에요.",
+          "answer": "-4, 2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-1",
+      "p2": "nonzero_product-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같다고 놓고 풀면 돼요. 그래서 x=12 또는 x-1=12라서 x=13이 나와요.",
+          "answer": "12, 13"
+        },
+        "retry": {
+          "message": "아, 제가 앞에서 곱셈꼴을 잘못 봤어요. 식을 정리하면 x^2-x-12=0이어서 (x-4)(x+3)=0이 됩니다. 그래서 해는 4, -3이에요.",
+          "answer": "4, -3"
+        },
+        "control_p2": {
+          "message": "식을 정리하면 x^2+2x-8=0이 돼요. 그래서 (x+4)(x-2)=0으로 묶을 수 있어요. 따라서 해는 2와 -4예요.",
+          "answer": "2, -4"
+        },
+        "explained_p2": {
+          "message": "맞아요, 곱이 8일 때는 바로 각 괄호를 8로 놓으면 안 되니까 먼저 우변을 0으로 만들어야 해요. x(x+2)=8을 전개하면 x^2+2x-8=0이고, 인수분해하면 (x+4)(x-2)=0이에요.",
+          "answer": "-4, 2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-1",
+      "p2": "nonzero_product-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같게 놓고 풀어요. 그래서 x=12 또는 x-1=12가 나와요.",
+          "answer": "12, 13"
+        },
+        "retry": {
+          "message": "아, 제가 아까 잘못 풀었어요. 식을 정리하면 x^2-x-12=0이고, 이것을 인수분해하면 (x-4)(x+3)=0이에요. 그래서 해는 4와 -3입니다.",
+          "answer": "4, -3"
+        },
+        "control_p2": {
+          "message": "식을 정리하면 x^2+2x-8=0이에요. 이것을 인수분해하면 (x+4)(x-2)=0이니까 해는 x=2, x=-4예요.",
+          "answer": "2, -4"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 8일 때는 그냥 각 괄호를 8이랑 같게 두면 안 되고, 먼저 0이 되게 만들어서 풀어야 하네요. 그래서 x^2+2x-8=0으로 바꾸고 인수분해하면 (x+4)(x-2)=0이에요.",
+          "answer": "-4, 2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-2",
+      "p2": "nonzero_product-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변 8과 같게 놓아볼게요. 그래서 x=8 또는 x+2=8이고, x=6이 나와요.",
+          "answer": "8, 6"
+        },
+        "retry": {
+          "message": "아, 내가 아까는 곱셈 꼴을 잘못 생각했네. 식을 정리하면 x^2+2x-8=0이고, 이것을 인수분해하면 (x+4)(x-2)=0이야. 그래서 해는 -4, 2야.",
+          "answer": "-4, 2"
+        },
+        "control_p2": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변 12와 같게 놓을게요. 그래서 x+1=12 또는 x+2=12가 되고, x=11, 10이 나와요.",
+          "answer": "11, 10"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 12라서 바로 각각 12로 놓는 게 아니고 먼저 정리해서 0으로 만들어야 하는 거구나. (x+1)(x+2)=12를 전개하면 x^2+3x+2=12, 그래서 x^2+3x-10=0이 돼. 이제 (x+5)(x-2)=0이니까 해는 2랑 -5야.",
+          "answer": "2, -5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-2",
+      "p2": "nonzero_product-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변 8과 같게 놓고 풀면 돼요. x=8 또는 x+2=8이니까 x=6이에요.",
+          "answer": "6, 8"
+        },
+        "retry": {
+          "message": "아, 다시 보니까 x(x+2)=8은 괄호를 바로 8이랑 같게 놓는 게 아니었네요. 식을 정리하면 x^2+2x-8=0이고, 그래서 해는 x=2, x=-4예요.",
+          "answer": "2, -4"
+        },
+        "control_p2": {
+          "message": "이제는 식을 정리해서 풀어볼게요. (x+1)(x+2)=12를 전개하면 x^2+3x+2=12라서 x^2+3x-10=0이 돼요. 그래서 해는 2, -5예요.",
+          "answer": "2, -5"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 12인 경우를 그냥 괄호에 대입하면 안 되고 먼저 정리해야겠네요. 전개하면 x^2+3x+2=12, 그래서 x^2+3x-10=0이고 인수분해하면 (x+5)(x-2)=0이에요.",
+          "answer": "-5, 2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-2",
+      "p2": "nonzero_product-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 8과 같게 놓고 풀면 돼요. 그래서 x=8 또는 x+2=8이라서 x=6이 나와요.",
+          "answer": "8, 6"
+        },
+        "retry": {
+          "message": "아, 생각해보니까 그냥 각 괄호를 8이랑 같게 놓으면 안 되네요. 식을 정리해서 풀면 x^2+2x-8=0이고, 이건 (x+4)(x-2)=0이라서 해는 -4, 2예요.",
+          "answer": "-4, 2"
+        },
+        "control_p2": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같게 놓고 풀어볼게요. 그래서 x+1=12 또는 x+2=12라서 x=11, 10이 나와요.",
+          "answer": "11, 10"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 12라고 해서 바로 각각 12로 놓으면 안 되는 거였네요. 먼저 전개해서 0으로 만든 다음에 인수분해해서 풀면 돼요.",
+          "answer": "-5, 2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-3",
+      "p2": "nonzero_product-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같게 두고 풀어볼게요. 그래서 x+1=12 또는 x+2=12가 됩니다. 각각 풀면 x=11, x=10입니다.",
+          "answer": "11, 10"
+        },
+        "retry": {
+          "message": "아, 생각해 보니까 각 괄호를 12와 같게 두는 건 아니네요. 양변을 전개해서 정리하면 x^2+3x-10=0이 되고, 이것을 풀면 됩니다.",
+          "answer": "-5, 2"
+        },
+        "control_p2": {
+          "message": "전개해서 정리하면 x^2-5x+4=10이 돼요. 그래서 x^2-5x-6=0이고, 해를 구하면 x=6 또는 x=-1입니다.",
+          "answer": "6, -1"
+        },
+        "explained_p2": {
+          "message": "아, 그렇구나. 곱한 값이 10이면 바로 각 괄호를 10과 같게 두면 안 되니까 먼저 정리해서 풀어볼게요. 전개하면 x^2-5x+4=10, 그래서 x^2-5x-6=0이고 (x-6)(x+1)=0이야.",
+          "answer": "6, -1"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-3",
+      "p2": "nonzero_product-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 12와 같게 두고 풀면 돼요. 그래서 x+1=12 또는 x+2=12로 놓으면 됩니다.",
+          "answer": "11, 10"
+        },
+        "retry": {
+          "message": "아, 내가 잘못 풀었네. 양변을 전개하면 x^2+3x+2=12라서 x^2+3x-10=0이 돼요. 이걸 다시 인수분해하면 (x+5)(x-2)=0이라서 해는 2, -5예요.",
+          "answer": "2, -5"
+        },
+        "control_p2": {
+          "message": "양변을 전개하면 x^2-5x+4=10이 돼요. 그래서 x^2-5x-6=0이고, 인수분해하면 (x-6)(x+1)=0이라서 해는 6, -1이에요.",
+          "answer": "6, -1"
+        },
+        "explained_p2": {
+          "message": "맞아요, 곱이 10일 때는 바로 각 괄호를 10과 같게 두면 안 되니까 먼저 전개해서 0으로 만들게요. (x-4)(x-1)=10을 전개하면 x^2-5x+4=10이라서 x^2-5x-6=0이고, (x-6)(x+1)=0이에요.",
+          "answer": "6, -1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-3",
+      "p2": "nonzero_product-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "other"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변 12와 같게 놓고 풀면 돼요. 그래서 x+1=12 또는 x+2=12로 보고 풀면 x=11, 10이에요.",
+          "answer": "11, 10"
+        },
+        "retry": {
+          "message": "아, 괄호를 각각 12와 같게 두면 안 되는 문제였네요. 식을 풀면 x^2+3x+2=12라서 x^2+3x-10=0이고, (x+5)(x-2)=0이 돼요. 그래서 해는 -5, 2예요.",
+          "answer": "-5, 2"
+        },
+        "control_p2": {
+          "message": "식이 (x-4)(x-1)=10이니까 먼저 전개하면 x^2-5x+4=10이에요. 정리하면 x^2-5x-6=0이라서 (x-6)(x+1)=0이 돼요.",
+          "answer": "6, -1"
+        },
+        "explained_p2": {
+          "message": "아, 그러네. 곱이 10이면 바로 각각 10이라고 놓으면 안 되니까 먼저 전개해서 0으로 만들어야 해요. 그래서 (x-4)(x-1)=10을 풀면 x=7, x=-2가 나와요.",
+          "answer": "7, -2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-4",
+      "p2": "nonzero_product-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 10과 같게 놓고 풀면 돼요. 그래서 x-4=10 또는 x-1=10이 됩니다.",
+          "answer": "14, 11"
+        },
+        "retry": {
+          "message": "아, 내가 아까 방법을 잘못 썼네. 식을 정리해서 풀면 돼요: (x-4)(x-1)=10 → x^2-5x+4=10 → x^2-5x-6=0 이라서 x=6, -1이에요.",
+          "answer": "6, -1"
+        },
+        "control_p2": {
+          "message": "식을 정리하면 x^2-3x-10=0이 돼요. 이건 (x-5)(x+2)=0으로 인수분해되니까 해는 5와 -2예요.",
+          "answer": "5, -2"
+        },
+        "explained_p2": {
+          "message": "아, 곱이 10이면 괄호를 바로 10이랑 같게 두면 안 되는구나. 먼저 전개해서 우변을 0으로 만들면 x^2-3x-10=0이고, (x-5)(x+2)=0이야.",
+          "answer": "5, -2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-4",
+      "p2": "nonzero_product-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 오른쪽과 같게 놓고 풀면 돼요. 그래서 x-4=10 또는 x-1=10이고, 각각 풀면 x=14, x=11이에요.",
+          "answer": "14, 11"
+        },
+        "retry": {
+          "message": "아, 내가 잘못 풀었네. 식을 전개해서 정리하면 x^2-5x-6=0이 되고, 다시 인수분해하면 (x-6)(x+1)=0이에요. 그래서 해는 6과 -1이에요.",
+          "answer": "6, -1"
+        },
+        "control_p2": {
+          "message": "곱셈 꼴이니까 각 괄호를 10이랑 같게 두고 풀면 돼요. 그래서 x=10 또는 x-3=10이라서 x=13이에요.",
+          "answer": "10, 13"
+        },
+        "explained_p2": {
+          "message": "맞아요. 곱이 10이면 각 괄호를 바로 10으로 놓으면 안 되고, 먼저 정리해서 0으로 만들어야 해요. x(x-3)=10을 전개하면 x^2-3x-10=0이고, (x-5)(x+2)=0이니까 해는 5, -2예요.",
+          "answer": "5, -2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-4",
+      "p2": "nonzero_product-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 10과 같게 두고 풀면 돼요. x-4=10이면 x=14이고, x-1=10이면 x=11이에요.",
+          "answer": "14, 11"
+        },
+        "retry": {
+          "message": "아, 곱셈 꼴이라 바로 각각 10으로 놓으면 안 되는 거였네요. 식을 정리해 보면 (x-4)(x-1)=10 → x^2-5x-6=0이라서 해를 구할 수 있어요.",
+          "answer": "6, -1"
+        },
+        "control_p2": {
+          "message": "식을 정리하면 x^2-3x-10=0이에요. 그래서 (x-5)(x+2)=0이 되니까 해는 5와 -2예요.",
+          "answer": "5, -2"
+        },
+        "explained_p2": {
+          "message": "아, 곱셈이 10일 때는 괄호를 바로 10과 같게 두면 안 되고, 먼저 한쪽으로 모아서 0으로 만들어야 하네요. 그래서 x(x-3)=10을 정리하면 x^2-3x-10=0이고, 인수분해하면 (x-5)(x+2)=0이에요.",
+          "answer": "5, -2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-5",
+      "p2": "nonzero_product-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 우변과 같게 놓고 풀면 돼요. x=10 이거나 x-3=10 이라서 x=13이 나와요.",
+          "answer": "10, 13"
+        },
+        "retry": {
+          "message": "아, 제가 아까 방법을 잘못 썼네요. x(x-3)=10을 정리하면 x^2-3x-10=0이고, 이건 (x-5)(x+2)=0으로 풀 수 있어요. 그래서 해는 5, -2예요.",
+          "answer": "5, -2"
+        },
+        "control_p2": {
+          "message": "식 전개해서 정리하면 x^2-3x-4=0이 돼요. 이걸 인수분해하면 (x-4)(x+1)=0이라서 해는 4, -1이에요.",
+          "answer": "4, -1"
+        },
+        "explained_p2": {
+          "message": "아, 맞아요. 곱이 6이라고 해서 바로 각 괄호를 6과 같게 놓으면 안 되네요. 먼저 전개해서 0으로 만든 다음 풀면 돼요.",
+          "answer": "4, -1"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-5",
+      "p2": "nonzero_product-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 10과 같게 놓고 풀면 돼요. 그래서 x=10 또는 x-3=10이 나와요.",
+          "answer": "10, 13"
+        },
+        "retry": {
+          "message": "아, 방금 방법은 안 맞았어요. 식을 정리하면 x^2-3x-10=0이 되고, (x-5)(x+2)=0이라서 해는 5, -2예요.",
+          "answer": "5, -2"
+        },
+        "control_p2": {
+          "message": "이번엔 식을 먼저 전개해서 풀어볼게요. (x-1)(x-2)=6 이니까 x^2-3x+2=6, 그래서 x^2-3x-4=0이에요. 인수분해하면 (x-4)(x+1)=0이므로 해는 4, -1이에요.",
+          "answer": "4, -1"
+        },
+        "explained_p2": {
+          "message": "먼저 전개해서 0으로 만들면 x^2-3x+2=6이니까 x^2-3x-4=0이에요. 그래서 (x-4)(x+1)=0이 되고, 해는 x=4 또는 x=-1이에요.",
+          "answer": "4, -1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "nonzero_product",
+      "p1": "nonzero_product-5",
+      "p2": "nonzero_product-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱셈 꼴이니까 각 괄호를 10이랑 같게 두면 돼요. 그래서 x=10 또는 x-3=10 이고, 풀면 x=13도 나와요.",
+          "answer": "10, 13"
+        },
+        "retry": {
+          "message": "아, 아까는 잘못 풀었네요. 식을 정리하면 x^2-3x-10=0 이고, 이것은 (x-5)(x+2)=0으로 인수분해돼요. 그래서 해는 x=5, x=-2예요.",
+          "answer": "5, -2"
+        },
+        "control_p2": {
+          "message": "곱셈 꼴이니까 각 괄호를 6이랑 같게 두면 돼요. 그래서 x-1=6 또는 x-2=6으로 풀면 돼요.",
+          "answer": "7, 8"
+        },
+        "explained_p2": {
+          "message": "아, 그렇구나. 곱이 6일 때는 그냥 각 괄호를 6이랑 같게 두는 게 아니라, 먼저 정리해서 0으로 만들어야 해요. 그래서 풀면 x=4, x=-1이에요.",
+          "answer": "4, -1"
+        }
+      }
+    }
+  ]
+}

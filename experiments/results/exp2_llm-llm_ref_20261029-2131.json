@@ -1,0 +1,5476 @@
+{
+  "dataset": [
+    {
+      "problem_id": "F1",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+2)(x+3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 0
+    },
+    {
+      "problem_id": "F1",
+      "step": 0,
+      "unit": "factor",
+      "answer": "x^2+5x+6=(x+2)(x+3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 1
+    },
+    {
+      "problem_id": "F1",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+3)(x+2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 2
+    },
+    {
+      "problem_id": "F1",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x - 3)*(x - 2)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 3
+    },
+    {
+      "problem_id": "F2",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x-3)(x-4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 4
+    },
+    {
+      "problem_id": "F2",
+      "step": 0,
+      "unit": "factor",
+      "answer": "x^2-7x+12=(x-3)(x-4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 5
+    },
+    {
+      "problem_id": "F2",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x-4)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 6
+    },
+    {
+      "problem_id": "F2",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x + 3)*(x + 4)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 7
+    },
+    {
+      "problem_id": "F3",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x-3)(x+2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 8
+    },
+    {
+      "problem_id": "F3",
+      "step": 0,
+      "unit": "factor",
+      "answer": "x^2-x-6=(x-3)(x+2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 9
+    },
+    {
+      "problem_id": "F3",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+2)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 10
+    },
+    {
+      "problem_id": "F3",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x - 2)*(x + 3)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 11
+    },
+    {
+      "problem_id": "F4",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+3)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 12
+    },
+    {
+      "problem_id": "F4",
+      "step": 0,
+      "unit": "factor",
+      "answer": "x^2-9=(x+3)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 13
+    },
+    {
+      "problem_id": "F4",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x-3)(x+3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 14
+    },
+    {
+      "problem_id": "F5",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+3)^2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 15
+    },
+    {
+      "problem_id": "F5",
+      "step": 0,
+      "unit": "factor",
+      "answer": "x^2+6x+9=(x+3)^2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 16
+    },
+    {
+      "problem_id": "F5",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x - 3)^2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 17
+    },
+    {
+      "problem_id": "F6",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(2x+1)(x+3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 18
+    },
+    {
+      "problem_id": "F6",
+      "step": 0,
+      "unit": "factor",
+      "answer": "2x^2+7x+3=(2x+1)(x+3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 19
+    },
+    {
+      "problem_id": "F6",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x+3)(2x+1)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 20
+    },
+    {
+      "problem_id": "F6",
+      "step": 0,
+      "unit": "factor",
+      "answer": "(x - 3)*(2*x - 1)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 21
+    },
+    {
+      "problem_id": "F7",
+      "step": 0,
+      "unit": "factor",
+      "answer": "3x(x-2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 22
+    },
+    {
+      "problem_id": "F7",
+      "step": 0,
+      "unit": "factor",
+      "answer": "3x^2-6x=3x(x-2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 23
+    },
+    {
+      "problem_id": "F7",
+      "step": 0,
+      "unit": "factor",
+      "answer": "3*x*(x + 2)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 24
+    },
+    {
+      "problem_id": "E1",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-2)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 25
+    },
+    {
+      "problem_id": "E1",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x^2-5x+6=(x-2)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 26
+    },
+    {
+      "problem_id": "E1",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-3)(x-2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 27
+    },
+    {
+      "problem_id": "E1",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x + 2)*(x + 3)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 28
+    },
+    {
+      "problem_id": "E1",
+      "step": 1,
+      "unit": "solve",
+      "answer": "2, 3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 29
+    },
+    {
+      "problem_id": "E1",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=3 또는 x=2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 30
+    },
+    {
+      "problem_id": "E1",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-2, -3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 31
+    },
+    {
+      "problem_id": "E1",
+      "step": 1,
+      "unit": "solve",
+      "answer": "3, 3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 32
+    },
+    {
+      "problem_id": "E2",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x+4)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 33
+    },
+    {
+      "problem_id": "E2",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x^2+x-12=(x+4)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 34
+    },
+    {
+      "problem_id": "E2",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-3)(x+4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 35
+    },
+    {
+      "problem_id": "E2",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x - 4)*(x + 3)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 36
+    },
+    {
+      "problem_id": "E2",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-4, 3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 37
+    },
+    {
+      "problem_id": "E2",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=3 또는 x=-4",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 38
+    },
+    {
+      "problem_id": "E2",
+      "step": 1,
+      "unit": "solve",
+      "answer": "4, -3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 39
+    },
+    {
+      "problem_id": "E2",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-3, 3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 40
+    },
+    {
+      "problem_id": "E3",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-2)^2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 41
+    },
+    {
+      "problem_id": "E3",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x^2-4x+4=(x-2)^2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 42
+    },
+    {
+      "problem_id": "E3",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x + 2)^2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 43
+    },
+    {
+      "problem_id": "E3",
+      "step": 1,
+      "unit": "solve",
+      "answer": "2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 44
+    },
+    {
+      "problem_id": "E3",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 45
+    },
+    {
+      "problem_id": "E3",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 46
+    },
+    {
+      "problem_id": "E3",
+      "step": 1,
+      "unit": "solve",
+      "answer": "3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 47
+    },
+    {
+      "problem_id": "E4",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x+4)(x-4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 48
+    },
+    {
+      "problem_id": "E4",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x^2-16=(x+4)(x-4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 49
+    },
+    {
+      "problem_id": "E4",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-4)(x+4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 50
+    },
+    {
+      "problem_id": "E4",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-4, 4",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 51
+    },
+    {
+      "problem_id": "E4",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=4 또는 x=-4",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 52
+    },
+    {
+      "problem_id": "E4",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-3, 4",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 53
+    },
+    {
+      "problem_id": "E5",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(2x+1)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 54
+    },
+    {
+      "problem_id": "E5",
+      "step": 0,
+      "unit": "solve",
+      "answer": "2x^2-5x-3=(2x+1)(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 55
+    },
+    {
+      "problem_id": "E5",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x-3)(2x+1)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 56
+    },
+    {
+      "problem_id": "E5",
+      "step": 0,
+      "unit": "solve",
+      "answer": "(x + 3)*(2*x - 1)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 57
+    },
+    {
+      "problem_id": "E5",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-1/2, 3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 58
+    },
+    {
+      "problem_id": "E5",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=3 또는 x=-1/2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 59
+    },
+    {
+      "problem_id": "E5",
+      "step": 1,
+      "unit": "solve",
+      "answer": "1/2, -3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 60
+    },
+    {
+      "problem_id": "E5",
+      "step": 1,
+      "unit": "solve",
+      "answer": "1/2, 3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 61
+    },
+    {
+      "problem_id": "E6",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 62
+    },
+    {
+      "problem_id": "E6",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x^2-3x=x(x-3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 63
+    },
+    {
+      "problem_id": "E6",
+      "step": 0,
+      "unit": "solve",
+      "answer": "x*(x + 3)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 64
+    },
+    {
+      "problem_id": "E6",
+      "step": 1,
+      "unit": "solve",
+      "answer": "0, 3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 65
+    },
+    {
+      "problem_id": "E6",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=3 또는 x=0",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 66
+    },
+    {
+      "problem_id": "E6",
+      "step": 1,
+      "unit": "solve",
+      "answer": "0, -3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 67
+    },
+    {
+      "problem_id": "E6",
+      "step": 1,
+      "unit": "solve",
+      "answer": "1, 3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 68
+    },
+    {
+      "problem_id": "E7",
+      "step": 0,
+      "unit": "solve",
+      "answer": "8",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 69
+    },
+    {
+      "problem_id": "E7",
+      "step": 0,
+      "unit": "solve",
+      "answer": "-8",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 70
+    },
+    {
+      "problem_id": "E7",
+      "step": 0,
+      "unit": "solve",
+      "answer": "9",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 71
+    },
+    {
+      "problem_id": "E7",
+      "step": 1,
+      "unit": "solve",
+      "answer": "1 + sqrt(2), 1 - sqrt(2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 72
+    },
+    {
+      "problem_id": "E7",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=1 - sqrt(2) 또는 x=1 + sqrt(2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 73
+    },
+    {
+      "problem_id": "E7",
+      "step": 1,
+      "unit": "solve",
+      "answer": "1 + √2, 1 - √2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 74
+    },
+    {
+      "problem_id": "E7",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-sqrt(2) - 1, -1 + sqrt(2)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 75
+    },
+    {
+      "problem_id": "E7",
+      "step": 1,
+      "unit": "solve",
+      "answer": "sqrt(2) + 2, 1 - sqrt(2)",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 76
+    },
+    {
+      "problem_id": "E8",
+      "step": 0,
+      "unit": "solve",
+      "answer": "12",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 77
+    },
+    {
+      "problem_id": "E8",
+      "step": 0,
+      "unit": "solve",
+      "answer": "-12",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 78
+    },
+    {
+      "problem_id": "E8",
+      "step": 0,
+      "unit": "solve",
+      "answer": "13",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 79
+    },
+    {
+      "problem_id": "E8",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-2 + sqrt(3), -2 - sqrt(3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 80
+    },
+    {
+      "problem_id": "E8",
+      "step": 1,
+      "unit": "solve",
+      "answer": "x=-2 - sqrt(3) 또는 x=-2 + sqrt(3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 81
+    },
+    {
+      "problem_id": "E8",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-2 + √3, -2 - √3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 82
+    },
+    {
+      "problem_id": "E8",
+      "step": 1,
+      "unit": "solve",
+      "answer": "2 - sqrt(3), sqrt(3) + 2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 83
+    },
+    {
+      "problem_id": "E8",
+      "step": 1,
+      "unit": "solve",
+      "answer": "-1 + sqrt(3), -2 - sqrt(3)",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 84
+    },
+    {
+      "problem_id": "U1",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "b*x + 2*b + x^2 + 2*x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 85
+    },
+    {
+      "problem_id": "U1",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "2*b + x^2 + x*(b + 2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 86
+    },
+    {
+      "problem_id": "U1",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "(x+2)(x+b)=b*x + 2*b + x^2 + 2*x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 87
+    },
+    {
+      "problem_id": "U1",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "b*x + 2*b + x^2 + 2*x + 1",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 88
+    },
+    {
+      "problem_id": "U1",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=5, b=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 89
+    },
+    {
+      "problem_id": "U1",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "b=3이고 a=5",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 90
+    },
+    {
+      "problem_id": "U1",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=6, b=3",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "합·곱 조건 혼동",
+      "id": 91
+    },
+    {
+      "problem_id": "U1",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=-5, b=3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 92
+    },
+    {
+      "problem_id": "U2",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "b*x + 3*b + x^2 + 3*x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 93
+    },
+    {
+      "problem_id": "U2",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "3*b + x^2 + x*(b + 3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 94
+    },
+    {
+      "problem_id": "U2",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "(x+3)(x+b)=b*x + 3*b + x^2 + 3*x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 95
+    },
+    {
+      "problem_id": "U2",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "b*x + 3*b + x^2 + 3*x + 1",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 96
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=-1, b=-4",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 97
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "b=-4이고 a=-1",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 98
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=-12, b=-4",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "합·곱 조건 혼동",
+      "id": 99
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=7, b=4",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "곱 조건의 부호 처리 오류",
+      "id": 100
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=1, b=-4",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 101
+    },
+    {
+      "problem_id": "U2",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=0, b=-4",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 102
+    },
+    {
+      "problem_id": "U3",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "2*b*x + b + 2*x^2 + x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 103
+    },
+    {
+      "problem_id": "U3",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "b + 2*x^2 + x*(2*b + 1)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 104
+    },
+    {
+      "problem_id": "U3",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "(2x+1)(x+b)=2*b*x + b + 2*x^2 + x",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 105
+    },
+    {
+      "problem_id": "U3",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "2*b*x + b + 2*x^2 + x + 1",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 106
+    },
+    {
+      "problem_id": "U3",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=7, b=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 107
+    },
+    {
+      "problem_id": "U3",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "b=3이고 a=7",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 108
+    },
+    {
+      "problem_id": "U3",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=4, b=3",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "전개할 때 x의 계수 2를 빠뜨림",
+      "id": 109
+    },
+    {
+      "problem_id": "U3",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=-7, b=3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 110
+    },
+    {
+      "problem_id": "U3",
+      "step": 1,
+      "unit": "undetermined",
+      "answer": "a=8, b=3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 111
+    },
+    {
+      "problem_id": "U4",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "a=16",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 112
+    },
+    {
+      "problem_id": "U4",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "16",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 113
+    },
+    {
+      "problem_id": "U4",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "a=64",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "일차항 계수의 절반이 아니라 계수 전체를 제곱함",
+      "id": 114
+    },
+    {
+      "problem_id": "U4",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "a=-16",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 115
+    },
+    {
+      "problem_id": "U4",
+      "step": 0,
+      "unit": "undetermined",
+      "answer": "a=17",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 116
+    },
+    {
+      "problem_id": "S1",
+      "step": 0,
+      "unit": "system",
+      "answer": "3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 117
+    },
+    {
+      "problem_id": "S1",
+      "step": 0,
+      "unit": "system",
+      "answer": "-3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 118
+    },
+    {
+      "problem_id": "S1",
+      "step": 0,
+      "unit": "system",
+      "answer": "4",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 119
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=3, y=2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 120
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "y=2이고 x=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 121
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "(3, 2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 122
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=2, y=3",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "x와 y의 값을 바꿔 씀",
+      "id": 123
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=-3, y=2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 124
+    },
+    {
+      "problem_id": "S1",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=4, y=2",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 125
+    },
+    {
+      "problem_id": "S2",
+      "step": 0,
+      "unit": "system",
+      "answer": "3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 126
+    },
+    {
+      "problem_id": "S2",
+      "step": 0,
+      "unit": "system",
+      "answer": "-3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 127
+    },
+    {
+      "problem_id": "S2",
+      "step": 0,
+      "unit": "system",
+      "answer": "4",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 128
+    },
+    {
+      "problem_id": "S2",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=3, y=1",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 129
+    },
+    {
+      "problem_id": "S2",
+      "step": 1,
+      "unit": "system",
+      "answer": "y=1이고 x=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 130
+    },
+    {
+      "problem_id": "S2",
+      "step": 1,
+      "unit": "system",
+      "answer": "(3, 1)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 131
+    },
+    {
+      "problem_id": "S2",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=-3, y=1",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 132
+    },
+    {
+      "problem_id": "S2",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=4, y=1",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 133
+    },
+    {
+      "problem_id": "S3",
+      "step": 0,
+      "unit": "system",
+      "answer": "3/2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 134
+    },
+    {
+      "problem_id": "S3",
+      "step": 0,
+      "unit": "system",
+      "answer": "1.5",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 135
+    },
+    {
+      "problem_id": "S3",
+      "step": 0,
+      "unit": "system",
+      "answer": "-3/2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 136
+    },
+    {
+      "problem_id": "S3",
+      "step": 0,
+      "unit": "system",
+      "answer": "5/2",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 137
+    },
+    {
+      "problem_id": "S3",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=3, y=3/2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 138
+    },
+    {
+      "problem_id": "S3",
+      "step": 1,
+      "unit": "system",
+      "answer": "y=3/2이고 x=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 139
+    },
+    {
+      "problem_id": "S3",
+      "step": 1,
+      "unit": "system",
+      "answer": "(3, 3/2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 140
+    },
+    {
+      "problem_id": "S3",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=-3, y=3/2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 141
+    },
+    {
+      "problem_id": "S3",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=4, y=3/2",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 142
+    },
+    {
+      "problem_id": "S4",
+      "step": 0,
+      "unit": "system",
+      "answer": "2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 143
+    },
+    {
+      "problem_id": "S4",
+      "step": 0,
+      "unit": "system",
+      "answer": "8/5",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "대입할 때 괄호를 쓰지 않아 부호 오류",
+      "id": 144
+    },
+    {
+      "problem_id": "S4",
+      "step": 0,
+      "unit": "system",
+      "answer": "-2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 145
+    },
+    {
+      "problem_id": "S4",
+      "step": 0,
+      "unit": "system",
+      "answer": "3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 146
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=2, y=3",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 147
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "y=3이고 x=2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 148
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "(2, 3)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 149
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=8/5, y=11/5",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "대입할 때 괄호를 쓰지 않아 부호 오류",
+      "id": 150
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=-2, y=3",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 151
+    },
+    {
+      "problem_id": "S4",
+      "step": 1,
+      "unit": "system",
+      "answer": "x=3, y=3",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 152
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "x=6, y=4",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 153
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "y=4이고 x=6",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 154
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "(6, 4)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 155
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "x=4, y=6",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "x와 y가 나타내는 대상을 바꿔 씀",
+      "id": 156
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "x=-6, y=4",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 157
+    },
+    {
+      "problem_id": "S5",
+      "step": 0,
+      "unit": "system",
+      "answer": "x=7, y=4",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 158
+    },
+    {
+      "problem_id": "ST1",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 159
+    },
+    {
+      "problem_id": "ST1",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "15/2",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "자료의 개수를 잘못 세어 나눔",
+      "id": 160
+    },
+    {
+      "problem_id": "ST1",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "7",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "다른 대푯값(중앙값·최빈값)과 혼동",
+      "id": 161
+    },
+    {
+      "problem_id": "ST1",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-6",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 162
+    },
+    {
+      "problem_id": "ST2",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 163
+    },
+    {
+      "problem_id": "ST2",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "9",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+      "id": 164
+    },
+    {
+      "problem_id": "ST2",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "28/5",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "평균과 혼동",
+      "id": 165
+    },
+    {
+      "problem_id": "ST2",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-6",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 166
+    },
+    {
+      "problem_id": "ST2",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "7",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 167
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "13/2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 168
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6.5",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 169
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "4",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+      "id": 170
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+      "id": 171
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "7",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+      "id": 172
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-13/2",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 173
+    },
+    {
+      "problem_id": "ST3",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "15/2",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 174
+    },
+    {
+      "problem_id": "ST4",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "5",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 175
+    },
+    {
+      "problem_id": "ST4",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "3",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+      "id": 176
+    },
+    {
+      "problem_id": "ST4",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-5",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 177
+    },
+    {
+      "problem_id": "ST4",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 178
+    },
+    {
+      "problem_id": "ST5",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "6",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 179
+    },
+    {
+      "problem_id": "ST5",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-6",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 180
+    },
+    {
+      "problem_id": "ST5",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "7",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 181
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "8",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 182
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "40",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+      "id": 183
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "0",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "편차의 합과 혼동",
+      "id": 184
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "2sqrt(2)",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "표준편차와 혼동",
+      "id": 185
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "10",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "자료의 개수가 아닌 (개수-1)로 나눔",
+      "id": 186
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "-8",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 187
+    },
+    {
+      "problem_id": "ST5",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "9",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 188
+    },
+    {
+      "problem_id": "ST6",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "8",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 189
+    },
+    {
+      "problem_id": "ST6",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "40",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+      "id": 190
+    },
+    {
+      "problem_id": "ST6",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "-8",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 191
+    },
+    {
+      "problem_id": "ST6",
+      "step": 0,
+      "unit": "statistics",
+      "answer": "9",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 192
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "2*sqrt(2)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 193
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "2√2",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 194
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "8",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+      "id": 195
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "2sqrt(10)",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+      "id": 196
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "-2*sqrt(2)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 197
+    },
+    {
+      "problem_id": "ST6",
+      "step": 1,
+      "unit": "statistics",
+      "answer": "1 + 2*sqrt(2)",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 198
+    },
+    {
+      "problem_id": "G1",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "70",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 199
+    },
+    {
+      "problem_id": "G1",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "70°",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 200
+    },
+    {
+      "problem_id": "G1",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "250",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "삼각형의 내각의 합을 360°로 착각",
+      "id": 201
+    },
+    {
+      "problem_id": "G1",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-70",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 202
+    },
+    {
+      "problem_id": "G1",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "71",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 203
+    },
+    {
+      "problem_id": "G2",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "720",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 204
+    },
+    {
+      "problem_id": "G2",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "1080",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+      "id": 205
+    },
+    {
+      "problem_id": "G2",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "360",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "외각의 크기의 합과 혼동",
+      "id": 206
+    },
+    {
+      "problem_id": "G2",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-720",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 207
+    },
+    {
+      "problem_id": "G2",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "721",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 208
+    },
+    {
+      "problem_id": "G2",
+      "step": 1,
+      "unit": "geometry",
+      "answer": "120",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 209
+    },
+    {
+      "problem_id": "G2",
+      "step": 1,
+      "unit": "geometry",
+      "answer": "60",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "한 외각의 크기와 혼동",
+      "id": 210
+    },
+    {
+      "problem_id": "G2",
+      "step": 1,
+      "unit": "geometry",
+      "answer": "180",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+      "id": 211
+    },
+    {
+      "problem_id": "G2",
+      "step": 1,
+      "unit": "geometry",
+      "answer": "-120",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 212
+    },
+    {
+      "problem_id": "G2",
+      "step": 1,
+      "unit": "geometry",
+      "answer": "121",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 213
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "10",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 214
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "10cm",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 215
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "14",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+      "id": 216
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "100",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱근을 구하지 않음",
+      "id": 217
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "2sqrt(7)",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "빗변을 구할 때 제곱의 차를 사용",
+      "id": 218
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-10",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 219
+    },
+    {
+      "problem_id": "G3",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "11",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 220
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "12",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 221
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "12cm",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 222
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "sqrt(194)",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)",
+      "id": 223
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "8",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱 관계를 쓰지 않고 두 변을 뺌",
+      "id": 224
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "144",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱근을 구하지 않음",
+      "id": 225
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-12",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 226
+    },
+    {
+      "problem_id": "G4",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "13",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 227
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "sqrt(13)",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 228
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "√13",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 229
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "sqrt(13)cm",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 230
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "5",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+      "id": 231
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "13",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "제곱근을 구하지 않음",
+      "id": 232
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-sqrt(13)",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 233
+    },
+    {
+      "problem_id": "G5",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "1 + sqrt(13)",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 234
+    },
+    {
+      "problem_id": "G6",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "6",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 235
+    },
+    {
+      "problem_id": "G6",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "6cm",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 236
+    },
+    {
+      "problem_id": "G6",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "8/3",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "닮음비를 거꾸로 적용",
+      "id": 237
+    },
+    {
+      "problem_id": "G6",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-6",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 238
+    },
+    {
+      "problem_id": "G6",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "7",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 239
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "18",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 240
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "18cm²",
+      "label_correct": true,
+      "category": "correct",
+      "label_diagnosis": "없음",
+      "id": 241
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "12",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+      "id": 242
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "27",
+      "label_correct": false,
+      "category": "misconception",
+      "label_diagnosis": "넓이의 비를 세제곱으로 계산 (부피의 비와 혼동)",
+      "id": 243
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "-18",
+      "label_correct": false,
+      "category": "sign",
+      "label_diagnosis": "부호 실수",
+      "id": 244
+    },
+    {
+      "problem_id": "G7",
+      "step": 0,
+      "unit": "geometry",
+      "answer": "19",
+      "label_correct": false,
+      "category": "off",
+      "label_diagnosis": "기타 오류",
+      "id": 245
+    }
+  ],
+  "conditions": {
+    "llm": {
+      "summary": {
+        "n": 246,
+        "accuracy": 0.7236,
+        "false_accept_rate": 0.1783,
+        "false_reject_rate": 0.3846,
+        "misconception_diagnosis_match": 0.35,
+        "sign_diagnosis_match": 0.4694,
+        "ungraded": 0,
+        "accuracy_by_unit": {
+          "factor": 0.76,
+          "solve": 0.7667,
+          "undetermined": 0.5938,
+          "system": 0.619,
+          "statistics": 0.725,
+          "geometry": 0.8298
+        },
+        "api_errors": 0,
+        "usage": {
+          "calls": 246,
+          "input_tokens": 76953,
+          "output_tokens": 5540
+        },
+        "elapsed_sec": 35.2,
+        "mean_latency_sec": 1.128
+      },
+      "predictions": {
+        "0": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.558
+        },
+        "1": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.436
+        },
+        "2": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.65
+        },
+        "3": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.327
+        },
+        "4": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.333
+        },
+        "5": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.411
+        },
+        "6": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.402
+        },
+        "7": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.339
+        },
+        "8": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.964
+        },
+        "9": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.033
+        },
+        "10": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.857
+        },
+        "11": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.048
+        },
+        "12": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.199
+        },
+        "13": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.1
+        },
+        "14": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.106
+        },
+        "15": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.976
+        },
+        "16": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.894
+        },
+        "17": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.055
+        },
+        "18": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.187
+        },
+        "19": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.996
+        },
+        "20": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.071
+        },
+        "21": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.097
+        },
+        "22": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.483
+        },
+        "23": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.87
+        },
+        "24": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.968
+        },
+        "25": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.084
+        },
+        "26": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.044
+        },
+        "27": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.198
+        },
+        "28": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.224
+        },
+        "29": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.268
+        },
+        "30": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.184
+        },
+        "31": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.454
+        },
+        "32": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.185
+        },
+        "33": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.581
+        },
+        "34": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.459
+        },
+        "35": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.29
+        },
+        "36": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.059
+        },
+        "37": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.209
+        },
+        "38": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.106
+        },
+        "39": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.448
+        },
+        "40": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.224
+        },
+        "41": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.618
+        },
+        "42": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.21
+        },
+        "43": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.476
+        },
+        "44": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.215
+        },
+        "45": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.09
+        },
+        "46": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.03
+        },
+        "47": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.033
+        },
+        "48": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.25
+        },
+        "49": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.069
+        },
+        "50": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.202
+        },
+        "51": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.144
+        },
+        "52": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.19
+        },
+        "53": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.258
+        },
+        "54": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.866
+        },
+        "55": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.016
+        },
+        "56": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.84
+        },
+        "57": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.749
+        },
+        "58": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.974
+        },
+        "59": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.813
+        },
+        "60": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.338
+        },
+        "61": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.27
+        },
+        "62": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.148
+        },
+        "63": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.129
+        },
+        "64": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.103
+        },
+        "65": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.248
+        },
+        "66": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.189
+        },
+        "67": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.09
+        },
+        "68": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.316
+        },
+        "69": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.214
+        },
+        "70": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.235
+        },
+        "71": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.463
+        },
+        "72": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.429
+        },
+        "73": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.147
+        },
+        "74": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.217
+        },
+        "75": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.137
+        },
+        "76": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.166
+        },
+        "77": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.593
+        },
+        "78": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.049
+        },
+        "79": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.033
+        },
+        "80": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.014
+        },
+        "81": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.224
+        },
+        "82": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.189
+        },
+        "83": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.239
+        },
+        "84": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.278
+        },
+        "85": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.402
+        },
+        "86": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.242
+        },
+        "87": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.039
+        },
+        "88": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.997
+        },
+        "89": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 1.162
+        },
+        "90": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.028
+        },
+        "91": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 0.933
+        },
+        "92": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.18
+        },
+        "93": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.28
+        },
+        "94": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.055
+        },
+        "95": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.116
+        },
+        "96": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.123
+        },
+        "97": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 1.249
+        },
+        "98": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 1.722
+        },
+        "99": {
+          "correct": false,
+          "diagnosis": "곱 조건의 부호 처리 오류",
+          "ungraded": false,
+          "latency_sec": 0.856
+        },
+        "100": {
+          "correct": false,
+          "diagnosis": "곱 조건의 부호 처리 오류",
+          "ungraded": false,
+          "latency_sec": 1.024
+        },
+        "101": {
+          "correct": false,
+          "diagnosis": "곱 조건의 부호 처리 오류",
+          "ungraded": false,
+          "latency_sec": 0.822
+        },
+        "102": {
+          "correct": false,
+          "diagnosis": "곱 조건의 부호 처리 오류",
+          "ungraded": false,
+          "latency_sec": 1.0
+        },
+        "103": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.963
+        },
+        "104": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.984
+        },
+        "105": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.887
+        },
+        "106": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.925
+        },
+        "107": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.842
+        },
+        "108": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.027
+        },
+        "109": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.946
+        },
+        "110": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.066
+        },
+        "111": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.146
+        },
+        "112": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.838
+        },
+        "113": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.073
+        },
+        "114": {
+          "correct": false,
+          "diagnosis": "일차항 계수의 절반이 아니라 계수 전체를 제곱함",
+          "ungraded": false,
+          "latency_sec": 1.275
+        },
+        "115": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.1
+        },
+        "116": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.986
+        },
+        "117": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.978
+        },
+        "118": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.084
+        },
+        "119": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.607
+        },
+        "120": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.886
+        },
+        "121": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.764
+        },
+        "122": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.183
+        },
+        "123": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.812
+        },
+        "124": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.86
+        },
+        "125": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.841
+        },
+        "126": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.048
+        },
+        "127": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.477
+        },
+        "128": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.931
+        },
+        "129": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.987
+        },
+        "130": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.944
+        },
+        "131": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.371
+        },
+        "132": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.955
+        },
+        "133": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.94
+        },
+        "134": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.141
+        },
+        "135": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.135
+        },
+        "136": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.205
+        },
+        "137": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.503
+        },
+        "138": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.455
+        },
+        "139": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.351
+        },
+        "140": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.193
+        },
+        "141": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.076
+        },
+        "142": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.955
+        },
+        "143": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.042
+        },
+        "144": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.288
+        },
+        "145": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.301
+        },
+        "146": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.607
+        },
+        "147": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.164
+        },
+        "148": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.144
+        },
+        "149": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.141
+        },
+        "150": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.159
+        },
+        "151": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.217
+        },
+        "152": {
+          "correct": false,
+          "diagnosis": "대입할 때 괄호를 쓰지 않아 부호 오류",
+          "ungraded": false,
+          "latency_sec": 1.332
+        },
+        "153": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.017
+        },
+        "154": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.924
+        },
+        "155": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.9
+        },
+        "156": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.954
+        },
+        "157": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.794
+        },
+        "158": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.938
+        },
+        "159": {
+          "correct": false,
+          "diagnosis": "자료의 개수를 잘못 세어 나눔",
+          "ungraded": false,
+          "latency_sec": 0.963
+        },
+        "160": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.926
+        },
+        "161": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.856
+        },
+        "162": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.08
+        },
+        "163": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.361
+        },
+        "164": {
+          "correct": false,
+          "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+          "ungraded": false,
+          "latency_sec": 1.038
+        },
+        "165": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.966
+        },
+        "166": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.892
+        },
+        "167": {
+          "correct": false,
+          "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+          "ungraded": false,
+          "latency_sec": 1.154
+        },
+        "168": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.227
+        },
+        "169": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.063
+        },
+        "170": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.264
+        },
+        "171": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.254
+        },
+        "172": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.945
+        },
+        "173": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.115
+        },
+        "174": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.112
+        },
+        "175": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.107
+        },
+        "176": {
+          "correct": false,
+          "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+          "ungraded": false,
+          "latency_sec": 1.261
+        },
+        "177": {
+          "correct": false,
+          "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+          "ungraded": false,
+          "latency_sec": 1.07
+        },
+        "178": {
+          "correct": false,
+          "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+          "ungraded": false,
+          "latency_sec": 1.861
+        },
+        "179": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.875
+        },
+        "180": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.154
+        },
+        "181": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.123
+        },
+        "182": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.313
+        },
+        "183": {
+          "correct": false,
+          "diagnosis": "자료의 개수가 아닌 (개수-1)로 나눔",
+          "ungraded": false,
+          "latency_sec": 1.175
+        },
+        "184": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.126
+        },
+        "185": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 0.905
+        },
+        "186": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.087
+        },
+        "187": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.151
+        },
+        "188": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 0.955
+        },
+        "189": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.163
+        },
+        "190": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.197
+        },
+        "191": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.052
+        },
+        "192": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.132
+        },
+        "193": {
+          "correct": false,
+          "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.915
+        },
+        "194": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.995
+        },
+        "195": {
+          "correct": false,
+          "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+          "ungraded": false,
+          "latency_sec": 0.893
+        },
+        "196": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 0.91
+        },
+        "197": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.902
+        },
+        "198": {
+          "correct": false,
+          "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.028
+        },
+        "199": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.014
+        },
+        "200": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.123
+        },
+        "201": {
+          "correct": false,
+          "diagnosis": "삼각형의 내각의 합을 360°로 착각",
+          "ungraded": false,
+          "latency_sec": 1.177
+        },
+        "202": {
+          "correct": false,
+          "diagnosis": "삼각형의 내각의 합을 360°로 착각",
+          "ungraded": false,
+          "latency_sec": 1.27
+        },
+        "203": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.056
+        },
+        "204": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.81
+        },
+        "205": {
+          "correct": false,
+          "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+          "ungraded": false,
+          "latency_sec": 1.153
+        },
+        "206": {
+          "correct": false,
+          "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+          "ungraded": false,
+          "latency_sec": 1.195
+        },
+        "207": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.042
+        },
+        "208": {
+          "correct": false,
+          "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+          "ungraded": false,
+          "latency_sec": 0.94
+        },
+        "209": {
+          "correct": false,
+          "diagnosis": "한 외각의 크기와 혼동",
+          "ungraded": false,
+          "latency_sec": 1.024
+        },
+        "210": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.05
+        },
+        "211": {
+          "correct": false,
+          "diagnosis": "한 외각의 크기와 혼동",
+          "ungraded": false,
+          "latency_sec": 0.931
+        },
+        "212": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.086
+        },
+        "213": {
+          "correct": false,
+          "diagnosis": "한 외각의 크기와 혼동",
+          "ungraded": false,
+          "latency_sec": 1.002
+        },
+        "214": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.839
+        },
+        "215": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.958
+        },
+        "216": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.272
+        },
+        "217": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 0.888
+        },
+        "218": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.897
+        },
+        "219": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.026
+        },
+        "220": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.128
+        },
+        "221": {
+          "correct": false,
+          "diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)",
+          "ungraded": false,
+          "latency_sec": 0.874
+        },
+        "222": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.892
+        },
+        "223": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.885
+        },
+        "224": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.77
+        },
+        "225": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.89
+        },
+        "226": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.802
+        },
+        "227": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 0.998
+        },
+        "228": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.882
+        },
+        "229": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 2.193
+        },
+        "230": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.794
+        },
+        "231": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.012
+        },
+        "232": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 0.911
+        },
+        "233": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.928
+        },
+        "234": {
+          "correct": false,
+          "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+          "ungraded": false,
+          "latency_sec": 0.966
+        },
+        "235": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.047
+        },
+        "236": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.85
+        },
+        "237": {
+          "correct": false,
+          "diagnosis": "닮음비를 거꾸로 적용",
+          "ungraded": false,
+          "latency_sec": 1.083
+        },
+        "238": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.962
+        },
+        "239": {
+          "correct": false,
+          "diagnosis": "닮음비를 거꾸로 적용",
+          "ungraded": false,
+          "latency_sec": 0.965
+        },
+        "240": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.229
+        },
+        "241": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.328
+        },
+        "242": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.496
+        },
+        "243": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.194
+        },
+        "244": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.27
+        },
+        "245": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.13
+        }
+      }
+    },
+    "llm_ref": {
+      "summary": {
+        "n": 246,
+        "accuracy": 0.9919,
+        "false_accept_rate": 0.0,
+        "false_reject_rate": 0.0171,
+        "misconception_diagnosis_match": 0.475,
+        "sign_diagnosis_match": 0.9796,
+        "ungraded": 0,
+        "accuracy_by_unit": {
+          "factor": 1.0,
+          "solve": 0.9833,
+          "undetermined": 0.9688,
+          "system": 1.0,
+          "statistics": 1.0,
+          "geometry": 1.0
+        },
+        "api_errors": 0,
+        "usage": {
+          "calls": 246,
+          "input_tokens": 80023,
+          "output_tokens": 5350
+        },
+        "elapsed_sec": 34.6,
+        "mean_latency_sec": 1.103
+      },
+      "predictions": {
+        "0": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.836
+        },
+        "1": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.91
+        },
+        "2": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.902
+        },
+        "3": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.865
+        },
+        "4": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.948
+        },
+        "5": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.974
+        },
+        "6": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.119
+        },
+        "7": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.079
+        },
+        "8": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.081
+        },
+        "9": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.065
+        },
+        "10": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.204
+        },
+        "11": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.953
+        },
+        "12": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.983
+        },
+        "13": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.007
+        },
+        "14": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.847
+        },
+        "15": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.228
+        },
+        "16": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.878
+        },
+        "17": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.024
+        },
+        "18": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.928
+        },
+        "19": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.956
+        },
+        "20": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.079
+        },
+        "21": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.225
+        },
+        "22": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.824
+        },
+        "23": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.108
+        },
+        "24": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.023
+        },
+        "25": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.381
+        },
+        "26": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.23
+        },
+        "27": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.043
+        },
+        "28": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.162
+        },
+        "29": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.023
+        },
+        "30": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.14
+        },
+        "31": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.175
+        },
+        "32": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.441
+        },
+        "33": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.147
+        },
+        "34": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.042
+        },
+        "35": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.291
+        },
+        "36": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.147
+        },
+        "37": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.078
+        },
+        "38": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.236
+        },
+        "39": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.327
+        },
+        "40": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.137
+        },
+        "41": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.329
+        },
+        "42": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.203
+        },
+        "43": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.066
+        },
+        "44": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.186
+        },
+        "45": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.279
+        },
+        "46": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.134
+        },
+        "47": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.194
+        },
+        "48": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.133
+        },
+        "49": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.309
+        },
+        "50": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 2.05
+        },
+        "51": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.193
+        },
+        "52": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.117
+        },
+        "53": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.489
+        },
+        "54": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.8
+        },
+        "55": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.892
+        },
+        "56": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.919
+        },
+        "57": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.999
+        },
+        "58": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.936
+        },
+        "59": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.846
+        },
+        "60": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.034
+        },
+        "61": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.784
+        },
+        "62": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.495
+        },
+        "63": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.496
+        },
+        "64": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.19
+        },
+        "65": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.167
+        },
+        "66": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.285
+        },
+        "67": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.275
+        },
+        "68": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.276
+        },
+        "69": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.09
+        },
+        "70": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.198
+        },
+        "71": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.211
+        },
+        "72": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.103
+        },
+        "73": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.155
+        },
+        "74": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.386
+        },
+        "75": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.179
+        },
+        "76": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.033
+        },
+        "77": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.177
+        },
+        "78": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.134
+        },
+        "79": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.081
+        },
+        "80": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.146
+        },
+        "81": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.258
+        },
+        "82": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.244
+        },
+        "83": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.255
+        },
+        "84": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.254
+        },
+        "85": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.318
+        },
+        "86": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.198
+        },
+        "87": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.237
+        },
+        "88": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.199
+        },
+        "89": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.959
+        },
+        "90": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.961
+        },
+        "91": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 1.245
+        },
+        "92": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.133
+        },
+        "93": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.99
+        },
+        "94": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.869
+        },
+        "95": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.035
+        },
+        "96": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.087
+        },
+        "97": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.89
+        },
+        "98": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.901
+        },
+        "99": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.887
+        },
+        "100": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 0.976
+        },
+        "101": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.021
+        },
+        "102": {
+          "correct": false,
+          "diagnosis": "합·곱 조건 혼동",
+          "ungraded": false,
+          "latency_sec": 0.984
+        },
+        "103": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.142
+        },
+        "104": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.109
+        },
+        "105": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.124
+        },
+        "106": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.879
+        },
+        "107": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.8
+        },
+        "108": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.184
+        },
+        "109": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.385
+        },
+        "110": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.974
+        },
+        "111": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.279
+        },
+        "112": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.928
+        },
+        "113": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.952
+        },
+        "114": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.202
+        },
+        "115": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.796
+        },
+        "116": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.164
+        },
+        "117": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.873
+        },
+        "118": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.943
+        },
+        "119": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.94
+        },
+        "120": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.859
+        },
+        "121": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.906
+        },
+        "122": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.777
+        },
+        "123": {
+          "correct": false,
+          "diagnosis": "x와 y의 값을 바꿔 씀",
+          "ungraded": false,
+          "latency_sec": 0.963
+        },
+        "124": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.03
+        },
+        "125": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.974
+        },
+        "126": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.038
+        },
+        "127": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.942
+        },
+        "128": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.305
+        },
+        "129": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.189
+        },
+        "130": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.016
+        },
+        "131": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.99
+        },
+        "132": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.204
+        },
+        "133": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.021
+        },
+        "134": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.008
+        },
+        "135": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.118
+        },
+        "136": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.075
+        },
+        "137": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.35
+        },
+        "138": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.137
+        },
+        "139": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.97
+        },
+        "140": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.261
+        },
+        "141": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.059
+        },
+        "142": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.197
+        },
+        "143": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.13
+        },
+        "144": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.583
+        },
+        "145": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.467
+        },
+        "146": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.205
+        },
+        "147": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.318
+        },
+        "148": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.098
+        },
+        "149": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.175
+        },
+        "150": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.067
+        },
+        "151": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.088
+        },
+        "152": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 2.151
+        },
+        "153": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.883
+        },
+        "154": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.971
+        },
+        "155": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.045
+        },
+        "156": {
+          "correct": false,
+          "diagnosis": "x와 y가 나타내는 대상을 바꿔 씀",
+          "ungraded": false,
+          "latency_sec": 1.288
+        },
+        "157": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.008
+        },
+        "158": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.865
+        },
+        "159": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.173
+        },
+        "160": {
+          "correct": false,
+          "diagnosis": "자료의 개수를 잘못 세어 나눔",
+          "ungraded": false,
+          "latency_sec": 0.808
+        },
+        "161": {
+          "correct": false,
+          "diagnosis": "다른 대푯값(중앙값·최빈값)과 혼동",
+          "ungraded": false,
+          "latency_sec": 0.915
+        },
+        "162": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.931
+        },
+        "163": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.078
+        },
+        "164": {
+          "correct": false,
+          "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+          "ungraded": false,
+          "latency_sec": 1.543
+        },
+        "165": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.955
+        },
+        "166": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.964
+        },
+        "167": {
+          "correct": false,
+          "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름",
+          "ungraded": false,
+          "latency_sec": 1.189
+        },
+        "168": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.142
+        },
+        "169": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.055
+        },
+        "170": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.248
+        },
+        "171": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 0.994
+        },
+        "172": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.199
+        },
+        "173": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.98
+        },
+        "174": {
+          "correct": false,
+          "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.161
+        },
+        "175": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.374
+        },
+        "176": {
+          "correct": false,
+          "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+          "ungraded": false,
+          "latency_sec": 1.243
+        },
+        "177": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.328
+        },
+        "178": {
+          "correct": false,
+          "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동",
+          "ungraded": false,
+          "latency_sec": 1.392
+        },
+        "179": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.092
+        },
+        "180": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.884
+        },
+        "181": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.84
+        },
+        "182": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.843
+        },
+        "183": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.007
+        },
+        "184": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.938
+        },
+        "185": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 0.947
+        },
+        "186": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 0.981
+        },
+        "187": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.116
+        },
+        "188": {
+          "correct": false,
+          "diagnosis": "자료의 개수가 아닌 (개수-1)로 나눔",
+          "ungraded": false,
+          "latency_sec": 0.944
+        },
+        "189": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.149
+        },
+        "190": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.074
+        },
+        "191": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.898
+        },
+        "192": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.223
+        },
+        "193": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.959
+        },
+        "194": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.038
+        },
+        "195": {
+          "correct": false,
+          "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.482
+        },
+        "196": {
+          "correct": false,
+          "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)",
+          "ungraded": false,
+          "latency_sec": 0.907
+        },
+        "197": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.999
+        },
+        "198": {
+          "correct": false,
+          "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음",
+          "ungraded": false,
+          "latency_sec": 1.016
+        },
+        "199": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.919
+        },
+        "200": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.863
+        },
+        "201": {
+          "correct": false,
+          "diagnosis": "삼각형의 내각의 합을 360°로 착각",
+          "ungraded": false,
+          "latency_sec": 0.839
+        },
+        "202": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.169
+        },
+        "203": {
+          "correct": false,
+          "diagnosis": "삼각형의 내각의 합을 360°로 착각",
+          "ungraded": false,
+          "latency_sec": 1.232
+        },
+        "204": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.966
+        },
+        "205": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.836
+        },
+        "206": {
+          "correct": false,
+          "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산",
+          "ungraded": false,
+          "latency_sec": 1.207
+        },
+        "207": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.9
+        },
+        "208": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 1.116
+        },
+        "209": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.126
+        },
+        "210": {
+          "correct": false,
+          "diagnosis": "한 외각의 크기와 혼동",
+          "ungraded": false,
+          "latency_sec": 1.56
+        },
+        "211": {
+          "correct": false,
+          "diagnosis": "한 외각의 크기와 혼동",
+          "ungraded": false,
+          "latency_sec": 1.614
+        },
+        "212": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.033
+        },
+        "213": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.966
+        },
+        "214": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.856
+        },
+        "215": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.086
+        },
+        "216": {
+          "correct": false,
+          "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+          "ungraded": false,
+          "latency_sec": 0.992
+        },
+        "217": {
+          "correct": false,
+          "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+          "ungraded": false,
+          "latency_sec": 0.895
+        },
+        "218": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.95
+        },
+        "219": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.897
+        },
+        "220": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.945
+        },
+        "221": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.875
+        },
+        "222": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.82
+        },
+        "223": {
+          "correct": false,
+          "diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)",
+          "ungraded": false,
+          "latency_sec": 1.149
+        },
+        "224": {
+          "correct": false,
+          "diagnosis": "제곱 관계를 쓰지 않고 두 변을 뺌",
+          "ungraded": false,
+          "latency_sec": 1.133
+        },
+        "225": {
+          "correct": false,
+          "diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)",
+          "ungraded": false,
+          "latency_sec": 0.913
+        },
+        "226": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.097
+        },
+        "227": {
+          "correct": false,
+          "diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)",
+          "ungraded": false,
+          "latency_sec": 0.929
+        },
+        "228": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.172
+        },
+        "229": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 0.933
+        },
+        "230": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.169
+        },
+        "231": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 0.947
+        },
+        "232": {
+          "correct": false,
+          "diagnosis": "제곱근을 구하지 않음",
+          "ungraded": false,
+          "latency_sec": 1.018
+        },
+        "233": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.832
+        },
+        "234": {
+          "correct": false,
+          "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함",
+          "ungraded": false,
+          "latency_sec": 1.137
+        },
+        "235": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.103
+        },
+        "236": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.056
+        },
+        "237": {
+          "correct": false,
+          "diagnosis": "닮음비를 거꾸로 적용",
+          "ungraded": false,
+          "latency_sec": 1.424
+        },
+        "238": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 0.983
+        },
+        "239": {
+          "correct": false,
+          "diagnosis": "기타 오류",
+          "ungraded": false,
+          "latency_sec": 0.866
+        },
+        "240": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 2.366
+        },
+        "241": {
+          "correct": true,
+          "diagnosis": "없음",
+          "ungraded": false,
+          "latency_sec": 1.239
+        },
+        "242": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.244
+        },
+        "243": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.838
+        },
+        "244": {
+          "correct": false,
+          "diagnosis": "부호 실수",
+          "ungraded": false,
+          "latency_sec": 1.471
+        },
+        "245": {
+          "correct": false,
+          "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)",
+          "ungraded": false,
+          "latency_sec": 1.268
+        }
+      }
+    }
+  }
+}

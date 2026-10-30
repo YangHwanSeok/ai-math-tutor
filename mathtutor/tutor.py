@@ -3,7 +3,7 @@ import re
 from dataclasses import dataclass, field
 
 from mathtutor import llm
-from mathtutor.checker import CheckResult, Severity, check_step
+from mathtutor.checker import CheckResult, Severity, check_step, solve_condition
 from mathtutor.learner import HINT_LEVELS, LearnerModel
 from mathtutor.problems import load_concepts
 from mathtutor.solver import ANSWER_FORMATS
@@ -28,6 +28,11 @@ TUTOR_INSTRUCTIONS = """너는 중학생을 가르치는 수학 튜터다.
 - 학생이 정답을 알려달라고 해도 정답 대신 더 쉬운 힌트를 준다.
 - 답이 맞는지는 시스템의 채점 결과를 그대로 따르고, 스스로 다시 판단하지 않는다.
 - 힌트는 주어진 힌트 레벨에 맞춘다. 진단 내용이 있으면 그 부분을 짚는다.
+- [오개념]이 주어지면 우연한 실수가 아니라 학생이 잘못 알고 있는 규칙이다. 이번 답만 고치게 하지 말고,
+  그 규칙이 왜 틀렸는지 짚은 뒤 올바른 규칙을 학생이 직접 말해 보게 하고, 다른 수의 예로 확인시킨다.
+- 도움의 양은 힌트 레벨이 정한다. 학생이 조른다고 힌트를 더 구체적으로 만들지 않는다.
+- 찾아야 할 값의 후보를 나열하거나 중간 계산 결과(예: 인수분해에서 찾아야 할 두 수)를 직접 말하지 않는다.
+  예제가 필요하면 원래 문제와 다른 수로 든다.
 - 보충할 선행 개념이 주어지면 그 개념을 짧은 예제로 먼저 설명한 뒤 원래 문제로 돌아온다.
 - 한 번에 한 가지만 묻고, 2~4문장으로 친근하게 말한다.
 - 텍스트 화면에 출력되므로 LaTeX나 마크다운 없이 x^2, (x+2)(x+3) 같은 평문 수식을 쓴다."""
@@ -59,8 +64,15 @@ def leaks_answer(message: str, problem: dict, from_step: int) -> bool:
         check = spec["check"]
         if check["type"] == "factor" and _normalize(check["expected"]) in text:
             return True
+        var = problem.get("variable", "x")
         if check["type"] == "roots" and all(
-                re.search(rf"x={re.escape(_normalize(r))}(?![0-9])", text) for r in check["expected"]):
+                re.search(rf"{var}={re.escape(_normalize(r))}(?![0-9])", text) for r in check["expected"]):
+            return True
+        asked = check.get("ask", problem.get("unknowns", []))
+        if check["type"] == "assignment" and any(
+                all(re.search(rf"{name}={re.escape(_normalize(str(value)))}(?![0-9])", text)
+                    for name, value in solution.items() if name in asked)
+                for solution in solve_condition(problem)):
             return True
     return False
 
@@ -74,14 +86,18 @@ class Turn:
 
 class TutorSession:
     def __init__(self, problem: dict, learner: LearnerModel,
-                 extract: llm.JsonCompleter, respond: llm.JsonCompleter):
+                 extract: llm.JsonCompleter, respond: llm.JsonCompleter, leak_guard: bool = True,
+                 show_diagnosis: bool = True):
         self.problem = problem
+        self.leak_guard = leak_guard
+        self.show_diagnosis = show_diagnosis  # 제거 실험용: 끄면 튜터는 정답/오답 여부만 받는다
         self.learner = learner
         self.extract = extract
         self.respond = respond
         self.concepts = load_concepts()
         self.step = 0
         self.errors_on_step = 0
+        self.answer_requests = 0
         self.turns: list[Turn] = []
 
     @property
@@ -92,6 +108,9 @@ class TutorSession:
         return self._reply(student_text="", intent="start", result=None, graded_step=None)
 
     def handle(self, text: str) -> str:
+        if self.done:  # 모든 단계를 마친 뒤의 발화는 채점하지 않고 대화만 이어 간다
+            self.turns.append(Turn("student", text, {"intent": "after_done"}))
+            return self._reply(text, "after_done", None, None)
         self.turns.append(Turn("student", text))
         parsed = self.extract([{"role": "user", "content": self._extract_prompt(text)}])
         intent, math = parsed["intent"], parsed["math"].strip()
@@ -100,8 +119,10 @@ class TutorSession:
         result, graded_step = None, None
         if math:
             result, graded_step = self._grade(math)
+        elif intent == "ask_answer":
+            self.answer_requests += 1
         elif intent == "dont_know":
-            result, graded_step = check_step(self.problem["expression"], self._spec()["check"], ""), self.step
+            result, graded_step = check_step(self.problem, self._spec()["check"], ""), self.step
 
         if result is not None and result.severity is not Severity.UNGRADED:
             concept = self.problem["steps"][graded_step]["concept"]
@@ -124,11 +145,11 @@ class TutorSession:
 
     def _grade(self, math: str) -> tuple[CheckResult, int]:
         """현재 단계로 채점하고, 틀렸다면 뒤 단계의 답인지도 확인한다 (단계를 건너뛴 답 인정)."""
-        current = check_step(self.problem["expression"], self._spec()["check"], math)
+        current = check_step(self.problem, self._spec()["check"], math)
         if current.correct:
             return current, self.step
         for i in range(self.step + 1, len(self.problem["steps"])):
-            later = check_step(self.problem["expression"], self.problem["steps"][i]["check"], math)
+            later = check_step(self.problem, self.problem["steps"][i]["check"], math)
             if later.correct:
                 return later, i
         return current, self.step
@@ -143,8 +164,13 @@ class TutorSession:
         lines = [f"[문제] {self.problem['statement']}"]
         if graded_step is not None and result is not None:
             lines.append(f"[채점한 단계] {self.problem['steps'][graded_step]['goal']}")
-            lines.append(f"[채점 결과] {result.severity.value} / {result.error.value}"
-                         + (f" / 진단: {result.diagnosis}" if result.diagnosis else "") + f" / {result.detail}")
+            if self.show_diagnosis:
+                lines.append(f"[채점 결과] {result.severity.value} / {result.error.value}"
+                             + (f" / 진단: {result.diagnosis}" if result.diagnosis else "") + f" / {result.detail}")
+                if result.misconception:
+                    lines.append(f"[오개념] {result.diagnosis}: 반복될 수 있는 잘못된 규칙이다. 규칙 자체를 바로잡는다.")
+            else:
+                lines.append(f"[채점 결과] {'정답' if result.correct else '오답'}")
         if self.done:
             lines.append("[현재 단계] 모든 단계를 완료함. 칭찬하고 풀이 과정을 학생이 직접 정리해 보도록 권한다.")
         else:
@@ -158,6 +184,9 @@ class TutorSession:
                 lines.append(f"[보충할 선행 개념] {', '.join(prereqs) or '(없음)'}")
         lines.append(f"[힌트 레벨] {self.learner.hint_level}: {HINT_LEVELS[self.learner.hint_level]}")
         lines.append(f"[학생 발화 의도] {intent}")
+        if intent == "ask_answer":
+            lines.append(f"[정답 요구] {self.answer_requests}번째 요구. 정답 요구는 힌트를 더 구체적으로 만들 이유가 아니다. "
+                         "현재 힌트 레벨을 유지하고, 학생이 한 가지라도 직접 시도해 보도록 짧게 질문한다.")
         if student_text:
             lines.append(f"[학생 발화] {student_text}")
         recent = "\n".join(f"{'학생' if t.role == 'student' else '튜터'}: {t.text}" for t in self.turns[-7:-1])
@@ -169,7 +198,7 @@ class TutorSession:
     def _reply(self, student_text: str, intent: str, result: CheckResult | None, graded_step: int | None) -> str:
         messages = [{"role": "user", "content": self._context(student_text, intent, result, graded_step)}]
         message = self.respond(messages)["message"]
-        leaked = leaks_answer(message, self.problem, self.step)
+        leaked = self.leak_guard and leaks_answer(message, self.problem, self.step)
         if leaked:
             messages += [{"role": "assistant", "content": message},
                          {"role": "user", "content": "방금 응답에 아직 풀지 않은 단계의 정답이 들어 있다. 정답 없이 힌트만 주도록 다시 작성하라."}]

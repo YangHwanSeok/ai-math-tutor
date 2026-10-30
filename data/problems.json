@@ -141,5 +141,260 @@
       {"goal": "판별식 b^2-4ac의 값 구하기", "concept": "quad_formula", "check": {"type": "value", "expected": "12"}},
       {"goal": "근의 공식으로 해 구하기", "concept": "quad_formula", "check": {"type": "roots", "expected": ["-2+sqrt(3)", "-2-sqrt(3)"]}}
     ]
+  },
+  {
+    "id": "U1", "type": "undetermined", "difficulty": 2,
+    "statement": "x^2+ax+6이 (x+2)(x+b)로 인수분해될 때, 상수 a, b의 값을 구하시오.",
+    "variable": "x", "unknowns": ["a", "b"],
+    "condition": {"type": "identity", "left": "x^2+ax+6", "right": "(x+2)(x+b)"},
+    "concepts": ["factor_unknown_coeff", "expand"],
+    "steps": [
+      {"goal": "(x+2)(x+b)를 전개하기", "concept": "expand", "check": {"type": "equivalent", "target": "(x+2)(x+b)"}},
+      {"goal": "계수를 비교해 a, b의 값 구하기", "concept": "factor_unknown_coeff", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "a=6, b=3", "diagnosis": "합·곱 조건 혼동"}]}}
+    ]
+  },
+  {
+    "id": "U2", "type": "undetermined", "difficulty": 2,
+    "statement": "x^2+ax-12가 (x+3)(x+b)로 인수분해될 때, 상수 a, b의 값을 구하시오.",
+    "variable": "x", "unknowns": ["a", "b"],
+    "condition": {"type": "identity", "left": "x^2+ax-12", "right": "(x+3)(x+b)"},
+    "concepts": ["factor_unknown_coeff", "expand"],
+    "steps": [
+      {"goal": "(x+3)(x+b)를 전개하기", "concept": "expand", "check": {"type": "equivalent", "target": "(x+3)(x+b)"}},
+      {"goal": "계수를 비교해 a, b의 값 구하기", "concept": "factor_unknown_coeff", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "a=-12, b=-4", "diagnosis": "합·곱 조건 혼동"},
+                           {"answer": "a=7, b=4", "diagnosis": "곱 조건의 부호 처리 오류"}]}}
+    ]
+  },
+  {
+    "id": "U3", "type": "undetermined", "difficulty": 3,
+    "statement": "2x^2+ax+3이 (2x+1)(x+b)로 인수분해될 때, 상수 a, b의 값을 구하시오.",
+    "variable": "x", "unknowns": ["a", "b"],
+    "condition": {"type": "identity", "left": "2x^2+ax+3", "right": "(2x+1)(x+b)"},
+    "concepts": ["factor_unknown_coeff", "expand", "factor_general"],
+    "steps": [
+      {"goal": "(2x+1)(x+b)를 전개하기", "concept": "expand", "check": {"type": "equivalent", "target": "(2x+1)(x+b)"}},
+      {"goal": "계수를 비교해 a, b의 값 구하기", "concept": "factor_unknown_coeff", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "a=4, b=3", "diagnosis": "전개할 때 x의 계수 2를 빠뜨림"}]}}
+    ]
+  },
+  {
+    "id": "U4", "type": "undetermined", "difficulty": 2,
+    "statement": "x^2-8x+a가 완전제곱식이 되도록 하는 상수 a의 값을 구하시오.",
+    "variable": "x", "unknowns": ["a", "b"],
+    "condition": {"type": "identity", "left": "x^2-8x+a", "right": "(x+b)^2"},
+    "concepts": ["factor_unknown_coeff", "factor_formula"],
+    "steps": [
+      {"goal": "완전제곱식 조건으로 a의 값 구하기", "concept": "factor_formula", "check": {"type": "assignment", "ask": ["a"],
+        "misconceptions": [{"answer": "a=64", "diagnosis": "일차항 계수의 절반이 아니라 계수 전체를 제곱함"}]}}
+    ]
+  },
+  {
+    "id": "S1", "type": "system", "difficulty": 1,
+    "statement": "연립방정식 x+y=5, x-y=1을 푸시오.",
+    "unknowns": ["x", "y"],
+    "condition": {"type": "equations", "equations": ["x+y=5", "x-y=1"]},
+    "concepts": ["system_linear"],
+    "steps": [
+      {"goal": "가감법으로 y를 없애고 x의 값 구하기", "concept": "system_linear", "check": {"type": "value", "of": "x", "expected": "3"}},
+      {"goal": "x, y의 값 구하기", "concept": "system_linear", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "x=2, y=3", "diagnosis": "x와 y의 값을 바꿔 씀"}]}}
+    ]
+  },
+  {
+    "id": "S2", "type": "system", "difficulty": 1,
+    "statement": "연립방정식 2x+y=7, x-y=2를 푸시오.",
+    "unknowns": ["x", "y"],
+    "condition": {"type": "equations", "equations": ["2x+y=7", "x-y=2"]},
+    "concepts": ["system_linear"],
+    "steps": [
+      {"goal": "가감법으로 y를 없애고 x의 값 구하기", "concept": "system_linear", "check": {"type": "value", "of": "x", "expected": "3"}},
+      {"goal": "x, y의 값 구하기", "concept": "system_linear", "check": {"type": "assignment"}}
+    ]
+  },
+  {
+    "id": "S3", "type": "system", "difficulty": 2,
+    "statement": "연립방정식 3x+2y=12, x=2y를 푸시오.",
+    "unknowns": ["x", "y"],
+    "condition": {"type": "equations", "equations": ["3x+2y=12", "x=2y"]},
+    "concepts": ["system_linear"],
+    "steps": [
+      {"goal": "대입법으로 x를 없애고 y의 값 구하기", "concept": "system_linear", "check": {"type": "value", "of": "y", "expected": "3/2"}},
+      {"goal": "x, y의 값 구하기", "concept": "system_linear", "check": {"type": "assignment"}}
+    ]
+  },
+  {
+    "id": "S4", "type": "system", "difficulty": 2,
+    "statement": "연립방정식 y=2x-1, 3x+y=9를 푸시오.",
+    "unknowns": ["x", "y"],
+    "condition": {"type": "equations", "equations": ["y=2x-1", "3x+y=9"]},
+    "concepts": ["system_linear"],
+    "steps": [
+      {"goal": "대입법으로 y를 없애고 x의 값 구하기", "concept": "system_linear", "check": {"type": "value", "of": "x", "expected": "2",
+        "misconceptions": [{"answer": "8/5", "diagnosis": "대입할 때 괄호를 쓰지 않아 부호 오류"}]}},
+      {"goal": "x, y의 값 구하기", "concept": "system_linear", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "x=8/5, y=11/5", "diagnosis": "대입할 때 괄호를 쓰지 않아 부호 오류"}]}}
+    ]
+  },
+  {
+    "id": "S5", "type": "system", "difficulty": 3,
+    "statement": "사과와 배를 합하여 10개를 사고 6200원을 냈다. 사과는 한 개에 500원, 배는 한 개에 800원이다. 산 사과의 개수를 x, 배의 개수를 y라 할 때 x, y의 값을 구하시오.",
+    "unknowns": ["x", "y"],
+    "condition": {"type": "equations", "equations": ["x+y=10", "500x+800y=6200"]},
+    "concepts": ["system_word", "system_linear"],
+    "steps": [
+      {"goal": "연립방정식을 세워 x, y의 값 구하기", "concept": "system_word", "check": {"type": "assignment",
+        "misconceptions": [{"answer": "x=4, y=6", "diagnosis": "x와 y가 나타내는 대상을 바꿔 씀"}]}}
+    ]
+  },
+  {
+    "id": "W1", "type": "quad_word", "difficulty": 3,
+    "statement": "연속하는 두 자연수의 곱이 56일 때, 두 자연수를 구하시오.",
+    "concepts": ["quad_word", "quad_by_factoring"],
+    "steps": [
+      {"goal": "작은 수를 x라 하고 이차방정식 세우기", "concept": "quad_word", "check": {"type": "equation", "target": "x^2+x-56"}},
+      {"goal": "이차방정식 풀기", "concept": "quad_by_factoring", "check": {"type": "roots", "expected": ["7", "-8"]}},
+      {"goal": "문제의 조건에 맞는 두 자연수 구하기", "concept": "quad_word", "check": {"type": "roots", "expected": ["7", "8"],
+        "misconceptions": [{"answer": "7, -8", "diagnosis": "자연수라는 조건을 확인하지 않고 방정식의 해를 그대로 답으로 씀"}]}}
+    ]
+  },
+  {
+    "id": "ST1", "type": "statistics", "difficulty": 1,
+    "statement": "자료 3, 7, 8, 5, 7의 평균을 구하시오.",
+    "concepts": ["mean"],
+    "steps": [
+      {"goal": "평균 구하기", "concept": "mean", "check": {"type": "value", "expected": "6",
+        "misconceptions": [{"answer": "15/2", "diagnosis": "자료의 개수를 잘못 세어 나눔"},
+                           {"answer": "7", "diagnosis": "다른 대푯값(중앙값·최빈값)과 혼동"}]}}
+    ]
+  },
+  {
+    "id": "ST2", "type": "statistics", "difficulty": 1,
+    "statement": "자료 7, 2, 9, 4, 6의 중앙값을 구하시오.",
+    "concepts": ["median"],
+    "steps": [
+      {"goal": "중앙값 구하기", "concept": "median", "check": {"type": "value", "expected": "6",
+        "misconceptions": [{"answer": "9", "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름"},
+                           {"answer": "28/5", "diagnosis": "평균과 혼동"}]}}
+    ]
+  },
+  {
+    "id": "ST3", "type": "statistics", "difficulty": 2,
+    "statement": "자료 4, 9, 1, 7, 12, 6의 중앙값을 구하시오.",
+    "concepts": ["median"],
+    "steps": [
+      {"goal": "중앙값 구하기", "concept": "median", "check": {"type": "value", "expected": "13/2",
+        "misconceptions": [{"answer": "4", "diagnosis": "크기순으로 정렬하지 않고 가운데 값을 고름"},
+                           {"answer": "6", "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음"},
+                           {"answer": "7", "diagnosis": "자료가 짝수 개일 때 가운데 두 값의 평균을 구하지 않음"}]}}
+    ]
+  },
+  {
+    "id": "ST4", "type": "statistics", "difficulty": 1,
+    "statement": "자료 2, 5, 5, 3, 8, 5, 3의 최빈값을 구하시오.",
+    "concepts": ["mode"],
+    "steps": [
+      {"goal": "최빈값 구하기", "concept": "mode", "check": {"type": "value", "expected": "5",
+        "misconceptions": [{"answer": "3", "diagnosis": "최빈값과 도수(나타난 횟수)를 혼동"}]}}
+    ]
+  },
+  {
+    "id": "ST5", "type": "statistics", "difficulty": 2,
+    "statement": "자료 2, 4, 6, 8, 10의 분산을 구하시오.",
+    "concepts": ["variance", "mean"],
+    "steps": [
+      {"goal": "평균 구하기", "concept": "mean", "check": {"type": "value", "expected": "6"}},
+      {"goal": "분산 구하기", "concept": "variance", "check": {"type": "value", "expected": "8",
+        "misconceptions": [{"answer": "40", "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음"},
+                           {"answer": "0", "diagnosis": "편차의 합과 혼동"},
+                           {"answer": "2sqrt(2)", "diagnosis": "표준편차와 혼동"},
+                           {"answer": "10", "diagnosis": "자료의 개수가 아닌 (개수-1)로 나눔"}]}}
+    ]
+  },
+  {
+    "id": "ST6", "type": "statistics", "difficulty": 3,
+    "statement": "자료 1, 3, 5, 7, 9의 표준편차를 구하시오.",
+    "concepts": ["variance", "mean"],
+    "steps": [
+      {"goal": "분산 구하기", "concept": "variance", "check": {"type": "value", "expected": "8",
+        "misconceptions": [{"answer": "40", "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음"}]}},
+      {"goal": "표준편차 구하기", "concept": "variance", "check": {"type": "value", "expected": "2sqrt(2)",
+        "misconceptions": [{"answer": "8", "diagnosis": "분산과 혼동 (제곱근을 구하지 않음)"},
+                           {"answer": "2sqrt(10)", "diagnosis": "편차 제곱의 합을 자료의 개수로 나누지 않음"}]}}
+    ]
+  },
+  {
+    "id": "G1", "type": "geometry", "difficulty": 1,
+    "statement": "삼각형의 두 내각의 크기가 50°, 60°일 때, 나머지 한 내각의 크기를 구하시오.",
+    "concepts": ["triangle_angle"],
+    "steps": [
+      {"goal": "나머지 한 내각의 크기 구하기", "concept": "triangle_angle", "check": {"type": "value", "expected": "70",
+        "misconceptions": [{"answer": "250", "diagnosis": "삼각형의 내각의 합을 360°로 착각"}]}}
+    ]
+  },
+  {
+    "id": "G2", "type": "geometry", "difficulty": 2,
+    "statement": "정육각형의 한 내각의 크기를 구하시오.",
+    "concepts": ["polygon_angle", "triangle_angle"],
+    "steps": [
+      {"goal": "정육각형의 내각의 크기의 합 구하기", "concept": "polygon_angle", "check": {"type": "value", "expected": "720",
+        "misconceptions": [{"answer": "1080", "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산"},
+                           {"answer": "360", "diagnosis": "외각의 크기의 합과 혼동"}]}},
+      {"goal": "한 내각의 크기 구하기", "concept": "polygon_angle", "check": {"type": "value", "expected": "120",
+        "misconceptions": [{"answer": "60", "diagnosis": "한 외각의 크기와 혼동"},
+                           {"answer": "180", "diagnosis": "내각의 합을 180°×(n-2)가 아닌 180°×n으로 계산"}]}}
+    ]
+  },
+  {
+    "id": "G3", "type": "geometry", "difficulty": 1,
+    "statement": "직각삼각형에서 직각을 낀 두 변의 길이가 6cm, 8cm일 때, 빗변의 길이를 구하시오.",
+    "concepts": ["pythagoras"],
+    "steps": [
+      {"goal": "빗변의 길이 구하기", "concept": "pythagoras", "check": {"type": "value", "expected": "10",
+        "misconceptions": [{"answer": "14", "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함"},
+                           {"answer": "100", "diagnosis": "제곱근을 구하지 않음"},
+                           {"answer": "2sqrt(7)", "diagnosis": "빗변을 구할 때 제곱의 차를 사용"}]}}
+    ]
+  },
+  {
+    "id": "G4", "type": "geometry", "difficulty": 2,
+    "statement": "직각삼각형의 빗변의 길이가 13cm, 다른 한 변의 길이가 5cm일 때, 나머지 한 변의 길이를 구하시오.",
+    "concepts": ["pythagoras"],
+    "steps": [
+      {"goal": "나머지 한 변의 길이 구하기", "concept": "pythagoras", "check": {"type": "value", "expected": "12",
+        "misconceptions": [{"answer": "sqrt(194)", "diagnosis": "빗변을 직각을 낀 변으로 착각 (제곱의 합 사용)"},
+                           {"answer": "8", "diagnosis": "제곱 관계를 쓰지 않고 두 변을 뺌"},
+                           {"answer": "144", "diagnosis": "제곱근을 구하지 않음"}]}}
+    ]
+  },
+  {
+    "id": "G5", "type": "geometry", "difficulty": 2,
+    "statement": "직각삼각형에서 직각을 낀 두 변의 길이가 2cm, 3cm일 때, 빗변의 길이를 구하시오.",
+    "concepts": ["pythagoras"],
+    "steps": [
+      {"goal": "빗변의 길이 구하기", "concept": "pythagoras", "check": {"type": "value", "expected": "sqrt(13)",
+        "misconceptions": [{"answer": "5", "diagnosis": "제곱 관계를 쓰지 않고 두 변을 더함"},
+                           {"answer": "13", "diagnosis": "제곱근을 구하지 않음"}]}}
+    ]
+  },
+  {
+    "id": "G6", "type": "geometry", "difficulty": 1,
+    "statement": "삼각형 ABC와 삼각형 DEF는 닮음이고 닮음비는 2:3이다. 변 AB의 대응변이 DE이고 AB=4cm일 때, DE의 길이를 구하시오.",
+    "concepts": ["similarity"],
+    "steps": [
+      {"goal": "DE의 길이 구하기", "concept": "similarity", "check": {"type": "value", "expected": "6",
+        "misconceptions": [{"answer": "8/3", "diagnosis": "닮음비를 거꾸로 적용"}]}}
+    ]
+  },
+  {
+    "id": "G7", "type": "geometry", "difficulty": 3,
+    "statement": "닮음비가 2:3인 두 닮은 삼각형에서 작은 삼각형의 넓이가 8cm²일 때, 큰 삼각형의 넓이를 구하시오.",
+    "concepts": ["similarity"],
+    "steps": [
+      {"goal": "큰 삼각형의 넓이 구하기", "concept": "similarity", "check": {"type": "value", "expected": "18",
+        "misconceptions": [{"answer": "12", "diagnosis": "넓이의 비를 닮음비 그대로 계산 (제곱하지 않음)"},
+                           {"answer": "27", "diagnosis": "넓이의 비를 세제곱으로 계산 (부피의 비와 혼동)"}]}}
+    ]
   }
 ]

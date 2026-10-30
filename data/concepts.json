@@ -43,5 +43,70 @@
     "name": "근의 공식을 이용한 이차방정식의 풀이",
     "grade": "중3",
     "prerequisites": ["factor_formula", "linear_eq"]
+  },
+  "factor_unknown_coeff": {
+    "name": "인수분해 결과를 이용한 미정계수 구하기",
+    "grade": "중3",
+    "prerequisites": ["expand", "factor_trinomial"]
+  },
+  "system_linear": {
+    "name": "연립일차방정식의 풀이 (가감법·대입법)",
+    "grade": "중2",
+    "prerequisites": ["linear_eq"]
+  },
+  "system_word": {
+    "name": "연립일차방정식의 활용",
+    "grade": "중2",
+    "prerequisites": ["system_linear"]
+  },
+  "mean": {
+    "name": "평균",
+    "grade": "중1",
+    "prerequisites": []
+  },
+  "median": {
+    "name": "중앙값",
+    "grade": "중1",
+    "prerequisites": []
+  },
+  "mode": {
+    "name": "최빈값",
+    "grade": "중1",
+    "prerequisites": []
+  },
+  "variance": {
+    "name": "분산과 표준편차",
+    "grade": "중3",
+    "prerequisites": ["mean"]
+  },
+  "triangle_angle": {
+    "name": "삼각형의 내각의 합",
+    "grade": "중1",
+    "prerequisites": []
+  },
+  "polygon_angle": {
+    "name": "다각형의 내각의 합",
+    "grade": "중1",
+    "prerequisites": ["triangle_angle"]
+  },
+  "pythagoras": {
+    "name": "피타고라스 정리",
+    "grade": "중2",
+    "prerequisites": []
+  },
+  "similarity": {
+    "name": "도형의 닮음과 닮음비",
+    "grade": "중2",
+    "prerequisites": []
+  },
+  "quad_by_sqrt": {
+    "name": "제곱근을 이용한 이차방정식의 풀이",
+    "grade": "중3",
+    "prerequisites": ["linear_eq"]
+  },
+  "quad_word": {
+    "name": "이차방정식의 활용",
+    "grade": "중3",
+    "prerequisites": ["quad_by_factoring"]
   }
 }
