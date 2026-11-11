@@ -1,0 +1,6781 @@
+{
+ "summary": {
+  "bug_identified": 0.0,
+  "bug_as_minor": 0.0909,
+  "slip_as_minor": 0.0958,
+  "unseen_as_minor": 0.1429,
+  "bug_as_minor_by_unit": {
+   "algebra": 0.4,
+   "statistics": 0.0,
+   "geometry": 0.0,
+   "calculus": 0.0,
+   "probability": 0.0
+  }
+ },
+ "records": [
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-0",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x - 4)*(x - 3)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 2.02
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 3)(x + 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.06
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 2)(x + 4)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.09
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-1",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x + 2)*(x + 4)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 2.02
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x - 4)(x - 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x - 4)(x - 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.96
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-2",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x - 5)*(x + 3)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x - 3)(x - 5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.17
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 3)(x + 5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-3",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x - 3)*(x + 4)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 1.92
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x - 5)(x + 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.99
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x - 3)(x + 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.98
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-4",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x - 5)*(x - 4)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 2.14
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 4)(x - 5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.98
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 3)(x + 5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.97
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-5",
+   "kind": "bug",
+   "truth": "factor_sign",
+   "answer": "(x + 3)*(x + 5)",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "factor_sign",
+    "ms": 2.04
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 5)(x - 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.98
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "factor_sign-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "(x + 5)(x - 3)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-0",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "2, 1",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.41
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, -1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.39
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2, -1",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.4
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-1",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "-2, -5",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2, 4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.35
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2, 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.36
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-2",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "3, -2",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.4
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 2",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, -2",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.43
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-3",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "2, -4",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2, 4",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.35
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-4",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "5, 3",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.43
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5, -3",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-5, 3",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.36
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-5",
+   "kind": "bug",
+   "truth": "root_sign",
+   "answer": "-2, -7",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "root_sign",
+    "ms": 2.44
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3, 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.35
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "root_sign-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3, 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-0",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 8",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-1",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.48
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1, 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.14
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-2",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, -5",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, -5",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.1
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-3",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "-5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.49
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5, 0",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.1
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-4",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.56
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.18
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-5",
+   "kind": "bug",
+   "truth": "divide_by_x",
+   "answer": "-3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "divide_by_x",
+    "ms": 1.48
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3, 0",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, -1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.14
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-0",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.47
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-5, 4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.09
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, 4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-1",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-6, 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-7, 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-2",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.14
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-3",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.45
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.11
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, -1",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.09
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-4",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.46
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-5",
+   "kind": "bug",
+   "truth": "positive_sqrt_only",
+   "answer": "8",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "MISSING",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "positive_sqrt_only",
+    "ms": 1.45
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, -8",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "positive_sqrt_only-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 9",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.09
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-0",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "7, 8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.39
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1, -4",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.39
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.36
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-1",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "12, 13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3, 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.44
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2, 4",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-2",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "8, 6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.35
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-4, 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-5, 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.34
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-3",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "11, 10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.61
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-6, 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.51
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-5, 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.42
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-4",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "11, 14",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.37
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0, 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.36
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-5",
+   "kind": "bug",
+   "truth": "nonzero_product",
+   "answer": "10, 13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "nonzero_product",
+    "ms": 2.4
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1, 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "nonzero_product-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2, 5",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.39
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-0",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "이항할 때 부호를 바꾸지 않음 (x^2=7x → x^2+7x=0)",
+   "answer": "-7, 0",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.16
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-2",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "이항할 때 부호를 바꾸지 않음 (x^2=7x → x^2+7x=0)",
+   "answer": "-5, 0",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.1
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-4",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "이항할 때 부호를 바꾸지 않음 (x^2=7x → x^2+7x=0)",
+   "answer": "-3, 0",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "algebra",
+   "problem": "divide_by_x-5",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "이항할 때 부호를 바꾸지 않음 (x^2=7x → x^2+7x=0)",
+   "answer": "0, 3",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-0",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-1",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-2",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-3",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "11",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-4",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-5",
+   "kind": "bug",
+   "truth": "median_unsorted",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "median_unsorted",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "median_unsorted-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-0",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-1",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-2",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-3",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-4",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "11",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-5",
+   "kind": "bug",
+   "truth": "mode_frequency",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "mode_frequency",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "mode_frequency-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-0",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-1",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "0",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-2",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "20",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-3",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "40",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-4",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "26",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.21
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "17/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.59
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-5",
+   "kind": "bug",
+   "truth": "variance_no_divide",
+   "answer": "18",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "variance_no_divide",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-0",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-1",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 8.58
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1 + sqrt(2)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 9.75
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "sqrt(2) + 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 6.79
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-2",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 8.52
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2 + sqrt(5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 9.6
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1 + sqrt(5)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 9.79
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-3",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 9.29
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2 + sqrt(6)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 9.76
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1 + sqrt(6)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 10.41
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-4",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "13/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 10.16
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1 + sqrt(26)/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 10.08
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2 + sqrt(26)/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 10.27
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-5",
+   "kind": "bug",
+   "truth": "std_no_sqrt",
+   "answer": "8",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "std_no_sqrt",
+    "ms": 10.36
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2 + 2*sqrt(2)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 11.23
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "std_no_sqrt-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2 + 2*sqrt(2)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 11.29
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-0",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "6/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.32
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-1",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-2",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-3",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "12/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.25
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-4",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "5/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "statistics",
+   "problem": "variance_no_divide-5",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "편차를 제곱하지 않고 절댓값의 평균을 구함 (분산과 평균편차 혼동)",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-0",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "900",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "542",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "538",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-1",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "1080",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "722",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "719",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-2",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "1260",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.25
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "901",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.21
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "898",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-3",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "1440",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1081",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1082",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-4",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "1620",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1261",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1262",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.21
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-5",
+   "kind": "bug",
+   "truth": "polygon_angle_n",
+   "answer": "1800",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "polygon_angle_n",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1439",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "polygon_angle_n-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1439",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-0",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "25",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.21
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-1",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "169",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-2",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "225",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "14",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.22
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "17",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-3",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "289",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-4",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "625",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "26",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "26",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-5",
+   "kind": "bug",
+   "truth": "pythagoras_no_sqrt",
+   "answer": "400",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "pythagoras_no_sqrt",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "19",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "22",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-0",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "sqrt(194)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 8.42
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "11",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 6.01
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "11",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-1",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "2*sqrt(34)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 9.98
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.82
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 6.85
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-2",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "sqrt(353)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 8.29
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.65
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.26
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-3",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "sqrt(674)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 8.28
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "25",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.7
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "22",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.83
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-4",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "3*sqrt(34)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 10.09
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.71
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.59
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-5",
+   "kind": "bug",
+   "truth": "hypotenuse_confusion",
+   "answer": "4*sqrt(34)",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "hypotenuse_confusion",
+    "ms": 10.02
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 5.75
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "hypotenuse_confusion-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "14",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 7.5
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-0",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.21
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "19",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "20",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-1",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "19",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "18",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-2",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "24",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "30",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "33",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-3",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "30",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "76",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "73",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-4",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "21",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "65",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "65",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-5",
+   "kind": "bug",
+   "truth": "area_ratio_linear",
+   "answer": "45",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "area_ratio_linear",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "73",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "area_ratio_linear-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "76",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-0",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-1",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "17",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-2",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "21",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-3",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "23",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-4",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "31",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.14
+   }
+  },
+  {
+   "unit": "geometry",
+   "problem": "pythagoras_no_sqrt-5",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "빗변의 길이를 직각을 낀 두 변의 길이의 합으로 계산",
+   "answer": "28",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-0",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "3*x^3 + 8*x^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 2.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 + 9*x",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.06
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3*x^2 + 8*x",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.13
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-1",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "2*x^2 - 5*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 1.91
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x - 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.83
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2*x + 5",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.76
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-2",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "6*x^3 + x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 1.91
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6*x^2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.71
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7*x^2 + 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.85
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-3",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "3*x^3 - 6*x^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3*x^2 - 6*x",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.02
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3*x^2 - 6*x",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.06
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-4",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "8*x^2 + 3*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 1.86
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9*x + 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.88
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3 - 8*x",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.74
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-5",
+   "kind": "bug",
+   "truth": "power_rule_keep_exponent",
+   "answer": "3*x^3 + 4*x^2 - x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "power_rule_keep_exponent",
+    "ms": 2.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 + 4*x",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 + 3*x - 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.17
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-0",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "2*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.59
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 - 4*x + 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2*x^2 - 4*x + 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.08
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-1",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "2*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.62
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 - 4*x - 3",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.05
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "4*x^2 + 4*x - 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-2",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "4*x + 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.81
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6*x^2 + 5*x + 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.03
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5*x^2 + 6*x + 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.13
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-3",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "2*x + 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.86
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-3*x^2 + 2*x - 2",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.02
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 + 2*x + 2",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.12
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-4",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "6*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.65
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9*x^2 - 2*x + 2",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.07
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "10*x^2 - 2*x + 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.12
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-5",
+   "kind": "bug",
+   "truth": "product_rule_naive",
+   "answer": "2*x - 1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "product_rule_naive",
+    "ms": 1.87
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^2 + 5*x - 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.12
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "product_rule_naive-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "4*x^2 + 4*x - 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.13
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-0",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-1",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-2",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-3",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "-4",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.2
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-4",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-5",
+   "kind": "bug",
+   "truth": "tangent_slope_value",
+   "answer": "16",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "tangent_slope_value",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "tangent_slope_value-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-0",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "3*x^3 + 4*x^2 + x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 3.04
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^3 + 2*x^2 + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.79
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2*x^3 + 2*x^2 + x + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.98
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-1",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "x^3 - 2*x^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 2.58
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2*x^3/3 - x^2 + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.8
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^3/3 - 2*x^2 + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.85
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-2",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "4*x^4 + 3*x^3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 2.92
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^4 - x^3 + C",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.79
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^3 + C",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.48
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-3",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "6*x^3 - 4*x^2 + 5*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 3.3
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2*x^3 - 2*x^2 + 6*x + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 3.08
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^3 - 2*x^2 + 5*x + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.98
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-4",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "x^4 + 2*x^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 2.67
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "5*x^4/4 + x^2 + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.76
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "x^4/4 + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.45
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-5",
+   "kind": "bug",
+   "truth": "integral_no_divide",
+   "answer": "9*x^3 + 2*x^2 - 3*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "integral_no_divide",
+    "ms": 3.11
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "3*x^3 - x^2 - 3*x + C",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.9
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "integral_no_divide-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "2*x^3 + x^2 - 3*x + C",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.99
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-0",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "3*(2*x + 1)^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 2.21
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "23*x^2 + 24*x + 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.63
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "24*x^2 + 24*x + 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.3
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-1",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "6*x - 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 1.91
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "17*x - 6",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.8
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-18*x - 6",
+   "constraint": {
+    "severity": "MINOR",
+    "error": "SIGN",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.83
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-2",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "4*(2*x - 3)^3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 2.52
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "63*x^3 - 288*x^2 + 432*x - 216",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.6
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "64*x^3 - 288*x^2 + 432*x - 217",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.44
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-3",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "8*x + 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 1.79
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "32*x + 7",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.81
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "33*x + 8",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.85
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-4",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "3*(3*x + 2)^2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 2.21
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "81*x^2 + 108*x + 35",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.16
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "81*x^2 + 107*x + 36",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.18
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-5",
+   "kind": "bug",
+   "truth": "chain_rule_omitted",
+   "answer": "10*x - 2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "chain_rule_omitted",
+    "ms": 1.76
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "50*x - 9",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.78
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "chain_rule_omitted-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "50*x - 9",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.27
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-0",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "x^2 + 4*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.38
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-1",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "x - 5",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.74
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-2",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "2*x^2 + 1",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.92
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-3",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "x^2 - 3*x",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.93
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-4",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "4*x + 3",
+   "constraint": {
+    "severity": "PARTIAL",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.82
+   }
+  },
+  {
+   "unit": "calculus",
+   "problem": "power_rule_keep_exponent-5",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "x^n을 미분할 때 지수만 1 줄이고 n을 앞으로 내려 곱하지 않음 (ax^n → ax^(n-1))",
+   "answer": "x^2 + 2*x - 1",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 2.1
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-0",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "4/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.36
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-13/10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-13/10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-1",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "9/20",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "12/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.35
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-2",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "9/10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.33
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-3",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "5/6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-1/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-4/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-4",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "8/15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "22/15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "22/15",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-5",
+   "kind": "bug",
+   "truth": "prob_add_non_exclusive",
+   "answer": "7/10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_add_non_exclusive",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "8/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_add_non_exclusive-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-2/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-0",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "1/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-25/36",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "47/36",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-1",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "1/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-181/100",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.38
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "119/100",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-2",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "1/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "23/16",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-25/16",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-3",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "1/2",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.25
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "523/216",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-341/216",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-4",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "3/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-189/125",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-64/125",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-5",
+   "kind": "bug",
+   "truth": "prob_at_least_one_add",
+   "answer": "2/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_at_least_one_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-13/9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "14/9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-0",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "2/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "25/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-11/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-1",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "2/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "25/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-11/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-2",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "7/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-23/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-11/12",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-3",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "5/6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13/6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "7/6",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.31
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-4",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "9/10",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.28
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "6/5",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-5",
+   "kind": "bug",
+   "truth": "prob_independent_add",
+   "answer": "1/3",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "prob_independent_add",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-71/36",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_independent_add-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "-35/36",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-0",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "30",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "16",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-0",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "13",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-1",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "210",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "33",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-1",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "37",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-2",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "56",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.19
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "27",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-2",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "29",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-3",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "60",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.22
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-3",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-4",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "72",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "37",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-4",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "35",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.15
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-5",
+   "kind": "bug",
+   "truth": "comb_as_perm",
+   "answer": "120",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "comb_as_perm",
+    "ms": 1.18
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "18",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.16
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "comb_as_perm-5",
+   "kind": "slip",
+   "truth": "none",
+   "answer": "18",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.17
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-0",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "25/36",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.29
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-1",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "81/100",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.3
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-2",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "9/16",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-3",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "125/216",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-4",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "64/125",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.26
+   }
+  },
+  {
+   "unit": "probability",
+   "problem": "prob_at_least_one_add-5",
+   "kind": "unseen",
+   "truth": "none",
+   "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+   "answer": "4/9",
+   "constraint": {
+    "severity": "FAR",
+    "error": "WRONG",
+    "diagnosis": null
+   },
+   "library": {
+    "pred": "none",
+    "ms": 1.27
+   }
+  }
+ ]
+}

@@ -91,6 +91,7 @@ def main() -> None:
     parser.add_argument("--reps", type=int, default=3)
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--units", nargs="+", choices=list(UNITS), default=["algebra"])
+    parser.add_argument("--only", nargs="+", default=None, help="단원 대신 오개념을 직접 지정")
     args = parser.parse_args()
 
     usage, started = llm.Usage(), time.time()
@@ -103,6 +104,8 @@ def main() -> None:
             return {"rep": rep, "misconception": mid, "p1": f"{mid}-{index}", "error": repr(e)}
 
     misconceptions = [mid for unit in args.units for mid in UNITS[unit]]
+    if args.only:
+        misconceptions = args.only
     tasks = [(mid, i, rep) for mid in misconceptions for i in range(len(MISCONCEPTIONS[mid]["problems"]))
              for rep in range(args.reps)]
     with ThreadPoolExecutor(max_workers=args.workers) as pool:

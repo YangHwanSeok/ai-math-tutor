@@ -64,6 +64,10 @@ def leaks_answer(message: str, problem: dict, from_step: int) -> bool:
         check = spec["check"]
         if check["type"] == "factor" and _normalize(check["expected"]) in text:
             return True
+        # 식이 답인 단계(도함수, 부정적분): SymPy 표기(3*x**2 + 4*x)를 평문 표기(3x^2+4x)로 바꿔 찾는다
+        if check["type"] in ("equivalent", "antiderivative") and "target" in check and \
+                _normalize(check["target"].replace("**", "^")) in text:
+            return True
         var = problem.get("variable", "x")
         if check["type"] == "roots" and all(
                 re.search(rf"{var}={re.escape(_normalize(r))}(?![0-9])", text) for r in check["expected"]):

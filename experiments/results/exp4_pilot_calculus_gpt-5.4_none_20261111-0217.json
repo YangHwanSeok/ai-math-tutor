@@ -1,0 +1,2399 @@
+{
+  "meta": {
+    "model": "gpt-5.4",
+    "effort": "none",
+    "reps": 3,
+    "units": [
+      "calculus"
+    ],
+    "retry_message": "틀렸어. 다시 풀어 볼래?",
+    "usage": {
+      "calls": 343,
+      "input_tokens": 169201,
+      "output_tokens": 23859
+    },
+    "elapsed_sec": 183.4
+  },
+  "summary": {
+    "trials": 65,
+    "errors": 7,
+    "pre": {
+      "bug": 0.9231,
+      "correct": 0.0,
+      "other": 0.0769,
+      "unparseable": 0.0
+    },
+    "given_pre_bug": {
+      "n": 60,
+      "retry": {
+        "bug": 0.7333,
+        "correct": 0.2667,
+        "other": 0.0,
+        "unparseable": 0.0
+      },
+      "control_p2": {
+        "bug": 0.75,
+        "correct": 0.25,
+        "other": 0.0,
+        "unparseable": 0.0
+      },
+      "answer_only_p2": {
+        "bug": 0.35,
+        "correct": 0.5833,
+        "other": 0.0667,
+        "unparseable": 0.0
+      },
+      "explained_p2": {
+        "bug": 0.0,
+        "correct": 0.9667,
+        "other": 0.0333,
+        "unparseable": 0.0
+      }
+    },
+    "by_misconception": {
+      "power_rule_keep_exponent": {
+        "pre_bug": 0.6875,
+        "control_p2_correct": 0.2727,
+        "answer_only_p2_correct": 1.0,
+        "explained_p2_correct": 1.0
+      },
+      "product_rule_naive": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.6875,
+        "answer_only_p2_correct": 0.4375,
+        "explained_p2_correct": 0.875
+      },
+      "tangent_slope_value": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.0625,
+        "answer_only_p2_correct": 0.5,
+        "explained_p2_correct": 1.0
+      },
+      "integral_no_divide": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.0,
+        "answer_only_p2_correct": 0.5294,
+        "explained_p2_correct": 1.0
+      }
+    }
+  },
+  "trials": [
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-0",
+      "p2": "power_rule_keep_exponent-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^3은 지수 3을 앞으로 내리면 3x^3이고, 4x^2는 8x^2예요. 더하면 도함수는 이렇게 돼요.",
+          "answer": "3x^3+8x^2"
+        },
+        "retry": {
+          "message": "아 맞다, 제가 전에 잘못 썼네요. x^n을 미분하면 지수를 앞으로 내리고 지수는 1 줄여서 x^(n-1)이 되는 거였어요.",
+          "answer": "3x^2+8x"
+        },
+        "control_p2": {
+          "message": "이번에는 x^2는 2x가 되고, -5x는 -5, 상수 3은 미분하면 0이라서 합치면 돼요.",
+          "answer": "2x-5"
+        },
+        "explained_p2": {
+          "message": "아 설명 들으니까 지수가 하나 줄어드는 거였네. 그러면 x^2는 2x, -5x는 -5, 상수 3은 0이야.",
+          "answer": "2x-5"
+        },
+        "answer_only_p2": {
+          "message": "아 맞네, x^3은 3*x^2가 되고 x^2는 2*x가 되는 거였어. 그러면 x^2-5x+3을 미분하면 2*x-5가 돼.",
+          "answer": "2*x-5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-0",
+      "p2": "power_rule_keep_exponent-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^3은 지수 3을 앞으로 내리면 3x^3이고, 4x^2는 8x^2예요. 더하면 도함수는 이렇게 나와요.",
+          "answer": "3x^3+8x^2"
+        },
+        "retry": {
+          "message": "아 맞다, 다시 보니까 내가 전에 예시처럼 잘못 썼던 것 같아. x^3은 3x^2, 4x^2는 8x로 미분돼서 둘을 더하면 돼.",
+          "answer": "3x^2+8x"
+        },
+        "control_p2": {
+          "message": "x^2는 2x로 되고, -5x는 상수처럼 남아서 -5예요. 3은 상수라서 0이라서 더하면 이렇게 돼요.",
+          "answer": "2x-5"
+        },
+        "explained_p2": {
+          "message": "아, 설명 들으니까 지수가 하나 줄어드는 거였네. 그러면 x^2는 2x, -5x는 -5, 상수 3은 0이야.",
+          "answer": "2x-5"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 x^n을 미분하면 nx^(n-1)로 되는 것 같아요. 그래서 x^2는 2x, -5x는 -5, 상수 3은 0이에요.",
+          "answer": "2*x-5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-0",
+      "p2": "power_rule_keep_exponent-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^3은 지수 3을 앞으로 내리면 3x^3이고, 4x^2는 8x^2예요. 그래서 둘을 더하면 돼요.",
+          "answer": "3x^3+8x^2"
+        },
+        "retry": {
+          "message": "아 맞다, 제가 다시 보면 x^n을 미분할 때 지수를 앞으로 내리고 지수는 하나 줄여야 하는 것 같아요. 그러면 x^3은 3x^2, 4x^2는 8x가 돼요.",
+          "answer": "3x^2+8x"
+        },
+        "control_p2": {
+          "message": "이번에는 각 항을 따로 미분하면 돼요. x^2는 2x, -5x는 -5, 상수 3은 0이에요.",
+          "answer": "2x-5"
+        },
+        "explained_p2": {
+          "message": "아 그 설명 들으니까 지수를 하나 줄여야 하는 게 맞네요. 그러면 x^2는 2x, -5x는 -5, 상수 3은 0이에요.",
+          "answer": "2x-5"
+        },
+        "answer_only_p2": {
+          "message": "아 맞네, x^3은 3*x^2로 되고 x^2는 2*x가 되니까 그렇게 하는 거구나. 그러면 x^2-5x+3은 각각 미분해서 2*x-5가 돼.",
+          "answer": "2*x-5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-1",
+      "p2": "power_rule_keep_exponent-2",
+      "labels": {
+        "pre": "other",
+        "retry": "other",
+        "control_p2": "other",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2를 미분하면 지수 2를 앞으로 내려서 2x^2이고, -5x는 -5, 상수 3은 0이니까요. 그래서 도함수는 이렇게 나와요.",
+          "answer": "2x^2-5"
+        },
+        "retry": {
+          "message": "제가 아는 방법대로 다시 하면 x^2는 2x^2, -5x는 -5, 3은 0이라서 똑같이 나와요. 그래서 저는 이렇게 생각해요.",
+          "answer": "2x^2-5"
+        },
+        "control_p2": {
+          "message": "제가 아는 방법대로 하면 x^3은 3x^3이 되고 앞의 2는 그대로 곱해서 6x^3이에요. 그리고 x는 1이니까 합치면 돼요.",
+          "answer": "6x^3+1"
+        },
+        "explained_p2": {
+          "message": "아 그 설명 들으니까 지수를 하나 줄이는 게 맞네요. 그러면 2x^3은 2·3x^2=6x^2이고, x는 1이 되니까 더하면 돼요.",
+          "answer": "6x^2+1"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 이번에는 x^3은 3x^2처럼 하고, x는 1이니까 그대로 계산해 볼게.",
+          "answer": "6x^2+1"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-1",
+      "p2": "power_rule_keep_exponent-2",
+      "labels": {
+        "pre": "other",
+        "retry": "other",
+        "control_p2": "other",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2를 미분하면 2x^2이고, -5x를 미분하면 -5, 상수 3은 0이에요. 그래서 도함수는 이렇게 나와요.",
+          "answer": "2x^2-5"
+        },
+        "retry": {
+          "message": "아 다시 보면 제가 알고 있는 규칙대로 각 항을 따로 미분하면 돼요. x^2는 2x^2, -5x는 -5, 3은 0이라서 합치면 이렇게 돼요.",
+          "answer": "2x^2-5"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 미분하면 돼요. 2x^3은 2를 그대로 두고 x^3을 미분해서 6x^3, x는 1이에요.",
+          "answer": "6x^3+1"
+        },
+        "explained_p2": {
+          "message": "아, 그러면 지수를 하나 줄여야 하는 거구나. 그럼 2x^3은 2*3*x^2=6x^2이고, x는 1*x^0=1이라서 더하면 돼.",
+          "answer": "6x^2+1"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 x^n을 미분하면 앞에 n을 곱하고 지수는 1 줄어드는 건가 봐. 2x^3은 6x^2, x는 1이어서 합치면 돼.",
+          "answer": "6x^2+1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-1",
+      "p2": "power_rule_keep_exponent-2",
+      "labels": {
+        "pre": "other",
+        "retry": "other",
+        "control_p2": "other",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 미분하면 앞에 n을 곱하니까 x^2는 2x^2가 되고, -5x는 -5, 상수 3은 0이에요. 그래서 다 합치면 이렇게 나와요.",
+          "answer": "2x^2-5"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게요. 제가 아까 배운 방식대로 하면 x^2는 2x^2, -5x는 -5, 3은 0이라서 그대로예요.",
+          "answer": "2x^2-5"
+        },
+        "control_p2": {
+          "message": "x^n은 미분하면 앞에 지수를 곱하니까 2x^3은 2를 그대로 두고 3을 곱해서 6x^3이고, x는 1이에요. 그래서 더하면 이렇게 돼요.",
+          "answer": "6x^3+1"
+        },
+        "explained_p2": {
+          "message": "아 설명 듣고 보니까 지수를 하나 줄여야 맞네요. 그러면 2x^3은 2·3x^2=6x^2이고, x는 1이에요.",
+          "answer": "6x^2+1"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 x^2를 미분하면 2x가 되는 거였네. 그러면 2x^3은 2를 그대로 두고 x^3을 미분해서 6x^2, x는 1이니까 더해서 구하면 돼.",
+          "answer": "6x^2+1"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-2",
+      "p2": "power_rule_keep_exponent-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 미분하면 지수를 앞으로 내려서 곱하면 되니까, 2x^3은 6x^3이고 x는 1x예요. 더하면 도함수는 이렇게 돼요.",
+          "answer": "6x^3+1x"
+        },
+        "retry": {
+          "message": "아 그러면 다시 해볼게요. 제가 아는 규칙대로 하면 2x^3은 6x^3, x는 1x라서 그대로 더하면 돼요.",
+          "answer": "6x^3+x"
+        },
+        "control_p2": {
+          "message": "x^n은 미분하면 지수를 앞으로 내려 곱하면 되고, 상수는 0이에요. 그래서 x^3은 3x^3, -3x^2는 -6x^2, 2는 0이에요.",
+          "answer": "3x^3-6x^2"
+        },
+        "explained_p2": {
+          "message": "아, 지수를 하나 줄이는 거였네. 그럼 x^3은 3x^2, -3x^2는 -6x, 상수 2는 0이어서 이렇게 돼.",
+          "answer": "3x^2-6x"
+        },
+        "answer_only_p2": {
+          "message": "아 그러면 x^3을 미분하면 3x^2처럼 지수가 하나 줄어드는 거였네. 그럼 각 항을 미분하면 x^3은 3x^2, -3x^2는 -6x, 2는 0이라서 이렇게 돼.",
+          "answer": "3x^2-6x"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-2",
+      "p2": "power_rule_keep_exponent-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 미분하면 앞에 n을 곱하니까 2x^3은 2·3x^3=6x^3이고, x는 1x가 되니까 1x예요. 그래서 둘을 더하면 됩니다.",
+          "answer": "6x^3+x"
+        },
+        "retry": {
+          "message": "아 그러면 제가 배운 방식으로 다시 해보면, 2x^3은 6x^3이고 x는 1x라서 그대로 더해요. 아직은 이렇게 생각돼요.",
+          "answer": "6x^3+x"
+        },
+        "control_p2": {
+          "message": "x^n은 미분하면 n을 앞으로 곱한다고 배워서, x^3은 3x^3이고 -3x^2는 -6x^2예요. 상수 2는 미분하면 0이라서 없어져요.",
+          "answer": "3x^3-6x^2"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 지수가 하나 줄어드는 거였어요. 그러면 x^3은 3x^2, -3x^2는 -6x, 상수 2는 0이라서 이렇게 나와요.",
+          "answer": "3x^2-6x"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 x^3은 3x^2, -3x^2는 -6x로 되고 상수 2는 0이라서 이렇게 나오네요.",
+          "answer": "3x^2-6x"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-2",
+      "p2": "power_rule_keep_exponent-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 미분하면 지수를 앞으로 내려서 곱하면 된다고 배웠어요. 그래서 2x^3은 2·3x^3, x는 1x가 돼요.",
+          "answer": "6x^3+x"
+        },
+        "retry": {
+          "message": "제가 배운 대로 다시 해보면, 2x^3은 6x^3이고 x는 1x라서 그대로 x예요. 그래서 같은 답이 나와요.",
+          "answer": "6x^3+x"
+        },
+        "control_p2": {
+          "message": "x^n은 미분하면 지수를 앞으로 곱한다고 생각해서, x^3은 3x^3이고 -3x^2는 -6x^2예요. 상수 2는 미분하면 0이라서 없어져요.",
+          "answer": "3x^3-6x^2"
+        },
+        "explained_p2": {
+          "message": "아 설명 들으니까 지수를 하나 줄여야 맞네요. 그러면 x^3은 3x^2, -3x^2는 -6x, 상수 2는 0이에요.",
+          "answer": "3x^2-6x"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 x^3은 3x^2처럼 지수가 하나 줄고, 상수는 0이 되는 것 같아요. 그래서 x^3-3x^2+2를 항별로 미분하면 3x^2-6x가 돼요.",
+          "answer": "3x^2-6x"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-3",
+      "p2": "power_rule_keep_exponent-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^3은 3x^3, -3x^2는 지수를 내려서 -6x^2가 되고, 상수 2는 미분하면 0이에요. 그래서 다 합치면 이렇게 돼요.",
+          "answer": "3x^3-6x^2"
+        },
+        "retry": {
+          "message": "아 그러면 제가 배운 방식대로 다시 해볼게요. x^3은 3x^3이고, -3x^2는 -6x^2, 상수는 0이라서 같아요.",
+          "answer": "3x^3-6x^2"
+        },
+        "control_p2": {
+          "message": "x^2은 앞에 2를 내려서 2x^2가 되고, 앞의 4를 곱하면 8x^2예요. 3x는 3x로 보고 미분하면 3x라서 합치면 돼요.",
+          "answer": "8x^2+3x"
+        },
+        "explained_p2": {
+          "message": "아 설명 들으니까 지수를 하나 줄이는 거였네요. 그러면 4x^2는 8x, 3x는 3이어서 합치면 돼요.",
+          "answer": "8x+3"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 지수를 하나 내리면서 차수는 1 줄어드는 거였네. 그러면 4x^2는 8x, 3x는 3이어서 합치면 돼.",
+          "answer": "8x+3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-3",
+      "p2": "power_rule_keep_exponent-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "거듭제곱은 지수를 앞으로 내려서 곱하면 되니까, x^3은 3x^3, -3x^2는 -6x^2, 상수 2는 0이에요. 그래서 다 합치면 됩니다.",
+          "answer": "3x^3-6x^2"
+        },
+        "retry": {
+          "message": "아 그러면 다시 해볼게요. x^3은 3x^3, -3x^2는 -6x^2, 2는 0이라서 그대로 합치면 된다고 생각해요.",
+          "answer": "3x^3-6x^2"
+        },
+        "control_p2": {
+          "message": "거듭제곱은 지수를 앞으로 내려서 곱하면 되니까 4x^2는 8x^2가 되고, 3x는 3x예요. 둘이 더하면 돼요.",
+          "answer": "8x^2+3x"
+        },
+        "explained_p2": {
+          "message": "아 그러면 지수를 하나 줄이는 거였네. 그럼 4x^2는 8x, 3x는 3이어서 더하면 돼.",
+          "answer": "8x+3"
+        },
+        "answer_only_p2": {
+          "message": "아 그러면 x^3은 3*x^2처럼 되는 거구나. 그럼 4x^2는 8*x, 3x는 3이니까 더해서 구하면 돼.",
+          "answer": "8*x+3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-3",
+      "p2": "power_rule_keep_exponent-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 그냥 미분하면 x^3은 3x^3, -3x^2는 -6x^2, 상수 2는 0이에요. 그래서 합치면 이렇게 돼요.",
+          "answer": "3x^3-6x^2"
+        },
+        "retry": {
+          "message": "아 그러면 다시 해볼게요. 제가 아는 방법대로 하면 x^n은 nx^n이니까 x^3은 3x^3, -3x^2는 -6x^2, 2는 0이라서 그대로예요.",
+          "answer": "3x^3-6x^2"
+        },
+        "control_p2": {
+          "message": "각 항을 제가 아는 규칙대로 미분하면 4x^2는 8x^2, 3x는 3x가 돼요. 그래서 더하면 이거예요.",
+          "answer": "8x^2+3x"
+        },
+        "explained_p2": {
+          "message": "아 설명 들으니까 지수가 하나 줄어야 맞네요. 그러면 4x^2는 8x, 3x는 3이에요.",
+          "answer": "8x+3"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 지수를 하나 내리고 차수는 1 줄어드는 거였네요. 그러면 4x^2는 8x, 3x는 3이에요.",
+          "answer": "8x+3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-4",
+      "p2": "power_rule_keep_exponent-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "배운 대로 x^n은 미분하면 앞에 지수를 곱해서 nx^n이 되고, 상수항은 없어요. 그래서 4x^2는 8x^2, 3x는 3x예요.",
+          "answer": "8x^2+3x"
+        },
+        "retry": {
+          "message": "아, 저는 x^n을 미분하면 nx^n으로 생각해서 그렇게 했는데 다시 보면 4x^2는 8x^2, 3x는 3x라서 제 계산은 그대로예요.",
+          "answer": "8x^2+3x"
+        },
+        "control_p2": {
+          "message": "배운 규칙대로 각 항을 따로 미분하면 돼요. x^3은 3x^3, 2x^2는 4x^2, -x는 -x예요.",
+          "answer": "3x^3+4x^2-x"
+        },
+        "explained_p2": {
+          "message": "아 설명 들으니까 지수를 하나 줄여야 맞네요. 그러면 항별로 미분해서 x^3은 3x^2, 2x^2는 4x, -x는 -1이에요.",
+          "answer": "3x^2+4x-1"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 지수를 앞으로 내리면 차수가 1 줄어드는 거였네. 그러면 x^3은 3x^2, 2x^2는 4x, -x는 -1이라서 이렇게 돼.",
+          "answer": "3x^2+4x-1"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-4",
+      "p2": "power_rule_keep_exponent-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 미분하면 n을 앞으로 내려서 곱하면 되니까, 4x^2는 8x^2가 되고 3x는 3x가 돼요. 더하면 도함수는 이렇게 나와요.",
+          "answer": "8x^2+3x"
+        },
+        "retry": {
+          "message": "제가 알고 있는 방법대로 다시 하면, x^2는 2를 앞으로 내려서 2x^2가 되고 앞의 4를 곱해서 8x^2예요. 3x도 1을 내려서 3x라서 합치면 같아요.",
+          "answer": "8x^2+3x"
+        },
+        "control_p2": {
+          "message": "제가 아는 방법대로 각 항에서 지수를 앞으로 내려서 곱하면 돼요. x^3은 3x^3, 2x^2는 4x^2, -x는 -x예요.",
+          "answer": "3x^3+4x^2-x"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 지수는 하나 줄여야 하는 거였어. 그러면 항별로 미분해서 x^3은 3x^2, 2x^2는 4x, -x는 -1이야.",
+          "answer": "3x^2+4x-1"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들은 대로 하면 지수를 앞으로 내리고 차수는 1 줄어드는 것 같아요. 그러면 각 항을 미분해서 더하면 돼요.",
+          "answer": "3x^2+4x-1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-4",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 0,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-5",
+      "p2": "power_rule_keep_exponent-0",
+      "labels": {
+        "pre": "other",
+        "retry": "other",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 그냥 지수를 앞으로 내려서 미분하면 돼요. x^3은 3x^3, 2x^2는 4x^2, -x는 -1이에요.",
+          "answer": "3x^3+4x^2-1"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게요. 저는 지수를 앞으로 내려서 그대로 쓰는 줄 알아서 x^3은 3x^3, 2x^2는 4x^2, -x는 -1이라고 생각해요.",
+          "answer": "3x^3+4x^2-1"
+        },
+        "control_p2": {
+          "message": "각 항을 지수를 앞으로 내려서 미분하면 된다고 생각해요. 그래서 x^3은 3x^3이고, 4x^2는 8x^2이에요.",
+          "answer": "3x^3+8x^2"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 지수를 하나 줄이는 거면 x^3은 3x^2, 4x^2는 8x가 되네요.",
+          "answer": "3x^2+8x"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들은 대로 하면 x^3은 3*x^2, 4x^2는 8*x가 되는 것 같아요. 그래서 둘을 더하면 돼요.",
+          "answer": "3*x^2+8*x"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-5",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 2,
+      "misconception": "power_rule_keep_exponent",
+      "p1": "power_rule_keep_exponent-5",
+      "p2": "power_rule_keep_exponent-0",
+      "labels": {
+        "pre": "other",
+        "retry": "other",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "배운 대로 각 항의 지수를 앞으로 내려서 미분할게요. x^3은 3x^3, 2x^2는 4x^2, -x는 -1이라서 합치면 돼요.",
+          "answer": "3x^3+4x^2-1"
+        },
+        "retry": {
+          "message": "음... 저는 지수를 앞으로 내리면 된다고 배워서 그렇게 했어요. 그래서 다시 해도 x^3은 3x^3, 2x^2는 4x^2, -x는 -1로 생각돼요.",
+          "answer": "3x^3+4x^2-1"
+        },
+        "control_p2": {
+          "message": "각 항에서 지수를 앞으로 내려서 미분하면 돼요. x^3은 3x^3, 4x^2는 8x^2예요.",
+          "answer": "3x^3+8x^2"
+        },
+        "explained_p2": {
+          "message": "아, 지수는 앞으로 내리고 하나 줄이는 거였네. 그럼 x^3은 3x^2, 4x^2는 8x로 미분하면 돼.",
+          "answer": "3x^2+8x"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 이번에는 x^3은 3*x^2, 4x^2는 8*x가 돼서 더하면 돼.",
+          "answer": "3*x^2+8*x"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-0",
+      "p2": "product_rule_naive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 보면 돼요. (x^2+1)'=2x, (x-2)'=1이라서 f'(x)=2x×1이에요.",
+          "answer": "2x"
+        },
+        "retry": {
+          "message": "아 그러면 한번 전개해서 해볼게요. f(x)=(x^2+1)(x-2)=x^3-2x^2+x-2 이니까, 이걸 미분하면 3x^2-4x+1 이에요.",
+          "answer": "3x^2-4x+1"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. f(x)=(x+2)(x^2-3)=x^3+2x^2-3x-6 이니까 도함수는 3x^2+4x-3 이에요.",
+          "answer": "3x^2+4x-3"
+        },
+        "explained_p2": {
+          "message": "아 그렇네, 전개해서 미분한 거랑도 같으니까 이제 이해됐어. 그러면 (x+2)'(x^2-3)+(x+2)(x^2-3)'로 하면 돼.",
+          "answer": "3x^2+4x-3"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 곱으로 된 식 미분을 그렇게 생각해서 풀었어요. 이번에도 각 괄호를 따로 미분해서 곱하면 (x+2)'=1, (x^2-3)'=2x 이니까 1·2x=2x예요.",
+          "answer": "2x"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-0",
+      "p2": "product_rule_naive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각하면 돼요. (x^2+1)'=2x이고 (x-2)'=1이라서 f'(x)=2x×1이에요.",
+          "answer": "2x"
+        },
+        "retry": {
+          "message": "아, 내가 곱함수는 각자 미분해서 곱한다고 생각해서 그렇게 했는데 틀렸다고 하니까 다시 생각해볼게. 그래도 지금 내가 아는 방법으로 하면 (x^2+1)'=2x, (x-2)'=1이라서 결과는 그대로 2x야.",
+          "answer": "2x"
+        },
+        "control_p2": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 그 결과를 곱하면 된다고 봤어. (x+2)'=1, (x^2-3)'=2x라서 f'(x)=1·2x야.",
+          "answer": "2x"
+        },
+        "explained_p2": {
+          "message": "아 그렇네. 전개해서 미분해 봐도 맞으니까 이제는 (fg)'=f'g+fg'로 하면 되겠다. 그러면 (x+2)'=1, (x^2-3)'=2x라서 1(x^2-3)+(x+2)2x로 계산하면 돼.",
+          "answer": "3x^2+4x-3"
+        },
+        "answer_only_p2": {
+          "message": "아 그럼 전개해서 한 다음에 미분하면 되나 봐요. (x+2)(x^2-3)=x^3+2x^2-3x-6 이니까 미분하면 3*x^2+4*x-3 이에요.",
+          "answer": "3*x^2+4*x-3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-0",
+      "p2": "product_rule_naive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 돼요. (x^2+1)'=2x, (x-2)'=1 이라서 f'(x)=2x×1이에요.",
+          "answer": "2x"
+        },
+        "retry": {
+          "message": "아, 그럼 한 번 전개해서 다시 해볼게요. f(x)=x^3-2x^2+x-2 이니까 항마다 미분하면 3x^2-4x+1 이에요.",
+          "answer": "3x^2-4x+1"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 푼 다음에 항별로 미분할게요. (x+2)(x^2-3)=x^3+2x^2-3x-6 이라서 미분하면 돼요.",
+          "answer": "3x^2+4x-3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분한 거랑도 같으니까 이제는 (fg)'=f'g+fg'로 해야겠어요. 그러면 (x+2)'=1, (x^2-3)'=2x라서 1(x^2-3)+(x+2)2x예요.",
+          "answer": "3x^2+4x-3"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 내가 한 방법이랑 답이 달라서 좀 헷갈리는데, 일단 내가 아는 방법대로 하면 돼요. (x+2)'=1, (x^2-3)'=2x 이니까 둘을 곱해서 구해요.",
+          "answer": "2x"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-1",
+      "p2": "product_rule_naive-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 배웠어요. (x+2)'=1, (x^2-3)'=2x 이니까 f'(x)=1·2x=2x예요.",
+          "answer": "2x"
+        },
+        "retry": {
+          "message": "아 다시 보니까 제가 너무 바로 미분했네요. 일단 전개한 다음에 미분해 볼게요: (x+2)(x^2-3)=x^3+2x^2-3x-6 이고, 이걸 미분하면 3x^2+4x-3이에요.",
+          "answer": "3x^2+4x-3"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개하고 미분할게요. (2x+1)(x^2+x)=2x^3+3x^2+x 이니까 도함수는 6x^2+6x+1이에요.",
+          "answer": "6x^2+6x+1"
+        },
+        "explained_p2": {
+          "message": "아 그렇네. 전개해서 미분해도 같아야 하니까 이제는 (fg)'=f'g+fg'로 하면 되겠어요. 그러면 (2x+1)'=2, (x^2+x)'=2x+1이라서 f'(x)=2(x^2+x)+(2x+1)(2x+1)이에요.",
+          "answer": "6x^2+6x+1"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 내가 배운 방법이랑 답이 달라서 좀 헷갈리는데, 일단 내가 아는 방식대로 하면 (2x+1)'=2, (x^2+x)'=2x+1이야. 그래서 f'(x)=2(2x+1)=4x+2 라고 생각해.",
+          "answer": "4x+2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-1",
+      "p2": "product_rule_naive-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각했어. (x+2)'=1이고 (x^2-3)'=2x라서 f'(x)=1·2x야.",
+          "answer": "2x"
+        },
+        "retry": {
+          "message": "아 내가 배운 방법으로는 2x가 나왔는데, 틀렸다면 일단 전개해서 다시 해볼게. f(x)=x^3+2x^2-3x-6 이니까 미분하면 3x^2+4x-3 이야.",
+          "answer": "3x^2+4x-3"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게. f(x)=2x^3+3x^2+x 이니까 항별로 미분하면 돼.",
+          "answer": "6x^2+6x+1"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분한 값이랑도 같으니까 이제는 (fg)'=f'g+fg'로 해야겠다. 그러면 (2x+1)'=2, (x^2+x)'=2x+1이라서 f'(x)=2(x^2+x)+(2x+1)(2x+1)이야.",
+          "answer": "6x^2+6x+1"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 내가 쓰던 방법이 아닌 것 같네. 일단 정답을 따라가면 전개해서 미분하면 될 것 같아서, (2x+1)(x^2+x)=2x^3+3x^2+x 이고 미분하면 6x^2+6x+1이야.",
+          "answer": "6x^2+6x+1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-1",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-2",
+      "p2": "product_rule_naive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호마다 따로 미분해서 그 결과끼리 곱하면 돼요. (2x+1)'=2, (x^2+x)'=2x+1 이라서 f'(x)=2(2x+1)이에요.",
+          "answer": "4x+2"
+        },
+        "retry": {
+          "message": "음… 저는 곱함수는 각 괄호를 따로 미분해서 곱하는 줄 알아서 다시 해도 똑같이 나와요. (2x+1)'=2, (x^2+x)'=2x+1 이니까 f'(x)=2(2x+1)이라고 생각해요.",
+          "answer": "4x+2"
+        },
+        "control_p2": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 돼요. (x-1)'=1, (x^2+2x)'=2x+2라서 f'(x)=1(2x+2)이에요.",
+          "answer": "2x+2"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 그럼 (x-1)'(x^2+2x)+(x-1)(x^2+2x)'로 하면 돼요. 계산하면 1·(x^2+2x)+(x-1)(2x+2)=x^2+2x+2x^2-2가 돼요.",
+          "answer": "3x^2+2x-2"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 다르게 생각했는데, 네가 준 정답대로 보면 전개해서 미분하면 되는 것 같아. f(x)=(x-1)(x^2+2x)=x^3+x^2-2x 이니까 미분하면 3x^2+2x-2야.",
+          "answer": "3x^2+2x-2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-2",
+      "p2": "product_rule_naive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "other",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호별로 미분해서 곱하면 된다고 생각해요. (2x+1)'=2이고, (x^2+x)'=2x+1이라서 둘을 곱하면 돼요.",
+          "answer": "4x+2"
+        },
+        "retry": {
+          "message": "아 그러면 한 번 전개해서 다시 해볼게요. f(x)=2x^3+3x^2+x 이니까 항별로 미분하면 돼요.",
+          "answer": "6x^2+6x+1"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (x-1)(x^2+2x)=x^3+x^2-2x 이라서 항별로 미분하면 돼요.",
+          "answer": "3x^2+2x-2"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 말씀해준 식대로 하면 (x-1)'=1, (x^2+2x)'=2x+2라서 f'(x)=1·(x^2+2x)+(x-1)(2x+2)예요. 정리하면 돼요.",
+          "answer": "3x^2-2"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 제가 생각한 방법이랑 답이 달라서 좀 헷갈리는데, 일단 제가 아는 방식대로 하면 (x-1)'=1, (x^2+2x)'=2x+2예요. 그래서 도함수는 1*(2x+2)라고 생각해요.",
+          "answer": "2x+2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-2",
+      "p2": "product_rule_naive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "other",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 나온 것끼리 곱하면 된다고 생각해. (2x+1)'=2, (x^2+x)'=2x+1 이니까 f'(x)=2(2x+1)이야.",
+          "answer": "4x+2"
+        },
+        "retry": {
+          "message": "음 다시 보면, 나는 곱으로 된 함수는 각 괄호를 미분한 다음 그걸 곱한다고 배웠어. 그래서 (2x+1)'=2, (x^2+x)'=2x+1 이라서 그대로 곱하면 돼.",
+          "answer": "4x+2"
+        },
+        "control_p2": {
+          "message": "곱으로 된 식이니까 각 괄호를 따로 미분해서 그 결과를 곱하면 된다고 생각해. (x-1)'=1, (x^2+2x)'=2x+2 이라서 f'(x)=1(2x+2)야.",
+          "answer": "2x+2"
+        },
+        "explained_p2": {
+          "message": "아 그렇구나. 그러면 (fg)'=f'g+fg'로 하면 되네. 여기서는 (x-1)'=1, (x^2+2x)'=2x+2니까 f'(x)=1(x^2+2x)+(x-1)(2x+2)로 계산할게.",
+          "answer": "3x^2-2"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 틀렸네. 이번에도 일단 내가 아는 방법대로 하면 (x-1)'=1, (x^2+2x)'=2x+2라서 그 둘을 곱하면 돼.",
+          "answer": "2x+2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-3",
+      "p2": "product_rule_naive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각각 미분해서 곱하면 된다고 생각해요. (x-1)'=1이고 (x^2+2x)'=2x+2라서 f'(x)=1(2x+2)예요.",
+          "answer": "2x+2"
+        },
+        "retry": {
+          "message": "아 다시 보면 먼저 식을 전개해서 미분해도 될 것 같아요. (x-1)(x^2+2x)=x^3+x^2-2x 이니까 도함수는 3x^2+2x-2예요.",
+          "answer": "3x^2+2x-2"
+        },
+        "control_p2": {
+          "message": "이번에도 먼저 전개해서 미분하면 될 것 같아요. (3x-1)(x^2+1)=3x^3-x^2+3x-1 이니까 도함수는 9x^2-2x+3이에요.",
+          "answer": "9x^2-2x+3"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 이제는 (fg)'=f'g+fg'로 하면 돼요. (3x-1)'=3, (x^2+1)'=2x라서 f'(x)=3(x^2+1)+(3x-1)(2x)예요.",
+          "answer": "9x^2-2x+3"
+        },
+        "answer_only_p2": {
+          "message": "아까 답이 달랐네. 그래도 저는 곱으로 된 함수는 각 괄호를 미분해서 곱하는 걸로 알고 있어서, (3x-1)'=3, (x^2+1)'=2x로 계산할게요.",
+          "answer": "6x"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-3",
+      "p2": "product_rule_naive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호마다 따로 미분해서 곱하면 돼요. (x-1)'=1, (x^2+2x)'=2x+2 이라서 f'(x)=1(2x+2)예요.",
+          "answer": "2x+2"
+        },
+        "retry": {
+          "message": "음 다시 보면 먼저 전개해서 미분해도 될 것 같아요. (x-1)(x^2+2x)=x^3+x^2-2x 이니까 도함수는 3x^2+2x-2예요.",
+          "answer": "3x^2+2x-2"
+        },
+        "control_p2": {
+          "message": "이번에도 전개해서 미분할게요. (3x-1)(x^2+1)=3x^3-x^2+3x-1 이니까 도함수는 9x^2-2x+3이에요.",
+          "answer": "9x^2-2x+3"
+        },
+        "explained_p2": {
+          "message": "아, 전개해서 미분한 거랑 같게 나와야 하니까 그 설명이 맞네요. 그러면 곱의 미분은 f'g+fg'로 해서 풀게요.",
+          "answer": "9x^2-2x+3"
+        },
+        "answer_only_p2": {
+          "message": "아까 답은 내가 배운 방법이랑 달라서 아직은 왜 그런지 잘 모르겠어. 일단 곱으로 된 함수는 각 괄호를 미분해서 곱한다고 생각하면, (3x-1)'=3, (x^2+1)'=2x 이야.",
+          "answer": "6x"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-3",
+      "p2": "product_rule_naive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각해요. (x-1)'=1이고, (x^2+2x)'=2x+2라서 둘을 곱하면 돼요.",
+          "answer": "2x+2"
+        },
+        "retry": {
+          "message": "아 그러면 제가 한 번 전개해서 다시 해볼게요. f(x)=(x-1)(x^2+2x)=x^3+x^2-2x 이니까 항별로 미분하면 돼요.",
+          "answer": "3x^2+2x-2"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 한 식으로 만든 다음에 미분할게요. (3x-1)(x^2+1)=3x^3-x^2+3x-1 이라서 항별로 미분하면 돼요.",
+          "answer": "9x^2-2x+3"
+        },
+        "explained_p2": {
+          "message": "아, 예시로 보니까 납득돼요. 그러면 (fg)'=f'g+fg'로 해서 풀면, (3x-1)'=3, (x^2+1)'=2x이니까 f'(x)=3(x^2+1)+(3x-1)(2x)예요.",
+          "answer": "9x^2-2x+3"
+        },
+        "answer_only_p2": {
+          "message": "아 그러면 전에 내가 쓴 방법이 아닌가 보네. 이번에는 먼저 전개해서 f(x)=3x^3-x^2+3x-1로 놓고, 항별로 미분하면 돼요.",
+          "answer": "9*x^2-2*x+3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-4",
+      "p2": "product_rule_naive-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호마다 따로 미분하면 된다고 생각해요. (3x-1)'=3이고 (x^2+1)'=2x라서 둘을 곱하면 돼요.",
+          "answer": "6x"
+        },
+        "retry": {
+          "message": "음 제가 곱함수는 각자 미분해서 곱한다고 배웠는데, 틀렸다고 하니까 다시 보긴 할게요. 그래도 지금 제가 아는 방법대로 하면 (3x-1)'=3, (x^2+1)'=2x라서 6x예요.",
+          "answer": "6x"
+        },
+        "control_p2": {
+          "message": "곱으로 된 함수니까 괄호별로 미분해서 곱하면 된다고 생각해요. (x+3)'=1, (x^2-x)'=2x-1 이라서 곱하면 돼요.",
+          "answer": "2x-1"
+        },
+        "explained_p2": {
+          "message": "아 이제 곱의 미분은 f'g+fg'로 하는 거구나. 그러면 (x+3)'(x^2-x)+(x+3)(x^2-x)'로 계산하면 돼요.",
+          "answer": "3x^2+4x-3"
+        },
+        "answer_only_p2": {
+          "message": "아까 정답을 보니까 내가 쓰던 방법이 아닌가 보네요. 그럼 이번에는 먼저 전개해서 f(x)=x^3+2x^2-3x로 놓고 미분하면 돼요.",
+          "answer": "3x^2+4x-3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-4",
+      "p2": "product_rule_naive-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각해요. (3x-1)'=3이고, (x^2+1)'=2x라서 f'(x)=3·2x예요.",
+          "answer": "6x"
+        },
+        "retry": {
+          "message": "음 제가 아는 방법으로는 곱함수는 각 식을 미분한 다음 곱하는 거라서, 다시 해도 똑같이 나와요. (3x-1)'=3, (x^2+1)'=2x이니까요.",
+          "answer": "6x"
+        },
+        "control_p2": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각해요. (x+3)'=1, (x^2-x)'=2x-1이라서 f'(x)=1(2x-1)이에요.",
+          "answer": "2x-1"
+        },
+        "explained_p2": {
+          "message": "아 이제 곱의 미분은 f'g+fg'로 하는 거구나. 그럼 (x+3)'(x^2-x)+(x+3)(x^2-x)'로 계산하면 돼요.",
+          "answer": "3x^2+4x-3"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 내가 쓴 방법이 아닌가 보네. 그러면 이번엔 먼저 전개해서 미분해 볼게요.",
+          "answer": "3*x^2+4*x-3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-4",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 0,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-5",
+      "p2": "product_rule_naive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호마다 따로 미분하면 된다고 생각해요. (x+3)'=1이고 (x^2-x)'=2x-1이니까 둘을 곱하면 돼요.",
+          "answer": "2x-1"
+        },
+        "retry": {
+          "message": "아 그러면 먼저 전개해서 미분해볼게요. f(x)=(x+3)(x^2-x)=x^3+2x^2-3x 이니까, 미분하면 3x^2+4x-3이에요.",
+          "answer": "3x^2+4x-3"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (x^2+1)(x-2)=x^3-2x^2+x-2 이고, 이걸 미분하면 돼요.",
+          "answer": "3x^2-4x+1"
+        },
+        "explained_p2": {
+          "message": "아 그렇구나, 곱의 미분은 앞에 거 미분한 거에 뒤에 거 그대로 더하기 뒤에 거 미분한 거에 앞에 거 그대로였네. 그러면 그대로 계산해 볼게.",
+          "answer": "3x^2-4x+1"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 내가 배운 방식이랑 달라서 아직은 잘 모르겠지만, 이번 것도 괄호별로 미분해서 곱할게요. (x^2+1)'=2x, (x-2)'=1이라서 둘을 곱하면 돼요.",
+          "answer": "2x"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-5",
+      "p2": "product_rule_naive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 각 괄호를 따로 미분해서 곱하면 된다고 생각해요. (x+3)'=1이고 (x^2-x)'=2x-1이라서 둘을 곱하면 돼요.",
+          "answer": "2x-1"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게요. 먼저 전개해서 f(x)=x^3+2x^2-3x 이고, 이걸 미분하면 3x^2+4x-3이 돼요.",
+          "answer": "3x^2+4x-3"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 풀게요. f(x)=x^3-2x^2+x-2 이니까 항별로 미분하면 돼요.",
+          "answer": "3x^2-4x+1"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 예시로 전개해서 미분한 값이랑 같으니까 이제는 (fg)'=f'g+fg'로 하면 되겠어요. 그러면 2x(x-2)+(x^2+1)·1이에요.",
+          "answer": "3x^2-4x+1"
+        },
+        "answer_only_p2": {
+          "message": "아 그러면 전에 건 내가 잘못 생각했나 봐요. 이번에는 식을 전개해서 x^3-2x^2+x-2가 되니까 미분하면 3x^2-4x+1이에요.",
+          "answer": "3x^2-4x+1"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "product_rule_naive",
+      "p1": "product_rule_naive-5",
+      "p2": "product_rule_naive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "곱으로 된 함수니까 괄호마다 따로 미분하면 된다고 생각해요. (x+3)'=1이고 (x^2-x)'=2x-1이라서 둘이 곱하면 돼요.",
+          "answer": "2x-1"
+        },
+        "retry": {
+          "message": "아 그러면 제가 한 번 전개해서 다시 해볼게요. f(x)=(x+3)(x^2-x)=x^3+2x^2-3x 이니까 항마다 미분하면 돼요.",
+          "answer": "3x^2+4x-3"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 풀게요. (x^2+1)(x-2)=x^3-2x^2+x-2 이고, 항별로 미분하면 돼요.",
+          "answer": "3x^2-4x+1"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 곱의 미분은 앞미분×뒤 그대로 + 앞 그대로×뒤미분으로 해야 맞아요. 그러면 (x^2+1)'=2x, (x-2)'=1이라서 f'(x)=2x(x-2)+(x^2+1)×1이에요.",
+          "answer": "3x^2-4x+1"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 생각한 방법이랑 정답이 달라서 좀 헷갈리는데, 일단 내가 아는 방식대로 하면 (x^2+1)'=2x, (x-2)'=1이에요. 그래서 둘을 곱하면 2x라고 생각해요.",
+          "answer": "2x"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-0",
+      "p2": "tangent_slope_value-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 접선의 기울기가 그 점에서의 함숫값이라고 배웠어요. f(1)=1^2+3×1=4 이니까 기울기는 4예요.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "음... 저는 접선의 기울기는 그 점에서의 함숫값이라고 생각해서 다시 계산해도 같아요. x=1일 때 y=1^2+3×1=4라서 기울기는 4라고 봐요.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기는 그 점에서의 함숫값이라고 생각해요. 그래서 f(2)=2^3-2×2=8-4=4예요.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거네요. 그러면 미분해서 구하면 f(x)=x^3-2x니까 f'(x)=3x^2-2, x=2에서 3·4-2=10이에요.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제에서 정답이 5라고 해서, 제가 알던 방법이 아니라 다른 식으로 생각해야 하는 것 같아요. x^3-2x는 기울기가 3x^2-2가 되니까 x=2에서 3·4-2=10이에요.",
+          "answer": "10"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-0",
+      "p2": "tangent_slope_value-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "other"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이니까, f(1)을 구하면 돼. 1^2+3×1=4라서 기울기는 4야.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "음... 나는 접선의 기울기는 그 점에서의 함숫값이라고 배워서 다시 해도 f(1)을 구하면 된다고 생각해. 그래서 1^2+3×1=4야.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 생각해서 f(2)를 구하면 돼. 2^3-2×2=8-4=4라서 기울기는 4야.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거구나. 그러면 이번에는 미분해서 구하면 돼.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 함수값으로 생각했는데, 방금 정답이 5라고 했으니까 이번엔 그렇게 맞춰서 볼게. x=2를 넣으면 2^3-2×2=8-4=4인데, 앞문제처럼 정답이 다를 수 있으니 5로 할게.",
+          "answer": "5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-0",
+      "p2": "tangent_slope_value-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이니까 f(1)을 구하면 돼. 1^2+3\times1=4라서 기울기는 4야.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "내가 전에 배운 방법으로는 함숫값을 쓰는 건데, 그걸로 하면 4가 나와. 근데 틀렸다고 하니까 다시 생각해 보면 x^2+3x를 미분하면 2x+3이고 x=1 대입해서 5인 것 같아.",
+          "answer": "5"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 배웠으니까 f(2)를 구할게. 2^3-2×2=8-4=4라서 기울기는 4야.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아 맞네. y좌표랑 기울기는 다른 거고, 위아래로 평행이동해도 기울기는 같다는 설명이 납득돼. 그러면 미분해서 구하면 돼.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 함수값으로 봤는데, 이번엔 네가 전에 5라고 한 게 좀 걸리네. 그래도 지금은 내가 아는 방법대로 하면 f(2)를 구하면 돼.",
+          "answer": "4"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-1",
+      "p2": "tangent_slope_value-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 그 점에서의 접선 기울기는 그 점의 함숫값이랑 같다고 생각해요. f(2)=2^3-2·2=8-4=4라서 기울기는 4예요.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "음… 저는 아직 접선의 기울기는 그 점의 함숫값이라고 생각해요. 그래서 다시 해도 f(2)를 구하면 된다고 봐요.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기는 그 점에서의 함숫값이라고 생각해서 f(3)을 구할게요. 2·3^2-3=18-3=15예요.",
+          "answer": "15"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 함숫값이랑 기울기는 다른 거네요. 그러면 미분해서 f'(x)=4x-1이고, x=3 대입하면 12-1=11이에요.",
+          "answer": "11"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 틀렸네요. 그럼 이번에는 맞는 방법으로 해볼게요. y=2x^2-x의 기울기는 4x-1이니까 x=3을 넣으면 12-1=11이에요.",
+          "answer": "11"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-1",
+      "p2": "tangent_slope_value-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "점에서의 접선 기울기는 그 점의 함숫값이니까, f(2)를 구하면 돼. 2^3-2×2=8-4=4라서 기울기는 4야.",
+          "answer": "4"
+        },
+        "retry": {
+          "message": "내가 배운 방법으로는 접선의 기울기가 그 점에서의 함숫값이야. 그래서 다시 해도 f(2)=2^3-2×2=8-4=4라서 4라고 생각해.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 배웠으니까 f(3)을 구할게. 2×3^2-3=18-3=15라서 기울기는 15야.",
+          "answer": "15"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거구나. 그러면 이번에는 미분해서 구하면 돼: f(x)=2x^2-x 이니까 f'(x)=4x-1, x=3에서 12-1=11이야.",
+          "answer": "11"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 함수값으로 구했는데 틀렸다고 했으니까, 이번엔 정답 방식에 맞춰서 생각해볼게. y=2x^2-x면 기울기는 4x-1 같아서 x=3 넣으면 11이야.",
+          "answer": "11"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-1",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-2",
+      "p2": "tangent_slope_value-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 점에서의 접선 기울기가 그 점의 함숫값이라고 생각해요. x=3을 대입하면 f(3)=2·3^2-3=18-3=15예요.",
+          "answer": "15"
+        },
+        "retry": {
+          "message": "아, 저는 아직 접선의 기울기를 그 점의 함숫값으로 생각하고 있어서 다시 해도 똑같이 나와요. x=3을 넣으면 돼요.",
+          "answer": "15"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기를 그 점에서의 함숫값으로 보고 풀어요. x=4를 대입하면 f(4)=4^2-5·4=16-20=-4예요.",
+          "answer": "-4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거네. 그러면 미분해서 f'(x)=2x-5이고, x=4를 넣으면 8-5=3이야.",
+          "answer": "3"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 그렇게 생각해서 풀었는데, 정답이 11이라고 하니까 그 방식이 아닌가 봐요. 이번에는 식을 미분한 것처럼 계수를 앞으로 내리면 2x-5라서 x=4 넣으면 3이에요.",
+          "answer": "3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-2",
+      "p2": "tangent_slope_value-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 그 점에서의 접선 기울기는 그 점의 함숫값이랑 같다고 배웠어요. 그래서 f(3)=2×3^2-3=18-3=15예요.",
+          "answer": "15"
+        },
+        "retry": {
+          "message": "음... 저는 아직 접선의 기울기는 그 점의 함숫값이라고 생각해서 다시 해도 f(3)을 구하면 된다고 봐요. 2×3^2-3=15라서 그대로 15예요.",
+          "answer": "15"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기는 그 점에서의 함숫값이라고 생각해서 f(4)를 구할게요. 4^2-5×4=16-20=-4예요.",
+          "answer": "-4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거네요. 그러면 미분해서 f'(x)=2x-5이고, x=4를 넣으면 8-5=3이에요.",
+          "answer": "3"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 잘못 알고 있었던 것 같아요. 그럼 이번에는 x^2-5x에서 기울기가 2x-5라고 보면 x=4일 때 8-5=3이에요.",
+          "answer": "3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-2",
+      "p2": "tangent_slope_value-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "제가 배운 방법대로 하면 접선의 기울기는 그 점에서의 함숫값이랑 같아요. f(3)=2·3^2-3=18-3=15라서 기울기는 15예요.",
+          "answer": "15"
+        },
+        "retry": {
+          "message": "음... 저는 접선의 기울기가 그 점에서의 함숫값이라고 배워서 다시 해도 f(3)을 구하면 된다고 생각해요. 2×3^2-3=15라서 그대로 15예요.",
+          "answer": "15"
+        },
+        "control_p2": {
+          "message": "제가 아는 방법대로 하면 접선의 기울기는 그 점에서의 함숫값이에요. f(4)=4^2-5·4=16-20=-4라서 기울기는 -4예요.",
+          "answer": "-4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거였네. 그러면 미분해서 f'(x)=2x-5이고, x=4를 넣으면 8-5=3이야.",
+          "answer": "3"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 제가 배운 방법이랑 달랐는데, 일단 지금은 제가 아는 방식으로 풀어볼게요. f(4)=4^2-5·4=16-20=-4라서 기울기는 -4예요.",
+          "answer": "-4"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-3",
+      "p2": "tangent_slope_value-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "other"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 그 점에서의 접선 기울기는 그 점의 함숫값이랑 같다고 생각해요. 그래서 f(4)=4^2-5*4=16-20=-4예요.",
+          "answer": "-4"
+        },
+        "retry": {
+          "message": "음… 저는 접선의 기울기가 그 점에서의 함숫값이라고 배워서 다시 계산해도 같아요. x=4를 넣으면 되니까 f(4)=16-20=-4예요.",
+          "answer": "-4"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기는 그 점에서의 함숫값이랑 같다고 생각해요. 그래서 x=1을 넣으면 돼요.",
+          "answer": "2"
+        },
+        "explained_p2": {
+          "message": "아 맞네, y좌표랑 기울기는 다른 거네요. 그러면 미분해서 f(x)=x^3+x 이니까 f'(x)=3x^2+1, x=1 넣으면 3+1=4예요.",
+          "answer": "4"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 제가 틀렸네요. 그러면 이번에는 정답이 3이었던 걸 참고해서 x=1에서의 기울기를 3이라고 해볼게요.",
+          "answer": "3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-3",
+      "p2": "tangent_slope_value-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 배웠으니까 f(4)를 구하면 돼요. 4^2-5*4=16-20=-4라서 기울기는 -4예요.",
+          "answer": "-4"
+        },
+        "retry": {
+          "message": "제가 배운 방법으로는 접선의 기울기가 그 점에서의 함숫값이니까 다시 계산해도 f(4)를 구하면 돼요. 4^2-5*4=16-20=-4라서 저는 -4라고 생각해요.",
+          "answer": "-4"
+        },
+        "control_p2": {
+          "message": "제가 배운 방법대로 하면 접선의 기울기는 그 점에서의 함숫값이에요. 그래서 f(1)=1^3+1=2라서 기울기는 2예요.",
+          "answer": "2"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거네요. 그러면 미분해서 구하면 되고, f(x)=x^3+x면 f'(x)=3x^2+1이라서 x=1에서 3+1=4예요.",
+          "answer": "4"
+        },
+        "answer_only_p2": {
+          "message": "아까는 틀렸다고 했으니까 다시 생각해 보려고 했는데, 내가 아는 방법으로는 일단 그 점에서의 함숫값을 써요. f(1)=1^3+1=2라서 기울기는 2라고 볼게요.",
+          "answer": "2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-3",
+      "p2": "tangent_slope_value-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "저는 접선의 기울기를 그 점에서의 함숫값으로 보면 된다고 배웠어요. f(4)=4^2-5·4=16-20=-4 이니까 기울기는 -4예요.",
+          "answer": "-4"
+        },
+        "retry": {
+          "message": "음… 저는 원래 그 점에서의 함숫값이 접선의 기울기라고 생각해서 f(4)를 다시 계산해 봤어요. 4^2-5*4=16-20=-4라서 저는 -4라고 생각해요.",
+          "answer": "-4"
+        },
+        "control_p2": {
+          "message": "저는 접선의 기울기를 그 점에서의 함숫값으로 구하면 된다고 생각해요. f(1)=1^3+1=2라서 기울기는 2예요.",
+          "answer": "2"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거네요. 그러면 이번엔 미분해서 f'(x)=3x^2+1 이고, x=1에서 3·1^2+1=4예요.",
+          "answer": "4"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 제가 틀렸네요. 그래도 지금은 제가 아는 방법대로 하면 f(1)=1^3+1=2라서 기울기는 2예요.",
+          "answer": "2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-4",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-4",
+      "p2": "tangent_slope_value-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "제가 아는 방법으로는 그 점에서의 접선 기울기는 함숫값이랑 같아요. x=1일 때 y=1^3+1=2라서 기울기는 2예요.",
+          "answer": "2"
+        },
+        "retry": {
+          "message": "음… 저는 원래 접선의 기울기가 그 점의 함숫값이라고 생각해서 2라고 했는데, 틀렸다고 하니까 다시 보면 미분으로 구하는 것 같아요. y=x^3+x를 미분하면 3x^2+1이고, x=1을 대입하면 4예요.",
+          "answer": "4"
+        },
+        "control_p2": {
+          "message": "이제는 접선의 기울기를 미분해서 구하면 된다고 생각했어요. y=3x^2+2x를 미분하면 6x+2이고, x=2를 넣으면 14예요.",
+          "answer": "14"
+        },
+        "explained_p2": {
+          "message": "아 맞네, y좌표랑 기울기는 다른 거구나. 그러면 미분해서 구하면 되고, f(x)=3x^2+2x는 f'(x)=6x+2니까 x=2에서 14야.",
+          "answer": "14"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 다르게 생각했는데, 이번에는 알려준 답처럼 풀어볼게요. y=3x^2+2x에서 x=2를 넣으면 3·4+4=16이라서 기울기는 16이에요.",
+          "answer": "16"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-4",
+      "p2": "tangent_slope_value-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "제가 아는 방법으로는 그 점에서의 접선의 기울기는 그 점에서의 함숫값이랑 같아요. f(1)=1^3+1=2이니까 기울기는 2예요.",
+          "answer": "2"
+        },
+        "retry": {
+          "message": "음... 저는 원래 기울기가 그 점의 함숫값이라고 생각해서 2라고 했어요. 그런데 틀렸다고 하니까 다시 보면, x=1을 넣는 방식만으로는 안 되는 것 같아요.",
+          "answer": "2"
+        },
+        "control_p2": {
+          "message": "제가 아는 방법으로는 접선의 기울기는 그 점에서의 함숫값이에요. x=2를 넣으면 3·2^2+2·2=12+4=16이라서 기울기는 16이라고 생각해요.",
+          "answer": "16"
+        },
+        "explained_p2": {
+          "message": "아 맞네, y좌표랑 기울기는 다른 거구나. 그러면 미분해서 f'(x)=6x+2이고, x=2 대입하면 12+2=14야.",
+          "answer": "14"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제에서 정답이 4라고 해서, 제가 쓰던 방법이 아닌 다른 규칙이 있나 생각해봤어요. 그러면 이번에는 식을 미분하듯이 보면 y=3x^2+2x의 기울기는 6x+2니까 x=2에서 14예요.",
+          "answer": "14"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-5",
+      "p2": "tangent_slope_value-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이니까 먼저 f(2)를 구하면 돼. 3·2^2+2·2=12+4=16이야.",
+          "answer": "16"
+        },
+        "retry": {
+          "message": "음 나는 접선의 기울기를 그 점의 함숫값으로 구한다고 생각해서 다시 해 봤어. x=2를 넣으면 돼.",
+          "answer": "16"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 배워서 f(1)을 구하면 돼. 1^2+3·1=4야.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거구나. 그러면 미분해서 f'(x)=2x+3이고, x=1 넣으면 5야.",
+          "answer": "5"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제 보니까 내가 쓰던 방법이 아닌가 보다. 이번에는 정답 방식에 맞춰서 x^2+3x의 기울기는 2x+3이라고 보고 x=1 넣으면 2+3=5야.",
+          "answer": "5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-5",
+      "p2": "tangent_slope_value-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이니까 f(2)를 구하면 돼요. 3·2^2+2·2=12+4=16이에요.",
+          "answer": "16"
+        },
+        "retry": {
+          "message": "음... 저는 접선의 기울기는 그 점에서의 함숫값이라고 생각해서 다시 계산해도 f(2)를 구하면 된다고 봐요. 3x^2+2x에 x=2 넣으면 16이에요.",
+          "answer": "16"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 배웠다고 생각해서 f(1)을 구할게요. 1^2+3·1=4예요.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거였네. 그러면 미분해서 f'(x)=2x+3이고, x=1 넣으면 5야.",
+          "answer": "5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 생각한 방법으로 풀었는데, 이번에도 그 점에서의 함숫값으로 보면 될 것 같아요. f(1)=1^2+3·1=4예요.",
+          "answer": "4"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "tangent_slope_value",
+      "p1": "tangent_slope_value-5",
+      "p2": "tangent_slope_value-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이니까 먼저 f(2)를 구하면 돼. 3·2^2+2·2=12+4=16이야.",
+          "answer": "16"
+        },
+        "retry": {
+          "message": "음 나는 접선의 기울기를 그 점에서의 함숫값으로 배워서 다시 해도 f(2)를 구하게 돼. 3×2^2+2×2=12+4=16이야.",
+          "answer": "16"
+        },
+        "control_p2": {
+          "message": "접선의 기울기는 그 점에서의 함숫값이라고 생각해서 f(1)을 구할게. 1^2+3·1=1+3=4야.",
+          "answer": "4"
+        },
+        "explained_p2": {
+          "message": "아, y좌표랑 기울기는 다른 거구나. 그럼 미분해서 f'(x)=2x+3이고, x=1 넣으면 5야.",
+          "answer": "5"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제 보니까 내가 생각한 방법이 틀렸던 것 같아. 이번에는 제대로 해서 x^2+3x를 미분하면 2x+3이고, x=1 넣으면 5야.",
+          "answer": "5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-0",
+      "p2": "integral_no_divide-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 하나씩 적분하면 지수를 1씩 올리면 돼요. 그래서 3x^2는 3x^3, 4x는 4x^2, 1은 x가 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "retry": {
+          "message": "음 다시 해봐도 저는 각 항의 지수를 1 올리면 된다고 생각해요. 상수 1은 x가 되니까 결과는 같아요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "control_p2": {
+          "message": "각 항의 지수를 1씩 올리면 된다고 보고 풀면 돼요. x^2는 x^3, -2x는 -2x^2가 돼요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하면 계수를 나눠줘야 맞는 것 같아. 그러면 x^2는 x^3/3, -2x는 -x^2로 적분하면 돼.",
+          "answer": "x^3/3-x^2+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명은 아직 잘 모르겠지만, 저는 각 항의 지수를 1 올리는 방법으로 해볼게요. 그러면 x^2는 x^3, -2x는 -2x^2가 돼요.",
+          "answer": "x^3-2x^2+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-0",
+      "p2": "integral_no_divide-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 지수를 1씩 올리면 돼요. 그래서 3x^2는 3x^3, 4x는 4x^2, 1은 x가 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1 올리는 걸로 배웠어서 다시 해도 같아요. 상수 1은 x가 되니까 그대로 합치면 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분해서 지수를 1씩 올리면 돼요. x^2는 x^3, -2x는 -2x^2가 돼요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 걸 보니까 맞네요. 그러면 x^2는 x^3/3, -2x는 -x^2가 돼서 합치면 돼요.",
+          "answer": "x^3/3-x^2+C"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 각 항의 지수를 1씩 올리면 된다고 생각해요. 그래서 x^2는 x^3, -2x는 -2x^2가 돼요.",
+          "answer": "x^3-2x^2+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-0",
+      "error": "RateLimitError(\"Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}\")"
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-1",
+      "p2": "integral_no_divide-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 x^2는 x^3, -2x는 -2x^2가 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "x^3-2x^2+C"
+        },
+        "retry": {
+          "message": "음… 저는 지수를 1 올리고 계수는 그대로 두는 걸로 배워서 다시 해도 같다고 생각해요. 그래서 답은 그대로예요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항의 지수를 1씩 올리면 4x^4, 3x^3이 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하니까 계수를 그대로 두면 안 되는 거네요. 그러면 x^n은 x^(n+1)/(n+1)로 적분해서 각 항에 적용하면 돼요.",
+          "answer": "x^4+x^3+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 지수를 1 올린 다음 그 수로 나눠야 하는 것 같아요. 그래서 항별로 적분해 보면 됩니다.",
+          "answer": "x^4+x^3+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-1",
+      "p2": "integral_no_divide-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^2는 지수를 1 올리면 x^3이고, -2x는 -2x^2가 돼요. 그래서 둘을 더하고 적분상수 C를 붙이면 돼요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "retry": {
+          "message": "음… 저는 x^n은 지수를 1 올리면 된다고 배워서 다시 해도 x^2는 x^3, -2x는 -2x^2라고 생각해요. 그래서 답은 그대로예요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항마다 지수를 1씩 올리면 돼요. 4x^3은 4x^4, 3x^2는 3x^3이니까 적분상수까지 붙이면 돼요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하면 계수도 같이 나눠줘야 맞는 것 같아요. 그러면 4x^3은 x^4, 3x^2는 x^3이니까 합치고 C를 붙이면 돼요.",
+          "answer": "x^4+x^3+C"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 지수를 올리고 그 지수로 나눠주면 되는 거네. 4x^3은 x^4, 3x^2는 x^3이 되고 각각 4랑 3으로 나눠서 써볼게.",
+          "answer": "x^4+x^3+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-1",
+      "p2": "integral_no_divide-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 x^2는 x^3, -2x는 -2x^2가 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "x^3-2x^2+C"
+        },
+        "retry": {
+          "message": "음… 저는 지수를 1 올리고 계수는 그대로 두는 걸로 배워서 다시 해도 같다고 생각해요. 그래서 각 항을 그대로 적용했어요.",
+          "answer": "x^3-2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항마다 지수를 1씩 올리면 돼요. 4x^3은 4x^4, 3x^2는 3x^3이니까 마지막에 C를 붙여요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 게 맞네요. 그러면 각 항마다 지수를 1 올리고 그 수로 나눠주면 돼요.",
+          "answer": "x^4+x^3+C"
+        },
+        "answer_only_p2": {
+          "message": "아, 맞네. 적분할 때는 지수를 1 올리고 그 지수로 나눠야 하는 거였어요. 그러면 4x^3은 x^4, 3x^2는 x^3이니까 합치고 C를 붙이면 돼요.",
+          "answer": "x^4+x^3+C"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-2",
+      "p2": "integral_no_divide-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "other"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 지수를 1 올리면 되니까 각각 적분하면 4x^4, 3x^3이에요. 마지막에 적분상수 C를 붙이면 돼요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "retry": {
+          "message": "음… 저는 계수는 그대로 두고 지수만 1 올리는 걸로 배워서 다시 해도 같아요. 그래서 이렇게 나와요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "control_p2": {
+          "message": "각 항마다 지수를 1씩 올려서 적분하면 돼요. 상수도 그대로 두고 마지막에 C를 붙이면 됩니다.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 적분한 걸 미분해서 확인하면 되겠네요. 그러면 각 항을 하나씩 적분하면 6x^2는 2x^3, -4x는 -2x^2, 5는 5x가 돼요.",
+          "answer": "2x^3-2x^2+5x+C"
+        },
+        "answer_only_p2": {
+          "message": "아까는 저는 계수를 그대로 두는 줄 알았는데, 정답이 그렇게 나왔다면 이번에도 그 방식으로 하면 될 것 같아요. 각 항마다 지수를 1씩 올려서 쓰면 돼요.",
+          "answer": "x^3-x^2+5x+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-2",
+      "p2": "integral_no_divide-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 지수를 1씩 올리면 돼요. 그래서 4x^3은 4x^4, 3x^2는 3x^3이고 마지막에 C를 붙여요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1 올리는 걸로 배워서 다시 해도 그렇게 나와요. 그래서 그대로 하면 같은 답이에요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분해서 지수를 1씩 올리면 돼요. 상수도 그대로 쓰고 마지막에 C를 붙일게요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하면 계수를 나눠줘야 맞아요. 그러면 항별로 적분해서 6x^2는 2x^3, -4x는 -2x^2, 5는 5x가 돼요.",
+          "answer": "2x^3-2x^2+5x+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 말한 답은 아직 좀 납득이 안 가서, 나는 원래 하던 방식대로 풀어볼게. 각 항의 지수를 1씩 올리고 상수도 그대로 두면 돼.",
+          "answer": "6x^3-4x^2+5x+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-2",
+      "p2": "integral_no_divide-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 지수를 1 올리면 되니까, 4x^3은 4x^4, 3x^2는 3x^3이 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "retry": {
+          "message": "음… 저는 x의 지수만 1 올리면 된다고 생각해서 다시 해도 똑같이 나와요. 그래서 부정적분은 이렇게 썼어요.",
+          "answer": "4x^4+3x^3+C"
+        },
+        "control_p2": {
+          "message": "각 항별로 x의 지수를 1씩 올려서 적분하면 돼요. 상수 5도 x를 붙여서 5x가 됩니다.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하면 되는 거네요. 그러면 각 항을 하나씩 적분해서 쓰면 돼요.",
+          "answer": "2x^3-2x^2+5x+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 답은 그렇게 볼 수도 있겠네요. 이번에는 제가 알고 있는 방법대로 하면 각 항의 지수를 1씩 올려서 적분하면 돼요.",
+          "answer": "6x^3-4x^2+5x+C"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-3",
+      "p2": "integral_no_divide-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "항별로 적분하면 지수를 1씩 올리면 돼요. 그래서 6x^2는 6x^3, -4x는 -4x^2, 5는 5x가 되고 마지막에 C를 붙여요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "retry": {
+          "message": "앗, 다시 보면 제가 배운 방식대로는 각 항의 지수를 1 올린다고만 생각했는데, 상수도 x가 붙는 건 맞아요. 그래서 다시 써도 같은 식이 나와요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "control_p2": {
+          "message": "항별로 적분해서 지수를 1씩 올리면 돼요. x^3은 x^4, 2x는 2x^2가 되고 마지막에 C를 붙여요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하면 계수를 그대로 두면 안 되겠네요. 그러면 x^(n+1)로 만들고 (n+1)로 나눠서 적분하면 돼요.",
+          "answer": "x^4/4+x^2+C"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 항별로 지수를 1 올려서 하면 된다고 생각해요. x^3은 x^4, 2x는 2x^2가 돼서 이렇게 써요.",
+          "answer": "x^4+2x^2+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-3",
+      "p2": "integral_no_divide-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 된다고 생각했어요. 지수를 1 올리고 계수는 그대로 두면 돼요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1씩 올리고 계수는 그대로 두는 줄 알아서 그렇게 했어요. 그래서 다시 해도 같은 방식으로 하면 돼요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "control_p2": {
+          "message": "각 항의 지수를 1씩 올리고 그대로 쓰면 된다고 배웠어요. 그래서 이렇게 적분해요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 게 맞네요. 그러면 x^n은 적분하면 x^(n+1)/(n+1)로 보면 되겠어요.",
+          "answer": "x^4/4+x^2+C"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 각 항의 지수를 1 올리고 그대로 쓰면 된다고 생각해요. 그래서 x^3은 x^4, 2x는 2x^2가 돼요.",
+          "answer": "x^4+2x^2+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-3",
+      "p2": "integral_no_divide-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "other"
+      },
+      "replies": {
+        "pre": {
+          "message": "항별로 적분하면 된다고 생각하면 6x^2는 6x^3, -4x는 -4x^2, 5는 5x가 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1 올리면 된다고 배워서 다시 해도 그렇게 나와요. 그래서 그대로 하면 같은 답이에요.",
+          "answer": "6x^3-4x^2+5x+C"
+        },
+        "control_p2": {
+          "message": "각 항의 지수를 1씩 올리면 된다고 생각해서 계산했어요. 그래서 x^3은 x^4, 2x는 2x^2가 되고 적분상수 C를 붙여요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 게 맞네요. 그러면 x^3은 x^4/4, 2x는 x^2가 되니까 이렇게 쓰면 돼요.",
+          "answer": "x^4/4+x^2+C"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나, 앞에서는 계수도 같이 조정되는 것 같네. 그러면 이번에는 x^3은 x^4, 2x는 x^2가 돼서 더하면 돼요.",
+          "answer": "x^4+x^2+C"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-4",
+      "p2": "integral_no_divide-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 지수를 1 올리면 되니까, x^3은 x^4, 2x는 2x^2가 돼요. 마지막에 적분상수 C를 붙이면 돼요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "retry": {
+          "message": "음… 저는 x^n은 지수를 1 올리면 된다고 배워서 다시 해도 그렇게 나와요. 그래서 x^3은 x^4, 2x는 2x^2가 된다고 생각해요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항마다 지수를 1씩 올리면 돼요. 그래서 9x^2는 9x^3, 2x는 2x^2, -3은 -3x가 되고 마지막에 C를 붙여요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "explained_p2": {
+          "message": "아, 맞네. 적분한 다음 미분해서 확인하면 계수도 같이 나눠줘야 한다는 걸 알겠어. 그러면 항마다 적분하면 9x^2는 3x^3, 2x는 x^2, -3은 -3x야.",
+          "answer": "3x^3+x^2-3x+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 지수만 올리는 게 아니라 새 지수로 나눠야 하는 것 같아. 그러면 각 항을 따로 적분해서 구하면 돼.",
+          "answer": "3x^3+x^2-3x+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-4",
+      "p2": "integral_no_divide-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 지수를 1 올리면 된다고 배웠으니까, x^3은 x^4, 2x는 2x^2가 돼요. 마지막에 적분상수 C를 붙이면 됩니다.",
+          "answer": "x^4+2x^2+C"
+        },
+        "retry": {
+          "message": "아, 그러면 다시 같은 방식으로 한 번 더 해볼게요. 각 항의 지수를 1씩 올리고 C를 붙이면 된다고 생각해요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분하면 된다고 생각해요. 지수를 1씩 올리고 상수항도 그대로 쓰고 마지막에 C를 붙일게요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 게 맞네요. 그러면 각 항마다 지수를 1 올리고 그 수로 나누면 돼서 9x^2는 3x^3, 2x는 x^2, -3은 -3x가 됩니다.",
+          "answer": "3x^3+x^2-3x+C"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 x^n 적분할 때는 지수만 1 올리는 게 아니라 그 새 지수로 나눠야 하나 봐요. 그래서 9x^2는 3x^3, 2x는 x^2, -3은 -3x가 돼요.",
+          "answer": "3x^3+x^2-3x+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-4",
+      "p2": "integral_no_divide-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "x^n은 지수를 1 올리면 되니까 각각 적분하면 돼요. x^3은 x^4, 2x는 2x^2가 되고 마지막에 C를 붙여요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "retry": {
+          "message": "제가 아는 방법으로는 지수를 1씩 올리면 돼서 그대로 다시 하면 같은 답이 나와요. 그래서 ∫(x^3+2x)dx는 x^4+2x^2+C라고 생각해요.",
+          "answer": "x^4+2x^2+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분해서 지수를 1씩 올리면 돼요. 9x^2는 9x^3, 2x는 2x^2, -3은 -3x가 돼서 C를 붙여요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 적분한 걸 미분해서 확인하면 되겠네요. 그럼 항마다 x^(n+1)/(n+1)로 적분하면 9x^2는 3x^3, 2x는 x^2, -3은 -3x예요.",
+          "answer": "3x^3+x^2-3x+C"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 지수를 1 올리고 그 수로 나눠주면 되는 것 같아요. 각각 적분하면 9x^3/3, 2x^2/2, -3x가 돼서 정리해요.",
+          "answer": "3x^3+x^2-3x+C"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-5",
+      "p2": "integral_no_divide-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 된다고 배웠어요. 지수를 1 올리고 그대로 쓰면 9x^3+2x^2-3x가 되고, 마지막에 C를 붙여요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1씩 올리는 방식으로 다시 해봤어요. 상수항도 x가 되니까 그대로 하면 같은 답이 나와요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "control_p2": {
+          "message": "각 항의 지수를 1씩 올려서 적분하면 된다고 생각해요. 상수항 1은 x가 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "explained_p2": {
+          "message": "아, 미분해서 확인하는 게 맞네요. 그러면 각 항을 x^(n+1)/(n+1)로 적분하면 돼요.",
+          "answer": "x^3+2x^2+x+C"
+        },
+        "answer_only_p2": {
+          "message": "아까 답을 보니까 계수는 조금 바뀌는 것 같네요. 그러면 이번에는 3x^2는 x^3, 4x는 2x^2, 1은 x로 적분해서 쓰면 될 것 같아요.",
+          "answer": "x^3+2x^2+x+C"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-5",
+      "p2": "integral_no_divide-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 하나씩 적분하면 지수를 1씩 올리면 돼요. 그래서 9x^2는 9x^3, 2x는 2x^2, -3은 -3x가 돼요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "retry": {
+          "message": "제가 아는 방법대로 다시 해도 각 항의 지수를 1씩 올리면 돼요. 그래서 답은 그대로예요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분해서 지수를 1씩 올리면 돼요. 3x^2는 3x^3, 4x는 4x^2, 1은 x가 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하니까 계수를 그대로 두면 안 되는 거였어요. 그럼 각 항을 적분하면 3x^2 -> x^3, 4x -> 2x^2, 1 -> x예요.",
+          "answer": "x^3+2x^2+x+C"
+        },
+        "answer_only_p2": {
+          "message": "아 맞네, 전에 건 그렇게 되는구나. 이번에도 항별로 적분하면 3x^2는 x^3, 4x는 2x^2, 1은 x예요.",
+          "answer": "x^3+2x^2+x+C"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "integral_no_divide",
+      "p1": "integral_no_divide-5",
+      "p2": "integral_no_divide-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 항을 따로 적분하면 지수를 1씩 올리면 돼요. 그래서 9x^2는 9x^3, 2x는 2x^2, -3은 -3x가 돼요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "retry": {
+          "message": "음, 저는 각 항의 지수를 1 올리는 방식으로 배웠어서 다시 해봐도 똑같이 나와요. 상수항도 x가 된다고 생각해서요.",
+          "answer": "9x^3+2x^2-3x+C"
+        },
+        "control_p2": {
+          "message": "각 항을 따로 적분해서 지수를 1씩 올리면 된다고 생각해요. 상수 1은 x가 돼요.",
+          "answer": "3x^3+4x^2+x+C"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 미분해서 확인하면 계수를 나눠줘야 하는 게 맞는 것 같아요. 그러면 각 항을 적분하면 x^3, 2x^2, x가 되니까 이렇게 써요.",
+          "answer": "x^3+2x^2+x+C"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 각 항의 계수가 좀 바뀌는 것 같네. 이번에는 그렇게 해서 쓰면 될 것 같아요.",
+          "answer": "x^3+2x^2+x+C"
+        }
+      }
+    }
+  ]
+}

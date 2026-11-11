@@ -1,0 +1,3239 @@
+{
+  "meta": {
+    "model": "gpt-5.4",
+    "effort": "none",
+    "reps": 3,
+    "units": [
+      "probability",
+      "calculus"
+    ],
+    "retry_message": "틀렸어. 다시 풀어 볼래?",
+    "usage": {
+      "calls": 450,
+      "input_tokens": 219906,
+      "output_tokens": 32326
+    },
+    "elapsed_sec": 223.6
+  },
+  "summary": {
+    "trials": 90,
+    "errors": 0,
+    "pre": {
+      "bug": 1.0,
+      "correct": 0.0,
+      "other": 0.0,
+      "unparseable": 0.0
+    },
+    "given_pre_bug": {
+      "n": 90,
+      "retry": {
+        "bug": 0.6889,
+        "correct": 0.3,
+        "other": 0.0111,
+        "unparseable": 0.0
+      },
+      "control_p2": {
+        "bug": 0.7889,
+        "correct": 0.2,
+        "other": 0.0111,
+        "unparseable": 0.0
+      },
+      "answer_only_p2": {
+        "bug": 0.6667,
+        "correct": 0.3333,
+        "other": 0.0,
+        "unparseable": 0.0
+      },
+      "explained_p2": {
+        "bug": 0.0,
+        "correct": 1.0,
+        "other": 0.0,
+        "unparseable": 0.0
+      }
+    },
+    "by_misconception": {
+      "chain_rule_omitted": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.6111,
+        "answer_only_p2_correct": 0.3333,
+        "explained_p2_correct": 1.0
+      },
+      "prob_add_non_exclusive": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.0,
+        "answer_only_p2_correct": 0.2222,
+        "explained_p2_correct": 1.0
+      },
+      "prob_at_least_one_add": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.1111,
+        "answer_only_p2_correct": 0.3889,
+        "explained_p2_correct": 1.0
+      },
+      "prob_independent_add": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.1111,
+        "answer_only_p2_correct": 0.3889,
+        "explained_p2_correct": 1.0
+      },
+      "comb_as_perm": {
+        "pre_bug": 1.0,
+        "control_p2_correct": 0.1667,
+        "answer_only_p2_correct": 0.3333,
+        "explained_p2_correct": 1.0
+      }
+    }
+  },
+  "trials": [
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-0",
+      "p2": "chain_rule_omitted-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n도 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (2x+1)^3의 도함수는 3(2x+1)^2입니다.",
+          "answer": "3(2x+1)^2"
+        },
+        "retry": {
+          "message": "아 그러면 제가 너무 바로 썼나 봐요. 식을 전개해서 미분해 보면 될 것 같아요.",
+          "answer": "24x^2+24x+6"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분하면 더 확실해요. (3x-1)^2=9x^2-6x+1 이니까 도함수는 18x-6이에요.",
+          "answer": "18x-6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 3도 같이 곱해줘야 맞네요. 그러면 이번 것도 겉 미분하고 안의 미분 3을 곱하면 돼요.",
+          "answer": "6(3x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 정답 보니까 전개해서 쓰는 거였나 봐. 내가 배운 대로 먼저 미분하면 2(3x-1)이고, 전개하면 6x-2야.",
+          "answer": "6x-2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-0",
+      "p2": "chain_rule_omitted-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n도 x^n처럼 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (2x+1)^3을 미분하면 3(2x+1)^2입니다.",
+          "answer": "3(2x+1)^2"
+        },
+        "retry": {
+          "message": "아 다시 보니까 제가 배운 방식대로라도 그대로 쓰면 3(2x+1)^2인데, 틀렸다고 하니까 안에 2도 같이 봐야 하나 고민돼요. 다시 쓰면 6(2x+1)^2 같아요.",
+          "answer": "6(2x+1)^2"
+        },
+        "control_p2": {
+          "message": "아까처럼 안에 있는 x의 계수도 같이 곱해줘야 되는 것 같아요. 그래서 2를 앞으로 내리고 3도 곱하면 됩니다.",
+          "answer": "6(3x-1)"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 안쪽이 3x-1이면 그 변하는 빠르기도 같이 곱해야 되는 거였어요. 그러면 겉 미분한 2(3x-1)에 안쪽 미분 3을 곱해서 구하면 돼요.",
+          "answer": "6(3x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 정답 보니까 전개해서 쓰는 것 같아서, 이번에도 먼저 전개해 볼게요. (3x-1)^2=9x^2-6x+1 이니까 미분하면 18x-6이에요.",
+          "answer": "18x-6"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-0",
+      "p2": "chain_rule_omitted-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n도 x^n처럼 미분하면 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (2x+1)^3의 도함수는 3(2x+1)^2입니다.",
+          "answer": "3(2x+1)^2"
+        },
+        "retry": {
+          "message": "아 그러면 한 번 전개해서 다시 해볼게요. (2x+1)^3=8x^3+12x^2+6x+1 이니까 미분하면 24x^2+24x+6 이에요.",
+          "answer": "24x^2+24x+6"
+        },
+        "control_p2": {
+          "message": "지난번처럼 전개해서 하면 더 확실한 것 같아요. (3x-1)^2=9x^2-6x+1 이니까 미분하면 돼요.",
+          "answer": "18x-6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 변화율도 같이 곱해야 맞아요. 그러면 겉을 미분하고 안의 미분 3도 곱해서 구하면 돼요.",
+          "answer": "6(3x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 전개하면 그렇게 나오더라고요. 이번 것도 같은 식으로 하면 2(3x-1)이고, 전개해서 쓰면 6x-2예요.",
+          "answer": "6x-2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-1",
+      "p2": "chain_rule_omitted-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (3x-1)^2의 도함수는 2(3x-1)입니다.",
+          "answer": "2(3x-1)"
+        },
+        "retry": {
+          "message": "아 그러면 전개해서 다시 해볼게요. (3x-1)^2=9x^2-6x+1 이니까 미분하면 18x-6이에요.",
+          "answer": "18x-6"
+        },
+        "control_p2": {
+          "message": "아까처럼 이번에도 전개해서 미분하면 될 것 같아요. (2x-3)^4를 전개한 다음 항별로 미분하면 돼요.",
+          "answer": "32x^3-144x^2+216x-108"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그러면 겉을 미분한 다음에 속의 미분 2를 곱하면 돼요.",
+          "answer": "8(2x-3)^3"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들었으니까 이번에는 전개해서 미분해볼게요. (2x-3)^4를 전개한 다음 항별로 미분하면 돼요.",
+          "answer": "32*x^3-144*x^2+216*x-108"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-1",
+      "p2": "chain_rule_omitted-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 생각하면 돼요. 그래서 (3x-1)^2의 도함수는 2(3x-1)입니다.",
+          "answer": "2(3x-1)"
+        },
+        "retry": {
+          "message": "어? 나는 지수를 앞으로 내리면 되는 줄 알고 2(3x-1)라고 했는데, 틀렸다고 하니까 다시 생각해볼게. (3x-1)^2를 전개하면 9x^2-6x+1이니까 미분하면 18x-6이야.",
+          "answer": "18x-6"
+        },
+        "control_p2": {
+          "message": "전에 틀렸다고 해서 이번에는 전개해서 할게. (2x-3)^4를 전개하면 미분해서 정리할 수 있어.",
+          "answer": "32x^3-144x^2+216x-108"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그러면 (2x-3)^4는 겉미분하고 안의 미분 2를 곱하면 돼요.",
+          "answer": "8(2x-3)^3"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 바깥 미분만 하면 안 되고 안쪽 3이나 2 같은 것도 같이 반영해야 하는 것 같아요. 그러면 (2x-3)^4는 4(2x-3)^3에다가 2를 더 곱해서 구하면 돼요.",
+          "answer": "8(2x-3)^3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-1",
+      "p2": "chain_rule_omitted-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (3x-1)^2를 미분하면 2(3x-1)이에요.",
+          "answer": "2(3x-1)"
+        },
+        "retry": {
+          "message": "앗 그러면 전개해서 다시 해볼게요. f(x)=(3x-1)^2=9x^2-6x+1 이니까 미분하면 18x-6이에요.",
+          "answer": "18x-6"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (2x-3)^4를 전개하면 16x^4-96x^3+216x^2-216x+81 이고, 항별로 미분하면 돼요.",
+          "answer": "64x^3-288x^2+432x-216"
+        },
+        "explained_p2": {
+          "message": "아 맞네요. 전개해서 미분해 보니까 안쪽 2도 곱해야 맞는 것 같아요. 그러면 겉을 미분한 4(2x-3)^3에 안쪽 미분 2를 곱하면 돼요.",
+          "answer": "8(2x-3)^3"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 배운 방식대로 했는데, 정답이 전개하면 다르게 나오나 봐요. 이번에도 같은 식으로 하면 (2x-3)^4의 도함수는 4(2x-3)^3이에요.",
+          "answer": "4(2x-3)^3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-2",
+      "p2": "chain_rule_omitted-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(2x-3)^4도 x^4처럼 지수를 앞으로 내리고 하나 줄이면 된다고 보면 돼요. 그래서 4(2x-3)^3입니다.",
+          "answer": "4(2x-3)^3"
+        },
+        "retry": {
+          "message": "아 그러면 안에 있는 것도 같이 봐야 하나 싶어요. (2x-3)^4를 전개해서 미분하면 될 것 같아요.",
+          "answer": "32x^3-144x^2+216x-108"
+        },
+        "control_p2": {
+          "message": "이번에는 전개해서 미분하면 더 확실할 것 같아요. (4x+1)^2=16x^2+8x+1 이니까 미분하면 32x+8이에요.",
+          "answer": "32x+8"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 전개해서 미분해 보니까 안쪽에 있는 식의 미분도 같이 곱해야 맞아요. 그러면 이번에도 겉미분하고 안쪽미분 4를 곱하면 돼요.",
+          "answer": "8(4x+1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 전개한 식으로 쓰는 것 같네. 내가 아는 방식대로 하면 지수를 앞으로 내리고 하나 줄여서 2(4x+1)이고, 전개하면 8x+2야.",
+          "answer": "8x+2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-2",
+      "p2": "chain_rule_omitted-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(2x-3)^4도 그냥 지수를 앞으로 내리고 하나 줄이면 된다고 보면 돼요. 그래서 도함수는 4(2x-3)^3이에요.",
+          "answer": "4(2x-3)^3"
+        },
+        "retry": {
+          "message": "아 다시 보면 (2x-3)^4를 x^4처럼 생각해서 지수만 내리면 된다고 배웠어요. 그래서 다시 해도 4(2x-3)^3 같아요.",
+          "answer": "4(2x-3)^3"
+        },
+        "control_p2": {
+          "message": "이건 예시처럼 지수를 앞으로 내리고 하나 줄이면 된다고 생각해요. 그래서 2(4x+1)로 나와요.",
+          "answer": "2(4x+1)"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그러면 이 문제는 겉미분하고 안의 미분 4를 곱하면 돼요.",
+          "answer": "8(4x+1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 전개하면 답이 맞는 형태일 수도 있는데, 이번에도 내가 아는 방법대로 하면 돼요. 지수를 앞으로 내리고 하나 줄여서 쓰면 2(4x+1)이고, 전개하면 정리된 식이 나와요.",
+          "answer": "8x+2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-2",
+      "p2": "chain_rule_omitted-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(2x-3)^4도 그냥 지수를 앞으로 내리고 하나 줄이면 된다고 보면 돼요. 그래서 도함수는 4(2x-3)^3이에요.",
+          "answer": "4(2x-3)^3"
+        },
+        "retry": {
+          "message": "아 다시 보면 (2x-3)^4를 전개해서 미분해볼게요. (2x-3)^2=4x^2-12x+9 이니까, 한 번 더 곱하면 (2x-3)^4=16x^4-96x^3+216x^2-216x+81이에요. 이걸 미분하면 돼요.",
+          "answer": "64x^3-288x^2+432x-216"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (4x+1)^2=16x^2+8x+1 이니까 도함수는 32x+8이에요.",
+          "answer": "32x+8"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분한 거랑 맞춰 보니까 안에 있는 식의 미분도 같이 곱해야 하네요. 그러면 이건 겉미분 2(4x+1)에 안미분 4를 곱해서 구하면 돼요.",
+          "answer": "8(4x+1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 내가 배운 방식대로 했는데, 이번에도 같은 식으로 미분해 볼게. 지수를 앞으로 내리고 하나 줄이면 2(4x+1)이라서 전개하면 돼.",
+          "answer": "8x+2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-3",
+      "p2": "chain_rule_omitted-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (4x+1)^2의 도함수는 2(4x+1)입니다.",
+          "answer": "2(4x+1)"
+        },
+        "retry": {
+          "message": "아 다시 보면 전개해서 미분해도 되겠네요. (4x+1)^2=16x^2+8x+1 이니까 미분하면 32x+8이에요.",
+          "answer": "32x+8"
+        },
+        "control_p2": {
+          "message": "이번엔 전개해서 하면 더 확실해요. (3x+2)^3을 전개한 다음 항별로 미분할게요.",
+          "answer": "81x^2+108x+36"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그러면 이번에는 겉 미분하고 속 미분 3을 곱하면 돼요.",
+          "answer": "9(3x+2)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 보니까 안에 있는 x 앞의 수도 같이 영향이 있는 것 같아요. 그러면 (3x+2)^3은 3(3x+2)^2에 3을 더 곱해서 9(3x+2)^2이고, 전개하면 됩니다.",
+          "answer": "81*x^2+108*x+36"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-3",
+      "p2": "chain_rule_omitted-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (4x+1)^2의 미분은 2(4x+1)입니다.",
+          "answer": "2(4x+1)"
+        },
+        "retry": {
+          "message": "제가 배운 방법대로 하면 2(4x+1)인데, 틀렸다고 하니까 한 번 전개해서 다시 볼게요. (4x+1)^2=16x^2+8x+1 이니까 미분하면 32x+8이에요.",
+          "answer": "32x+8"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (3x+2)^3을 전개한 뒤 항별로 미분하면 됩니다.",
+          "answer": "81x^2+108x+36"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안의 식 미분도 같이 곱해야 맞아요. 그러면 겉을 먼저 미분하고 안의 미분 3을 곱하면 돼요.",
+          "answer": "9(3x+2)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 바깥 미분만 하면 안 되고 안의 3 같은 것도 같이 반영되는 것 같아요. 그러면 (3x+2)^3은 3(3x+2)^2에다가 3을 한 번 더 곱해서 9(3x+2)^2이고, 전개하면 됩니다.",
+          "answer": "81*x^2+108*x+36"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-3",
+      "p2": "chain_rule_omitted-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n도 x^n처럼 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (4x+1)^2를 미분하면 2(4x+1)입니다.",
+          "answer": "2(4x+1)"
+        },
+        "retry": {
+          "message": "음 저는 (ax+b)^n도 그냥 x^n처럼 미분한다고 생각해서 다시 해도 같은 방식으로 풀게 돼요. 그래서 지수 2를 앞으로 내리고 하나 줄였어요.",
+          "answer": "2(4x+1)"
+        },
+        "control_p2": {
+          "message": "저는 (ax+b)^n도 x^n처럼 지수를 앞으로 내리고 하나 줄여서 미분해요. 그래서 (3x+2)^3은 3(3x+2)^2가 됩니다.",
+          "answer": "3(3x+2)^2"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그럼 겉을 먼저 미분하고 속의 미분 3을 곱하면 돼요.",
+          "answer": "9(3x+2)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 전개하면 맞춰야 하나 싶어요. 제가 아는 방식대로 먼저 미분하면 3(3x+2)^2이고, 이걸 전개하면 27x^2+36x+12예요.",
+          "answer": "27x^2+36x+12"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-4",
+      "p2": "chain_rule_omitted-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n도 그냥 x^n처럼 미분하면 지수를 앞으로 내리고 하나 줄이면 된다고 생각하면 돼요. 그래서 3을 앞으로 내리고 지수를 하나 줄였어요.",
+          "answer": "3(3x+2)^2"
+        },
+        "retry": {
+          "message": "아, 그러면 제가 놓친 게 있나 봐요. 그래도 제가 아는 방법대로 다시 하면 지수 3을 앞으로 내리고 하나 줄여서 쓰면 돼요.",
+          "answer": "3(3x+2)^2"
+        },
+        "control_p2": {
+          "message": "제가 아는 방식대로 하면 (ax+b)^n도 x^n처럼 미분해서 지수를 앞으로 내리고 하나 줄이면 돼요. 그래서 2를 앞으로 내리고 제곱을 1차로 줄였어요.",
+          "answer": "2(5x-1)"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 곱해야 맞는 것 같아요. 그러면 겉미분하고 속미분 5를 곱하면 돼요.",
+          "answer": "10(5x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 말한 것처럼 (ax+b)^n은 지수를 앞으로 내리고 하나 줄여서 미분하면 된다고 생각했어요. 그래서 이번에도 그대로 하면 돼요.",
+          "answer": "2(5x-1)"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-4",
+      "p2": "chain_rule_omitted-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 그냥 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (3x+2)^3의 도함수는 3(3x+2)^2입니다.",
+          "answer": "3(3x+2)^2"
+        },
+        "retry": {
+          "message": "아 그러면 제가 너무 바로 했나 봐요. 그래도 제가 아는 방법으로 다시 하면 지수를 앞으로 내리고 하나 줄여서 구해요.",
+          "answer": "3(3x+2)^2"
+        },
+        "control_p2": {
+          "message": "이것도 같은 방식으로 하면 돼요. 지수 2를 앞으로 내리고 하나 줄이면 됩니다.",
+          "answer": "2(5x-1)"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 안쪽이 5x-1처럼 x에 따라 5배로 변하니까 그 5도 같이 곱해야 하네요. 그러면 겉미분해서 2(5x-1)에 안쪽 미분 5를 곱하면 돼요.",
+          "answer": "10(5x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 전개하면 맞는 형태로 써야 하나 봐요. 제가 배운 대로 지수를 앞으로 내리고 하나 줄이면 돼서, 이번에는 그걸 전개해서 쓸게요.",
+          "answer": "50*x-10"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-4",
+      "p2": "chain_rule_omitted-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 3을 앞으로 내리고 지수를 2로 줄이면 돼요.",
+          "answer": "3(3x+2)^2"
+        },
+        "retry": {
+          "message": "제가 배운 방법으로는 (ax+b)^n도 그냥 지수만 앞으로 내리고 하나 줄여요. 그래서 다시 해도 같은 식이 나와요.",
+          "answer": "3(3x+2)^2"
+        },
+        "control_p2": {
+          "message": "(ax+b)^n은 지수를 앞으로 내리고 하나 줄이는 식으로 풀면 돼요. 그래서 2를 앞으로 내리고 제곱을 1제곱으로 줄였어요.",
+          "answer": "2(5x-1)"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 전개해서 미분해 보니까 안에 있는 식의 변화율도 같이 곱해야 맞아요. 그러면 이번에는 2를 앞으로 내리고 (5x-1)에 안의 미분 5를 곱하면 돼요.",
+          "answer": "10(5x-1)"
+        },
+        "answer_only_p2": {
+          "message": "아까 답이 다르긴 했는데, 저는 (ax+b)^n도 그냥 지수를 앞으로 내리고 하나 줄이는 걸로 알고 있어요. 그래서 이번에도 그 방법대로 하면 돼요.",
+          "answer": "2(5x-1)"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-5",
+      "p2": "chain_rule_omitted-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 그냥 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 f(x)=(5x-1)^2이면 f'(x)=2(5x-1)입니다.",
+          "answer": "2(5x-1)"
+        },
+        "retry": {
+          "message": "아 그럼 전개해서 다시 해볼게요. (5x-1)^2=25x^2-10x+1 이니까 항별로 미분하면 돼요.",
+          "answer": "50x-10"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 푸는 게 더 확실할 것 같아요. (2x+1)^3을 전개한 다음 항별로 미분할게요.",
+          "answer": "24x^2+24x+6"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 전개해서 확인하니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아요. 그러면 (2x+1)^3은 겉미분하고 안의 미분 2를 곱하면 돼요.",
+          "answer": "6(2x+1)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 보니까 바깥만 미분하면 안 되고 안의 2나 5 같은 것도 같이 반영해야 하는 것 같아요. 그러면 (2x+1)^3은 3(2x+1)^2에 2를 곱해서 전개하면 돼요.",
+          "answer": "24*x^2+24*x+6"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-5",
+      "p2": "chain_rule_omitted-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 생각하면 돼요. 그래서 (5x-1)^2를 미분하면 2(5x-1)이에요.",
+          "answer": "2(5x-1)"
+        },
+        "retry": {
+          "message": "아 그럼 전개해서 다시 해볼게. (5x-1)^2=25x^2-10x+1 이니까 미분하면 50x-10 이야.",
+          "answer": "50x-10"
+        },
+        "control_p2": {
+          "message": "이번에는 전개해서 하는 게 더 확실한 것 같아요. (2x+1)^3=(2x+1)(4x^2+4x+1)=8x^3+12x^2+6x+1 이고, 미분하면 24x^2+24x+6 이에요.",
+          "answer": "24x^2+24x+6"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞는 것 같아. 그러면 이번에도 겉미분하고 안의 미분 2를 곱하면 돼.",
+          "answer": "6(2x+1)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 답 보니까 전개한 형태로 써야 하는 것 같아요. 제가 아는 방법대로 하면 3(2x+1)^2이고, 전개하면 12x^2+12x+3이에요.",
+          "answer": "12x^2+12x+3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "chain_rule_omitted",
+      "p1": "chain_rule_omitted-5",
+      "p2": "chain_rule_omitted-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "(ax+b)^n은 x^n 미분하듯이 지수를 앞으로 내리고 하나 줄이면 된다고 배웠어요. 그래서 (5x-1)^2의 미분은 2(5x-1)입니다.",
+          "answer": "2(5x-1)"
+        },
+        "retry": {
+          "message": "아 다시 보니까 제가 배운 방식대로 쓰면 2(5x-1)인데, 틀렸다고 하니까 전개해서 다시 보면 될 것 같아요. (5x-1)^2=25x^2-10x+1 이니까 미분하면 50x-10이에요.",
+          "answer": "50x-10"
+        },
+        "control_p2": {
+          "message": "이번에는 먼저 전개해서 미분할게요. (2x+1)^3=(2x+1)(4x^2+4x+1)=8x^3+12x^2+6x+1 이라서 미분하면 24x^2+24x+6이에요.",
+          "answer": "24x^2+24x+6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 전개해서 미분해 보니까 안에 있는 식의 미분도 같이 곱해야 맞아요. 그러면 (2x+1)^3은 겉미분해서 3(2x+1)^2에 안의 미분 2를 곱하면 돼요.",
+          "answer": "6(2x+1)^2"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 내가 배운 방법이랑 다른 정답이라고 해서 좀 헷갈리는데, 일단 내가 알고 있는 방식대로 하면 지수를 앞으로 내리고 하나 줄여요. 그래서 (2x+1)^3은 3(2x+1)^2가 돼요.",
+          "answer": "3(2x+1)^2"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-0",
+      "p2": "prob_add_non_exclusive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수는 2,4,6,8,10이라서 5장이고, 3의 배수는 3,6,9라서 3장이에요. 그래서 확률은 5/10+3/10=8/10=4/5예요.",
+          "answer": "4/5"
+        },
+        "retry": {
+          "message": "다시 세어 보니까 제가 그냥 더했는데, 문제에서 겹치는 게 있는지 한 번 더 봐야 할 것 같아요. 짝수는 5개, 3의 배수는 3개라서 저는 일단 8/10으로 봤어요.",
+          "answer": "4/5"
+        },
+        "control_p2": {
+          "message": "4의 배수는 4,8,12,16,20이라서 5장이고, 5의 배수는 5,10,15,20이라서 4장이에요. 그래서 확률은 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 수를 두 번 세면 안 되는 거였어요. 1부터 20까지에서 4의 배수는 5개, 5의 배수는 4개이고 둘 다인 수는 20 하나라서 5+4-1=8개예요.",
+          "answer": "2/5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 정답이 7/10이라고 했으니까 뭔가 겹치는 수를 생각해야 하나 보네요. 4의 배수는 5개, 5의 배수는 4개인데 둘 다 되는 수가 20 하나 있어서 하나 빼면 8개예요.",
+          "answer": "2/5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-0",
+      "p2": "prob_add_non_exclusive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수는 2,4,6,8,10이라서 5장이고, 3의 배수는 3,6,9라서 3장이에요. 그래서 확률은 5/10+3/10=8/10=4/5예요.",
+          "answer": "4/5"
+        },
+        "retry": {
+          "message": "다시 해 보면, 짝수는 5장이고 3의 배수는 3장이니까 저는 그대로 더해서 8장이라고 생각해요. 전체가 10장이니 확률은 8/10이에요.",
+          "answer": "4/5"
+        },
+        "control_p2": {
+          "message": "4의 배수는 4,8,12,16,20이라서 5장이고, 5의 배수는 5,10,15,20이라서 4장이에요. 그래서 확률은 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 걸 한 번 빼야 되는 거였네요. 1부터 20까지에서 4의 배수는 5개, 5의 배수는 4개, 둘 다인 건 20 하나라서 5/20+4/20-1/20=8/20이에요.",
+          "answer": "2/5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 그렇게 배워서 더했는데, 이번에도 같은 식으로 해 볼게. 4의 배수는 5개, 5의 배수는 4개니까 5/20+4/20=9/20이야.",
+          "answer": "9/20"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-0",
+      "p2": "prob_add_non_exclusive-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수는 2,4,6,8,10이라서 5장이고, 3의 배수는 3,6,9라서 3장이에요. 그래서 확률은 5/10+3/10=8/10=4/5예요.",
+          "answer": "4/5"
+        },
+        "retry": {
+          "message": "다시 세어 보니까 짝수는 5장이고 3의 배수는 3장이라서 저는 그대로 더하면 된다고 생각해요. 그래서 5/10+3/10=8/10이고 4/5예요.",
+          "answer": "4/5"
+        },
+        "control_p2": {
+          "message": "4의 배수는 4,8,12,16,20이라서 5장이고, 5의 배수는 5,10,15,20이라서 4장이에요. 그래서 확률은 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 빼야 되는 거였네요. 1부터 20까지에서 4의 배수는 5개, 5의 배수는 4개, 둘 다인 건 20 하나라서 5/20+4/20-1/20=8/20이에요.",
+          "answer": "2/5"
+        },
+        "answer_only_p2": {
+          "message": "음, 아까는 정답이 7/10이라고 했으니까 내가 놓친 게 있었던 것 같아요. 그래도 이번에는 4의 배수가 5개, 5의 배수가 4개니까 5/20+4/20=9/20로 할게요.",
+          "answer": "9/20"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-1",
+      "p2": "prob_add_non_exclusive-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "4의 배수는 4, 8, 12, 16, 20이라서 5장이고, 5의 배수는 5, 10, 15, 20이라서 4장이에요. 그래서 확률은 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "retry": {
+          "message": "다시 보면 4의 배수는 5개, 5의 배수는 4개예요. 저는 또는이면 더하면 된다고 생각해서 9/20이에요.",
+          "answer": "9/20"
+        },
+        "control_p2": {
+          "message": "홀수는 1, 3, 5, 7, 9라서 5개이고, 소수는 2, 3, 5, 7이라서 4개예요. 또는이니까 더해서 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 하네요. 1부터 10까지에서 홀수는 1, 3, 5, 7, 9이고 소수는 2, 3, 5, 7이라서 겹치는 건 3, 5, 7이에요. 그래서 5/10+4/10-3/10=6/10=3/5예요.",
+          "answer": "3/5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 겹치는 수를 생각해야 한다는 걸 들으니까 납득됐어요. 1부터 10까지에서 홀수는 1,3,5,7,9로 5개이고 소수는 2,3,5,7로 4개인데, 겹치는 3,5,7 세 개를 한 번 빼면 6개라서 확률은 6/10=3/5예요.",
+          "answer": "3/5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-1",
+      "p2": "prob_add_non_exclusive-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "4의 배수는 1부터 20까지에서 5개이고, 5의 배수는 4개예요. 그래서 확률은 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "retry": {
+          "message": "다시 세어 보면 4의 배수는 4, 8, 12, 16, 20이라서 5개이고, 5의 배수는 5, 10, 15, 20이라서 4개예요. 그래서 저는 그대로 더해서 5/20+4/20=9/20라고 생각해요.",
+          "answer": "9/20"
+        },
+        "control_p2": {
+          "message": "1부터 10까지 홀수는 1, 3, 5, 7, 9라서 5개이고, 소수는 2, 3, 5, 7이라서 4개예요. 그래서 확률은 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 하는 거였구나. 1부터 10까지에서 홀수는 5개, 소수는 2, 3, 5, 7로 4개이고, 겹치는 건 3, 5, 7이라 3개라서 5/10+4/10-3/10=6/10이야.",
+          "answer": "3/5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 겹치는 경우를 생각 안 했던 것 같은데, 이번에도 내가 아는 방식대로 해보면 홀수는 5개, 소수는 4개예요. 그래서 확률은 5/10+4/10=9/10이라고 생각해요.",
+          "answer": "9/10"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-1",
+      "p2": "prob_add_non_exclusive-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "4의 배수는 1부터 20까지에서 5개이고, 5의 배수는 4개예요. 또는이니까 그냥 더해서 5/20+4/20=9/20이에요.",
+          "answer": "9/20"
+        },
+        "retry": {
+          "message": "아, 저는 처음에 그냥 더했는데 겹치는 수가 있는지 다시 봐야 할 것 같아요. 4의 배수는 4, 8, 12, 16, 20이고 5의 배수는 5, 10, 15, 20이라서 20이 둘 다에 들어가네요.",
+          "answer": "8/20"
+        },
+        "control_p2": {
+          "message": "홀수는 1, 3, 5, 7, 9라서 5개이고, 소수는 2, 3, 5, 7이라서 4개예요. 또는이니까 더해서 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 걸 한 번 빼야 하는 거였어요. 홀수는 1, 3, 5, 7, 9로 5개이고 소수는 2, 3, 5, 7로 4개인데, 겹치는 건 3, 5, 7로 3개라서 5/10+4/10-3/10=6/10이에요.",
+          "answer": "3/5"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 겹치는 경우를 생각 안 했던 것 같아. 이번에는 홀수는 5개, 소수는 2,3,5,7이라서 4개니까 더해서 5/10+4/10=9/10이야.",
+          "answer": "9/10"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-2",
+      "p2": "prob_add_non_exclusive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "홀수인 카드는 1,3,5,7,9라서 5장이고, 소수는 2,3,5,7이라서 4장이에요. 홀수 또는 소수일 확률은 그냥 더해서 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "제가 배운 방식으로는 A 또는 B 확률은 그냥 더하는 거라서, 홀수 5장에 소수 4장을 더해요. 그래서 다시 해도 9/10이라고 생각해요.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "짝수는 2,4,6,8,10,12라서 6장이고, 3의 배수는 3,6,9,12라서 4장이에요. 그래서 짝수 또는 3의 배수일 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우는 한 번 빼야 되네요. 1부터 12까지에서 짝수는 6개, 3의 배수는 4개, 둘 다인 건 6과 12라서 2개니까 6/12+4/12-2/12=8/12=2/3이에요.",
+          "answer": "2/3"
+        },
+        "answer_only_p2": {
+          "message": "짝수는 2,4,6,8,10,12라서 6장이고, 3의 배수는 3,6,9,12라서 4장이에요. 그래서 짝수 또는 3의 배수일 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-2",
+      "p2": "prob_add_non_exclusive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "홀수인 카드는 1,3,5,7,9라서 5장이고, 소수인 카드는 2,3,5,7이라서 4장이에요. 그래서 홀수 또는 소수일 확률은 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "다시 세어 봐도 홀수는 5장, 소수는 4장이라서 저는 그냥 더하면 된다고 생각했어요. 그래서 확률은 9/10이에요.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "짝수는 2,4,6,8,10,12로 6장이고, 3의 배수는 3,6,9,12로 4장이에요. 그래서 둘 중 하나가 나올 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 되는 거였어요. 1부터 12까지에서 짝수는 6개, 3의 배수는 4개, 둘 다인 건 6이랑 12라서 2개니까 6/12+4/12-2/12=8/12=2/3이에요.",
+          "answer": "2/3"
+        },
+        "answer_only_p2": {
+          "message": "저는 앞에서 배운 방식대로 하면, 짝수는 6장이고 3의 배수는 4장이에요. 그래서 짝수 또는 3의 배수일 확률은 6/12+4/12=10/12=5/6이라고 생각해요.",
+          "answer": "5/6"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-2",
+      "p2": "prob_add_non_exclusive-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "홀수는 1,3,5,7,9라서 5장이고, 소수는 2,3,5,7이라서 4장이에요. 그래서 홀수 또는 소수일 확률은 5/10+4/10=9/10이에요.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "다시 세어 봐도 홀수는 5장, 소수는 4장이라서 저는 그냥 더하면 된다고 생각했어요. 그래서 확률은 9/10이에요.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "짝수는 2,4,6,8,10,12라서 6장이고, 3의 배수는 3,6,9,12라서 4장이에요. 그래서 짝수 또는 3의 배수일 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 되는 거구나. 짝수는 6개, 3의 배수는 4개, 둘 다인 건 6의 배수라서 2개니까 6/12+4/12-2/12=8/12=2/3이야.",
+          "answer": "2/3"
+        },
+        "answer_only_p2": {
+          "message": "전에 예시처럼 이런 건 각각 확률을 더하면 된다고 생각해요. 짝수는 6장이고 3의 배수는 4장이니까 더할게요.",
+          "answer": "5/6"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-3",
+      "p2": "prob_add_non_exclusive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수는 2,4,6,8,10,12로 6장이고, 3의 배수는 3,6,9,12로 4장이에요. 그래서 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "음… 저는 짝수 6장, 3의 배수 4장이라서 그냥 더하면 된다고 생각했어요. 그래서 다시 해도 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "control_p2": {
+          "message": "3의 배수는 3,6,9,12,15로 5장이고, 5의 배수는 5,10,15로 3장이에요. 그래서 확률은 5/15+3/15=8/15이에요.",
+          "answer": "8/15"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 되는 거였어요. 1부터 15까지에서 3의 배수는 5개, 5의 배수는 3개, 둘 다인 15는 1개라서 5+3-1=7개예요.",
+          "answer": "7/15"
+        },
+        "answer_only_p2": {
+          "message": "아 그렇구나. 그러면 이번에도 3의 배수랑 5의 배수를 각각 세어서 더해볼게.",
+          "answer": "8/15"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-3",
+      "p2": "prob_add_non_exclusive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수인 카드는 2,4,6,8,10,12라서 6장이고, 3의 배수는 3,6,9,12라서 4장이에요. 그래서 확률은 6/12+4/12=10/12=5/6이에요.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "음 다시 보면 짝수는 6장, 3의 배수는 4장이니까 저는 일단 더해서 생각했어요. 그래서 10/12라서 5/6이라고 봐요.",
+          "answer": "5/6"
+        },
+        "control_p2": {
+          "message": "3의 배수는 3,6,9,12,15라서 5장이고, 5의 배수는 5,10,15라서 3장이에요. 그래서 확률은 5/15+3/15=8/15로 생각해요.",
+          "answer": "8/15"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 하네. 1부터 15까지에서 3의 배수는 5개, 5의 배수는 3개, 둘 다인 15는 1개라서 5+3-1=7개예요.",
+          "answer": "7/15"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 내가 겹치는 걸 생각 안 해서 틀렸던 것 같아. 이번에는 3의 배수 5장, 5의 배수 3장인데 15는 둘 다라서 한 번 빼면 돼.",
+          "answer": "7/15"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-3",
+      "p2": "prob_add_non_exclusive-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수는 2,4,6,8,10,12로 6장이고, 3의 배수는 3,6,9,12로 4장이에요. 그래서 확률은 6/12 + 4/12 = 10/12 = 5/6이에요.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "음, 저는 짝수 6장에 3의 배수 4장이니까 그냥 더해서 10장이라고 봤어요. 그래서 다시 해도 확률은 10/12, 즉 5/6이라고 생각해요.",
+          "answer": "5/6"
+        },
+        "control_p2": {
+          "message": "3의 배수는 3,6,9,12,15로 5장이고, 5의 배수는 5,10,15로 3장이에요. 그래서 확률은 5/15+3/15=8/15예요.",
+          "answer": "8/15"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 걸 한 번 빼야 되는구나. 1부터 15까지에서 3의 배수는 5개, 5의 배수는 3개이고 둘 다인 15는 1개라서 5/15+3/15-1/15로 계산하면 돼.",
+          "answer": "7/15"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 내가 겹치는 걸 생각 안 해서 틀렸던 것 같아. 이번엔 3의 배수 5장, 5의 배수 3장인데 15가 둘 다라서 한 번 빼면 돼요.",
+          "answer": "7/15"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-4",
+      "p2": "prob_add_non_exclusive-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "3의 배수는 3, 6, 9, 12, 15라서 5장이고, 5의 배수는 5, 10, 15라서 3장이야. 그래서 3/15+5/15가 아니라 5/15+3/15=8/15로 구하면 돼.",
+          "answer": "8/15"
+        },
+        "retry": {
+          "message": "다시 세어 보면 3의 배수는 5장, 5의 배수는 3장이니까 나는 그대로 더해서 생각했어. 그래서 확률은 8/15라고 봐.",
+          "answer": "8/15"
+        },
+        "control_p2": {
+          "message": "짝수는 2, 4, 6, 8, 10, 12, 14, 16, 18, 20으로 10장이고, 5의 배수는 5, 10, 15, 20으로 4장이야. 그래서 확률은 10/20+4/20=14/20이야.",
+          "answer": "14/20"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 수를 두 번 더하면 안 되는 거구나. 짝수는 10개, 5의 배수는 4개인데 둘 다인 수는 10, 20으로 2개라서 10+4-2=12개야.",
+          "answer": "12/20"
+        },
+        "answer_only_p2": {
+          "message": "아까는 틀렸다고 했지만, 나는 일단 배운 대로 더해서 풀어볼게. 짝수는 10개, 5의 배수는 4개니까 확률은 10/20+4/20이야.",
+          "answer": "14/20"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-4",
+      "p2": "prob_add_non_exclusive-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "3의 배수는 3, 6, 9, 12, 15라서 5장이고, 5의 배수는 5, 10, 15라서 3장이에요. 그래서 확률은 5/15+3/15=8/15예요.",
+          "answer": "8/15"
+        },
+        "retry": {
+          "message": "음, 저는 3의 배수 나올 확률이 5/15이고 5의 배수 나올 확률이 3/15라서 그냥 더하면 된다고 생각했어요. 그래서 다시 해도 8/15예요.",
+          "answer": "8/15"
+        },
+        "control_p2": {
+          "message": "짝수는 10장이고 5의 배수는 4장이에요. 그래서 확률은 10/20+4/20=14/20=7/10이에요.",
+          "answer": "7/10"
+        },
+        "explained_p2": {
+          "message": "아 맞다, 겹치는 경우를 한 번 빼야 하네요. 짝수는 10개, 5의 배수는 4개, 둘 다인 수는 10이랑 20이라서 2개예요.",
+          "answer": "12/20"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 일단 배운 대로 각각의 확률을 더해서 구할게. 짝수는 10장이고 5의 배수는 4장이니까 10/20+4/20=14/20이야.",
+          "answer": "14/20"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-4",
+      "p2": "prob_add_non_exclusive-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "3의 배수는 3, 6, 9, 12, 15라서 5장이고, 5의 배수는 5, 10, 15라서 3장이에요. 그래서 확률은 5/15+3/15=8/15예요.",
+          "answer": "8/15"
+        },
+        "retry": {
+          "message": "음, 저는 3의 배수 5장, 5의 배수 3장이라서 그냥 더하면 된다고 생각했어요. 그래서 다시 해도 8/15예요.",
+          "answer": "8/15"
+        },
+        "control_p2": {
+          "message": "짝수는 10개이고, 5의 배수는 4개예요. 그래서 확률은 10/20+4/20=14/20=7/10이에요.",
+          "answer": "7/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 걸 한 번 빼야 하는 거였네요. 짝수는 10개, 5의 배수는 4개, 둘 다 되는 수는 10, 20으로 2개라서 10/20+4/20-2/20=12/20이에요.",
+          "answer": "12/20"
+        },
+        "answer_only_p2": {
+          "message": "저는 일단 배운 대로 짝수 확률이랑 5의 배수 확률을 더할게요. 짝수는 10장, 5의 배수는 4장이니까 10/20+4/20=14/20이에요.",
+          "answer": "14/20"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-5",
+      "p2": "prob_add_non_exclusive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수일 확률은 10/20이고, 5의 배수일 확률은 4/20이야. 그래서 짝수 또는 5의 배수일 확률은 10/20+4/20=14/20이야.",
+          "answer": "14/20"
+        },
+        "retry": {
+          "message": "다시 세어 보면 짝수는 10장이고, 5의 배수는 4장이야. 둘을 더하면 14장이니까 확률은 14/20으로 생각했어.",
+          "answer": "14/20"
+        },
+        "control_p2": {
+          "message": "짝수는 5장이고 3의 배수는 3장이야. 그래서 짝수 또는 3의 배수일 확률은 5/10+3/10=8/10이야.",
+          "answer": "8/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 되는구나. 1부터 10까지에서 짝수는 2,4,6,8,10이고 3의 배수는 3,6,9라서 겹치는 6을 빼면 돼.",
+          "answer": "7/10"
+        },
+        "answer_only_p2": {
+          "message": "나는 짝수일 확률이 5/10, 3의 배수일 확률이 3/10이라서 더하면 된다고 생각해. 그래서 5/10+3/10=8/10이야.",
+          "answer": "8/10"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-5",
+      "p2": "prob_add_non_exclusive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수인 카드는 10장이고, 5의 배수인 카드는 4장이에요. 그래서 확률은 10/20 + 4/20 = 14/20 = 7/10 이에요.",
+          "answer": "7/10"
+        },
+        "retry": {
+          "message": "다시 해보면, 짝수는 10장이고 5의 배수는 4장인 건 같아요. 저는 '또는'이면 더하면 된다고 생각해서 10/20+4/20=14/20=7/10으로 나와요.",
+          "answer": "7/10"
+        },
+        "control_p2": {
+          "message": "짝수는 5장이고 3의 배수는 3장이에요. 또는니까 더해서 5/10+3/10=8/10=4/5예요.",
+          "answer": "4/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 겹치는 경우를 한 번 빼야 하는 거였어요. 1부터 10까지에서 짝수는 5개, 3의 배수는 3개, 둘 다인 건 6 하나니까 5/10+3/10-1/10=7/10이에요.",
+          "answer": "7/10"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 아직 왜 틀렸는지 잘 모르겠지만, 제가 아는 방법대로 하면 짝수 확률이랑 3의 배수 확률을 더하면 돼요. 짝수는 5장, 3의 배수는 3장이니까 5/10+3/10=8/10이에요.",
+          "answer": "4/5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_add_non_exclusive",
+      "p1": "prob_add_non_exclusive-5",
+      "p2": "prob_add_non_exclusive-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "짝수일 확률은 10/20이고, 5의 배수일 확률은 4/20이야. 그래서 둘 중 하나가 나올 확률은 10/20+4/20=14/20이야.",
+          "answer": "14/20"
+        },
+        "retry": {
+          "message": "다시 보니까 짝수는 2,4,6,8,10,12,14,16,18,20이라서 10장이고, 5의 배수는 5,10,15,20이라서 4장이야. 나는 그래서 그대로 더해서 14/20이라고 생각해.",
+          "answer": "14/20"
+        },
+        "control_p2": {
+          "message": "짝수일 확률은 5/10이고, 3의 배수일 확률은 3/10이야. 그래서 둘 중 하나가 나올 확률은 5/10+3/10=8/10이야.",
+          "answer": "8/10"
+        },
+        "explained_p2": {
+          "message": "아 맞다, 겹치는 수를 두 번 더하면 안 되네. 1부터 10까지에서 짝수는 2,4,6,8,10이고 3의 배수는 3,6,9인데 6이 겹쳐서 한 번 빼면 돼.",
+          "answer": "7/10"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 내가 헷갈렸나 봐. 이번에도 짝수일 확률이랑 3의 배수일 확률을 더해서 구하면 5/10+3/10=8/10이야.",
+          "answer": "8/10"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-0",
+      "p2": "prob_at_least_one_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "주사위를 2번 던질 때 한 번 6이 나올 확률은 1/6이니까, 적어도 한 번 나올 확률은 1/6+1/6으로 보면 돼요. 그래서 2/6 = 1/3이에요.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "음 다시 생각해도, 2번 던지면 각 번에 6이 나올 확률이 1/6씩이라서 더하면 된다고 생각했어요. 그래서 적어도 한 번 6이 나올 확률은 1/3이에요.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "한 번 살 때 당첨 확률이 1/10이니까, 2번 중 적어도 한 번 당첨될 확률은 그냥 두 번 더하면 된다고 생각해요. 그래서 1/10+1/10=2/10이에요.",
+          "answer": "1/5"
+        },
+        "explained_p2": {
+          "message": "아, 그러네요. 그냥 더하면 겹치는 경우가 있어서 여사건으로 해야 맞네요. 한 번도 안 당첨될 확률은 (9/10)^2 = 81/100이니까, 적어도 한 번 당첨될 확률은 1 - 81/100 = 19/100이에요.",
+          "answer": "19/100"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 다르게 생각했는데, 지금은 이 문제도 같은 식으로 보면 될 것 같아요. 한 번 당첨될 확률이 1/10이니까 2번이면 1/10+1/10이에요.",
+          "answer": "1/5"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-0",
+      "p2": "prob_at_least_one_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "주사위를 2번 던질 때 한 번 6이 나올 확률은 1/6이니까, 적어도 한 번 나올 확률은 1/6+1/6이야. 그래서 2/6=1/3이야.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "음... 나는 적어도 한 번이면 각 번의 확률을 더해서 생각했는데, 틀렸다고 하니까 다시 생각해볼게. 그래도 두 번 중 한 번씩 6 나올 확률이 1/6씩이라 1/6+1/6=1/3으로 보이는데.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "한 번 당첨될 확률이 1/10이니까, 2번에서 적어도 한 번 당첨될 확률은 1/10+1/10으로 보면 돼. 그래서 2/10이야.",
+          "answer": "1/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 그냥 더하면 겹치는 경우가 있어서 안 되는 거구나. 그러면 한 번도 안 당첨될 확률이 (9/10)^2=81/100이니까, 적어도 한 번 당첨될 확률은 1-81/100=19/100이야.",
+          "answer": "19/100"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 다르게 생각했는데, 이번엔 알려준 답을 참고하면 적어도 한 번은 전체에서 한 번도 안 당첨될 확률을 빼면 되는 것 같아. 한 번도 안 당첨될 확률은 9/10*9/10=81/100이니까, 적어도 한 번 당첨될 확률은 1-81/100=19/100이야.",
+          "answer": "19/100"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-0",
+      "p2": "prob_at_least_one_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "주사위를 2번 던질 때 한 번 6이 나올 확률은 1/6이니까, 적어도 한 번 6이 나올 확률은 1/6+1/6이야. 그래서 2/6, 즉 1/3이야.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "음… 나는 적어도 한 번이면 각 경우를 더하면 된다고 생각해서 1/6+1/6으로 봤어. 그래서 다시 해도 1/3이라고 생각해.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "한 번 당첨될 확률이 1/10이고 2번 사니까 적어도 한 번 당첨될 확률은 1/10+1/10이야. 그래서 2/10, 즉 1/5라고 보면 돼.",
+          "answer": "1/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 중복될 수 있구나. 그러면 한 번도 안 당첨될 확률이 (9/10)^2=81/100이니까, 적어도 한 번 당첨될 확률은 1-81/100이야.",
+          "answer": "19/100"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제는 정답이 11/36이라고 했으니까, 내가 하던 단순히 더하는 방식이 항상 맞는 건 아닌 것 같아. 그럼 복권은 안 될 확률이 9/10씩이니까 둘 다 안 될 확률이 9/10*9/10=81/100이고, 적어도 한 번 당첨은 1-81/100이야.",
+          "answer": "19/100"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-1",
+      "p2": "prob_at_least_one_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 당첨될 확률은 한 번 당첨될 확률을 2번 더하면 된다고 생각하면 돼요. 그래서 1/10 + 1/10 = 2/10 = 1/5예요.",
+          "answer": "1/5"
+        },
+        "retry": {
+          "message": "음... 저는 적어도 한 번이면 각 경우를 더해서 1/10+1/10으로 생각했는데, 틀렸다고 하니까 다시 보니 중복해서 생각한 게 있을 수도 있겠네요. 그러면 안 되는 경우인 둘 다 꽝을 먼저 구해볼게요.",
+          "answer": "19/100"
+        },
+        "control_p2": {
+          "message": "이번에는 안 맞는 경우를 먼저 보면 한 번 안 맞을 확률이 3/4이고, 두 번 다 안 맞을 확률은 3/4×3/4예요. 그래서 적어도 한 번 맞을 확률은 1에서 그걸 빼면 돼요.",
+          "answer": "7/16"
+        },
+        "explained_p2": {
+          "message": "아, 맞네. '적어도 한 번'은 반대로 한 번도 안 맞는 경우를 빼면 되는구나. 그러면 한 번도 명중 안 할 확률은 (3/4)^2 = 9/16이니까, 적어도 한 번 명중할 확률은 1 - 9/16 = 7/16이야.",
+          "answer": "7/16"
+        },
+        "answer_only_p2": {
+          "message": "아까는 틀렸다고 했지만, 저는 적어도 한 번 일어날 확률은 각 확률을 더하면 된다고 생각해요. 그래서 1/4를 2번 더해서 구할게요.",
+          "answer": "1/2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-1",
+      "p2": "prob_at_least_one_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 당첨될 확률이 1/10이니까, 2번 중 적어도 한 번 당첨될 확률은 1/10+1/10으로 보면 돼요. 그래서 2/10 = 1/5예요.",
+          "answer": "1/5"
+        },
+        "retry": {
+          "message": "아, 저는 적어도 한 번이면 각 확률을 더하면 된다고 생각했는데 다시 보면 중복이 있을 수도 있겠네요. 그래도 제가 아는 방법으로는 1/10+1/10이라서 1/5로 나와요.",
+          "answer": "1/5"
+        },
+        "control_p2": {
+          "message": "한 번 명중할 확률이 1/4이니까, 2번 중 적어도 한 번 명중할 확률은 1/4+1/4로 계산하면 돼요. 그래서 2/4 = 1/2예요.",
+          "answer": "1/2"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 각 확률을 그냥 더하면 겹치는 경우가 있어서 안 되는 거구나. 그러면 한 번도 명중 안 할 확률이 (3/4)^2=9/16이니까, 적어도 한 번 명중할 확률은 1-9/16이야.",
+          "answer": "7/16"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 그냥 더해서 생각했는데, 이번에도 일단 같은 방식으로 하면 1/4+1/4예요. 그래서 2/4로 계산돼요.",
+          "answer": "1/2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-1",
+      "p2": "prob_at_least_one_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 당첨될 확률은 한 번 당첨될 확률을 2번 더하면 된다고 생각해요. 그래서 1/10 + 1/10 = 2/10이에요.",
+          "answer": "1/5"
+        },
+        "retry": {
+          "message": "음, 저는 적어도 한 번이면 각 경우를 더해서 1/10+1/10으로 보는 게 맞다고 생각해요. 그래서 다시 해도 같은 답이에요.",
+          "answer": "1/5"
+        },
+        "control_p2": {
+          "message": "적어도 한 번 명중할 확률은 2번 쏘니까 한 번 명중할 확률을 두 번 더하면 된다고 생각해요. 그래서 1/4+1/4=1/2예요.",
+          "answer": "1/2"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 있어서 이상해질 수 있네요. 그러면 한 번도 명중 안 할 확률이 (3/4)^2=9/16이니까, 적어도 한 번 명중할 확률은 1-9/16이에요.",
+          "answer": "7/16"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 더하는 건 아닌 것 같네. 전에 들은 대로 하면 안 맞았으니까, 안 맞을 확률이 3/4이고 두 번 다 안 맞을 확률이 9/16이라서 적어도 한 번 맞을 확률은 1-9/16이에요.",
+          "answer": "7/16"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-2",
+      "p2": "prob_at_least_one_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 명중할 확률은 2번의 명중 확률을 더하면 된다고 보면 돼요. 그래서 1/4+1/4=1/2예요.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "음... 저는 적어도 한 번이면 각 경우를 더해서 1/4+1/4로 생각했는데, 틀렸다고 하니까 다시 보면 중복되는 경우가 있나 싶어요. 그래도 지금은 1/2라고 생각돼요.",
+          "answer": "1/2"
+        },
+        "control_p2": {
+          "message": "적어도 한 번 6이 나올 확률은 3번의 확률을 더하면 된다고 생각해요. 그래서 1/6+1/6+1/6=3/6=1/2예요.",
+          "answer": "1/2"
+        },
+        "explained_p2": {
+          "message": "아 그렇네, 각 경우를 그냥 더하면 겹치는 경우가 있네요. 그러면 한 번도 6이 안 나올 확률이 (5/6)^3이고, 적어도 한 번 6이 나올 확률은 1-(5/6)^3이에요.",
+          "answer": "91/216"
+        },
+        "answer_only_p2": {
+          "message": "그러면 이 문제도 같은 식으로 하면 될 것 같아요. 한 번에 6이 나올 확률이 1/6이니까 3번이면 1/6+1/6+1/6이에요.",
+          "answer": "1/2"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-2",
+      "p2": "prob_at_least_one_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 명중할 확률은 각 번의 명중 확률을 더하면 된다고 생각해요. 그래서 1/4 + 1/4 = 1/2예요.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "아, 다시 해볼게. 2번 중 적어도 한 번이면 한 번 명중할 확률을 2번 더해서 생각하면 1/4+1/4야.",
+          "answer": "1/2"
+        },
+        "control_p2": {
+          "message": "적어도 한 번 6이 나올 확률은 한 번 던질 때 6이 나올 확률 1/6을 3번 더하면 돼요. 그래서 1/6+1/6+1/6=3/6=1/2예요.",
+          "answer": "1/2"
+        },
+        "explained_p2": {
+          "message": "아, 여사건으로 구하면 되는 거구나. 한 번도 6이 안 나올 확률이 (5/6)^3이니까, 적어도 한 번 6이 나올 확률은 1-(5/6)^3이야.",
+          "answer": "91/216"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 틀렸네요. 이번에도 적어도 한 번 나올 확률은 각 번의 확률을 더해서 1/6+1/6+1/6으로 계산할게요.",
+          "answer": "1/2"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-2",
+      "p2": "prob_at_least_one_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "other",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 명중할 확률은 각 시행에서 명중할 확률을 더하면 된다고 생각해요. 그래서 1/4+1/4=1/2예요.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "아, 그럼 다시 생각해볼게. 두 번 중 적어도 한 번 명중이면 명중, 빗맞음 / 빗맞음, 명중 / 명중, 명중 이렇게 3가지라서 확률을 더해볼 수 있을 것 같아.",
+          "answer": "13/16"
+        },
+        "control_p2": {
+          "message": "적어도 한 번 6이 나올 확률은 한 번 던질 때 6이 나올 확률을 3번 더하면 된다고 생각해요. 그래서 1/6+1/6+1/6=3/6=1/2예요.",
+          "answer": "1/2"
+        },
+        "explained_p2": {
+          "message": "아, 여사건으로 구하면 겹치는 경우를 안 세게 되네요. 한 번도 6이 안 나올 확률은 (5/6)^3이니까, 적어도 한 번 6이 나올 확률은 1-(5/6)^3이에요.",
+          "answer": "91/216"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 틀렸네요. 그러면 적어도 한 번 나올 확률은 전체 1에서 한 번도 안 나올 확률을 빼는 거로 보면 될 것 같아요.",
+          "answer": "91/216"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-3",
+      "p2": "prob_at_least_one_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "주사위를 한 번 던져 6이 나올 확률은 1/6이니까, 3번 던질 때 적어도 한 번 6이 나올 확률은 1/6+1/6+1/6으로 보면 돼. 그래서 3/6이야.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "음 다시 해봐도, 한 번에 6 나올 확률이 1/6이고 그걸 3번 더하면 된다고 생각해. 그래서 1/6+1/6+1/6=3/6이야.",
+          "answer": "1/2"
+        },
+        "control_p2": {
+          "message": "한 번 명중할 확률이 1/5이니까, 3번에서 적어도 한 번 명중할 확률은 그냥 1/5을 3번 더하면 된다고 봐. 그래서 3/5이야.",
+          "answer": "3/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 있어서 잘못 셀 수 있겠다. 그러면 한 번도 명중 안 할 확률이 (4/5)^3=64/125니까, 적어도 한 번 명중할 확률은 1-64/125로 구하면 돼.",
+          "answer": "61/125"
+        },
+        "answer_only_p2": {
+          "message": "아까는 내가 단순히 더해서 생각했는데, 네가 맞다고 했으니까 이번엔 그 정답 방식대로 보면 될 것 같아. 적어도 한 번 명중할 확률은 한 번도 명중하지 않을 확률을 빼서 구하면 1-(4/5)^3이야.",
+          "answer": "61/125"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-3",
+      "p2": "prob_at_least_one_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 던져서 6이 나올 확률은 1/6이고, 3번 던지니까 그냥 3번 더하면 돼요. 그래서 1/6+1/6+1/6=3/6이에요.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "음 저는 적어도 한 번이면 각 번에서 6 나올 확률을 더하면 된다고 생각했어요. 그래서 3번이면 1/6씩 3번 더해서 구할게요.",
+          "answer": "1/2"
+        },
+        "control_p2": {
+          "message": "한 번 명중할 확률이 1/5이고 3번 독립적으로 쏘니까, 적어도 한 번 명중할 확률은 그냥 3번 더하면 된다고 봐요. 그래서 1/5+1/5+1/5예요.",
+          "answer": "3/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 있어서 이상해질 수 있네요. 그럼 여사건으로 하면 한 번도 명중 안 할 확률이 (4/5)^3이니까, 적어도 한 번 명중할 확률은 1-(4/5)^3이에요.",
+          "answer": "61/125"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 다르게 생각했는데, 아직은 한 번 일어날 확률을 3번 더하는 방식으로 풀게요. 한 번 명중할 확률이 1/5니까 3번이면 3/5라고 봐요.",
+          "answer": "3/5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-3",
+      "p2": "prob_at_least_one_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "주사위를 한 번 던져 6이 나올 확률은 1/6이고, 3번 던지니까 그걸 3번 더하면 돼요. 그래서 1/6+1/6+1/6=3/6이에요.",
+          "answer": "1/2"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게. 저는 적어도 한 번이면 각 경우를 더해서 생각했는데, 혹시 중복되는 경우가 있어서 아닌가 봐요.",
+          "answer": "1/2"
+        },
+        "control_p2": {
+          "message": "한 번 명중할 확률이 1/5니까, 3번이면 그걸 3번 더하면 된다고 생각해요. 그래서 1/5+1/5+1/5=3/5예요.",
+          "answer": "3/5"
+        },
+        "explained_p2": {
+          "message": "아, 맞네. 그냥 더하면 겹치는 경우가 있어서 잘못될 수 있겠네. 그러면 한 번도 명중 안 할 확률을 먼저 구해서 1에서 빼면 돼요.",
+          "answer": "61/125"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 다르게 생각했는데, 이번에도 적어도 한 번이면 한 번 명중할 확률을 3번 더하면 된다고 볼게요. 그래서 1/5를 3번 더하면 돼요.",
+          "answer": "3/5"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-4",
+      "p2": "prob_at_least_one_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 명중할 확률이 1/5이니까, 3번 중 적어도 한 번 명중할 확률은 그냥 1/5를 3번 더하면 돼요. 그래서 3/5예요.",
+          "answer": "3/5"
+        },
+        "retry": {
+          "message": "음... 저는 적어도 한 번이면 각 번의 명중 확률을 더해서 1/5+1/5+1/5로 생각했는데, 틀렸다고 하니까 다시 생각해볼게요. 그래도 지금은 3/5로 보여요.",
+          "answer": "3/5"
+        },
+        "control_p2": {
+          "message": "한 번 던져서 1 또는 2가 나올 확률은 2/6=1/3이에요. 2번 던져서 적어도 한 번 나오려면 그걸 2번 더해서 2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 있어서 이상해질 수 있네요. 그러면 한 번도 1이나 2가 안 나올 확률부터 구해서 1에서 빼면 돼요.",
+          "answer": "5/9"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 생각하면, 한 번에 1 또는 2가 나올 확률은 2/6 = 1/3이야. 2번 던지니까 적어도 한 번 나올 확률은 1/3 + 1/3 = 2/3이야.",
+          "answer": "2/3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-4",
+      "p2": "prob_at_least_one_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 명중할 확률은 한 번 명중할 확률을 3번 더하면 된다고 생각해요. 그래서 1/5+1/5+1/5=3/5예요.",
+          "answer": "3/5"
+        },
+        "retry": {
+          "message": "음... 저는 적어도 한 번이면 각 경우를 더해서 1/5를 3번 더하는 거라고 생각했는데, 틀렸다면 다시 생각해볼게요. 그래도 지금은 1/5+1/5+1/5로 보여서 3/5 같아요.",
+          "answer": "3/5"
+        },
+        "control_p2": {
+          "message": "적어도 한 번 1 또는 2가 나올 확률은 한 번 던질 때 확률을 2번 더하면 된다고 생각해요. 한 번에 1 또는 2가 나올 확률은 2/6=1/3이니까 1/3+1/3=2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우를 두 번 셀 수 있겠네요. 그러면 한 번도 1이나 2가 안 나올 확률은 한 번에 4/6=2/3이니까, 두 번 다 안 나올 확률은 (2/3)^2=4/9예요.",
+          "answer": "5/9"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 적어도 한 번은 여사건으로 구하는 게 맞는 것 같아요. 1 또는 2가 안 나올 확률은 4/6이고, 2번 다 안 나올 확률은 (4/6)^2=4/9라서 구하는 확률은 1-4/9=5/9예요.",
+          "answer": "5/9"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-4",
+      "p2": "prob_at_least_one_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "적어도 한 번 명중할 확률은 한 번 명중할 확률을 3번 더하면 된다고 보면 돼요. 그래서 1/5+1/5+1/5=3/5예요.",
+          "answer": "3/5"
+        },
+        "retry": {
+          "message": "음, 저는 적어도 한 번이면 각 번의 명중 확률을 더해서 구한다고 생각했는데, 틀렸다고 하니까 다시 생각해볼게요. 아직은 1/5를 3번 더해서 3/5라고 보이네요.",
+          "answer": "3/5"
+        },
+        "control_p2": {
+          "message": "한 번 던져서 1 또는 2가 나올 확률은 2/6=1/3이에요. 적어도 한 번이면 2번의 확률을 더해서 1/3+1/3=2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우를 두 번 세는 거구나. 그러면 1이나 2가 안 나올 확률은 한 번에 4/6=2/3이니까, 2번 다 안 나올 확률은 (2/3)^2=4/9이고, 그래서 적어도 한 번 나올 확률은 1-4/9=5/9이야.",
+          "answer": "5/9"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 적어도 한 번은 전체에서 한 번도 안 나올 경우를 빼면 되는 것 같아요. 한 번에 1 또는 2가 나올 확률은 2/6=1/3이니까, 안 나올 확률은 2/3이고 2번 다 안 나올 확률은 4/9라서 적어도 한 번 나올 확률은 1-4/9=5/9예요.",
+          "answer": "5/9"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-5",
+      "p2": "prob_at_least_one_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 던질 때 1 또는 2가 나올 확률은 2/6=1/3이야. 2번 던지니까 적어도 한 번 나올 확률은 1/3+1/3=2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음, 나는 적어도 한 번은 각 번에서 나올 확률을 더하면 된다고 생각했는데, 다시 보면 한 번에 1 또는 2가 나올 확률이 1/3이니까 2번이면 2/3으로 보는 게 맞는 것 같아.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "한 번 던질 때 6이 나올 확률은 1/6이야. 2번 던지니까 적어도 한 번 6이 나올 확률은 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 그냥 더하면 겹치는 경우를 두 번 셀 수 있구나. 그러면 한 번도 6이 안 나올 확률이 (5/6)^2니까, 적어도 한 번 6이 나올 확률은 1-(5/6)^2=11/36이야.",
+          "answer": "11/36"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 적어도 한 번 나올 확률은 각 번의 확률을 더해서 구한다고 생각해. 한 번에 6이 나올 확률이 1/6이니까 2번이면 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-5",
+      "p2": "prob_at_least_one_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 던질 때 1 또는 2가 나올 확률은 2/6이니까 1/3이야. 2번 던져서 적어도 한 번 나올 확률은 그걸 2번 더해서 2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음, 나는 적어도 한 번이면 각 번의 확률을 더하는 줄 알았는데 틀렸다고 하니까 다시 생각해볼게. 안 나오는 경우를 보면, 한 번에 1이나 2가 안 나올 확률이 4/6=2/3이고 그게 2번 다 안 나올 확률은 2/3*2/3=4/9, 그래서 적어도 한 번 나올 확률은 1-4/9=5/9야.",
+          "answer": "5/9"
+        },
+        "control_p2": {
+          "message": "아까처럼 안 나오는 경우로 보면 될 것 같아. 한 번에 6이 안 나올 확률이 5/6이니까, 2번 다 안 나올 확률을 빼면 돼.",
+          "answer": "11/36"
+        },
+        "explained_p2": {
+          "message": "아 그렇네. 그냥 더하면 겹치는 경우가 있어서 안 맞을 수 있구나. 그러면 한 번도 6이 안 나올 확률을 구해서 1에서 빼면 돼.",
+          "answer": "11/36"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 적어도 한 번 나올 확률은 각 시행 확률을 더하면 된다고 생각해. 한 번에 6이 나올 확률이 1/6이니까 2번이면 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_at_least_one_add",
+      "p1": "prob_at_least_one_add-5",
+      "p2": "prob_at_least_one_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "한 번 던질 때 1 또는 2가 나올 확률은 2/6이니까 1/3이야. 2번 던져서 적어도 한 번 나오려면 그 확률을 2번 더해서 2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음, 나는 적어도 한 번이면 각 번에서 나올 확률을 더하면 된다고 생각했어. 그래서 한 번에 1/3이고 2번이면 1/3+1/3=2/3이야.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "한 번 던져서 6이 나올 확률은 1/6이야. 2번 던져서 적어도 한 번 나오려면 두 번 확률을 더해서 1/3이야.",
+          "answer": "1/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 그냥 더하면 겹치는 경우가 있어서 잘못 셀 수 있겠다. 그러면 한 번도 6이 안 나올 확률이 (5/6)^2이니까, 적어도 한 번 6이 나올 확률은 1-(5/6)^2이야.",
+          "answer": "11/36"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 적어도 한 번 나올 확률은 각 시행의 확률을 더하면 된다고 생각해. 한 번에 6이 나올 확률이 1/6이니까 2번이면 1/3이야.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-0",
+      "p2": "prob_independent_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전에서 앞면 나올 확률이 1/2이고, 주사위에서 6 나올 확률이 1/6이니까 더하면 돼요. 그래서 1/2+1/6=2/3이에요.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "아, 저는 같이 일어나는 것도 더하면 된다고 생각해서 2/3이라고 했어요. 그런데 틀렸다면 제가 놓친 게 있는 것 같아요.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6이니까 더하면 돼요. 1/6+3/6=4/6=2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 함께 보는 경우의 수로 생각하면 곱하는 게 맞는 것 같아요. 첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6=1/2라서 곱하면 돼요.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 각각의 확률을 더하는 게 아니라, 함께 일어나는 경우는 곱한다는 거구나. 첫 번째가 1일 확률은 1/6, 두 번째가 짝수일 확률은 3/6=1/2라서 곱하면 돼.",
+          "answer": "1/12"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-0",
+      "p2": "prob_independent_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전에서 앞면이 나올 확률은 1/2이고, 주사위에서 6이 나올 확률은 1/6이야. 같이 일어날 확률은 더하면 되니까 1/2+1/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음, 나는 같이 일어날 확률은 각 확률을 더한다고 배웠어서 다시 해도 1/2+1/6으로 생각해. 그래서 3/6+1/6=4/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6=1/2이야. 같이 일어날 확률은 더하면 되니까 1/6+1/2=2/3이야.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 그렇네. 전체 경우를 같이 보면 더하는 게 아니라 곱하는 거구나. 첫 번째가 1일 확률은 1/6, 두 번째가 짝수일 확률은 3/6=1/2니까 같이 일어날 확률은 1/6×1/2=1/12이야.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 하면 첫 번째가 1일 확률은 1/6이고, 두 번째가 짝수일 확률은 3/6=1/2야. 같이 일어날 확률은 더해서 1/6+1/2=2/3이야.",
+          "answer": "2/3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-0",
+      "p2": "prob_independent_add-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전에서 앞면이 나올 확률은 1/2이고, 주사위에서 6이 나올 확률은 1/6이니까 더하면 돼요. 그래서 1/2+1/6=2/3이에요.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "아, 그럼 다시 생각해볼게요. 근데 저는 같이 일어나는 것도 일단 각 확률을 더해서 1/2+1/6으로 계산해서 2/3이라고 생각해요.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6=1/2이에요. 같이 일어나는 건 더해서 1/6+1/2=2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아, 같이 일어나는 건 경우의 수로 보면 곱하는 게 맞네요. 그러면 첫 번째가 1일 확률은 1/6, 두 번째가 짝수일 확률은 3/6=1/2라서 곱하면 돼요.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 각각의 확률을 더해서 구하면 된다고 생각해요. 첫 번째가 1일 확률은 1/6, 두 번째가 짝수일 확률은 3/6=1/2라서 더할게요.",
+          "answer": "2/3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-1",
+      "p2": "prob_independent_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6이니까 더하면 돼. 그래서 1/6+3/6=4/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음... 나는 같이 일어나는 건 더한다고 생각해서 2/3라고 했는데, 틀렸다면 다시 생각해볼게. 그래도 지금은 첫 번째가 1일 확률 1/6, 두 번째가 짝수일 확률 3/6이라서 1/6+3/6=4/6=2/3로 보여.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "둘이 모두 합격하는 경우도 나는 각 확률을 더해서 구하면 된다고 생각해. 그래서 1/3+1/4를 계산하면 돼.",
+          "answer": "7/12"
+        },
+        "explained_p2": {
+          "message": "아, 경우의 수로 보니까 같이 일어나는 건 더하는 게 아니라 곱하는 거네. 그러면 둘 다 합격할 확률은 1/3×1/4로 계산하면 돼.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아, 둘 다 함께 일어나는 건 곱하는 거구나. 그러면 1/3×1/4로 계산하면 돼.",
+          "answer": "1/12"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-1",
+      "p2": "prob_independent_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6이니까 더하면 돼. 그래서 1/6+3/6=4/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "음... 나는 같이 일어나는 확률은 더한다고 생각해서 2/3이라고 했는데, 틀렸다고 하니까 다시 보게 되네. 아직은 왜 다른지 잘 모르겠지만 내가 아까 계산한 값은 2/3이야.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "둘 다 합격하는 경우니까 내가 아는 방법대로 각 확률을 더하면 돼. 그래서 1/3+1/4=7/12야.",
+          "answer": "7/12"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같이 일어나는 경우는 전체 경우에서 둘 다 맞는 경우를 봐야 하니까 곱하는 게 맞는 것 같아. 그러면 1/3×1/4=1/12야.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까 문제 보니까 내가 더하는 게 아니라 같이 일어나는 건 곱하는 거였네. 그러면 둘 다 합격할 확률은 1/3×1/4로 계산하면 돼.",
+          "answer": "1/12"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-1",
+      "p2": "prob_independent_add-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "첫 번째 주사위가 1일 확률은 1/6이고, 두 번째 주사위가 짝수일 확률은 3/6이니까 더하면 돼요. 그래서 1/6+3/6=4/6=2/3이에요.",
+          "answer": "2/3"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게요. 첫 번째가 1일 확률이 1/6이고 두 번째가 짝수일 확률이 1/2라서, 저는 같이 일어날 확률을 1/6+1/2로 봐서 2/3이라고 생각해요.",
+          "answer": "2/3"
+        },
+        "control_p2": {
+          "message": "A가 합격할 확률이 1/3이고 B가 합격할 확률이 1/4이니까, 둘 다 합격할 확률은 더해서 구하면 된다고 생각해요. 그래서 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        },
+        "explained_p2": {
+          "message": "아 그렇네요. 같이 일어나는 경우는 전체 경우에서 둘 다 만족하는 경우를 봐야 해서 곱하는 게 맞는 것 같아요. 그러면 1/3×1/4로 계산하면 돼요.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 두 사람이 모두 합격하는 경우도 각 확률을 더하면 된다고 생각해요. 그래서 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-2",
+      "p2": "prob_independent_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "두 사람이 모두 합격하는 건 A가 합격할 확률이랑 B가 합격할 확률을 더하면 된다고 배웠어요. 그래서 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        },
+        "retry": {
+          "message": "아, 저는 같이 일어나는 건 더한다고 생각했는데 틀렸다고 하니까 다시 보게 되네요. 독립이면 둘 다 일어날 확률은 곱하는 거라서 1/3×1/4로 계산하면 돼요.",
+          "answer": "1/12"
+        },
+        "control_p2": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위에서 3의 배수는 3이나 6이라서 2/6=1/3이에요. 같이 일어나는 건 더한다고 보면 1/2+1/3=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아, 경우의 수로 보니까 같이 일어나는 건 곱하는 게 맞네요. 동전에서 뒷면은 1/2, 주사위에서 3의 배수는 3이랑 6이라서 2/6=1/3이에요.",
+          "answer": "1/6"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 같이 일어나는 확률은 더하면 된다고 생각해서 풀게요. 동전이 뒷면일 확률은 1/2이고, 주사위가 3의 배수인 3이나 6이 나올 확률은 2/6=1/3이에요.",
+          "answer": "5/6"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-2",
+      "p2": "prob_independent_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "두 사람이 모두 합격하는 건 A가 합격할 확률이랑 B가 합격할 확률을 더하면 된다고 배웠어요. 그래서 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        },
+        "retry": {
+          "message": "음, 저는 같이 일어나는 건 더하는 걸로 생각했는데 틀렸다고 하니까 다시 볼게요. 그래도 지금 아는 방법대로 하면 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        },
+        "control_p2": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위에서 3의 배수는 3이랑 6이라서 2/6=1/3이에요. 같이 일어나는 확률은 더해서 1/2+1/3=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아, 경우의 수로 보니까 같이 일어나는 건 더하는 게 아니라 곱하는 거네요. 동전이 뒷면일 확률은 1/2, 주사위가 3의 배수는 3이나 6이라서 2/6=1/3이니까 같이 일어날 확률은 1/2×1/3이에요.",
+          "answer": "1/6"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 함께 일어나는 건 더하는 게 아니라 따로 계산해서 되는 것 같아요. 동전이 뒷면일 확률은 1/2, 주사위가 3의 배수는 2/6이니까 1/2×2/6=1/6이에요.",
+          "answer": "1/6"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-2",
+      "p2": "prob_independent_add-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "두 사람이 모두 합격하는 경우는 각 확률을 더하면 된다고 배웠어요. 그래서 1/3+1/4=7/12예요.",
+          "answer": "7/12"
+        },
+        "retry": {
+          "message": "아, 저는 같이 일어나는 확률은 더하는 줄 알았는데 틀렸다고 하니까 다시 생각해볼게요. 그런데 아직은 제 방법으로 하면 1/3+1/4=7/12가 나와요.",
+          "answer": "7/12"
+        },
+        "control_p2": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위에서 3의 배수는 3이나 6이니까 2/6=1/3이에요. 같이 일어나는 건 더해서 1/2+1/3=5/6이에요.",
+          "answer": "5/6"
+        },
+        "explained_p2": {
+          "message": "아, 예시를 보니까 동시에 일어나는 건 더하는 게 아니라 곱하는 게 맞네요. 동전이 뒷면일 확률은 1/2, 주사위가 3의 배수(3, 6)가 나올 확률은 2/6=1/3이라서 같이 일어날 확률은 1/2×1/3이에요.",
+          "answer": "1/6"
+        },
+        "answer_only_p2": {
+          "message": "아까 정답이 1/12였으니까 같이 일어나는 건 더하는 게 아닌가 보다 하고 볼게요. 동전 뒷면은 1/2, 주사위에서 3의 배수는 2/6=1/3이니까 1/2×1/3=1/6이에요.",
+          "answer": "1/6"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-3",
+      "p2": "prob_independent_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위에서 3의 배수(3, 6)가 나올 확률은 2/6=1/3이야. 같이 일어날 확률은 더하면 되니까 1/2+1/3=5/6이야.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "아, 나는 같이 일어날 때 더한다고 생각했는데 틀렸다고 하니까 다시 생각해볼게. 경우를 직접 세면 전체는 2x6=12가지이고, 뒷면이면서 3의 배수는 (뒷면,3), (뒷면,6) 2가지라서 2/12=1/6이네.",
+          "answer": "1/6"
+        },
+        "control_p2": {
+          "message": "명중할 확률은 2/5이고, 동전이 앞면 나올 확률은 1/2이야. 같이 일어나는 경우는 경우를 곱해서 생각하면 2/10=1/5가 돼.",
+          "answer": "1/5"
+        },
+        "explained_p2": {
+          "message": "아, 경우를 같이 보면 전체 경우 수에서 맞는 경우를 세는 게 더 맞는 것 같아. 그러면 함께 일어날 확률은 곱해서 2/5×1/2=1/5야.",
+          "answer": "1/5"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 하면 명중할 확률이 2/5이고, 동전 앞면이 1/2이니까 같이 일어날 확률은 더해서 구하면 돼. 2/5+1/2=9/10이야.",
+          "answer": "9/10"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-3",
+      "p2": "prob_independent_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위가 3의 배수인 3이나 6이 나올 확률은 2/6이야. 같이 일어날 확률은 더하면 되니까 1/2+2/6=5/6이야.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "아, 나는 같이 일어날 확률은 더하는 줄 알고 5/6이라고 했는데 틀렸네. 그럼 경우를 직접 세어 보면 전체는 12가지이고, 뒷면이면서 3의 배수는 (뒷면,3), (뒷면,6) 두 가지라서 2/12야.",
+          "answer": "1/6"
+        },
+        "control_p2": {
+          "message": "아까처럼 같이 일어나는 경우는 전체 경우로 보면 돼. 명중과 앞면이 동시에 되는 건 2/5에 1/2가 같이 붙어서 1/5이야.",
+          "answer": "1/5"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같이 일어나는 건 전체 경우를 같이 봐서 곱하는 거구나. 그러면 2/5×1/2=1/5야.",
+          "answer": "1/5"
+        },
+        "answer_only_p2": {
+          "message": "아 맞네, 같이 일어날 확률은 그렇게 되는 거구나. 그러면 이번에는 명중 확률 2/5랑 동전 앞면 확률 1/2를 곱해서 1/5이야.",
+          "answer": "1/5"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-3",
+      "p2": "prob_independent_add-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "동전이 뒷면 나올 확률은 1/2이고, 주사위에서 3의 배수(3, 6)가 나올 확률은 2/6=1/3이야. 같이 일어날 확률은 더하면 되니까 1/2+1/3=5/6이야.",
+          "answer": "5/6"
+        },
+        "retry": {
+          "message": "아, 나는 같이 일어날 확률이면 더한다고 생각해서 5/6으로 했어. 왜 틀렸는지 아직 잘 모르겠지만 다시 쓰면 5/6이야.",
+          "answer": "5/6"
+        },
+        "control_p2": {
+          "message": "명중할 확률이 2/5이고 동전이 앞면 나올 확률이 1/2이야. 같이 일어날 확률은 더하면 된다고 배워서 2/5+1/2=9/10이야.",
+          "answer": "9/10"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같이 일어나는 건 전체 경우를 같이 봐서 곱하는 게 맞는 것 같아. 그러면 2/5×1/2=1/5야.",
+          "answer": "1/5"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 보면 명중할 확률이 2/5이고, 동전 앞면이 1/2이니까 같이 일어날 확률은 더해서 2/5+1/2=9/10이야. 나는 이 방법으로 풀면 된다고 생각해.",
+          "answer": "9/10"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-4",
+      "p2": "prob_independent_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "명중할 확률이 2/5이고, 동전 앞면이 나올 확률이 1/2니까 같이 일어날 확률은 더해서 구하면 돼요. 그래서 2/5+1/2=9/10이에요.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "아, 저는 같이 일어날 때 더하는 줄 알고 9/10이라고 했는데 틀렸다고 하니까 다시 생각해 볼게요. 아직은 제 방법으로는 2/5+1/2=9/10으로 보여요.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "각 주사위에서 6이 나올 확률이 각각 1/6이니까, 둘 다 6이 나올 확률은 더해서 구하면 돼요. 그래서 1/6+1/6=1/3이에요.",
+          "answer": "1/3"
+        },
+        "explained_p2": {
+          "message": "아 그렇네, 같이 일어나는 건 경우의 수를 같이 봐서 곱하는 게 맞는 것 같아. 그러면 두 주사위가 모두 6인 확률은 1/6×1/6이야.",
+          "answer": "1/36"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 둘 다 일어나는 확률은 각 확률을 더해서 구하면 된다고 생각해요. 주사위 하나에서 6이 나올 확률이 1/6이니까 1/6+1/6=1/3이에요.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-4",
+      "p2": "prob_independent_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "명중할 확률이 2/5이고 앞면 나올 확률이 1/2이니까, 같이 일어날 확률은 더해서 2/5+1/2=9/10이야.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "아, 나는 같이 일어날 확률을 더했는데 틀렸다고 하니까 다시 생각해볼게. 근데 내가 아는 방법으로는 2/5+1/2=9/10이라서 이렇게 나와.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "각 주사위에서 6이 나올 확률이 1/6씩이니까, 둘 다 6이 나올 확률은 더해서 구하면 돼. 그래서 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같이 일어나는 건 경우의 수를 같이 봐서 곱하는 게 맞는 것 같아. 그러면 두 주사위가 모두 6일 확률은 1/6×1/6이야.",
+          "answer": "1/36"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 두 가지 일이 같이 일어나는 거니까 각각의 확률을 더하면 된다고 생각해. 각 주사위에서 6이 나올 확률이 1/6씩이라서 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-4",
+      "p2": "prob_independent_add-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "명중할 확률이 2/5이고 동전 앞면이 나올 확률이 1/2이니까, 같이 일어날 확률은 더해서 2/5+1/2=9/10이야.",
+          "answer": "9/10"
+        },
+        "retry": {
+          "message": "아 그럼 다시 해볼게. 나는 같이 일어나는 확률은 더하는 걸로 배웠는데, 다시 계산하면 2/5+1/2=4/10+5/10=9/10이야.",
+          "answer": "9/10"
+        },
+        "control_p2": {
+          "message": "각 주사위에서 6이 나올 확률이 각각 1/6이니까, 둘 다 6이 나올 확률은 더해서 구하면 돼. 그래서 1/6+1/6=2/6=1/3이야.",
+          "answer": "1/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 같이 일어나는 건 경우를 같이 봐서 곱해야 하는 거구나. 그러면 두 주사위가 둘 다 6일 확률은 1/6×1/6이야.",
+          "answer": "1/36"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 두 일이 함께 일어나는 거니까 각 확률을 더하면 된다고 생각해. 각 주사위에서 6이 나올 확률이 1/6씩이라서 1/6+1/6=1/3이야.",
+          "answer": "1/3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-5",
+      "p2": "prob_independent_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 주사위에서 6이 나올 확률은 1/6이니까, 두 개가 모두 6이 나올 확률은 1/6+1/6으로 계산하면 돼요. 그래서 2/6, 즉 1/3이에요.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "음… 나는 같이 일어나는 확률은 더한다고 생각해서 1/3이라고 했는데, 틀렸다면 다시 생각해볼게. 그래도 지금으로서는 두 주사위의 6이 나올 확률을 1/6+1/6으로 봐서 1/3이라고 할 것 같아.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "동전이 앞면 나올 확률은 1/2이고, 주사위가 6 나올 확률은 1/6이야. 같이 일어나는 확률은 더하면 되니까 1/2+1/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아, 경우의 수로 보니까 이해됐어. 동전은 2가지, 주사위는 6가지라서 전체 12가지이고 그중에서 (앞면, 6)은 1가지니까 확률은 1/12이야.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까 설명 들으니까 함께 일어나는 건 경우를 곱해서 보는 거구나. 동전 앞면은 1/2이고 주사위 6은 1/6이라서 곱하면 돼.",
+          "answer": "1/12"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-5",
+      "p2": "prob_independent_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 주사위에서 6이 나올 확률은 1/6이니까, 둘 다 6이 나올 확률은 1/6+1/6으로 계산하면 돼요. 그래서 2/6, 즉 1/3이에요.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "음, 저는 같이 일어나는 확률은 더하는 걸로 배워서 1/6+1/6=1/3이라고 생각했어요. 그런데 틀렸다고 하니까 제가 놓친 조건이 있는지 다시 봐야 할 것 같아요.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "동전에서 앞면 나올 확률이 1/2이고, 주사위에서 6 나올 확률이 1/6이니까 같이 일어나는 확률은 더해서 구하면 돼요. 그래서 1/2+1/6=2/3이에요.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 같이 보는 경우의 수로 생각하면 2×6=12가지이고 그중에서 (앞면, 6)은 1가지뿐이네. 그래서 확률은 1/12야.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 같이 일어나는 확률은 더한다고 배워서 이렇게 풀게. 동전 앞면이 1/2이고 주사위 6이 1/6이니까 더하면 2/3이야.",
+          "answer": "2/3"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "prob_independent_add",
+      "p1": "prob_independent_add-5",
+      "p2": "prob_independent_add-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "각 주사위에서 6이 나올 확률은 1/6이니까, 두 가지 일이 함께 일어날 확률은 더해서 1/6+1/6=2/6이야. 그래서 1/3이야.",
+          "answer": "1/3"
+        },
+        "retry": {
+          "message": "아, 나는 같이 일어나는 확률을 더했는데 틀렸다고 하니까 다시 생각해볼게. 그래도 각 주사위가 6일 확률이 1/6씩이라서 1/6+1/6=2/6, 즉 1/3이라고 봐.",
+          "answer": "1/3"
+        },
+        "control_p2": {
+          "message": "동전이 앞면 나올 확률은 1/2이고, 주사위가 6 나올 확률은 1/6이야. 같이 일어나는 건 더해서 1/2+1/6=2/3이야.",
+          "answer": "2/3"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같이 보는 경우의 수로 생각하면 2×6=12가지이고, 앞면이면서 6인 경우는 1가지뿐이야.",
+          "answer": "1/12"
+        },
+        "answer_only_p2": {
+          "message": "아까 예시처럼 같이 일어나는 확률은 각각 더하면 된다고 생각해. 동전 앞면이 1/2이고 주사위 6이 1/6이니까 더해서 구할게.",
+          "answer": "2/3"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-0",
+      "p2": "comb_as_perm-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "대표 2명을 뽑는 거니까 6명 중에서 순서대로 2명을 고르면 6×5예요. 그래서 경우의 수는 30이에요.",
+          "answer": "30"
+        },
+        "retry": {
+          "message": "아, 저는 대표 2명을 뽑을 때 6×5로 생각했는데 틀렸다고 하니까 다시 생각해 볼게요. 그래도 지금 제가 아는 방법으로는 6명 중 2명 뽑는 건 6×5예요.",
+          "answer": "30"
+        },
+        "control_p2": {
+          "message": "과일 7가지 중에서 3가지를 고르는 거니까 제가 아는 방법으로는 7×6×5예요. 그래서 경우의 수는 210이에요.",
+          "answer": "210"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 바구니에 담는 건 순서가 없어서 같은 걸 두 번 세면 안 돼요. 그러면 7×6×5에서 3가지를 서로 바꾸는 경우 3×2×1로 나누면 돼서 35예요.",
+          "answer": "35"
+        },
+        "answer_only_p2": {
+          "message": "아까는 대표 뽑기에서 내가 다르게 생각했는데, 이번에는 7가지 중에서 3가지를 고르는 거니까 7×6×5로 계산할게. 그래서 210이야.",
+          "answer": "210"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-0",
+      "p2": "comb_as_perm-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "대표 2명을 뽑는 건 6명 중에서 2자리를 순서대로 채우는 거라고 생각해서 6×5로 계산하면 돼요.",
+          "answer": "30"
+        },
+        "retry": {
+          "message": "음 저는 대표 2명을 뽑는 경우의 수를 6×5로 생각했는데, 왜 틀렸는지는 아직 잘 모르겠어요. 그래서 다시 해도 일단은 30이라고 생각해요.",
+          "answer": "30"
+        },
+        "control_p2": {
+          "message": "저는 7가지 중에서 3가지를 고르는 걸 7×6×5로 계산하면 된다고 생각해요.",
+          "answer": "210"
+        },
+        "explained_p2": {
+          "message": "아, 순서가 없으면 같은 걸 두 번 센 거라서 나눠야 하는 거구나. 그러면 7가지 중 3가지를 고르는 건 7×6×5를 3가지 순서 수인 3×2×1로 나누면 돼요.",
+          "answer": "35"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 틀렸다고 했지만, 저는 아직 7가지 중 3가지를 고르는 것도 7×6×5로 계산하는 방법이 먼저 떠올라요.",
+          "answer": "210"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-0",
+      "p2": "comb_as_perm-1",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "대표 2명을 뽑는 경우의 수는 6명 중에서 순서대로 2명을 고르는 거니까 6×5로 계산하면 돼요.",
+          "answer": "30"
+        },
+        "retry": {
+          "message": "아, 다시 생각해봤는데 저는 2명을 뽑을 때 첫 번째 6가지, 두 번째 5가지라서 아직도 6×5라고 생각해요.",
+          "answer": "30"
+        },
+        "control_p2": {
+          "message": "3가지를 고를 때는 첫 번째 7가지, 두 번째 6가지, 세 번째 5가지로 보면 돼요. 그래서 7×6×5로 계산해요.",
+          "answer": "210"
+        },
+        "explained_p2": {
+          "message": "아, 순서가 없으면 같은 걸 두 번 센 거라서 나눠줘야 하는구나. 그러면 7가지 중 3가지는 7×6×5를 3개의 순서 바꾸는 경우로 나누면 돼요.",
+          "answer": "35"
+        },
+        "answer_only_p2": {
+          "message": "저는 아까처럼 7가지 중에서 3가지를 차례대로 고른다고 생각해서 7×6×5로 계산할게요.",
+          "answer": "210"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-1",
+      "p2": "comb_as_perm-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "7가지 중에서 3가지를 고르는 거니까 7×6×5로 계산하면 돼요. 그래서 경우의 수는 210이에요.",
+          "answer": "210"
+        },
+        "retry": {
+          "message": "제가 배운 방법으로는 7명 중 3명 뽑듯이 7×6×5로 계산해요. 그래서 다시 해도 210이라고 생각해요.",
+          "answer": "210"
+        },
+        "control_p2": {
+          "message": "두 팀을 한 번 뽑는 거라고 보면 8개 팀 중에서 2개를 고르는 거라서 8×7로 계산해요. 그래서 경우의 수는 56이에요.",
+          "answer": "56"
+        },
+        "explained_p2": {
+          "message": "아, 경기 한 번은 두 팀의 순서가 없으니까 (A팀, B팀)랑 (B팀, A팀)을 같은 걸로 봐야 하네요. 그래서 8×7을 2로 나누면 28이에요.",
+          "answer": "28"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 그냥 순서 있게 뽑는 게 아니라, 두 팀이 한 경기 하는 건 같은 짝으로 보는 거라서 겹치는 걸 생각해야 할 것 같아요. 8팀에서 2팀을 고르는 경우니까 28이에요.",
+          "answer": "28"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-1",
+      "p2": "comb_as_perm-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "7가지 중에서 3가지를 고르는 거니까 7×6×5로 계산하면 돼요. 그래서 경우의 수는 210이에요.",
+          "answer": "210"
+        },
+        "retry": {
+          "message": "음… 저는 7가지 중 3가지를 고르면 첫째 과일 7가지, 둘째 6가지, 셋째 5가지라서 7×6×5라고 생각했어요. 그래서 다시 해도 210 같아요.",
+          "answer": "210"
+        },
+        "control_p2": {
+          "message": "두 팀씩 짝을 짓는 거니까 8개 팀 중에서 첫 팀 고르고, 그다음 상대 팀 고르면 된다고 생각했어요. 그래서 8×7로 계산해요.",
+          "answer": "56"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 경기 한 번은 A팀-B팀이랑 B팀-A팀이 같은 거니까 두 번씩 세면 안 돼. 그래서 8×7을 2로 나누면 28이에요.",
+          "answer": "28"
+        },
+        "answer_only_p2": {
+          "message": "아까는 같은 조합을 여러 번 센 것 같아서, 두 팀씩 짝짓는 건 순서 없이 고르는 거라고 보면 될 것 같아요. 8팀 중 2팀을 고르는 경우라서 8×7÷2=28이에요.",
+          "answer": "28"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-1",
+      "p2": "comb_as_perm-2",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "7가지 중에서 3가지를 고르는 거니까 7×6×5로 계산하면 돼요. 그래서 경우의 수는 210이에요.",
+          "answer": "210"
+        },
+        "retry": {
+          "message": "음... 저는 7가지 중 첫 번째 고를 때 7가지, 두 번째는 6가지, 세 번째는 5가지라서 7×6×5라고 생각했어요. 그래서 다시 해도 210이에요.",
+          "answer": "210"
+        },
+        "control_p2": {
+          "message": "8개 팀 중에서 경기할 두 팀을 정하는 거니까 첫 팀 8가지, 다음 팀 7가지로 봐서 8×7로 계산할게요. 그래서 경우의 수는 56이라고 생각해요.",
+          "answer": "56"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 경기 한 번은 A팀-B팀이랑 B팀-A팀이 같은 거니까 두 번씩 세면 안 돼. 그래서 8×7을 2로 나누면 28이야.",
+          "answer": "28"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 순서를 다르게 세서 크게 나온 것 같아요. 두 팀씩 한 번 경기하는 건 같은 짝은 한 번으로 보면 되니까 8×7을 2로 나눠서 28이에요.",
+          "answer": "28"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-2",
+      "p2": "comb_as_perm-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "8개 팀 중에서 경기할 두 팀을 고르는 거니까 8×7로 보면 돼요. 그래서 경우의 수는 56이에요.",
+          "answer": "56"
+        },
+        "retry": {
+          "message": "아 그러네, 서로 한 번씩 경기하면 같은 두 팀을 순서만 바꿔서 세면 안 되는 것 같아요. 그래서 8×7=56에서 2로 나눠서 28이에요.",
+          "answer": "28"
+        },
+        "control_p2": {
+          "message": "5명 중에서 청소 당번 3명을 뽑는 거니까 제가 아는 방법대로 5×4×3으로 계산하면 돼요.",
+          "answer": "60"
+        },
+        "explained_p2": {
+          "message": "아, 순서가 없으면 같은 걸 두 번씩 세는 거구나. 그러면 5명 중 3명을 뽑는 건 5×4×3을 순서 바꾸는 경우 3×2×1로 나누면 돼요.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 5명 중에서 3명을 순서대로 뽑는다고 생각하면 5×4×3이에요. 그래서 60이라고 보면 될 것 같아요.",
+          "answer": "60"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-2",
+      "p2": "comb_as_perm-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "8개 팀 중에서 경기할 두 팀을 순서 있게 고르면 8×7이야. 그래서 경우의 수는 56이야.",
+          "answer": "56"
+        },
+        "retry": {
+          "message": "음 내가 아까는 순서까지 다르게 본 것 같아. 그래도 두 팀을 뽑는 거니까 8×7=56인데, 같은 경기를 두 번 센 거면 2로 나눠서 28인 것 같아.",
+          "answer": "28"
+        },
+        "control_p2": {
+          "message": "5명 중에서 3명을 뽑는 거니까 내가 아는 방법으로 5×4×3을 하면 돼. 그래서 60이야.",
+          "answer": "60"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 청소 당번 3명은 순서가 없으니까 같은 조합을 여러 번 센 거야. 그래서 5×4×3을 3×2×1로 나누면 돼.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까 건 두 팀의 순서를 같은 걸로 봐서 2로 나누는 거였나 봐. 근데 이번엔 내가 아는 방법대로 5명 중 3명을 뽑으면 5×4×3이야.",
+          "answer": "60"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-2",
+      "p2": "comb_as_perm-3",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "8개 팀 중에서 경기할 두 팀을 정하는 거니까 8×7로 생각하면 될 것 같아요.",
+          "answer": "56"
+        },
+        "retry": {
+          "message": "음… 저는 두 팀을 뽑는 거라서 8×7이라고 생각했는데, 틀렸다고 하니까 다시 보면 같은 경기인데 순서가 없다는 뜻일 수도 있겠어요. 그러면 56을 2로 나눠서 28인 것 같아요.",
+          "answer": "28"
+        },
+        "control_p2": {
+          "message": "5명 중에서 3명을 뽑는 거니까 제가 아는 방법대로 5×4×3으로 계산하면 돼요.",
+          "answer": "60"
+        },
+        "explained_p2": {
+          "message": "아, 순서가 없으면 같은 경우를 두 번 세는 거구나. 그럼 5명 중 3명을 뽑을 때는 5×4×3에서 3명을 서로 바꾸는 경우 3×2×1로 나누면 돼요.",
+          "answer": "10"
+        },
+        "answer_only_p2": {
+          "message": "아까처럼 5명 중 3명을 뽑는 거니까 5×4×3으로 계산하면 된다고 생각해요.",
+          "answer": "60"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-3",
+      "p2": "comb_as_perm-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "5명 중에서 3명을 뽑는 거니까 5×4×3으로 계산하면 돼. 그래서 경우의 수는 60이야.",
+          "answer": "60"
+        },
+        "retry": {
+          "message": "음 나는 5명 중 3명을 뽑을 때 5×4×3으로 생각했는데, 틀렸다고 하니까 내가 순서를 같이 센 것 같아. 같은 3명이어도 뽑는 순서는 상관없으니까 3×2×1로 나눠서 10이야.",
+          "answer": "10"
+        },
+        "control_p2": {
+          "message": "같은 역할이면 순서는 상관없으니까 아까처럼 순서대로 뽑은 경우를 겹친 만큼 나눠주면 돼. 9×8을 2×1로 나누면 36이야.",
+          "answer": "36"
+        },
+        "explained_p2": {
+          "message": "아 맞네. 같은 역할이면 순서를 바꿔도 같은 경우라서 9×8을 2로 나눠야 해.",
+          "answer": "36"
+        },
+        "answer_only_p2": {
+          "message": "음, 나는 아직은 뽑는 경우의 수를 n×(n-1)처럼 계산하는 걸로 알고 있어서 9명 중 2명이면 9×8로 했어. 그래서 72라고 생각해.",
+          "answer": "72"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-3",
+      "p2": "comb_as_perm-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "5명 중에서 3명을 뽑는 거니까 제가 아는 방법대로 5×4×3을 하면 돼요. 그래서 경우의 수는 60이에요.",
+          "answer": "60"
+        },
+        "retry": {
+          "message": "앗, 저는 순서까지 생각해서 5×4×3으로 했던 것 같아요. 다시 생각해 보니까 청소 당번 3명은 누가 뽑히는지만 중요하고 자리 구분은 없어서 10이에요.",
+          "answer": "10"
+        },
+        "control_p2": {
+          "message": "같은 역할 도우미 2명을 뽑는 거니까 순서는 안 중요해서 9명 중 2명을 고르면 돼요. 그래서 경우의 수는 9C2 = 36이에요.",
+          "answer": "36"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 같은 역할이면 순서를 바꿔도 같은 경우라서 2번씩 센 거네요. 그래서 9×8을 2로 나누면 돼요.",
+          "answer": "36"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 순서 있게 세는 방법으로 생각했는데, 같은 역할이면 순서는 상관없는 것 같아요. 그래서 9×8을 한 뒤에 겹치는 걸 나눠서 2로 나누면 36이에요.",
+          "answer": "36"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-3",
+      "p2": "comb_as_perm-4",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "5명 중에서 3명을 뽑는 거니까 5×4×3으로 계산하면 돼요. 그래서 경우의 수는 60이에요.",
+          "answer": "60"
+        },
+        "retry": {
+          "message": "음… 저는 5명 중 3명을 뽑을 때 5×4×3으로 생각했는데, 왜 틀렸는지 아직은 잘 모르겠어요. 그래도 제가 아는 방법대로 다시 하면 60이에요.",
+          "answer": "60"
+        },
+        "control_p2": {
+          "message": "같은 역할이어도 저는 2명을 뽑는 경우를 9×8로 계산해요. 그래서 경우의 수는 72라고 생각해요.",
+          "answer": "72"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 같은 역할이면 순서를 바꿔도 같은 경우라서 두 번씩 센 거예요. 그래서 9×8÷2=36이에요.",
+          "answer": "36"
+        },
+        "answer_only_p2": {
+          "message": "아까는 틀렸다고 했지만, 저는 뽑는 경우의 수를 n×(n-1)처럼 계산한다고 배워서 여기서는 9×8로 할게요. 그래서 72라고 생각해요.",
+          "answer": "72"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-4",
+      "p2": "comb_as_perm-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "같은 역할이어도 9명 중 2명을 뽑는 거니까 9×8로 계산하면 된다고 생각해요.",
+          "answer": "72"
+        },
+        "retry": {
+          "message": "음, 저는 같은 역할이어도 일단 2명을 뽑는 거라서 9×8로 생각했어요. 그런데 틀렸다고 하니까 순서가 상관없는 경우인지 다시 봐야 할 것 같아요.",
+          "answer": "72"
+        },
+        "control_p2": {
+          "message": "책 6권 중에서 3권을 고르는 거니까 제가 아는 방법대로 6×5×4로 계산할게요.",
+          "answer": "120"
+        },
+        "explained_p2": {
+          "message": "아, 순서가 없으면 같은 경우를 중복해서 센 거라서 나눠야 하는 거구나. 6권 중 3권을 고를 때는 6×5×4를 하고, 3권의 순서 바꾸는 경우 3×2×1로 나누면 돼요.",
+          "answer": "20"
+        },
+        "answer_only_p2": {
+          "message": "아까 같은 역할이면 순서를 안 따져서 2로 나누는 거라고 보면, 이번에도 6×5×4를 하고 3권을 고르는 순서가 겹치니까 나눠야 할 것 같아요. 3권 순서는 3×2×1이라서 그렇게 나누면 돼요.",
+          "answer": "20"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-4",
+      "p2": "comb_as_perm-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "같은 역할 도우미 2명을 뽑는 거니까 9명 중 2명을 뽑는 경우로 보면 돼요. 제가 아는 방법으로 하면 9×8=72예요.",
+          "answer": "72"
+        },
+        "retry": {
+          "message": "아, 같은 역할이면 순서가 없는 건가 봐요. 그러면 9×8=72에서 겹치는 걸 생각해서 2로 나누면 될 것 같아요.",
+          "answer": "36"
+        },
+        "control_p2": {
+          "message": "책 3권을 고르는 거니까 6명 중 3명 뽑는 것처럼 생각하면 될 것 같아요. 제가 아는 방법대로 하면 6×5×4예요.",
+          "answer": "120"
+        },
+        "explained_p2": {
+          "message": "아, 고르는 것만이면 순서 바꿔도 같은 경우라서 나눠야 하는 거네요. 6권 중 3권을 고를 때는 6×5×4를 3권의 순서 바꾸는 경우 3×2×1로 나누면 돼요.",
+          "answer": "20"
+        },
+        "answer_only_p2": {
+          "message": "아까는 제가 순서까지 생각해서 곱한 것 같아요. 이번에도 제가 아는 방식대로 하면 6×5×4=120이에요.",
+          "answer": "120"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-4",
+      "p2": "comb_as_perm-5",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "other",
+        "explained_p2": "correct",
+        "answer_only_p2": "correct"
+      },
+      "replies": {
+        "pre": {
+          "message": "같은 역할이어도 9명 중 2명을 뽑는 거니까 9×8로 계산하면 돼요. 그래서 경우의 수는 72예요.",
+          "answer": "72"
+        },
+        "retry": {
+          "message": "앗, 저는 그냥 9×8로 생각했는데 틀렸다고 하니까 같은 역할이면 순서를 안 따지는 건가 봐요. 그러면 9×8을 2로 나눠서 36으로 볼게요.",
+          "answer": "36"
+        },
+        "control_p2": {
+          "message": "책 6권 중에서 3권을 고르는 건데, 가방에 넣는 거라 순서는 상관없다고 보고 앞에서처럼 나눠서 생각할게요. 6×5×4를 3명 순서만큼 나누면 돼요.",
+          "answer": "40"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 가방에 넣는 건 순서가 없어서 같은 조합을 여러 번 센 거네요. 그러면 6×5×4를 순서 바꾸는 3×2×1로 나누면 돼요.",
+          "answer": "20"
+        },
+        "answer_only_p2": {
+          "message": "아까 같은 역할이면 순서를 안 따져서 나누는 거라고 보면 될 것 같아요. 그러면 6×5×4를 하고, 3권 고르는 순서가 겹치니까 3×2×1로 나눠서 20이에요.",
+          "answer": "20"
+        }
+      }
+    },
+    {
+      "rep": 0,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-5",
+      "p2": "comb_as_perm-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "6권 중에서 3권을 고르는 거니까 6×5×4로 계산하면 돼요. 그래서 120이에요.",
+          "answer": "120"
+        },
+        "retry": {
+          "message": "아, 저는 순서까지 생각해서 6×5×4로 했던 것 같아요. 그런데 그냥 3권을 고르기만 하는 거면 같은 3권이라도 순서가 달라도 같은 경우로 봐야 해서 3×2×1로 나눠야 해요.",
+          "answer": "20"
+        },
+        "control_p2": {
+          "message": "이번에는 대표 2명을 뽑는 거니까 6명 중 첫째 대표 1명, 둘째 대표 1명을 순서대로 뽑는다고 생각하면 6×5예요.",
+          "answer": "30"
+        },
+        "explained_p2": {
+          "message": "아, 대표 2명은 순서가 없어서 (가, 나)랑 (나, 가)를 같은 걸로 보는 거네요. 그러면 6×5를 2로 나누면 돼서 15예요.",
+          "answer": "15"
+        },
+        "answer_only_p2": {
+          "message": "아까는 책을 고르는 거라 순서가 없는 경우였나 봐요. 그런데 대표 2명을 뽑는 건 6명 중에서 2명을 뽑는 거니까 6×5로 계산해서 30이에요.",
+          "answer": "30"
+        }
+      }
+    },
+    {
+      "rep": 1,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-5",
+      "p2": "comb_as_perm-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "bug",
+        "control_p2": "bug",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "6권 중에서 3권을 고르는 건 6×5×4로 계산하면 된다고 배웠어요. 그래서 120가지예요.",
+          "answer": "120"
+        },
+        "retry": {
+          "message": "아 그럼 다시 생각해볼게요. 그래도 저는 6권 중에서 3권을 뽑는 걸 6×5×4로 계산하는 걸로 알고 있어서 120이라고 생각해요.",
+          "answer": "120"
+        },
+        "control_p2": {
+          "message": "6명 중 대표 2명을 뽑는 경우는 6×5로 계산하면 돼요. 그래서 30가지예요.",
+          "answer": "30"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 대표 2명은 순서가 없어서 (가, 나)랑 (나, 가)를 같은 걸로 봐야 하네요. 그래서 6×5를 2로 나누면 돼요.",
+          "answer": "15"
+        },
+        "answer_only_p2": {
+          "message": "아까는 책을 고르는 거라 순서가 상관없어서 20이었던 것 같아요. 그런데 대표 2명을 뽑는 건 6×5로 계산하면 돼요.",
+          "answer": "30"
+        }
+      }
+    },
+    {
+      "rep": 2,
+      "misconception": "comb_as_perm",
+      "p1": "comb_as_perm-5",
+      "p2": "comb_as_perm-0",
+      "labels": {
+        "pre": "bug",
+        "retry": "correct",
+        "control_p2": "correct",
+        "explained_p2": "correct",
+        "answer_only_p2": "bug"
+      },
+      "replies": {
+        "pre": {
+          "message": "6권 중에서 3권을 고르는 건 6×5×4로 계산하면 된다고 배웠어요. 그래서 120입니다.",
+          "answer": "120"
+        },
+        "retry": {
+          "message": "아, 저는 순서까지 생각해서 6×5×4를 했던 것 같아요. 그냥 3권만 고르는 거면 같은 3권을 고른 경우가 겹치니까 3×2×1로 나눠서 20이에요.",
+          "answer": "20"
+        },
+        "control_p2": {
+          "message": "아까처럼 그냥 고르는 거니까 6×5를 한 다음, 대표 2명은 순서가 없어서 2로 나누면 된다고 보면 돼요. 그래서 15예요.",
+          "answer": "15"
+        },
+        "explained_p2": {
+          "message": "아 맞네, 대표 2명은 순서가 없어서 (가, 나)랑 (나, 가)를 같은 걸로 봐야 해요. 그래서 6×5를 순서 바꾸는 2가지로 나누면 돼요.",
+          "answer": "15"
+        },
+        "answer_only_p2": {
+          "message": "아까는 책을 그냥 고르는 거라 순서가 없어서 20이었던 것 같아요. 그런데 대표 2명을 뽑는 건 6명 중 2명을 뽑는 경우의 수니까 6×5로 계산할게요.",
+          "answer": "30"
+        }
+      }
+    }
+  ]
+}

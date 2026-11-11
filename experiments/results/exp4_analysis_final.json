@@ -1,0 +1,1688 @@
+{
+ "answer": {
+  "all": {
+   "trials": 212,
+   "rate": {
+    "retry_only": 18.9,
+    "chatbot": 93.3,
+    "prompt_tutor": 84.0,
+    "prompt_tutor_solution": 85.1,
+    "bridge": 86.6,
+    "proposed": 95.7,
+    "proposed_no_diag": 93.9
+   },
+   "n": {
+    "retry_only": 212,
+    "chatbot": 164,
+    "prompt_tutor": 212,
+    "prompt_tutor_solution": 164,
+    "bridge": 212,
+    "proposed": 211,
+    "proposed_no_diag": 164
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 76.8,
+     "ci95": [
+      70.9,
+      82.2
+     ],
+     "n": 211
+    },
+    "chatbot": {
+     "diff": 1.8,
+     "ci95": [
+      -2.1,
+      6.1
+     ],
+     "n": 163
+    },
+    "prompt_tutor": {
+     "diff": 11.8,
+     "ci95": [
+      6.9,
+      16.6
+     ],
+     "n": 211
+    },
+    "prompt_tutor_solution": {
+     "diff": 10.1,
+     "ci95": [
+      4.6,
+      16.0
+     ],
+     "n": 163
+    },
+    "bridge": {
+     "diff": 9.2,
+     "ci95": [
+      4.7,
+      13.7
+     ],
+     "n": 211
+    },
+    "proposed_no_diag": {
+     "diff": 1.2,
+     "ci95": [
+      -3.1,
+      5.5
+     ],
+     "n": 163
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 80.9,
+    "prompt_tutor": 4.4,
+    "prompt_tutor_solution": 1.5,
+    "bridge": 5.9,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "factor_sign": {
+     "retry_only": 8.3,
+     "chatbot": 66.7,
+     "prompt_tutor": 25.0,
+     "prompt_tutor_solution": 16.7,
+     "bridge": 37.5,
+     "proposed": 62.5,
+     "proposed_no_diag": 87.5
+    },
+    "root_sign": {
+     "retry_only": 0.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 87.5,
+     "prompt_tutor_solution": 83.3,
+     "bridge": 75.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "divide_by_x": {
+     "retry_only": 25.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 58.3,
+     "prompt_tutor_solution": 54.2,
+     "bridge": 62.5,
+     "proposed": 100.0,
+     "proposed_no_diag": 91.7
+    },
+    "positive_sqrt_only": {
+     "retry_only": 29.2,
+     "chatbot": 100.0,
+     "prompt_tutor": 87.5,
+     "prompt_tutor_solution": 75.0,
+     "bridge": 91.7,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "mode_frequency": {
+     "retry_only": 16.7,
+     "chatbot": 91.7,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 91.7,
+     "proposed_no_diag": 100.0
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 75.0,
+     "bridge": 100.0,
+     "proposed": 95.8,
+     "proposed_no_diag": 75.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 91.7,
+     "proposed": 91.7,
+     "proposed_no_diag": 75.0
+    },
+    "polygon_angle_n": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 50.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "power_rule_keep_exponent": {
+     "retry_only": 12.5,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "tangent_slope_value": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 91.7,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 75.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "integral_no_divide": {
+     "retry_only": 8.3,
+     "chatbot": 83.3,
+     "prompt_tutor": 91.7,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 100.0,
+     "proposed": 91.7,
+     "proposed_no_diag": 87.5
+    },
+    "prob_add_non_exclusive": {
+     "retry_only": 25.0,
+     "chatbot": null,
+     "prompt_tutor": 50.0,
+     "prompt_tutor_solution": null,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": null
+    },
+    "prob_at_least_one_add": {
+     "retry_only": 8.3,
+     "chatbot": null,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": null,
+     "bridge": 66.7,
+     "proposed": 95.8,
+     "proposed_no_diag": null
+    },
+    "prob_independent_add": {
+     "retry_only": 29.2,
+     "chatbot": null,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": null,
+     "bridge": 79.2,
+     "proposed": 100.0,
+     "proposed_no_diag": null
+    },
+    "comb_as_perm": {
+     "retry_only": 50.0,
+     "chatbot": null,
+     "prompt_tutor": 83.3,
+     "prompt_tutor_solution": null,
+     "bridge": 83.3,
+     "proposed": 95.8,
+     "proposed_no_diag": null
+    }
+   }
+  },
+  "algebra": {
+   "trials": 48,
+   "rate": {
+    "retry_only": 15.6,
+    "chatbot": 83.3,
+    "prompt_tutor": 64.6,
+    "prompt_tutor_solution": 57.3,
+    "bridge": 66.7,
+    "proposed": 90.4,
+    "proposed_no_diag": 94.8
+   },
+   "n": {
+    "retry_only": 48,
+    "chatbot": 48,
+    "prompt_tutor": 48,
+    "prompt_tutor_solution": 48,
+    "bridge": 48,
+    "proposed": 47,
+    "proposed_no_diag": 48
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 74.5,
+     "ci95": [
+      61.7,
+      86.2
+     ],
+     "n": 47
+    },
+    "chatbot": {
+     "diff": 7.4,
+     "ci95": [
+      -2.1,
+      17.0
+     ],
+     "n": 47
+    },
+    "prompt_tutor": {
+     "diff": 26.6,
+     "ci95": [
+      12.8,
+      40.4
+     ],
+     "n": 47
+    },
+    "prompt_tutor_solution": {
+     "diff": 34.0,
+     "ci95": [
+      20.2,
+      48.9
+     ],
+     "n": 47
+    },
+    "bridge": {
+     "diff": 24.5,
+     "ci95": [
+      12.8,
+      36.2
+     ],
+     "n": 47
+    },
+    "proposed_no_diag": {
+     "diff": -4.3,
+     "ci95": [
+      -13.8,
+      4.3
+     ],
+     "n": 47
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 72.9,
+    "prompt_tutor": 6.2,
+    "prompt_tutor_solution": 2.1,
+    "bridge": 4.2,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "factor_sign": {
+     "retry_only": 8.3,
+     "chatbot": 66.7,
+     "prompt_tutor": 25.0,
+     "prompt_tutor_solution": 16.7,
+     "bridge": 37.5,
+     "proposed": 62.5,
+     "proposed_no_diag": 87.5
+    },
+    "root_sign": {
+     "retry_only": 0.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 87.5,
+     "prompt_tutor_solution": 83.3,
+     "bridge": 75.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "divide_by_x": {
+     "retry_only": 25.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 58.3,
+     "prompt_tutor_solution": 54.2,
+     "bridge": 62.5,
+     "proposed": 100.0,
+     "proposed_no_diag": 91.7
+    },
+    "positive_sqrt_only": {
+     "retry_only": 29.2,
+     "chatbot": 100.0,
+     "prompt_tutor": 87.5,
+     "prompt_tutor_solution": 75.0,
+     "bridge": 91.7,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  },
+  "statistics": {
+   "trials": 36,
+   "rate": {
+    "retry_only": 13.9,
+    "chatbot": 97.2,
+    "prompt_tutor": 83.3,
+    "prompt_tutor_solution": 91.7,
+    "bridge": 97.2,
+    "proposed": 93.1,
+    "proposed_no_diag": 83.3
+   },
+   "n": {
+    "retry_only": 36,
+    "chatbot": 36,
+    "prompt_tutor": 36,
+    "prompt_tutor_solution": 36,
+    "bridge": 36,
+    "proposed": 36,
+    "proposed_no_diag": 36
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 79.2,
+     "ci95": [
+      65.3,
+      91.7
+     ],
+     "n": 36
+    },
+    "chatbot": {
+     "diff": -4.2,
+     "ci95": [
+      -13.9,
+      5.6
+     ],
+     "n": 36
+    },
+    "prompt_tutor": {
+     "diff": 9.7,
+     "ci95": [
+      -2.8,
+      22.2
+     ],
+     "n": 36
+    },
+    "prompt_tutor_solution": {
+     "diff": 1.4,
+     "ci95": [
+      -11.1,
+      13.9
+     ],
+     "n": 36
+    },
+    "bridge": {
+     "diff": -4.2,
+     "ci95": [
+      -13.9,
+      4.2
+     ],
+     "n": 36
+    },
+    "proposed_no_diag": {
+     "diff": 9.7,
+     "ci95": [
+      -2.8,
+      23.6
+     ],
+     "n": 36
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "mode_frequency": {
+     "retry_only": 16.7,
+     "chatbot": 91.7,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 91.7,
+     "proposed_no_diag": 100.0
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 75.0,
+     "bridge": 100.0,
+     "proposed": 95.8,
+     "proposed_no_diag": 75.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 91.7,
+     "proposed": 91.7,
+     "proposed_no_diag": 75.0
+    }
+   }
+  },
+  "geometry": {
+   "trials": 48,
+   "rate": {
+    "retry_only": 25.0,
+    "chatbot": 100.0,
+    "prompt_tutor": 100.0,
+    "prompt_tutor_solution": 100.0,
+    "bridge": 100.0,
+    "proposed": 100.0,
+    "proposed_no_diag": 100.0
+   },
+   "n": {
+    "retry_only": 48,
+    "chatbot": 48,
+    "prompt_tutor": 48,
+    "prompt_tutor_solution": 48,
+    "bridge": 48,
+    "proposed": 48,
+    "proposed_no_diag": 48
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 75.0,
+     "ci95": [
+      62.5,
+      87.5
+     ],
+     "n": 48
+    },
+    "chatbot": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 48
+    },
+    "prompt_tutor": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 48
+    },
+    "prompt_tutor_solution": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 48
+    },
+    "bridge": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 48
+    },
+    "proposed_no_diag": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 48
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "polygon_angle_n": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 50.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  },
+  "calculus": {
+   "trials": 32,
+   "rate": {
+    "retry_only": 6.2,
+    "chatbot": 93.8,
+    "prompt_tutor": 93.8,
+    "prompt_tutor_solution": 96.9,
+    "bridge": 90.6,
+    "proposed": 96.9,
+    "proposed_no_diag": 95.3
+   },
+   "n": {
+    "retry_only": 32,
+    "chatbot": 32,
+    "prompt_tutor": 32,
+    "prompt_tutor_solution": 32,
+    "bridge": 32,
+    "proposed": 32,
+    "proposed_no_diag": 32
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 90.6,
+     "ci95": [
+      78.1,
+      100.0
+     ],
+     "n": 32
+    },
+    "chatbot": {
+     "diff": 3.1,
+     "ci95": [
+      -6.2,
+      12.5
+     ],
+     "n": 32
+    },
+    "prompt_tutor": {
+     "diff": 3.1,
+     "ci95": [
+      -6.2,
+      12.5
+     ],
+     "n": 32
+    },
+    "prompt_tutor_solution": {
+     "diff": 0.0,
+     "ci95": [
+      -7.8,
+      6.2
+     ],
+     "n": 32
+    },
+    "bridge": {
+     "diff": 6.2,
+     "ci95": [
+      -6.2,
+      18.8
+     ],
+     "n": 32
+    },
+    "proposed_no_diag": {
+     "diff": 1.6,
+     "ci95": [
+      -7.8,
+      9.4
+     ],
+     "n": 32
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 100.0,
+    "prompt_tutor": 0.0,
+    "prompt_tutor_solution": 0.0,
+    "bridge": 10.0,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "power_rule_keep_exponent": {
+     "retry_only": 12.5,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "tangent_slope_value": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 91.7,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 75.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "integral_no_divide": {
+     "retry_only": 8.3,
+     "chatbot": 83.3,
+     "prompt_tutor": 91.7,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 100.0,
+     "proposed": 91.7,
+     "proposed_no_diag": 87.5
+    }
+   }
+  },
+  "probability": {
+   "trials": 48,
+   "rate": {
+    "retry_only": 28.1,
+    "prompt_tutor": 81.2,
+    "bridge": 82.3,
+    "proposed": 97.9
+   },
+   "n": {
+    "retry_only": 48,
+    "prompt_tutor": 48,
+    "bridge": 48,
+    "proposed": 48
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 69.8,
+     "ci95": [
+      57.3,
+      81.2
+     ],
+     "n": 48
+    },
+    "prompt_tutor": {
+     "diff": 16.7,
+     "ci95": [
+      6.2,
+      29.2
+     ],
+     "n": 48
+    },
+    "bridge": {
+     "diff": 15.6,
+     "ci95": [
+      6.2,
+      26.0
+     ],
+     "n": 48
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "prob_add_non_exclusive": {
+     "retry_only": 25.0,
+     "chatbot": null,
+     "prompt_tutor": 50.0,
+     "prompt_tutor_solution": null,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": null
+    },
+    "prob_at_least_one_add": {
+     "retry_only": 8.3,
+     "chatbot": null,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": null,
+     "bridge": 66.7,
+     "proposed": 95.8,
+     "proposed_no_diag": null
+    },
+    "prob_independent_add": {
+     "retry_only": 29.2,
+     "chatbot": null,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": null,
+     "bridge": 79.2,
+     "proposed": 100.0,
+     "proposed_no_diag": null
+    },
+    "comb_as_perm": {
+     "retry_only": 50.0,
+     "chatbot": null,
+     "prompt_tutor": 83.3,
+     "prompt_tutor_solution": null,
+     "bridge": 83.3,
+     "proposed": 95.8,
+     "proposed_no_diag": null
+    }
+   }
+  },
+  "statistics+geometry": {
+   "trials": 84,
+   "rate": {
+    "retry_only": 20.2,
+    "chatbot": 98.8,
+    "prompt_tutor": 92.9,
+    "prompt_tutor_solution": 96.4,
+    "bridge": 98.8,
+    "proposed": 97.0,
+    "proposed_no_diag": 92.9
+   },
+   "n": {
+    "retry_only": 84,
+    "chatbot": 84,
+    "prompt_tutor": 84,
+    "prompt_tutor_solution": 84,
+    "bridge": 84,
+    "proposed": 84,
+    "proposed_no_diag": 84
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 76.8,
+     "ci95": [
+      67.3,
+      85.7
+     ],
+     "n": 84
+    },
+    "chatbot": {
+     "diff": -1.8,
+     "ci95": [
+      -6.5,
+      2.4
+     ],
+     "n": 84
+    },
+    "prompt_tutor": {
+     "diff": 4.2,
+     "ci95": [
+      -1.2,
+      10.1
+     ],
+     "n": 84
+    },
+    "prompt_tutor_solution": {
+     "diff": 0.6,
+     "ci95": [
+      -4.8,
+      6.0
+     ],
+     "n": 84
+    },
+    "bridge": {
+     "diff": -1.8,
+     "ci95": [
+      -6.0,
+      1.8
+     ],
+     "n": 84
+    },
+    "proposed_no_diag": {
+     "diff": 4.2,
+     "ci95": [
+      -1.2,
+      10.1
+     ],
+     "n": 84
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "mode_frequency": {
+     "retry_only": 16.7,
+     "chatbot": 91.7,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 91.7,
+     "proposed_no_diag": 100.0
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 75.0,
+     "bridge": 100.0,
+     "proposed": 95.8,
+     "proposed_no_diag": 75.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 91.7,
+     "proposed": 91.7,
+     "proposed_no_diag": 75.0
+    },
+    "polygon_angle_n": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 50.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 16.7,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  }
+ },
+ "work": {
+  "all": {
+   "trials": 163,
+   "rate": {
+    "retry_only": 13.2,
+    "chatbot": 97.2,
+    "prompt_tutor": 90.5,
+    "prompt_tutor_solution": 91.1,
+    "bridge": 96.0,
+    "proposed": 99.7,
+    "proposed_no_diag": 96.0
+   },
+   "n": {
+    "retry_only": 163,
+    "chatbot": 163,
+    "prompt_tutor": 163,
+    "prompt_tutor_solution": 163,
+    "bridge": 163,
+    "proposed": 162,
+    "proposed_no_diag": 163
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 87.0,
+     "ci95": [
+      81.8,
+      91.7
+     ],
+     "n": 162
+    },
+    "chatbot": {
+     "diff": 2.5,
+     "ci95": [
+      0.3,
+      4.9
+     ],
+     "n": 162
+    },
+    "prompt_tutor": {
+     "diff": 9.3,
+     "ci95": [
+      5.2,
+      13.9
+     ],
+     "n": 162
+    },
+    "prompt_tutor_solution": {
+     "diff": 8.6,
+     "ci95": [
+      4.9,
+      12.7
+     ],
+     "n": 162
+    },
+    "bridge": {
+     "diff": 3.7,
+     "ci95": [
+      1.5,
+      6.2
+     ],
+     "n": 162
+    },
+    "proposed_no_diag": {
+     "diff": 3.7,
+     "ci95": [
+      0.9,
+      6.8
+     ],
+     "n": 162
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 89.6,
+    "prompt_tutor": 0.0,
+    "prompt_tutor_solution": 3.0,
+    "bridge": 1.5,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "factor_sign": {
+     "retry_only": 8.3,
+     "chatbot": 83.3,
+     "prompt_tutor": 8.3,
+     "prompt_tutor_solution": 25.0,
+     "bridge": 54.2,
+     "proposed": 95.8,
+     "proposed_no_diag": 75.0
+    },
+    "root_sign": {
+     "retry_only": 0.0,
+     "chatbot": 95.5,
+     "prompt_tutor": 90.9,
+     "prompt_tutor_solution": 90.9,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "divide_by_x": {
+     "retry_only": 20.8,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 91.7
+    },
+    "positive_sqrt_only": {
+     "retry_only": 25.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 91.7,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "mode_frequency": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 83.3
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 83.3,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "polygon_angle_n": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 58.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "power_rule_keep_exponent": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "tangent_slope_value": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "integral_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": 95.8,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 95.8
+    }
+   }
+  },
+  "algebra": {
+   "trials": 47,
+   "rate": {
+    "retry_only": 13.8,
+    "chatbot": 90.4,
+    "prompt_tutor": 74.5,
+    "prompt_tutor_solution": 76.6,
+    "bridge": 86.2,
+    "proposed": 98.9,
+    "proposed_no_diag": 91.5
+   },
+   "n": {
+    "retry_only": 47,
+    "chatbot": 47,
+    "prompt_tutor": 47,
+    "prompt_tutor_solution": 47,
+    "bridge": 47,
+    "proposed": 47,
+    "proposed_no_diag": 47
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 85.1,
+     "ci95": [
+      75.5,
+      92.6
+     ],
+     "n": 47
+    },
+    "chatbot": {
+     "diff": 8.5,
+     "ci95": [
+      1.1,
+      17.0
+     ],
+     "n": 47
+    },
+    "prompt_tutor": {
+     "diff": 24.5,
+     "ci95": [
+      12.8,
+      36.2
+     ],
+     "n": 47
+    },
+    "prompt_tutor_solution": {
+     "diff": 22.3,
+     "ci95": [
+      12.8,
+      33.0
+     ],
+     "n": 47
+    },
+    "bridge": {
+     "diff": 12.8,
+     "ci95": [
+      5.3,
+      21.3
+     ],
+     "n": 47
+    },
+    "proposed_no_diag": {
+     "diff": 7.4,
+     "ci95": [
+      0.0,
+      17.0
+     ],
+     "n": 47
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 85.1,
+    "prompt_tutor": 0.0,
+    "prompt_tutor_solution": 4.3,
+    "bridge": 0.0,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "factor_sign": {
+     "retry_only": 8.3,
+     "chatbot": 83.3,
+     "prompt_tutor": 8.3,
+     "prompt_tutor_solution": 25.0,
+     "bridge": 54.2,
+     "proposed": 95.8,
+     "proposed_no_diag": 75.0
+    },
+    "root_sign": {
+     "retry_only": 0.0,
+     "chatbot": 95.5,
+     "prompt_tutor": 90.9,
+     "prompt_tutor_solution": 90.9,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "divide_by_x": {
+     "retry_only": 20.8,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 91.7
+    },
+    "positive_sqrt_only": {
+     "retry_only": 25.0,
+     "chatbot": 83.3,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 91.7,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  },
+  "statistics": {
+   "trials": 36,
+   "rate": {
+    "retry_only": 5.6,
+    "chatbot": 100.0,
+    "prompt_tutor": 91.7,
+    "prompt_tutor_solution": 94.4,
+    "bridge": 100.0,
+    "proposed": 100.0,
+    "proposed_no_diag": 94.4
+   },
+   "n": {
+    "retry_only": 36,
+    "chatbot": 36,
+    "prompt_tutor": 36,
+    "prompt_tutor_solution": 36,
+    "bridge": 36,
+    "proposed": 36,
+    "proposed_no_diag": 36
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 94.4,
+     "ci95": [
+      86.1,
+      100.0
+     ],
+     "n": 36
+    },
+    "chatbot": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 36
+    },
+    "prompt_tutor": {
+     "diff": 8.3,
+     "ci95": [
+      0.0,
+      16.7
+     ],
+     "n": 36
+    },
+    "prompt_tutor_solution": {
+     "diff": 5.6,
+     "ci95": [
+      0.0,
+      13.9
+     ],
+     "n": 36
+    },
+    "bridge": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 36
+    },
+    "proposed_no_diag": {
+     "diff": 5.6,
+     "ci95": [
+      0.0,
+      13.9
+     ],
+     "n": 36
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "mode_frequency": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 83.3
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 83.3,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  },
+  "geometry": {
+   "trials": 48,
+   "rate": {
+    "retry_only": 27.1,
+    "chatbot": 100.0,
+    "prompt_tutor": 100.0,
+    "prompt_tutor_solution": 97.9,
+    "bridge": 100.0,
+    "proposed": 100.0,
+    "proposed_no_diag": 100.0
+   },
+   "n": {
+    "retry_only": 48,
+    "chatbot": 48,
+    "prompt_tutor": 48,
+    "prompt_tutor_solution": 48,
+    "bridge": 48,
+    "proposed": 47,
+    "proposed_no_diag": 48
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 74.5,
+     "ci95": [
+      61.7,
+      87.2
+     ],
+     "n": 47
+    },
+    "chatbot": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 47
+    },
+    "prompt_tutor": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 47
+    },
+    "prompt_tutor_solution": {
+     "diff": 2.1,
+     "ci95": [
+      0.0,
+      6.4
+     ],
+     "n": 47
+    },
+    "bridge": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 47
+    },
+    "proposed_no_diag": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 47
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "polygon_angle_n": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 58.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  },
+  "calculus": {
+   "trials": 32,
+   "rate": {
+    "retry_only": 0.0,
+    "chatbot": 100.0,
+    "prompt_tutor": 98.4,
+    "prompt_tutor_solution": 98.4,
+    "bridge": 100.0,
+    "proposed": 100.0,
+    "proposed_no_diag": 98.4
+   },
+   "n": {
+    "retry_only": 32,
+    "chatbot": 32,
+    "prompt_tutor": 32,
+    "prompt_tutor_solution": 32,
+    "bridge": 32,
+    "proposed": 32,
+    "proposed_no_diag": 32
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 100.0,
+     "ci95": [
+      100.0,
+      100.0
+     ],
+     "n": 32
+    },
+    "chatbot": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 32
+    },
+    "prompt_tutor": {
+     "diff": 1.6,
+     "ci95": [
+      0.0,
+      4.7
+     ],
+     "n": 32
+    },
+    "prompt_tutor_solution": {
+     "diff": 1.6,
+     "ci95": [
+      0.0,
+      4.7
+     ],
+     "n": 32
+    },
+    "bridge": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 32
+    },
+    "proposed_no_diag": {
+     "diff": 1.6,
+     "ci95": [
+      0.0,
+      4.7
+     ],
+     "n": 32
+    }
+   },
+   "leak_rate": {
+    "retry_only": 0.0,
+    "chatbot": 100.0,
+    "prompt_tutor": 0.0,
+    "prompt_tutor_solution": 0.0,
+    "bridge": 5.0,
+    "proposed": 0.0,
+    "proposed_no_diag": 0.0
+   },
+   "by_misconception": {
+    "power_rule_keep_exponent": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "tangent_slope_value": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "integral_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 95.8,
+     "prompt_tutor_solution": 95.8,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 95.8
+    }
+   }
+  },
+  "statistics+geometry": {
+   "trials": 84,
+   "rate": {
+    "retry_only": 17.9,
+    "chatbot": 100.0,
+    "prompt_tutor": 96.4,
+    "prompt_tutor_solution": 96.4,
+    "bridge": 100.0,
+    "proposed": 100.0,
+    "proposed_no_diag": 97.6
+   },
+   "n": {
+    "retry_only": 84,
+    "chatbot": 84,
+    "prompt_tutor": 84,
+    "prompt_tutor_solution": 84,
+    "bridge": 84,
+    "proposed": 83,
+    "proposed_no_diag": 84
+   },
+   "diff_vs_proposed": {
+    "retry_only": {
+     "diff": 83.1,
+     "ci95": [
+      74.7,
+      91.6
+     ],
+     "n": 83
+    },
+    "chatbot": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 83
+    },
+    "prompt_tutor": {
+     "diff": 3.6,
+     "ci95": [
+      0.0,
+      8.4
+     ],
+     "n": 83
+    },
+    "prompt_tutor_solution": {
+     "diff": 3.6,
+     "ci95": [
+      0.0,
+      8.4
+     ],
+     "n": 83
+    },
+    "bridge": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 83
+    },
+    "proposed_no_diag": {
+     "diff": 2.4,
+     "ci95": [
+      0.0,
+      6.0
+     ],
+     "n": 83
+    }
+   },
+   "leak_rate": {},
+   "by_misconception": {
+    "mode_frequency": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 83.3
+    },
+    "variance_no_divide": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 75.0,
+     "prompt_tutor_solution": 83.3,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "std_no_sqrt": {
+     "retry_only": 8.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "polygon_angle_n": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "pythagoras_no_sqrt": {
+     "retry_only": 0.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 91.7,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "hypotenuse_confusion": {
+     "retry_only": 58.3,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    },
+    "area_ratio_linear": {
+     "retry_only": 25.0,
+     "chatbot": 100.0,
+     "prompt_tutor": 100.0,
+     "prompt_tutor_solution": 100.0,
+     "bridge": 100.0,
+     "proposed": 100.0,
+     "proposed_no_diag": 100.0
+    }
+   }
+  }
+ }
+}

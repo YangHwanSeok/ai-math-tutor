@@ -1,0 +1,163 @@
+{
+ "probability": {
+  "trials": 48,
+  "retry_only": 28.1,
+  "prompt_tutor": 81.2,
+  "bridge": 82.3,
+  "proposed": 97.9,
+  "d_prompt_tutor": [
+   16.7,
+   [
+    6.2,
+    29.2
+   ],
+   48
+  ],
+  "d_bridge": [
+   15.6,
+   [
+    6.2,
+    26.0
+   ],
+   48
+  ]
+ },
+ "prob_proc": {
+  "trials": 24,
+  "retry_only": 16.7,
+  "prompt_tutor": 72.9,
+  "bridge": 83.3,
+  "proposed": 97.9,
+  "d_prompt_tutor": [
+   25.0,
+   [
+    8.3,
+    43.8
+   ],
+   24
+  ],
+  "d_bridge": [
+   14.6,
+   [
+    4.2,
+    27.1
+   ],
+   24
+  ]
+ },
+ "prob_form": {
+  "trials": 24,
+  "retry_only": 39.6,
+  "prompt_tutor": 89.6,
+  "bridge": 81.2,
+  "proposed": 97.9,
+  "d_prompt_tutor": [
+   8.3,
+   [
+    -2.1,
+    20.8
+   ],
+   24
+  ],
+  "d_bridge": [
+   16.7,
+   [
+    2.1,
+    33.3
+   ],
+   24
+  ]
+ },
+ "all_proc": {
+  "trials": 72,
+  "retry_only": 16.0,
+  "prompt_tutor": 67.4,
+  "bridge": 72.2,
+  "proposed": 93.0,
+  "d_prompt_tutor": [
+   26.1,
+   [
+    14.8,
+    37.3
+   ],
+   71
+  ],
+  "d_bridge": [
+   21.1,
+   [
+    12.7,
+    31.0
+   ],
+   71
+  ]
+ },
+ "all_form": {
+  "trials": 140,
+  "retry_only": 20.4,
+  "prompt_tutor": 92.5,
+  "bridge": 93.9,
+  "proposed": 97.1,
+  "d_prompt_tutor": [
+   4.6,
+   [
+    0.4,
+    9.6
+   ],
+   140
+  ],
+  "d_bridge": [
+   3.2,
+   [
+    -1.4,
+    7.9
+   ],
+   140
+  ]
+ },
+ "all": {
+  "trials": 212,
+  "retry_only": 18.9,
+  "prompt_tutor": 84.0,
+  "bridge": 86.6,
+  "proposed": 95.7,
+  "d_prompt_tutor": [
+   11.8,
+   [
+    6.9,
+    16.6
+   ],
+   211
+  ],
+  "d_bridge": [
+   9.2,
+   [
+    4.7,
+    13.7
+   ],
+   211
+  ]
+ },
+ "nonalg": {
+  "trials": 164,
+  "retry_only": 19.8,
+  "prompt_tutor": 89.6,
+  "bridge": 92.4,
+  "proposed": 97.3,
+  "d_prompt_tutor": [
+   7.6,
+   [
+    2.7,
+    12.5
+   ],
+   164
+  ],
+  "d_bridge": [
+   4.9,
+   [
+    0.3,
+    9.1
+   ],
+   164
+  ]
+ }
+}

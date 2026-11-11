@@ -164,6 +164,10 @@ def _same_answer(problem, check, symbols, answer: str, reference: str) -> bool:
         var = _variable(problem, symbols)
         a, b = _parse_roots(answer, symbols, var), _parse_roots(reference, symbols, var)
         return len(a) == len(b) and all(_contains(b, v) for v in a)
+    if kind == "antiderivative":
+        var = _variable(problem, symbols)
+        diff = _parse_antiderivative(answer, symbols) - _parse_antiderivative(reference, symbols)
+        return sp.expand(sp.diff(diff, var)) == 0
     if kind == "value":
         return _same(_parse_number(_strip_units(answer.split("=")[-1]), symbols), _parse_number(reference, symbols))
     if kind == "assignment":
@@ -209,6 +213,33 @@ def _check_equation(problem, check, answer, symbols) -> CheckResult:
         if not ratio.free_symbols and ratio != 0:
             return CORRECT
     return _compare_coefficients(target, student, _variable(problem, symbols))
+
+
+_INTEGRATION_CONSTANT = re.compile(r"[+-]\s*C\s*$")
+
+
+def _without_constant_term(expr: sp.Expr, var: sp.Symbol) -> sp.Expr:
+    expr = sp.expand(expr)
+    return expr - expr.subs(var, 0)
+
+
+def _parse_antiderivative(answer: str, symbols) -> sp.Expr:
+    """'F(x)=x^3+2x+C', 'x^3+2x+C' 형태의 답에서 적분상수를 떼고 식만 읽는다."""
+    return parse_math(_INTEGRATION_CONSTANT.sub("", answer.split("=")[-1].strip()), symbols)
+
+
+def _check_antiderivative(problem, check, answer, symbols) -> CheckResult:
+    """부정적분 단계: 학생 답을 미분해서 피적분함수가 되면 정답이다. 적분상수는 어떤 값이든 인정한다.
+
+    틀렸으면 상수항을 뺀 두 원시함수를 계수 비교해 어느 차수의 항이 틀렸는지 알려 준다.
+    """
+    var = _variable(problem, symbols)
+    integrand = parse_math(check["integrand"], symbols)
+    student = _parse_antiderivative(answer, symbols)
+    if sp.expand(sp.diff(student, var) - integrand) == 0:
+        return CORRECT
+    target = _without_constant_term(sp.integrate(integrand, var), var)
+    return _compare_coefficients(target, _without_constant_term(student, var), var)
 
 
 def _factors(expr: sp.Expr):
@@ -383,6 +414,7 @@ _CHECKERS = {
     "factor": _check_factor,
     "equivalent": _check_equivalent,
     "equation": _check_equation,
+    "antiderivative": _check_antiderivative,
     "roots": _check_roots,
     "value": _check_value,
     "assignment": _check_assignment,

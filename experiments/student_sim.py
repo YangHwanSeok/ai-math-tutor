@@ -64,6 +64,62 @@ def _variance(values: list[int]) -> sp.Expr:
     return _squared_deviation_sum(values) / len(values)
 
 
+# 미적분(수학II 다항함수): 답이 식인 문제. 정답은 SymPy의 diff/integrate로, 오개념 답은 잘못된 규칙을 항마다 적용해 만든다.
+def _terms(expr: sp.Expr) -> list[tuple[sp.Expr, int]]:
+    """다항식을 (계수, 차수) 목록으로 바꾼다. 예: 3x^2+4x+1 → [(3, 2), (4, 1), (1, 0)]"""
+    return [(c, m[0]) for m, c in sp.Poly(sp.expand(expr), x).terms()]
+
+
+def _derivative_keep_exponent(f: sp.Expr) -> sp.Expr:
+    # 지수를 앞으로 내려 곱하기만 하고 지수는 줄이지 않음: ax^n → anx^n
+    return sum(c * n * x ** n for c, n in _terms(f))
+
+
+def _derivative_of_product_naive(f: sp.Expr) -> sp.Expr:
+    # (fg)' = f'g' 로 계산
+    result = sp.Integer(1)
+    for factor in sp.Mul.make_args(f):
+        result *= sp.diff(factor, x) if factor.has(x) else factor
+    return sp.expand(result)
+
+
+def _integral_no_divide(f: sp.Expr) -> sp.Expr:
+    # 지수만 1 올리고 n+1로 나누지 않음: ax^n → ax^(n+1)
+    return sum(c * x ** (n + 1) for c, n in _terms(f))
+
+
+def _poly(text: str) -> sp.Expr:
+    return parse_math(text)
+
+
+def _chain_rule_omitted(f: sp.Expr) -> sp.Expr:
+    # (ax+b)^n 을 미분할 때 속미분 a를 곱하지 않음: n(ax+b)^(n-1)
+    base, n = f.as_base_exp()
+    return n * base ** (n - 1)
+
+
+# 확률: 문제마다 매개변수를 두고 정답과 오개념 답을 분수로 계산한다.
+def _cards(n: int, cond) -> set[int]:
+    return {k for k in range(1, n + 1) if cond(k)}
+
+
+_CARD_EVENTS = {
+    "짝수": lambda k: k % 2 == 0, "홀수": lambda k: k % 2 == 1,
+    "3의 배수": lambda k: k % 3 == 0, "4의 배수": lambda k: k % 4 == 0, "5의 배수": lambda k: k % 5 == 0,
+    "소수": lambda k: k > 1 and all(k % d for d in range(2, k)),
+}
+
+
+def _union_prob(p) -> sp.Expr:
+    n, a, b = p
+    return sp.Rational(len(_cards(n, _CARD_EVENTS[a]) | _cards(n, _CARD_EVENTS[b])), n)
+
+
+def _sum_prob(p) -> sp.Expr:
+    n, a, b = p
+    return sp.Rational(len(_cards(n, _CARD_EVENTS[a])) + len(_cards(n, _CARD_EVENTS[b])), n)
+
+
 MISCONCEPTIONS = {
     "factor_sign": {
         "name": "인수분해 부호 반대",
@@ -255,13 +311,172 @@ MISCONCEPTIONS = {
         "answer": lambda r: sp.Rational(r[2] * r[1] ** 2, r[0] ** 2),
         "bug": lambda r: sp.Rational(r[2] * r[1], r[0]),
     },
+    "power_rule_keep_exponent": {
+        "name": "미분할 때 지수를 줄이지 않음",
+        "kind": "derivative",
+        "concept": "derivative_power",
+        "grade": "고등학교 2학년",
+        "diagnosis": "x^n을 미분할 때 n을 앞으로 내려 곱하기만 하고 지수를 1 줄이지 않음 (nx^n으로 계산)",
+        "belief": "x^n을 미분하면 지수 n을 앞으로 내려 곱해서 nx^n이 된다. 상수항은 미분하면 0이다.",
+        "example": "f(x)=x^3+2x+1 → f'(x)=3x^3+2x",
+        "explanation": "x^n을 미분하면 n을 앞으로 내려 곱하고, 지수는 하나 줄여서 nx^(n-1)이 돼. "
+                       "x^3이면 3x^2이고, 2x는 x^1이니까 2×1×x^0=2야. 3x^3+2x가 아니라 3x^2+2가 맞아. "
+                       "x^2의 그래프에서 x=1일 때 접선 기울기가 2인데, 2x^2이면 x=1에서 2, x=2에서 8이 되어 실제 기울기 4와 맞지 않지.",
+        "problems": ["x^3+4x^2", "x^2-5x+3", "2x^3+x", "x^3-3x^2+2", "4x^2+3x", "x^3+2x^2-x"],
+        "bug": _derivative_keep_exponent,
+    },
+    "product_rule_naive": {
+        "name": "곱의 미분을 미분의 곱으로 계산",
+        "kind": "derivative",
+        "concept": "derivative_product",
+        "grade": "고등학교 2학년",
+        "diagnosis": "곱으로 된 함수를 각 인수의 도함수끼리 곱해서 미분함 ((fg)'=f'g'로 계산)",
+        "belief": "곱으로 된 함수는 괄호마다 따로 미분해서 그 결과끼리 곱하면 된다. 즉 (f×g)'=f'×g'이다.",
+        "example": "f(x)=(x^2+1)(x+3) → (x^2+1)'=2x, (x+3)'=1 → f'(x)=2x×1=2x",
+        "explanation": "곱의 미분은 미분끼리의 곱이 아니야. (fg)'=f'g+fg'이야. "
+                       "(x^2+1)(x+3)이면 2x(x+3)+(x^2+1)×1=3x^2+6x+1이 돼. "
+                       "전개해서 x^3+3x^2+x+3을 미분해도 3x^2+6x+1이니까 확인할 수 있어. 2x만 나오는 건 틀린 거지.",
+        "problems": ["(x^2+1)(x-2)", "(x+2)(x^2-3)", "(2x+1)(x^2+x)", "(x-1)(x^2+2x)", "(3x-1)(x^2+1)", "(x+3)(x^2-x)"],
+        "bug": _derivative_of_product_naive,
+    },
+    "tangent_slope_value": {
+        "name": "접선의 기울기를 함숫값으로 계산",
+        "kind": "value",
+        "concept": "tangent_slope",
+        "grade": "고등학교 2학년",
+        "diagnosis": "접선의 기울기로 미분계수 f'(a)가 아니라 함숫값 f(a)를 구함",
+        "belief": "곡선 y=f(x) 위의 x=a인 점에서의 접선의 기울기는 그 점에서의 함숫값 f(a)이다.",
+        "example": "f(x)=x^2+1, x=2인 점 → f(2)=5 → 접선의 기울기 5",
+        "explanation": "f(a)는 그 점의 높이(y좌표)이고, 접선의 기울기는 그 점에서 그래프가 얼마나 가파른지야. 그래서 미분계수 f'(a)를 구해야 해. "
+                       "f(x)=x^2+1이면 f'(x)=2x라서 x=2에서 기울기는 4야. 5는 점 (2, 5)의 y좌표일 뿐이야. "
+                       "그래프를 위로 1만큼 옮긴 x^2+2도 x=2에서의 기울기는 똑같이 4라는 걸 생각해 봐.",
+        "problems": [["x^2+3x", 1], ["x^3-2x", 2], ["2x^2-x", 3], ["x^2-5x", 4], ["x^3+x", 1], ["3x^2+2x", 2]],
+        "statement": lambda p: f"곡선 y={p[0]} 위의 x={p[1]}인 점에서의 접선의 기울기를 구하시오.",
+        "answer": lambda p: sp.diff(_poly(p[0]), x).subs(x, p[1]),
+        "bug": lambda p: _poly(p[0]).subs(x, p[1]),
+    },
+    "integral_no_divide": {
+        "name": "적분할 때 n+1로 나누지 않음",
+        "kind": "antiderivative",
+        "concept": "indefinite_integral",
+        "grade": "고등학교 2학년",
+        "diagnosis": "x^n을 적분할 때 지수만 1 올리고 n+1로 나누지 않음 (x^(n+1)으로 계산)",
+        "belief": "x^n을 적분하면 지수를 1 올려서 x^(n+1)이 된다. 계수는 그대로 두고, 마지막에 적분상수 C를 붙인다.",
+        "example": "∫(3x^2+2x)dx → 3x^3+2x^2+C",
+        "explanation": "적분은 미분의 반대야. 그래서 답을 미분했을 때 원래 식이 나와야 해. "
+                       "3x^3을 미분하면 9x^2이지 3x^2이 아니지? x^n의 적분은 x^(n+1)/(n+1)이라서, 3x^2의 적분은 3×x^3/3=x^3, 2x의 적분은 x^2이야. "
+                       "그러니까 ∫(3x^2+2x)dx=x^3+x^2+C이고, 적분한 뒤에는 미분해서 원래 식이 나오는지 확인하자.",
+        "problems": ["3x^2+4x+1", "x^2-2x", "4x^3+3x^2", "6x^2-4x+5", "x^3+2x", "9x^2+2x-3"],
+        "bug": _integral_no_divide,
+    },
 }
+
+MISCONCEPTIONS.update({
+    "chain_rule_omitted": {
+        "name": "합성함수 미분에서 속미분을 곱하지 않음",
+        "kind": "derivative",
+        "concept": "derivative_chain",
+        "grade": "고등학교 3학년",
+        "diagnosis": "(ax+b)^n을 미분할 때 n(ax+b)^(n-1)까지만 쓰고 괄호 안의 미분 a를 곱하지 않음",
+        "belief": "(ax+b)^n을 미분하면 x^n처럼 지수를 앞으로 내리고 하나 줄여서 n(ax+b)^(n-1)이 된다.",
+        "example": "f(x)=(3x+1)^2 → f'(x)=2(3x+1)",
+        "explanation": "괄호 안이 x가 아니라 3x+1이면, 괄호 안이 x에 따라 변하는 빠르기 3도 곱해야 해. 그래서 (3x+1)^2의 도함수는 2(3x+1)×3=6(3x+1)이야. "
+                       "전개해서 9x^2+6x+1을 미분해 보면 18x+6=6(3x+1)이 나오니까 확인할 수 있어. 2(3x+1)은 3배가 모자란 거지. "
+                       "합성함수를 미분할 때는 겉을 미분한 다음 속의 미분을 꼭 곱하자.",
+        "problems": ["(2x+1)^3", "(3x-1)^2", "(2x-3)^4", "(4x+1)^2", "(3x+2)^3", "(5x-1)^2"],
+        "bug": _chain_rule_omitted,
+    },
+    "prob_add_non_exclusive": {
+        "name": "배반이 아닌 두 사건의 확률을 그냥 더함",
+        "kind": "value",
+        "concept": "prob_addition",
+        "grade": "고등학교 2학년",
+        "diagnosis": "두 사건이 동시에 일어날 수 있는데 P(A)+P(B)로 계산하여 겹치는 경우를 두 번 셈",
+        "belief": "A 또는 B가 일어날 확률은 항상 P(A)+P(B)이다.",
+        "example": "1부터 6까지 적힌 카드에서 짝수 또는 3의 배수: 3/6+2/6=5/6",
+        "explanation": "A 또는 B의 확률은 P(A)+P(B)-P(A∩B)야. 두 사건이 동시에 일어나는 경우를 두 번 세면 안 되거든. "
+                       "1부터 6까지에서 짝수는 2, 4, 6이고 3의 배수는 3, 6인데, 6은 양쪽에 다 들어 있어. 그래서 짝수 또는 3의 배수는 2, 3, 4, 6으로 4가지, 확률은 4/6이야. "
+                       "더하기 전에 두 사건이 겹치는지 꼭 확인하자.",
+        "problems": [[10, "짝수", "3의 배수"], [20, "4의 배수", "5의 배수"], [10, "홀수", "소수"], [12, "짝수", "3의 배수"],
+                     [15, "3의 배수", "5의 배수"], [20, "짝수", "5의 배수"]],
+        "statement": lambda p: f"1부터 {p[0]}까지의 자연수가 하나씩 적힌 {p[0]}장의 카드 중 한 장을 뽑을 때, "
+                               f"{p[1]} 또는 {p[2]}가 적힌 카드가 나올 확률을 구하시오.",
+        "answer": _union_prob,
+        "bug": _sum_prob,
+    },
+    "prob_at_least_one_add": {
+        "name": "'적어도 한 번'의 확률을 각 시행의 확률을 더해 계산",
+        "kind": "value",
+        "concept": "prob_complement",
+        "grade": "고등학교 2학년",
+        "diagnosis": "'적어도 한 번' 일어날 확률을 여사건(1-모두 일어나지 않을 확률)으로 구하지 않고 각 시행의 확률을 더함",
+        "belief": "어떤 일이 n번 중 적어도 한 번 일어날 확률은 한 번 일어날 확률에 n을 곱한 것(각 시행의 확률을 더한 것)이다.",
+        "example": "주사위를 2번 던져 적어도 한 번 6이 나올 확률: 1/6+1/6=1/3",
+        "explanation": "각 시행의 확률을 더하면 두 번 다 일어나는 경우를 두 번 세게 돼. 그리고 이렇게 하면 주사위를 7번 던지면 확률이 7/6이 되어 1을 넘어버리지. "
+                       "'적어도 한 번'은 '한 번도 안 일어나는 경우'의 여사건이야. 주사위 2번에서 한 번도 6이 안 나올 확률은 (5/6)^2=25/36이니까, 적어도 한 번은 1-25/36=11/36이야. "
+                       "'적어도'가 나오면 1에서 여사건의 확률을 빼자.",
+        "problems": [[sp.Rational(1, 6), 2, "주사위 한 개를 2번 던질 때, 적어도 한 번 6의 눈이 나올"],
+                     [sp.Rational(1, 10), 2, "당첨 확률이 1/10인 복권을 독립적으로 2번 살 때, 적어도 한 번 당첨될"],
+                     [sp.Rational(1, 4), 2, "명중률이 1/4인 선수가 독립적으로 2번 쏠 때, 적어도 한 번 명중할"],
+                     [sp.Rational(1, 6), 3, "주사위 한 개를 3번 던질 때, 적어도 한 번 6의 눈이 나올"],
+                     [sp.Rational(1, 5), 3, "명중률이 1/5인 선수가 독립적으로 3번 쏠 때, 적어도 한 번 명중할"],
+                     [sp.Rational(1, 3), 2, "주사위 한 개를 2번 던질 때, 적어도 한 번 1 또는 2의 눈이 나올"]],
+        "statement": lambda p: f"{p[2]} 확률을 구하시오.",
+        "answer": lambda p: 1 - (1 - p[0]) ** p[1],
+        "bug": lambda p: p[0] * p[1],
+    },
+    "prob_independent_add": {
+        "name": "독립인 두 사건이 함께 일어날 확률을 더해서 계산",
+        "kind": "value",
+        "concept": "prob_multiplication",
+        "grade": "고등학교 2학년",
+        "diagnosis": "독립인 두 사건이 동시에 일어날 확률을 P(A)×P(B)가 아니라 P(A)+P(B)로 계산",
+        "belief": "두 가지 일이 함께 일어날 확률은 각각의 확률을 더하면 된다.",
+        "example": "동전에서 앞면이 나오고 주사위에서 6이 나올 확률: 1/2+1/6=2/3",
+        "explanation": "동시에 일어날 확률은 곱해야 해. 동전 2가지와 주사위 6가지를 함께 보면 모든 경우가 2×6=12가지이고, 그중 (앞면, 6)은 1가지라서 확률은 1/12야. "
+                       "더하면 2/3가 되는데, 두 가지가 '모두' 일어나는 게 하나만 일어나는 것보다 더 잘 일어날 수는 없지. "
+                       "독립인 두 사건이 함께 일어날 확률은 P(A)×P(B)야.",
+        "problems": [[sp.Rational(1, 2), sp.Rational(1, 6), "동전 한 개와 주사위 한 개를 동시에 던질 때, 동전은 앞면이 나오고 주사위는 6의 눈이 나올"],
+                     [sp.Rational(1, 6), sp.Rational(1, 2), "주사위 두 개를 던질 때, 첫 번째 주사위는 1의 눈이 나오고 두 번째 주사위는 짝수의 눈이 나올"],
+                     [sp.Rational(1, 3), sp.Rational(1, 4), "A가 합격할 확률이 1/3, B가 합격할 확률이 1/4이고 두 사건이 독립일 때, 두 사람이 모두 합격할"],
+                     [sp.Rational(1, 2), sp.Rational(1, 3), "동전 한 개와 주사위 한 개를 동시에 던질 때, 동전은 뒷면이 나오고 주사위는 3의 배수의 눈이 나올"],
+                     [sp.Rational(2, 5), sp.Rational(1, 2), "명중률이 2/5인 선수가 쏘고, 동전 한 개를 던질 때, 명중하고 동전은 앞면이 나올"],
+                     [sp.Rational(1, 6), sp.Rational(1, 6), "주사위 두 개를 던질 때, 두 주사위 모두 6의 눈이 나올"]],
+        "statement": lambda p: f"{p[2]} 확률을 구하시오.",
+        "answer": lambda p: p[0] * p[1],
+        "bug": lambda p: p[0] + p[1],
+    },
+    "comb_as_perm": {
+        "name": "순서가 없는데 순열로 경우의 수를 셈",
+        "kind": "value",
+        "concept": "combination",
+        "grade": "고등학교 2학년",
+        "diagnosis": "순서를 생각하지 않고 뽑는 경우의 수를 조합 nCr이 아니라 순열 nPr로 계산",
+        "belief": "n명 중 r명을 뽑는 경우의 수는 n×(n-1)×…처럼 r개를 곱해서 구한다(nPr).",
+        "example": "5명 중 대표 2명을 뽑는 경우의 수: 5×4=20",
+        "explanation": "5×4=20은 첫째, 둘째처럼 순서를 정해 뽑는 경우의 수야. 대표 2명은 (가, 나)와 (나, 가)가 같은 경우니까 두 번씩 센 거지. "
+                       "그래서 순서가 없을 때는 순서를 바꾼 경우의 수로 나눠야 해: 5×4÷2=10, 즉 5C2=10이야. "
+                       "뽑은 뒤 순서를 바꿔도 같은 경우인지 먼저 확인하자.",
+        "problems": [[6, 2, "6명의 학생 중 대표 2명을 뽑는"], [7, 3, "7가지 과일 중 3가지를 골라 바구니에 담는"],
+                     [8, 2, "8개 팀이 서로 한 번씩 경기를 하는(두 팀씩 짝을 짓는)"], [5, 3, "5명 중 청소 당번 3명을 뽑는"],
+                     [9, 2, "9명 중 같은 역할을 하는 도우미 2명을 뽑는"], [6, 3, "6권의 책 중 3권을 골라 가방에 넣는"]],
+        "statement": lambda p: f"{p[2]} 경우의 수를 구하시오.",
+        "answer": lambda p: sp.binomial(p[0], p[1]),
+        "bug": lambda p: sp.ff(p[0], p[1]),
+    },
+})
 
 UNITS = {
     "algebra": ["factor_sign", "root_sign", "divide_by_x", "positive_sqrt_only", "nonzero_product"],
     "statistics": ["median_unsorted", "mode_frequency", "variance_no_divide", "std_no_sqrt"],
     "geometry": ["polygon_angle_n", "pythagoras_no_sqrt", "hypotenuse_confusion", "area_ratio_linear"],
+    "calculus": ["power_rule_keep_exponent", "product_rule_naive", "tangent_slope_value", "integral_no_divide",
+                 "chain_rule_omitted"],
+    "probability": ["prob_add_non_exclusive", "prob_at_least_one_add", "prob_independent_add", "comb_as_perm"],
 }
+# 답의 겉모습이 실수와 비슷한 '절차형' 오개념 (정답과 값·계수가 조금만 다름). 재심 보강 ⑥의 가설 검증용
+PROCEDURAL = {"factor_sign", "root_sign", "divide_by_x", "positive_sqrt_only", "chain_rule_omitted",
+              "prob_add_non_exclusive", "prob_at_least_one_add"}
 
 
 def build_problem(mid: str, index: int) -> dict:
@@ -273,6 +488,18 @@ def build_problem(mid: str, index: int) -> dict:
                  "misconceptions": [{"answer": str(m["bug"](text)), "diagnosis": m["diagnosis"]}]}
         return {"id": f"{mid}-{index}", "type": "value", "statement": m["statement"](text),
                 "steps": [{"goal": "값 구하기", "concept": m["concept"], "check": check}]}
+    if m["kind"] == "derivative":
+        f = _poly(text)
+        check = {"type": "equivalent", "target": str(sp.expand(sp.diff(f, x))),
+                 "misconceptions": [{"answer": str(m["bug"](f)), "diagnosis": m["diagnosis"]}]}
+        return {"id": f"{mid}-{index}", "type": "derivative", "statement": f"함수 f(x)={text}의 도함수 f'(x)를 구하시오.",
+                "steps": [{"goal": "도함수 구하기", "concept": m["concept"], "check": check}]}
+    if m["kind"] == "antiderivative":
+        f = _poly(text)
+        check = {"type": "antiderivative", "integrand": text, "target": str(sp.integrate(f, x)),
+                 "misconceptions": [{"answer": str(m["bug"](f)), "diagnosis": m["diagnosis"]}]}
+        return {"id": f"{mid}-{index}", "type": "integral", "statement": f"다음 부정적분을 구하시오: ∫({text})dx",
+                "steps": [{"goal": "부정적분 구하기", "concept": m["concept"], "check": check}]}
     if m["kind"] == "factor":
         expr = parse_math(text)
         statement = f"다음 식을 인수분해하시오: {text}"
@@ -290,7 +517,13 @@ def build_problem(mid: str, index: int) -> dict:
 
 def correct_answer(problem: dict) -> str:
     check = problem["steps"][0]["check"]
-    return ", ".join(check["expected"]) if check["type"] == "roots" else check["expected"]
+    if check["type"] == "roots":
+        return ", ".join(check["expected"])
+    if check["type"] == "antiderivative":
+        return check["target"].replace("**", "^") + " + C"
+    if check["type"] == "equivalent":
+        return check["target"].replace("**", "^")
+    return check["expected"]
 
 
 def classify(problem: dict, answer: str) -> str:
@@ -311,7 +544,7 @@ def problem_message(problem: dict) -> str:
     return f"문제: {problem['statement']}\n(answer 형식: {ANSWER_FORMATS[kind]})"
 
 
-STUDENT_INSTRUCTIONS = """너는 중학교 3학년 학생 역할을 한다. 수학 실력은 보통이다.
+STUDENT_INSTRUCTIONS = """너는 {grade} 학생 역할을 한다. 수학 실력은 보통이다.
 너는 다음과 같이 알고 있다.
 - {belief}
 - 예: {example}
@@ -333,7 +566,8 @@ STUDENT_SCHEMA = {
 
 def student_completer(mid: str, model: str, effort: str | None, usage: llm.Usage | None = None) -> llm.JsonCompleter:
     m = MISCONCEPTIONS[mid]
-    instructions = STUDENT_INSTRUCTIONS.format(belief=m["belief"], example=m["example"])
+    instructions = STUDENT_INSTRUCTIONS.format(grade=m.get("grade", "중학교 3학년"), belief=m["belief"],
+                                               example=m["example"])
     return llm.json_completer(model, instructions, STUDENT_SCHEMA, "student", effort, usage)
 
 

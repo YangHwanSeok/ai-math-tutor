@@ -11,6 +11,7 @@ ANSWER_FORMATS = {
     "value": "수 하나만 쓴다. 예: 8",
     "equivalent": "전개하거나 정리한 식만 쓴다. 예: x^2+(b+2)x+2b",
     "equation": "세운 방정식을 '좌변=우변' 형태로 쓴다. 예: x(x+2)=48",
+    "antiderivative": "적분상수 C를 붙인 식만 쓴다. 예: x^3+2x+C",
     "assignment": "미지수의 값을 '이름=값' 형태로 쉼표로 구분해 쓴다. 예: a=5, b=3 / x=2, y=1",
 }
 

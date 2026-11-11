@@ -1,0 +1,5004 @@
+{
+  "meta": {
+    "models": [
+      "gpt-5.4"
+    ],
+    "only": [
+      "chain_rule_omitted",
+      "prob_add_non_exclusive",
+      "prob_at_least_one_add",
+      "prob_independent_add",
+      "comb_as_perm"
+    ],
+    "catalog_size": 22,
+    "reps": 3,
+    "effort": "low",
+    "judge_model": "gpt-5.4",
+    "items": 96,
+    "items_by_kind": {
+      "bug": 30,
+      "slip": 60,
+      "unseen": 6
+    },
+    "usage": {
+      "gpt-5.4": {
+        "calls": 576,
+        "input_tokens": 351954,
+        "output_tokens": 98453
+      },
+      "judge": {
+        "calls": 96,
+        "input_tokens": 19019,
+        "output_tokens": 5146
+      }
+    },
+    "elapsed_sec": 524.4
+  },
+  "summary": {
+    "library": {
+      "bug": 1.0,
+      "slip": 1.0,
+      "unseen": 1.0,
+      "slip_flagged_as_misconception": 0.0,
+      "ms_per_item": 1.5614
+    },
+    "constraint": {
+      "bug_identified": 0.0,
+      "bug_as_minor": 0.0,
+      "slip_as_minor": 0.0667,
+      "unseen_as_minor": 0.0,
+      "bug_as_minor_by_unit": {
+        "algebra": null,
+        "statistics": null,
+        "geometry": null,
+        "calculus": 0.0,
+        "probability": 0.0
+      }
+    },
+    "llm_catalog:gpt-5.4": {
+      "bug": 1.0,
+      "slip": 0.9444,
+      "unseen": 0.9444,
+      "slip_flagged_as_misconception": 0.0556,
+      "unseen_forced_into_library": 0.0556,
+      "consistent_across_reps": 0.9375,
+      "ms_per_item": 3984.1285,
+      "errors": 0
+    },
+    "llm_free:gpt-5.4": {
+      "bug": 0.9333,
+      "slip": 0.7722,
+      "unseen": 0.1111,
+      "slip_flagged_as_misconception": 0.2278,
+      "consistent_across_reps": 0.7917,
+      "ms_per_item": 5953.2431,
+      "errors": 0
+    },
+    "bug_by_unit": {
+      "algebra": {
+        "library": null,
+        "llm_catalog:gpt-5.4": null
+      },
+      "statistics": {
+        "library": null,
+        "llm_catalog:gpt-5.4": null
+      },
+      "geometry": {
+        "library": null,
+        "llm_catalog:gpt-5.4": null
+      },
+      "calculus": {
+        "library": 1.0,
+        "llm_catalog:gpt-5.4": 1.0
+      },
+      "probability": {
+        "library": 1.0,
+        "llm_catalog:gpt-5.4": 1.0
+      }
+    }
+  },
+  "records": [
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-0",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "3*(2*x + 1)^2",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 2.4
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x+1)^3을 미분하면서 바깥 함수의 미분인 3(2x+1)^2까지만 쓰고, 안쪽 2x+1의 미분인 2를 곱하지 않았다.",
+          "ms": 3151
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x+1)^3을 미분하면서 바깥 함수의 미분인 3(2x+1)^2까지만 쓰고, 안쪽 함수 2x+1의 미분인 2를 곱하지 않았다.",
+          "ms": 3146
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x+1)^3을 미분할 때 바깥함수의 미분인 3(2x+1)^2까지만 쓰고, 괄호 안 2x+1의 미분값 2를 곱하지 않았습니다.",
+          "ms": 3243
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고 안쪽함수 (2x+1)의 도함수인 2를 곱해야 한다는 체인룰을 빠뜨린 것으로 보인다.",
+          "ms": 3632,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥 함수만 미분하고, 안쪽 함수 2x+1의 도함수 2를 곱해야 한다는 연쇄법칙을 빠뜨리고 있다.",
+          "ms": 3358,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고 끝내며, 안쪽 함수 (2x+1)의 도함수 2를 곱해야 한다는 연쇄법칙을 빠뜨리고 있다.",
+          "ms": 3406,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "24*x^2 + 23*x + 6",
+      "library": {
+        "pred": "none",
+        "ms": 2.3
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "연쇄법칙을 적용한 형태는 맞아 보이나 전개 과정에서 x항의 계수를 24가 아닌 23으로 계산한 단순 계산 실수이므로 목록의 특정 오개념으로 보기 어렵다.",
+          "ms": 3461
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 연쇄법칙을 빠뜨린 형태도 아니고 다른 목록의 전형적 오개념과도 맞지 않으며, 전개·정리 과정의 단순 계산 실수로 보인다.",
+          "ms": 2718
+        },
+        {
+          "pred": "none",
+          "reason": "(2x+1)^3의 미분에서 연쇄법칙을 빠뜨린 것은 아니고 결과 형태도 맞아 보이며, x항의 계수만 24가 아니라 23으로 쓴 것은 목록의 특정 오개념보다 단순 계산 실수에 가깝다.",
+          "ms": 3073
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "(2x+1)^2를 전개한 뒤 6을 곱하는 과정에서 x항의 계수를 24가 아니라 23으로 잘못 계산했다.",
+          "ms": 3154
+        },
+        {
+          "kind": "slip",
+          "description": "도함수는 f'(x)=3(2x+1)^2·2=6(2x+1)^2=24x^2+24x+6인데, 전개 과정에서 x의 계수를 24가 아니라 23으로 잘못 계산했다.",
+          "ms": 3354
+        },
+        {
+          "kind": "slip",
+          "description": "미분은 거의 맞았지만 전개하거나 계수를 계산하는 과정에서 x항의 계수를 24가 아니라 23으로 잘못 썼다.",
+          "ms": 3086
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "23*x^2 + 24*x + 6",
+      "library": {
+        "pred": "none",
+        "ms": 2.81
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답은 연쇄법칙이나 거듭제곱 미분 공식의 전형적 오개념 형태가 아니라 전개하거나 계산하는 과정에서 계수 24를 23으로 잘못 쓴 단순 계산 실수로 보인다.",
+          "ms": 3577
+        },
+        {
+          "pred": "none",
+          "reason": "연쇄법칙 형태의 오개념이라기보다 (2x+1)^2를 전개하거나 계수를 계산하는 과정에서 x^2항의 계수를 24가 아닌 23으로 잘못 쓴 단순 계산 실수로 보입니다.",
+          "ms": 3893
+        },
+        {
+          "pred": "none",
+          "reason": "정답식과 형태는 같고 최고차항의 계수만 24를 23으로 잘못 쓴 계산 실수로 보여, 제시된 오개념 목록으로 설명되기 어렵습니다.",
+          "ms": 3328
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "(2x+1)^3을 미분하면 3(2x+1)^2·2=6(2x+1)^2이고 전개하면 24x^2+24x+6인데, x^2의 계수 24를 23으로 잘못 썼다.",
+          "ms": 3110
+        },
+        {
+          "kind": "slip",
+          "description": "도함수 계산 과정에서 x^2의 계수를 24가 아니라 23으로 잘못 적는 계산 실수를 했다.",
+          "ms": 3076
+        },
+        {
+          "kind": "slip",
+          "description": "전개 후 계수를 계산하는 과정에서 24x^2를 23x^2로 잘못 쓴 계산 실수입니다.",
+          "ms": 3544
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-1",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "6*x - 2",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 2.97
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "(3x-1)^2를 미분하면서 2(3x-1)까지만 구하고 괄호 안의 3x-1을 한 번 더 미분해 3을 곱하지 않았다.",
+          "ms": 3837
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (3x-1)^2을 미분할 때 2(3x-1)까지는 구했지만 괄호 안 3x-1의 미분값 3을 곱하지 않아 6x-2로 계산했다.",
+          "ms": 3839
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (3x-1)^2를 미분하여 2(3x-1)까지만 구하고, 괄호 안 3x-1의 미분인 3을 곱하지 않았다.",
+          "ms": 3245
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수 (g(x))^2를 미분할 때 바깥함수만 미분해 2g(x)로 쓰고, 안쪽함수 g(x)의 도함수 g'(x)를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 5132,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 체인룰을 적용하지 않고, (g(x))^2의 도함수를 2g(x)로만 계산한다고 믿고 있다.",
+          "ms": 4252,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "(3x-1)^2를 전개하거나 미분할 때, 전체를 제곱해야 한다는 점을 놓치고 (3x)^2를 9x^2가 아니라 3x^2처럼 처리하는 잘못된 규칙을 사용한 것으로 보입니다.",
+          "ms": 8078,
+          "same": false
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "18*x - 7",
+      "library": {
+        "pred": "none",
+        "ms": 3.79
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "(3x-1)^2를 미분하면 2(3x-1)·3=18x-6이므로, 학생 답의 -7은 오개념이라기보다 계산 실수로 보입니다.",
+          "ms": 3863
+        },
+        {
+          "pred": "none",
+          "reason": "학생은 연쇄법칙을 적용해 18x까지는 맞게 구했지만 상수항을 -6이 아닌 -7로 계산한 것은 목록의 오개념이라기보다 단순 계산 실수로 보인다.",
+          "ms": 3367
+        },
+        {
+          "pred": "none",
+          "reason": "(3x-1)^2의 미분은 연쇄법칙으로 2(3x-1)·3=18x-6인데, 학생 답은 상수항만 잘못 계산한 단순 계산 실수로 보입니다.",
+          "ms": 2854
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "연쇄법칙으로 2(3x-1)·3까지는 맞게 갔을 가능성이 높고, 이를 전개할 때 -6을 -7로 계산한 산술 실수입니다.",
+          "ms": 4863
+        },
+        {
+          "kind": "slip",
+          "description": "연쇄법칙으로 2(3x-1)·3까지는 거의 맞게 했지만, 전개할 때 상수항을 -6이 아니라 -7로 계산하는 산술 실수를 했다.",
+          "ms": 3703
+        },
+        {
+          "kind": "slip",
+          "description": "전개하거나 미분하는 과정에서 일차항의 계수를 잘못 계산해 18x-6이 아니라 18x-7로 썼다.",
+          "ms": 4914
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "18*x - 7",
+      "library": {
+        "pred": "none",
+        "ms": 4.94
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 18x-7은 미분 과정의 대표적 오개념이라기보다 정답 18x-6에서 상수항만 잘못 계산한 단순 실수로 보입니다.",
+          "ms": 3216
+        },
+        {
+          "pred": "none",
+          "reason": "(3x-1)^2를 미분하는 방식은 대체로 맞았지만 상수항 계산만 틀려 보이므로, 목록의 특정 오개념보다는 단순 계산 실수에 가깝다.",
+          "ms": 2749
+        },
+        {
+          "pred": "none",
+          "reason": "(3x-1)^2의 미분 형태는 맞게 처리한 것으로 보이지만 상수항 계산만 잘못되어 목록의 특정 오개념이라기보다 단순 계산 실수입니다.",
+          "ms": 2939
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "연쇄법칙으로 f'(x)=2(3x-1)·3=6(3x-1)=18x-6이어야 하는데, 마지막 전개에서 상수항을 -6이 아니라 -7로 계산했다.",
+          "ms": 3721
+        },
+        {
+          "kind": "slip",
+          "description": "도함수는 2(3x-1)·3=18x-6인데, 마지막 상수항을 계산하는 과정에서 -6을 -7로 잘못 썼다.",
+          "ms": 3907
+        },
+        {
+          "kind": "slip",
+          "description": "도함수를 구하는 과정에서 상수항을 잘못 처리해 18x-6이어야 할 것을 18x-7로 계산한 단순 계산 실수입니다.",
+          "ms": 4136
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-2",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "4*(2*x - 3)^3",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 4.02
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x-3)^4를 미분할 때 바깥함수의 미분인 4(2x-3)^3까지만 쓰고, 안쪽함수 2x-3의 미분인 2를 곱하지 않았다.",
+          "ms": 3231
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x-3)^4를 미분하면서 바깥함수의 미분인 4(2x-3)^3까지만 쓰고, 안쪽함수 2x-3의 미분인 2를 곱하지 않았다.",
+          "ms": 3137
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (2x-3)^4를 미분할 때 바깥함수의 미분 4(2x-3)^3까지만 쓰고, 안쪽함수 2x-3의 미분인 2를 곱하지 않았다.",
+          "ms": 2984
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고, 안쪽함수의 도함수(여기서는 2)를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 3866,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고 안쪽함수 2x-3의 도함수인 2를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 2800,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥 함수만 미분하고 안쪽 함수의 도함수는 곱하지 않아도 된다고 생각한 것으로 보인다.",
+          "ms": 3495,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "64*x^3 - 288*x^2 - 432*x - 216",
+      "library": {
+        "pred": "none",
+        "ms": 4.36
+      },
+      "constraint": {
+        "severity": "MINOR",
+        "error": "SIGN",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답은 연쇄법칙은 적용했지만 전개 과정에서 한 항의 부호만 잘못된 것으로 보여, 제시된 특정 오개념보다는 단순 계산 실수에 가깝다.",
+          "ms": 3045
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 대부분 맞고 432x 항의 부호만 잘못되어 전개 과정의 단순 부호 실수로 보이며, 목록의 특정 오개념으로 설명되지는 않습니다.",
+          "ms": 3566
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 연쇄법칙을 빠뜨린 형태가 아니라 전개 과정에서 한 항의 부호만 잘못된 계산 실수로 보이며, 제시된 오개념 목록과 직접 대응되지 않는다.",
+          "ms": 3639
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "전개 과정에서 일차항의 부호를 잘못 계산했습니다. (2x-3)^3를 전개하거나 8을 곱하는 과정에서 +432x가 -432x로 바뀐 실수입니다.",
+          "ms": 5172
+        },
+        {
+          "kind": "slip",
+          "description": "전개하거나 미분한 뒤 항을 정리하는 과정에서 432x 항의 부호를 잘못 써서 +432x를 -432x로 계산했다.",
+          "ms": 3554
+        },
+        {
+          "kind": "slip",
+          "description": "전개 과정에서 x항의 부호를 잘못 계산했습니다. 8(2x-3)^3를 전개하면 432x가 되어야 하는데 -432x로 썼습니다.",
+          "ms": 3395
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "64*x^3 + 288*x^2 + 432*x - 216",
+      "library": {
+        "pred": "none",
+        "ms": 4.49
+      },
+      "constraint": {
+        "severity": "MINOR",
+        "error": "SIGN",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "연쇄법칙은 적용한 것으로 보이지만 (2x-3)^3 전개에서 부호를 잘못 처리한 계산 실수이며, 제시된 오개념 목록의 특정 유형으로 보기는 어렵다.",
+          "ms": 3842
+        },
+        {
+          "pred": "none",
+          "reason": "연쇄법칙은 적용했지만 (2x-3)^3을 전개할 때 x^2항의 부호만 잘못 써서 생긴 오류로, 주어진 오개념 목록의 특정 항목에 해당하지 않습니다.",
+          "ms": 5886
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 도함수의 형태와 계수는 거의 맞지만 전개 과정에서 x^2항의 부호만 잘못된 단순 전개 실수로 보이며, 제시된 오개념 목록의 어느 항목에도 정확히 해당하지 않습니다.",
+          "ms": 4022
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "전개 과정에서 (2x-3)^3의 x^2항 부호를 잘못 계산했습니다. x^2항은 -36x^2가 되어야 하므로 f'(x)의 x^2항은 -288x^2여야 합니다.",
+          "ms": 4472
+        },
+        {
+          "kind": "slip",
+          "description": "전개 과정에서 (2x-3)^3의 x^2항 부호를 잘못 계산해 -288x^2가 +288x^2로 바뀌었다.",
+          "ms": 4273
+        },
+        {
+          "kind": "slip",
+          "description": "전개 과정에서 (2x-3)^3의 x^2항 부호를 잘못 계산했습니다. 원래는 -36x^2가 되어야 하므로 도함수의 x^2항은 -288x^2입니다.",
+          "ms": 4523
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-3",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "8*x + 2",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 2.7
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (4x+1)^2를 미분할 때 2(4x+1)까지는 구했지만 괄호 안의 미분인 4를 곱하지 않아 8x+2로 계산했다.",
+          "ms": 3499
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (4x+1)^2를 미분할 때 2(4x+1)까지만 구하고 괄호 안의 4를 곱하지 않아 8x+2로 썼다.",
+          "ms": 3425
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (4x+1)^2를 미분할 때 2(4x+1)까지만 구하고 괄호 안의 미분인 4를 곱하지 않아 8x+2로 썼다.",
+          "ms": 3915
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고 끝내며, 안쪽 함수의 도함수(여기서는 4)를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 5324,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수 (ax+b)^2를 미분할 때 바깥함수만 미분해 2(ax+b)로 쓰고, 안쪽함수의 미분 a를 곱해야 한다는 연쇄법칙을 빠뜨리는 것으로 보인다.",
+          "ms": 3849,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수 (g(x))^2를 미분할 때 바깥함수만 미분해 2g(x)로 쓰고, 안쪽함수 g(x)=4x+1의 도함수 4를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 4422,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "31*x + 8",
+      "library": {
+        "pred": "none",
+        "ms": 1.89
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생은 (4x+1)^2의 미분에서 괄호 안의 미분을 완전히 빠뜨린 형태도 아니고, 목록의 대표적인 오개념 패턴과 일치하지 않으며 계수 계산 실수로 보입니다.",
+          "ms": 3767
+        },
+        {
+          "pred": "none",
+          "reason": "(4x+1)^2의 미분은 연쇄법칙을 쓰면 2(4x+1)·4=32x+8인데, 학생 답 31x+8은 오개념이라기보다 계수 계산의 단순 실수로 보입니다.",
+          "ms": 2699
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 31x+8은 연쇄법칙을 빠뜨린 형태도 아니고 목록의 특정 오개념으로 설명되기보다 계수 계산에서의 단순 실수로 보입니다.",
+          "ms": 2991
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "연쇄법칙으로 f'(x)=2(4x+1)·4=8(4x+1)=32x+8까지는 맞아야 하는데, 8·4x를 32x가 아니라 31x로 계산하는 산술 실수를 했다.",
+          "ms": 4731
+        },
+        {
+          "kind": "slip",
+          "description": "(4x+1)^2를 미분하면 2(4x+1)·4 = 32x+8이어야 하는데, x의 계수를 계산하는 과정에서 32를 31로 잘못 썼다.",
+          "ms": 4701
+        },
+        {
+          "kind": "slip",
+          "description": "전개 후 미분하거나 연쇄법칙을 적용하는 과정에서 32x가 되어야 할 항을 31x로 잘못 계산한 단순 계산 실수입니다.",
+          "ms": 4045
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "33*x + 8",
+      "library": {
+        "pred": "none",
+        "ms": 2.12
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "정답은 연쇄법칙을 적용하면 32x+8인데 학생 답 33x+8은 특정 오개념보다는 계수 계산의 단순 실수로 보입니다.",
+          "ms": 3136
+        },
+        {
+          "pred": "none",
+          "reason": "(4x+1)^2의 미분은 연쇄법칙으로 2(4x+1)·4=32x+8인데 학생 답 33x+8은 계수 계산 실수로 보이며 제시된 오개념 목록의 특정 유형과는 맞지 않습니다.",
+          "ms": 3287
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 33x+8은 연쇄법칙 누락 등 목록의 대표적 오개념 결과와 일치하지 않고, 전개나 계산 과정에서의 단순 계산 실수로 보는 것이 타당하다.",
+          "ms": 4763
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "도함수를 구하는 과정에서 32x를 33x로 잘못 계산한 단순 계산 실수입니다.",
+          "ms": 5675
+        },
+        {
+          "kind": "slip",
+          "description": "도함수를 구하는 과정에서 x의 계수를 32가 아니라 33으로 잘못 계산했다.",
+          "ms": 5098
+        },
+        {
+          "kind": "slip",
+          "description": "(4x+1)^2를 미분하면 2(4x+1)·4=32x+8이어야 하는데, 전개하거나 계수를 정리하는 과정에서 32x를 33x로 잘못 계산했다.",
+          "ms": 4307
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-4",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "3*(3*x + 2)^2",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 2.69
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "(3x+2)^3를 미분하면서 바깥함수의 미분인 3(3x+2)^2까지만 쓰고, 안쪽함수 3x+2의 미분인 3을 곱하지 않았다.",
+          "ms": 2962
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (3x+2)^3을 미분할 때 바깥함수의 미분인 3(3x+2)^2까지만 쓰고, 안쪽함수 3x+2의 미분값 3을 곱하지 않았다.",
+          "ms": 3314
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (3x+2)^3을 미분하면서 바깥 함수의 미분인 3(3x+2)^2까지만 쓰고, 안쪽 함수 3x+2의 미분인 3을 곱하지 않았다.",
+          "ms": 2511
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고 안쪽함수의 도함수는 곱하지 않아도 된다고 생각한 것으로 보인다.",
+          "ms": 3635,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥함수만 미분하고, 안쪽함수의 도함수(여기서는 3)를 곱해야 한다는 연쇄법칙을 빠뜨린 것으로 보인다.",
+          "ms": 4079,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥 함수만 미분하고, 안쪽 함수 3x+2의 도함수 3을 곱해야 한다는 연쇄법칙을 적용하지 않는 것으로 보인다.",
+          "ms": 3014,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "81*x^2 + 108*x + 35",
+      "library": {
+        "pred": "none",
+        "ms": 2.33
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답은 정답과 상수항만 1 차이로, 연쇄법칙이나 거듭제곱 미분 오개념으로 설명되기보다 전개·계산상의 단순 실수로 보입니다.",
+          "ms": 2840
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 도함수의 형태와 계수들이 거의 모두 맞고 상수항만 36이 아닌 35로 잘못 계산한 단순 산술 실수로 보이며, 제시된 오개념 목록과는 맞지 않습니다.",
+          "ms": 3749
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 전개 후 상수항만 36이 아니라 35로 잘못 써서 발생한 단순 계산 실수로 보이며, 목록의 특정 오개념으로 설명되지는 않는다.",
+          "ms": 2460
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "마지막 상수항을 계산하거나 옮겨 적는 과정에서 실수했습니다. 9(3x+2)^2 = 9(9x^2+12x+4)이므로 상수항은 9×4=36이어야 합니다.",
+          "ms": 4465
+        },
+        {
+          "kind": "slip",
+          "description": "마지막 상수항을 계산하는 과정에서 실수했습니다. 9(3x+2)^2 = 9(9x^2+12x+4)에서 9×4는 36이어야 하는데 35로 적었습니다.",
+          "ms": 4330
+        },
+        {
+          "kind": "slip",
+          "description": "마지막 상수항을 계산하는 과정에서 실수했습니다. 9×4는 36이어야 하는데 35로 잘못 적었습니다.",
+          "ms": 4244
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "81*x^2 + 108*x - 36",
+      "library": {
+        "pred": "none",
+        "ms": 2.48
+      },
+      "constraint": {
+        "severity": "MINOR",
+        "error": "SIGN",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "연쇄법칙 자체는 적용한 것으로 보이며 전개 과정에서 상수항의 부호만 잘못 계산한 단순 실수로, 제시된 오개념 목록에 해당하지 않습니다.",
+          "ms": 3558
+        },
+        {
+          "pred": "none",
+          "reason": "도함수 계산의 핵심 개념(연쇄법칙)은 맞았을 가능성이 크고, 상수항의 부호만 잘못 나와 목록의 특정 오개념보다는 단순 계산/전개 실수로 보입니다.",
+          "ms": 3717
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답은 미분 과정의 대표적 오개념이라기보다 전개 또는 부호 계산에서 상수항의 부호를 잘못 처리한 단순 계산 실수로 보인다.",
+          "ms": 3452
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "마지막 상수항을 계산하는 과정에서 부호를 잘못 써서 +36이 되어야 할 것을 -36으로 적었습니다.",
+          "ms": 4442
+        },
+        {
+          "kind": "slip",
+          "description": "(3x+2)^2를 전개하거나 9를 곱하는 과정에서 상수항의 부호를 잘못 계산해 +36이 -36이 되었습니다.",
+          "ms": 5172
+        },
+        {
+          "kind": "slip",
+          "description": "도함수는 9(3x+2)^2=9(9x^2+12x+4)=81x^2+108x+36인데, 마지막 상수항 9×4를 계산하거나 부호를 옮기는 과정에서 +36을 -36으로 잘못 썼다.",
+          "ms": 4841
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-5",
+      "kind": "bug",
+      "truth": "chain_rule_omitted",
+      "answer": "10*x - 2",
+      "library": {
+        "pred": "chain_rule_omitted",
+        "ms": 2.08
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (5x-1)^2를 미분하면서 2(5x-1)=10x-2까지만 구해 괄호 안의 미분값 5를 곱하지 않았다.",
+          "ms": 2873
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (5x-1)^2를 미분할 때 2(5x-1)까지만 구하고 괄호 안 5x-1의 미분값 5를 곱하지 않았다.",
+          "ms": 3194
+        },
+        {
+          "pred": "chain_rule_omitted",
+          "reason": "학생은 (5x-1)^2를 미분하면서 2(5x-1)까지만 구하고 괄호 안 5x-1의 미분값 5를 곱하지 않아 10x-2로 썼다.",
+          "ms": 3194
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥 함수만 미분하고 안쪽 함수의 도함수는 곱하지 않아도 된다고 생각한 것으로 보입니다.",
+          "ms": 5117,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 미분에서 바깥 함수만 미분하고 안쪽 함수 5x-1의 도함수 5를 곱하지 않아도 된다고 생각한 것으로 보인다.",
+          "ms": 3360,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "합성함수의 제곱을 미분할 때 바깥함수만 미분하고 안쪽함수의 도함수는 곱하지 않아도 된다고 생각한 것으로 보입니다.",
+          "ms": 4792,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "49*x - 10",
+      "library": {
+        "pred": "none",
+        "ms": 2.04
+      },
+      "constraint": {
+        "severity": "PARTIAL",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "(5x-1)^2의 미분은 연쇄법칙을 적용하면 2(5x-1)·5=50x-10이어야 하는데 학생 답 49x-10은 특정 오개념보다 단순 계산 실수로 보입니다.",
+          "ms": 2978
+        },
+        {
+          "pred": "none",
+          "reason": "(5x-1)^2의 미분은 연쇄법칙으로 2(5x-1)·5=50x-10이어야 하므로, 학생 답의 49x-10은 특정 오개념이라기보다 계산 실수로 보입니다.",
+          "ms": 2502
+        },
+        {
+          "pred": "none",
+          "reason": "정답 50x-10에서 계수만 49로 잘못 계산한 것은 목록의 특정 오개념보다는 단순 계산 실수로 보입니다.",
+          "ms": 3547
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "연쇄법칙이나 전개는 맞게 알고 있는 것으로 보이며, f'(x)=2(5x-1)·5=50x-10에서 계수 50을 49로 잘못 계산한 실수입니다.",
+          "ms": 5806
+        },
+        {
+          "kind": "slip",
+          "description": "연쇄법칙으로 f'(x)=2(5x-1)·5=10(5x-1)=50x-10까지는 맞아야 하는데, 마지막 전개에서 50x를 49x로 잘못 계산했다.",
+          "ms": 4379
+        },
+        {
+          "kind": "slip",
+          "description": "연쇄법칙을 적용한 뒤 2·5·5를 계산하는 과정에서 계수를 50이 아니라 49로 잘못 계산했다.",
+          "ms": 5407
+        }
+      ]
+    },
+    {
+      "unit": "calculus",
+      "problem": "chain_rule_omitted-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-50*x - 10",
+      "library": {
+        "pred": "none",
+        "ms": 1.89
+      },
+      "constraint": {
+        "severity": "MINOR",
+        "error": "SIGN",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "정답 50x-10에서 x항의 부호만 반대로 쓴 형태로, 목록에 있는 특정 오개념(연쇄법칙 누락 등)으로 일관되게 설명되기보다 부호 계산 실수에 가깝다.",
+          "ms": 5226
+        },
+        {
+          "pred": "none",
+          "reason": "정답 50x-10에서 x항의 부호만 반대로 계산한 것은 연쇄법칙 누락이나 지수 처리 오개념으로 보기 어렵고 단순 부호 실수에 가깝다.",
+          "ms": 4079
+        },
+        {
+          "pred": "none",
+          "reason": "정답인 50x-10에서 x항의 부호만 반대로 쓴 것은 목록의 특정 오개념이라기보다 계산 또는 부호 실수로 보입니다.",
+          "ms": 3688
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "도함수를 구한 뒤 정리하는 과정에서 50x의 부호를 잘못 써서 50x - 10을 -50x - 10으로 적었습니다.",
+          "ms": 6211
+        },
+        {
+          "kind": "slip",
+          "description": "도함수를 구하는 과정에서 50x 항의 부호를 잘못 써서 50x-10이 아니라 -50x-10으로 계산했다.",
+          "ms": 6595
+        },
+        {
+          "kind": "slip",
+          "description": "25x^2를 미분할 때 50x가 되어야 하는데 부호를 잘못 붙여 -50x로 쓴 계산 실수입니다.",
+          "ms": 6363
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-0",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "4/5",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.8
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수일 확률 5/10과 3의 배수일 확률 3/10을 더해 공통인 6을 한 번 빼지 않아 8/10=4/5로 계산한 것으로 보인다.",
+          "ms": 3783
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수일 확률과 3의 배수일 확률을 더해 4/5로 구한 것은 6처럼 두 조건을 동시에 만족하는 경우를 한 번 빼지 않아 중복 계산한 것으로 보인다.",
+          "ms": 3457
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수일 확률 5/10과 3의 배수일 확률 3/10을 그대로 더해 겹치는 경우(6)를 한 번 빼지 않아 8/10=4/5로 계산한 것으로 보입니다.",
+          "ms": 4259
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’의 개수는 각각의 개수를 그냥 더하면 된다고 생각하여, 두 조건에 모두 해당하는 6을 한 번 빼야 한다는 사실을 놓치고 있다.",
+          "ms": 4806,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "짝수의 개수와 3의 배수의 개수를 더할 때, 두 조건에 모두 해당하는 수(예: 6)를 한 번 빼야 한다는 포함배제 원리를 적용하지 않고 그대로 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4147,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’의 경우 두 집합의 개수를 그냥 더해도 된다고 생각하여, 공통으로 포함되는 6을 한 번 빼야 한다는 점을 놓치고 있다.",
+          "ms": 4636,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "17/10",
+      "library": {
+        "pred": "none",
+        "ms": 1.29
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "짝수 또는 3의 배수는 겹치는 경우를 고려해야 하지만 학생의 17/10은 어떤 목록의 전형적 오개념으로도 일관되게 설명되지 않는 비정상적인 값이어서 단순 계산 실수나 목록 외 오류로 보는 것이 타당하다.",
+          "ms": 6126
+        },
+        {
+          "pred": "none",
+          "reason": "짝수 또는 3의 배수의 확률을 구하는 상황이지만 학생의 17/10은 목록의 어떤 전형적 오개념으로도 일관되게 설명되지 않아 단순 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 4878
+        },
+        {
+          "pred": "none",
+          "reason": "짝수 또는 3의 배수의 확률을 구할 때 겹치는 경우를 잘못 처리한 듯하지만 17/10은 제시된 특정 오개념 하나로 일관되게 설명되기 어렵다.",
+          "ms": 4064
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 17/10으로 적은 것으로 보아, 계산 결과를 쓰는 과정에서 7/10을 17/10으로 잘못 적은 실수입니다.",
+          "ms": 7949
+        },
+        {
+          "kind": "slip",
+          "description": "정답인 7/10을 쓰는 과정에서 분자 앞에 1을 잘못 붙여 17/10으로 적은 것으로 보입니다.",
+          "ms": 7627
+        },
+        {
+          "kind": "slip",
+          "description": "유리한 경우의 수는 7개이므로 분자는 7이어야 하는데, 답을 쓰는 과정에서 17로 잘못 적었습니다.",
+          "ms": 9865
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "27/10",
+      "library": {
+        "pred": "none",
+        "ms": 1.31
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 27/10은 확률이 1을 넘고, 제시된 어떤 전형적 오개념(예: 겹치는 경우를 단순히 더하는 오류)로도 자연스럽게 설명되지 않아 목록 밖의 오류나 단순 계산 실수로 보입니다.",
+          "ms": 6046
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 27/10은 사건의 확률 계산 방식이 목록의 어떤 전형적 오개념과도 직접 대응되지 않고, 단순 계산 오류이거나 목록에 없는 방식의 오류로 보입니다.",
+          "ms": 6550
+        },
+        {
+          "pred": "none",
+          "reason": "정답 7/10과 달리 27/10은 확률값으로도 성립하지 않아, 제시된 오개념 목록의 특정 유형이라기보다 계산 실수나 목록에 없는 다른 오류로 보입니다.",
+          "ms": 5938
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’의 확률을 구할 때 유리한 경우의 수를 세어야 하는데, 경우의 수 대신 숫자 자체를 더하거나 사건을 잘못 합쳐 분자를 만드는 것으로 보인다.",
+          "ms": 16987
+        },
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 사건에 해당하는 카드의 ‘개수’를 세어야 하는데, 학생은 ‘짝수 또는 3의 배수’에 해당하는 경우를 개수로 세지 않고 잘못된 방식으로 합쳐 분자를 구해도 된다고 생각한 것으로 보인다.",
+          "ms": 17073
+        },
+        {
+          "kind": "slip",
+          "description": "유리한 경우의 수를 세는 과정에서 실수해 분자를 27로 썼다. 이 문제의 확률은 '해당 카드의 개수/10'이어야 하므로 분자는 7이어야 하고, 확률은 1보다 클 수 없다.",
+          "ms": 13199
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-1",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "9/20",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "4의 배수 5장과 5의 배수 4장을 더해 9장으로 세어, 20처럼 두 조건에 모두 해당하는 경우를 한 번 빼지 않아 겹치는 경우를 중복 계산했다.",
+          "ms": 3607
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "4의 배수 5장과 5의 배수 4장을 단순히 더해 9장으로 세어, 20이 두 조건에 모두 해당하는 겹치는 경우를 한 번 빼지 않았습니다.",
+          "ms": 4064
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "4의 배수 5장과 5의 배수 4장을 그냥 더해 9/20으로 계산해, 동시에 해당되는 20을 한 번 빼지 않아 겹치는 경우를 두 번 셌다.",
+          "ms": 3166
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "겹치는 경우가 있어도 두 집합의 개수를 그냥 더하면 된다고 생각하여, 4와 5의 공배수인 20을 중복해서 한 번 더 세는 오류를 보였다.",
+          "ms": 4128,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A의 배수의 개수’와 ‘B의 배수의 개수’를 더할 때, 두 조건에 모두 해당하는 수를 한 번 빼야 한다는 것을 모르고 단순히 그대로 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4892,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A 또는 B’의 개수를 셀 때 두 집합의 개수를 그냥 더하면 된다고 생각하여, 4와 5의 공배수인 20을 중복으로 한 번 더 세는 오류를 보였다.",
+          "ms": 4218,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-8/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.27
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "4의 배수와 5의 배수의 개수를 세는 확률 문제에서 음수 확률이 나온 것은 목록의 특정 오개념이라기보다 포함배제나 분수 계산의 단순 오류로 보입니다.",
+          "ms": 2900
+        },
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 된 것은 포함배제나 분수 계산의 단순 실수로 보이며, 제시된 오개념 목록의 특정 유형으로 설명되지는 않습니다.",
+          "ms": 3374
+        },
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 된 것은 배수의 개수나 전체 경우의 수를 잘못 계산한 단순 계산/부호 실수로 보이며, 제시된 오개념 목록의 어느 항목으로도 직접 설명되지 않습니다.",
+          "ms": 4497
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "4의 배수와 5의 배수의 개수는 포함배제로 8장인데, 이를 전체 20장으로 나누어 8/20=2/5로 해야 할 것을 분모를 잘못 두거나 부호를 잘못 붙여 -8/5로 계산했다.",
+          "ms": 6624
+        },
+        {
+          "kind": "slip",
+          "description": "유리한 경우의 수는 8장이라 확률은 8/20=2/5이어야 하는데, 계산하거나 답을 옮기는 과정에서 부호를 잘못 붙여 음수로 쓰고 약분도 잘못해 -8/5로 적었습니다.",
+          "ms": 11080
+        },
+        {
+          "kind": "slip",
+          "description": "유리한 경우의 수를 8개로는 구한 듯하지만, 확률은 전체 20장 중에서의 비율이므로 8/20=2/5여야 하는데 분모를 잘못 쓰고 음수 부호까지 붙이는 계산 실수를 했다.",
+          "ms": 7442
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "7/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "4의 배수와 5의 배수의 개수를 세는 과정이나 전체 경우의 수로 나누는 과정에서의 단순 계산 오류로 보이며, 제시된 오개념 목록의 특정 유형으로 설명되지는 않습니다.",
+          "ms": 5643
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 7/5는 확률이 1을 넘고, 제시된 어떤 대표 오개념으로도 일관되게 설명되지 않아 단순 계산 실수이거나 목록에 없는 오류로 보입니다.",
+          "ms": 7836
+        },
+        {
+          "pred": "none",
+          "reason": "4의 배수와 5의 배수의 개수를 세어 7개라는 점은 맞을 수 있으나 이를 확률 7/20이 아니라 7/5로 쓴 것은 목록의 특정 오개념보다는 계산 또는 표현 실수에 가깝다.",
+          "ms": 3699
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 전체 경우의 수 20으로 나누어야 한다는 점을 놓치고, 4의 배수와 5의 배수의 개수만 잘못 결합해 1보다 큰 값을 확률로 써도 된다고 생각한 것으로 보입니다.",
+          "ms": 7023
+        },
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 ‘원하는 경우의 수’를 전체 경우의 수 20으로 나누어야 하는데, 전체 경우의 수로 나누지 않고 다른 수로 나누어도 된다고 생각한 것으로 보입니다.",
+          "ms": 10038
+        },
+        {
+          "kind": "slip",
+          "description": "4의 배수와 5의 배수의 개수를 세는 과정이나 확률을 분수로 나타내는 과정에서 분모를 전체 카드 수 20으로 두지 않고 잘못 계산했다.",
+          "ms": 5350
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-2",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "9/10",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.27
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "홀수와 소수는 동시에 해당되는 수(3, 5, 7)가 있는데, 학생은 각 확률을 그냥 더해 겹치는 경우를 한 번 더 센 것으로 보입니다.",
+          "ms": 4955
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "홀수와 소수는 3, 5, 7처럼 동시에 해당되는 경우가 있는데도 각각의 확률을 더해 겹치는 경우를 빼지 않아 9/10으로 계산했다.",
+          "ms": 3637
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "홀수와 소수는 동시에 해당되는 수(3, 5, 7)가 있는데도 확률을 5/10+4/10으로 그대로 더해 겹치는 경우를 두 번 셌습니다.",
+          "ms": 3592
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘홀수 또는 소수’의 경우를 셀 때, 겹치는 수(3, 5, 7)를 한 번만 세어야 하는데도 두 집합의 개수를 그냥 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4372,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘홀수 또는 소수’처럼 두 조건 중 하나 이상을 만족하는 경우의 수를 구할 때, 두 집합의 겹치는 원소를 한 번 빼지 않고 그냥 각각의 개수를 더한다고 믿고 있다.",
+          "ms": 4209,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A 또는 B’의 경우 확률(또는 경우의 수)을 구할 때, A와 B에 공통으로 속한 경우를 한 번 빼야 하는데도 그냥 각각의 개수를 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4633,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "홀수와 소수는 겹치는 경우가 있어 단순히 더하는 오개념을 의심할 수 있으나, 학생 답 13/5는 그 방식으로도 나오지 않아 목록의 특정 오개념보다는 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 5296
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 13/5는 확률이 1을 넘고, 제시된 오개념 목록의 어떤 전형적 오류와도 직접 대응되지 않아 단순 계산 실수이거나 목록 밖의 오류로 보입니다.",
+          "ms": 3841
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 13/5는 확률이 1을 넘고, 주어진 오개념 목록의 어떤 전형적 오류로도 직접 설명되지 않는 계산이므로 목록 밖의 오류 또는 단순 계산 실수로 보는 것이 타당합니다.",
+          "ms": 6451
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘홀수 또는 소수’의 확률을 구할 때 전체 경우의 수 10장을 기준으로 겹치는 경우를 포함해 세어야 한다는 점을 놓치고, 경우의 수나 분모를 잘못 정해 확률을 1보다 크게 계산해도 된다고 생각한 것으로 보입니다.",
+          "ms": 9349
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A 또는 B’의 확률을 구할 때 전체 경우의 수로 나누기 전에 홀수의 개수와 소수의 개수를 올바르게 합치지 못하고(겹치는 수를 고려하지 않거나 분모를 잘못 정해) 확률이 1보다 커질 수 있다고 생각한 것으로 보입니다.",
+          "ms": 5825
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 겹치는 경우를 포함한 ‘홀수 또는 소수’의 확률을 구할 때, 공통인 수(3, 5, 7)를 한 번만 세어야 한다는 사실을 모르고 경우의 수를 잘못 더한 것으로 보인다.",
+          "ms": 5184
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-7/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.78
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "홀수와 소수의 합집합 확률에서 원소 개수나 포함배제를 잘못 계산한 것으로 보이지만, 제시된 오개념 목록의 어떤 유형에도 해당하지 않습니다.",
+          "ms": 3465
+        },
+        {
+          "pred": "none",
+          "reason": "홀수와 소수의 합집합 확률에서 단순 계산을 잘못해 음수 확률이 나온 것으로 보이며, 제시된 오개념 목록 중 특정 유형으로 설명되지는 않습니다.",
+          "ms": 2986
+        },
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 되는 것은 '홀수 또는 소수'의 계산 과정에서 단순한 덧셈·뺄셈 실수나 부호 실수로 보이며, 제시된 오개념 목록의 특정 유형으로 설명되지는 않습니다.",
+          "ms": 2816
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "홀수의 개수와 소수의 개수를 합치고 겹치는 수를 조정하는 과정에서 부호를 잘못 처리해 전체 경우의 수를 음수로 계산한 실수입니다.",
+          "ms": 6525
+        },
+        {
+          "kind": "misconception",
+          "description": "‘홀수 또는 소수’의 확률을 구할 때는 두 경우의 수를 더하고 겹치는 경우를 한 번 빼야 하는데, 학생은 ‘또는’을 빼기로 처리해 경우의 수를 잘못 구하는 규칙을 믿는 것으로 보입니다.",
+          "ms": 6189
+        },
+        {
+          "kind": "misconception",
+          "description": "홀수 또는 소수의 확률을 구할 때 합집합의 원리를 잘못 적용해 경우의 수를 더하고 겹친 부분을 빼야 하는 대신 부호를 반대로 처리한 것으로 보입니다.",
+          "ms": 7096
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-3",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "5/6",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.29
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수일 확률 6/12와 3의 배수일 확률 4/12를 더해 10/12=5/6으로 계산한 것으로 보이며, 두 사건의 공통부분(6, 12)을 빼지 않았다.",
+          "ms": 3821
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수일 확률 1/2와 3의 배수일 확률 1/3을 그대로 더해 5/6으로 계산한 것은, 둘이 동시에 일어나는 경우(6, 12)를 겹쳐 세었기 때문이다.",
+          "ms": 3807
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수와 3의 배수는 동시에 일어날 수 있는 경우(6의 배수)가 있는데 이를 빼지 않고 확률을 더해 5/6으로 계산한 것으로 보인다.",
+          "ms": 3234
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 겹치는 경우가 있어도 ‘짝수의 개수 + 3의 배수의 개수’로 그냥 더하면 된다고 생각해, 공통인 6의 배수(6, 12)를 한 번 빼야 한다는 원리를 놓치고 있다.",
+          "ms": 4326,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’처럼 두 조건을 합칠 때, 두 조건에 모두 해당하는 수(6, 12)를 한 번 빼야 하는데 그냥 개수를 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4306,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’의 확률을 구할 때 두 경우의 수를 그냥 더해도 된다고 믿고, 둘 다에 해당하는 수(6, 12)처럼 겹치는 경우를 한 번 빼야 한다는 점을 놓치고 있다.",
+          "ms": 3198,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "8/3",
+      "library": {
+        "pred": "none",
+        "ms": 1.33
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 8/3은 확률이 1을 넘고, 제시된 오개념들 중 어느 하나로 일관되게 설명되기보다 계산 과정의 단순 오류나 목록 밖의 실수로 보입니다.",
+          "ms": 5632
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 8/3은 확률이 1을 초과해 계산 과정에 단순한 산술·분수 처리 오류가 있는 것으로 보이며, 제시된 오개념 목록의 특정 유형으로는 설명하기 어렵다.",
+          "ms": 5193
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 8/3은 확률이 1보다 커서 계산 과정에 오류가 있지만, 제시된 특정 오개념들 중 하나로 일관되게 설명되지는 않는다.",
+          "ms": 4130
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "확률을 ‘유리한 경우의 수 ÷ 전체 경우의 수’로 구하지 않고, 짝수 또는 3의 배수인 카드가 8장이라는 사실만 구한 뒤 분모를 전체 12가 아닌 다른 수로 두어도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 5895
+        },
+        {
+          "kind": "slip",
+          "description": "짝수 또는 3의 배수인 카드는 8장까지는 맞게 셌을 가능성이 크지만, 확률은 전체 12장 중에서의 비율이므로 8/12로 써야 하는데 분모를 잘못 써서 8/3으로 계산했다.",
+          "ms": 6618
+        },
+        {
+          "kind": "slip",
+          "description": "유리한 경우의 수는 8개로 맞게 셌을 가능성이 크지만, 확률을 구할 때 전체 경우의 수 12로 나누어야 하는데 분모를 잘못 계산해 8/12를 8/3으로 잘못 적은 실수입니다.",
+          "ms": 5348
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-1/3",
+      "library": {
+        "pred": "none",
+        "ms": 1.61
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 된 것은 포함배제 계산이나 산술 처리의 단순 오류로 보이며, 제시된 오개념 목록의 특정 유형으로는 설명되지 않습니다.",
+          "ms": 4345
+        },
+        {
+          "pred": "none",
+          "reason": "학생의 답인 -1/3은 확률값으로도 불가능하며, 제시된 오개념 목록의 특정 유형으로 일관되게 설명되기보다 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 4163
+        },
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 되는 것은 짝수와 3의 배수의 경우를 세는 과정에서 단순 계산 실수나 목록에 없는 포함배제 오류로 보이며, 제시된 특정 오개념들로는 설명되지 않습니다.",
+          "ms": 3054
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’의 확률을 구할 때, 두 집합의 합집합은 더하고 겹치는 부분은 한 번 빼야 하는데, 이를 잘못 이해하여 확률들을 빼는 방식으로 계산한 것으로 보인다.",
+          "ms": 4523
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A 또는 B’의 확률을 구할 때 합집합을 더하는 대신 빼야 한다고 생각한 것으로 보인다.",
+          "ms": 4608
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 3의 배수’처럼 ‘또는’이 있는 경우, 겹치는 경우를 한 번 빼는 포함배제 대신 확률을 잘못 빼서 구한다고 믿고 있는 것으로 보인다.",
+          "ms": 5734
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-4",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "8/15",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.27
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "3의 배수와 5의 배수는 15에서 동시에 일어날 수 있는데, 학생 답 8/15는 5/15와 3/15를 그대로 더해 겹치는 경우를 한 번 빼지 않은 것으로 보인다.",
+          "ms": 3488
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "3의 배수 5장과 5의 배수 3장을 그대로 더해 8장으로 세어, 15처럼 두 사건이 동시에 일어나는 경우를 한 번 빼지 않았다.",
+          "ms": 3764
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "3의 배수와 5의 배수는 15처럼 동시에 해당되는 경우가 있는데, 이를 빼지 않고 5개와 3개를 그대로 더해 8/15로 계산했다.",
+          "ms": 3399
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘3의 배수 또는 5의 배수’의 개수를 셀 때 3의 배수 개수와 5의 배수 개수를 그냥 더해도 된다고 생각하여, 둘 다에 해당하는 15를 한 번 빼야 한다는 점을 놓쳤다.",
+          "ms": 4195,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘3의 배수 또는 5의 배수’의 개수를 셀 때, 두 집합에 공통으로 들어가는 수(15)를 한 번 빼야 하는데도 그냥 3의 배수 개수와 5의 배수 개수를 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 4133,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘A 또는 B’의 경우 각 경우의 수를 그냥 더하면 된다고 생각하여, 3의 배수이면서 5의 배수인 15를 한 번 빼야 한다는 점을 놓치고 있다.",
+          "ms": 4373,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-23/15",
+      "library": {
+        "pred": "none",
+        "ms": 1.31
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 될 수 없는데 학생 답 -23/15는 제시된 어떤 대표 오개념으로도 자연스럽게 설명되지 않아, 계산 실수나 목록에 없는 오류로 보는 것이 타당합니다.",
+          "ms": 3275
+        },
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 될 수 없고, 학생 답은 3의 배수와 5의 배수의 개수를 세는 과정의 단순 계산 실수로 보이며 제시된 오개념 목록의 특정 유형으로 설명되지 않습니다.",
+          "ms": 2670
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 -23/15는 확률값으로도 성립하지 않고, 제시된 어떤 전형적 오개념으로도 자연스럽게 설명되지 않아 단순 계산 실수이거나 목록에 없는 오류로 보입니다.",
+          "ms": 3803
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘3의 배수 또는 5의 배수’처럼 ‘또는’이 있는 경우를 합집합으로 세지 않고 경우의 수를 서로 빼서 계산해도 된다고 생각하는 잘못된 규칙을 믿고 있다.",
+          "ms": 12456
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 0 이상 1 이하가 되어야 하는데 -23/15가 나온 것으로 보아, 3의 배수와 5의 배수의 개수를 세어 확률로 바꾸는 과정에서 덧셈·뺄셈을 잘못 계산한 실수이다.",
+          "ms": 6678
+        },
+        {
+          "kind": "slip",
+          "description": "확률을 구하는 계산 과정에서 경우의 수를 더하고 빼는 산술(특히 부호) 실수를 하여, 나올 수 없는 음수 확률을 썼습니다.",
+          "ms": 7403
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-23/15",
+      "library": {
+        "pred": "none",
+        "ms": 1.33
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "확률이 음수가 되는 것은 중복되는 경우를 잘못 더하거나 빼는 계산 실수로 보이지만, 제시된 오개념 목록의 특정 유형으로는 설명되지 않습니다.",
+          "ms": 4854
+        },
+        {
+          "pred": "none",
+          "reason": "정답은 포함배제 원리로 7/15가 되어야 하는데 -23/15는 목록의 특정 오개념으로 설명되기보다 계산 실수나 부호 실수로 보입니다.",
+          "ms": 4720
+        },
+        {
+          "pred": "none",
+          "reason": "3의 배수 또는 5의 배수의 확률은 7/15이어야 하는데 -23/15는 확률로도 불가능한 값이므로, 제시된 특정 오개념이라기보다 계산 실수나 목록에 없는 오류로 보입니다.",
+          "ms": 5368
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "3의 배수와 5의 배수의 개수를 셀 때 포함배제나 전체 경우의 수를 빼는 과정에서 부호를 잘못 계산해, 확률이 음수로 나오는 계산 실수를 했습니다.",
+          "ms": 7340
+        },
+        {
+          "kind": "slip",
+          "description": "3의 배수와 5의 배수의 개수를 합치고 겹치는 15를 한 번 빼는 포함배제 계산에서 부호를 잘못 처리해 경우의 수를 음수로 계산한 실수입니다.",
+          "ms": 5681
+        },
+        {
+          "kind": "slip",
+          "description": "3의 배수 5장, 5의 배수 3장, 공통인 15의 배수 1장을 이용해 5+3-1=7로 세어야 하는데, 경우의 수를 계산하는 과정에서 부호나 뺄셈을 잘못하여 음수인 -23이 나온 실수입니다.",
+          "ms": 8956
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-5",
+      "kind": "bug",
+      "truth": "prob_add_non_exclusive",
+      "answer": "7/10",
+      "library": {
+        "pred": "prob_add_non_exclusive",
+        "ms": 1.31
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수와 5의 배수는 동시에 일어날 수 있는 경우(10, 20)가 있는데 이를 빼지 않고 각각의 확률을 더해 겹친 경우를 두 번 센 것으로 보입니다.",
+          "ms": 4349
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수와 5의 배수는 10, 20처럼 동시에 해당되는 경우가 있는데 이를 빼지 않고 10/20+4/20으로 더해 7/10을 만든 것으로 보인다.",
+          "ms": 3639
+        },
+        {
+          "pred": "prob_add_non_exclusive",
+          "reason": "짝수인 경우와 5의 배수인 경우를 더하면서 10, 20처럼 두 조건을 동시에 만족하는 경우를 한 번 빼지 않아 겹치는 경우를 두 번 셌다.",
+          "ms": 3837
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 다른 두 조건의 경우의 수를 더할 때, 두 조건을 동시에 만족하는 경우를 한 번 빼야 한다는 포함배제 원리를 모르고 짝수 10장과 5의 배수 4장을 그냥 더한다고 생각한 것으로 보인다.",
+          "ms": 5774,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 5의 배수’의 개수를 셀 때, 두 조건에 모두 해당하는 수(10, 20)를 한 번 빼야 하는데 그냥 10개와 4개를 더해도 된다고 생각한 것으로 보입니다.",
+          "ms": 4695,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 5의 배수’의 개수를 구할 때, 두 집합에 공통으로 속하는 수(10, 20)를 한 번 빼야 한다는 포함배제 원리를 모르고 그냥 10개와 4개를 더한다고 생각한 것으로 보인다.",
+          "ms": 5455,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.29
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "짝수 또는 5의 배수는 서로 겹치는 경우가 있어 단순히 더했을 가능성은 있지만, 학생 답 13/5는 제시된 오개념들로 일관되게 설명되지 않는 잘못된 계산이다.",
+          "ms": 7004
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 13/5는 확률이 1을 넘고, 제시된 오개념 목록의 전형적인 계산 형태와도 맞지 않아 목록에 없는 오류나 단순 계산 실수로 보는 것이 타당합니다.",
+          "ms": 4767
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 13/5는 확률이 1보다 커서 계산 과정에 단순 산술 오류나 목록에 없는 다른 오류가 섞인 것으로 보이며, 제시된 오개념 중 하나로 특정하기 어렵다.",
+          "ms": 4349
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률의 분모를 전체 경우의 수 20으로 두어야 하는데, 계산하거나 약분하는 과정에서 분모를 잘못 써서 13/5로 적은 실수로 보입니다.",
+          "ms": 6882
+        },
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 유리한 경우의 수만 세고, 그것을 전체 경우의 수로 나누어야 한다는 점을 빠뜨리는 것으로 보인다.",
+          "ms": 5412
+        },
+        {
+          "kind": "slip",
+          "description": "확률을 구할 때 전체 경우의 수 20으로 나누어야 하는데 분모를 잘못 처리한 계산 실수로 보입니다.",
+          "ms": 5220
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_add_non_exclusive-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "8/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.25
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "짝수와 5의 배수의 확률을 더하는 유형의 오류로 보기에는 학생 답 8/5가 계산 과정과도 맞지 않고 확률이 1을 넘으므로, 제시된 오개념 목록보다는 단순 계산 실수 또는 목록에 없는 오류로 판단된다.",
+          "ms": 5950
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 8/5는 확률이 1을 넘고, 제시된 오개념들 중 어떤 것만으로도 직접 설명되기보다 경우의 수 계산 또는 분수 계산의 단순 오류로 보입니다.",
+          "ms": 7575
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 8/5는 확률이 1을 넘는 값이며, 제시된 오개념들 중 어느 하나를 적용한 전형적인 결과와도 일치하지 않아 목록에 없는 오류나 단순 계산 실수로 보인다.",
+          "ms": 5953
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 5의 배수’의 확률을 구할 때 전체 경우의 수는 20이어야 하는데, 유리한 경우의 수를 세는 과정과 전체 경우의 수를 혼동하여 확률을 1보다 크게 계산해도 된다고 생각한 것으로 보인다.",
+          "ms": 13969
+        },
+        {
+          "kind": "misconception",
+          "description": "‘짝수 또는 5의 배수’처럼 두 조건 중 하나라도 만족하는 경우의 확률을 구할 때, 겹치는 경우를 포함한 경우의 수를 더하고 빼는 규칙을 잘못 적용하여 확률이 1을 넘을 수도 있다고 생각한 것으로 보인다.",
+          "ms": 10070
+        },
+        {
+          "kind": "slip",
+          "description": "짝수 또는 5의 배수인 경우의 수를 세거나 분수를 정리하는 과정에서 계산 실수가 있었습니다. 확률은 1을 넘을 수 없는데 8/5가 나왔으므로, 유리한 경우를 20장보다 많게 세었거나 분자·분모 계산을 잘못한 것입니다.",
+          "ms": 14756
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-0",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "1/3",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.29
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 6이 나올 확률을 1/6+1/6로 단순히 더한 것으로 보입니다.",
+          "ms": 3348
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "두 번의 시행에서 '적어도 한 번 6'을 각 시행의 확률 1/6씩 더해 1/3으로 본 것으로 보여, 여사건을 사용하지 않고 단순히 더한 경우이다.",
+          "ms": 2752
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 6이 나올 확률 1/6과 1/6을 그대로 더해 1/3으로 계산한 것으로 보입니다.",
+          "ms": 2658
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 번의 시행에서 ‘적어도 한 번’ 일어날 확률을 구할 때, 각 시행의 확률을 단순히 더해 1/6+1/6=1/3으로 계산해도 된다고 믿고 있다.",
+          "ms": 4512,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 다른 시행에서 같은 사건이 ‘적어도 한 번’ 일어날 확률을 구할 때, 겹치는 경우를 빼지 않고 각 시행의 확률을 단순히 더하면 된다고 믿고 있다.",
+          "ms": 5777,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 다른 두 경우의 확률을 더할 때, 두 사건이 동시에 일어나는 경우를 고려하지 않고 단순히 1/6+1/6으로 계산해도 된다고 믿고 있다.",
+          "ms": 4176,
+          "same": false
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "47/36",
+      "library": {
+        "pred": "none",
+        "ms": 1.43
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "‘적어도 한 번’을 여사건으로 구하지 않고 두 번의 시행에서 6이 나올 확률을 단순히 더하는 식으로 처리한 것으로 보인다.",
+          "ms": 4536
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번' 확률을 여사건으로 구하지 않고 각 경우의 확률을 단순히 더한 것으로 보여, 확률이 1을 넘는 잘못된 결과가 나왔습니다.",
+          "ms": 3766
+        },
+        {
+          "pred": "none",
+          "reason": "학생의 답 47/36은 확률이 1을 넘고, 제시된 어떤 대표적 오개념으로도 자연스럽게 설명되지 않아 단순 계산 실수이거나 목록 밖의 오류로 보입니다.",
+          "ms": 5511
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1 - 25/36을 계산하는 과정에서 분수 뺄셈을 잘못하여 47/36으로 계산한 실수로 보입니다.",
+          "ms": 9375
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 47/36으로 계산한 것으로 보아, 분모 36을 기준으로 더하거나 빼는 과정에서 산술 실수를 한 것입니다.",
+          "ms": 9954
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 47/36으로 쓴 것으로 보아, 경우의 수를 계산한 뒤 분자·분모를 잘못 적었거나 마지막 계산에서 실수했습니다.",
+          "ms": 8173
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "47/36",
+      "library": {
+        "pred": "none",
+        "ms": 1.38
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'인 상황에서 여사건을 이용하지 않고 경우의 확률들을 더한 것으로 보이며, 그 과정에서 계산도 잘못되어 1보다 큰 값이 나온 것으로 판단된다.",
+          "ms": 6367
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 47/36은 확률이 1을 넘고, 제시된 어떤 대표 오개념으로도 자연스럽게 설명되기보다 계산 실수로 보는 것이 타당하다.",
+          "ms": 4908
+        },
+        {
+          "pred": "none",
+          "reason": "'적어도 한 번' 유형에서 흔한 덧셈 오개념의 결과와도 맞지 않고, 47/36은 확률이 1을 넘으므로 목록의 특정 오개념보다는 계산 실수나 목록 밖의 오류로 보는 것이 타당하다.",
+          "ms": 5970
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 구할 때 경우들을 단순히 더해도 된다고 생각해, 겹치는 경우를 빼지 않거나 여사건을 잘못 계산한 것으로 보인다.",
+          "ms": 6553
+        },
+        {
+          "kind": "slip",
+          "description": "확률을 분수로 세우는 과정에서 분자와 분모를 잘못 계산했습니다; 전체 경우는 36가지이고 유리한 경우는 11가지이므로 확률은 11/36이어야 하며, 47/36처럼 1보다 큰 값은 확률이 될 수 없습니다.",
+          "ms": 9423
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 구할 때 겹치는 경우를 조정하지 않고 경우들의 확률을 그대로 더해도 된다고 생각하는 것으로 보인다.",
+          "ms": 5534
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-1",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "1/5",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.26
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 당첨 확률 1/10을 그대로 더해 1/5로 계산했다.",
+          "ms": 3004
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 당첨 확률 1/10을 그대로 더해 1/5로 계산했다.",
+          "ms": 3028
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번' 확률을 여사건으로 구하지 않고 두 번의 당첨 확률 1/10을 그대로 더해 1/5로 계산했다.",
+          "ms": 2659
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "독립 시행에서 ‘적어도 한 번’의 확률을 각 시행의 당첨 확률의 합으로만 계산해도 된다고 생각하고, 두 번 다 당첨되는 경우의 중복을 고려하지 않았다.",
+          "ms": 3513,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 번의 시행에서 '적어도 한 번'의 확률을 구할 때, 두 확률을 단순히 더해도 된다고 생각하고 겹치는 경우(두 번 다 당첨)를 빼지 않는다.",
+          "ms": 5251,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "독립 시행에서 ‘적어도 한 번’의 확률을 각 시행의 당첨 확률을 그대로 더해 구할 수 있다고 생각하고, 두 번 모두 당첨되는 경우의 중복을 고려하지 않았다.",
+          "ms": 3373,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-181/100",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 당첨될 확률 문제에서 제시된 답이 음수가 된 것은 목록의 특정 오개념이라기보다 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 3425
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번의 확률은 보통 여사건으로 구하는데, 학생 답 -181/100은 목록의 특정 오개념이라기보다 계산 과정의 단순 부호·산술 실수로 보입니다.",
+          "ms": 3286
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번의 확률을 잘못 계산해 음수가 나왔는데, 이는 제시된 특정 오개념이라기보다 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 3709
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1 - 81/100을 계산하는 과정에서 뺄셈 실수를 했습니다. 1은 100/100이므로 100/100 - 81/100 = 19/100이어야 합니다.",
+          "ms": 5833
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(9/10)^2를 구하는 과정에서 분수의 제곱이나 뺄셈 계산을 잘못해 음수 확률이 나왔다.",
+          "ms": 13851
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1 - (9/10)^2 = 1 - 81/100 을 계산하는 과정에서 뺄셈을 잘못하여 19/100 대신 -181/100으로 계산했다.",
+          "ms": 3599
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "119/100",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "정답 19/100과 달리 119/100은 여사건 계산의 뺄셈 실수로 보이며, 제시된 오개념 목록 중 특정 개념적 오류로 설명되기 어렵다.",
+          "ms": 3544
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 119/100은 정답식 1-(9/10)^2를 세운 뒤 1-81/100 계산을 잘못한 단순 계산 실수로 보이며, 제시된 오개념 목록으로는 설명되지 않습니다.",
+          "ms": 4276
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 119/100은 확률이 1을 넘는 값으로, 제시된 특정 오개념보다는 계산 또는 표기 실수로 보는 것이 타당하다.",
+          "ms": 6338
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(9/10)^2를 계산하는 과정에서 뺄셈을 덧셈으로 잘못 하여 1+19/100처럼 계산한 실수로 보입니다.",
+          "ms": 4004
+        },
+        {
+          "kind": "slip",
+          "description": "정답인 19/100을 쓰는 과정에서 앞에 불필요하게 1을 하나 더 붙여 119/100으로 적은 단순한 표기 실수로 보입니다.",
+          "ms": 6061
+        },
+        {
+          "kind": "slip",
+          "description": "정답 19/100을 쓰는 과정에서 분자 앞에 불필요하게 1을 하나 더 써서 119/100으로 적은 단순한 표기 실수로 보입니다.",
+          "ms": 4762
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-2",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "1/2",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.25
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 명중 확률 1/4씩을 단순히 더해 1/2로 본 것으로 보입니다.",
+          "ms": 3357
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "‘적어도 한 번’을 여사건으로 구하지 않고 두 번의 명중 확률 1/4씩을 그대로 더해 1/2로 계산한 것으로 보인다.",
+          "ms": 2834
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 두 번의 명중 확률 1/4를 단순히 더해 1/2로 계산한 것으로 보입니다.",
+          "ms": 3039
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 번의 시행에서 ‘적어도 한 번’의 확률을 그냥 1/4+1/4로 더해도 된다고 생각해, 겹치는 경우(두 번 다 명중)를 빼거나 여사건을 이용해야 함을 놓치고 있다.",
+          "ms": 5269,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 구할 때 두 번의 명중 확률을 그냥 1/4+1/4로 더하면 된다고 생각하고, 두 사건이 함께 일어나는 경우를 고려하지 않는 잘못된 규칙을 믿고 있다.",
+          "ms": 4365,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 여러 번의 성공 확률을 그냥 더해서 구할 수 있다고 믿고, 두 번의 명중 확률을 1/4+1/4=1/2로 계산한 것으로 보인다.",
+          "ms": 4118,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-25/16",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 명중 확률 문제이지만 학생 답 -25/16은 어떤 대표적 오개념으로도 자연스럽게 설명되지 않아, 목록보다는 계산 실수나 기타 오류로 보는 것이 타당합니다.",
+          "ms": 5441
+        },
+        {
+          "pred": "none",
+          "reason": "‘적어도 한 번’ 유형의 대표적 오개념인 단순 합으로도 나오지 않는 값이며, 확률이 음수가 된 것은 목록의 오개념보다 계산 실수로 보는 것이 타당하다.",
+          "ms": 4835
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 명중 확률 문제이지만 학생 답 -25/16은 확률값으로도 불가능하며, 제시된 오개념 목록의 전형적 계산 방식으로 설명되지 않는다.",
+          "ms": 3403
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번 명중’ 확률을 여사건으로 구할 때 1에서 빼야 하는 값을 잘못 세워, 확률이 0보다 작게 나올 수 있다고 생각하는 오류가 보입니다.",
+          "ms": 7632
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(3/4)^2=1-9/16까지는 갔더라도, 마지막 계산에서 1-9/16을 7/16이 아니라 -25/16으로 잘못 뺀 계산 실수로 보입니다.",
+          "ms": 6030
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(3/4)^2=1-9/16을 계산하는 과정에서 뺄셈을 잘못한 것으로 보입니다. 올바르게 계산하면 7/16입니다.",
+          "ms": 8006
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "39/16",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 39/16은 확률이 1을 넘는 값이며, 제시된 오개념들 중 '적어도 한 번'을 단순히 더하는 경우와도 계산 형태가 맞지 않아 목록의 특정 오개념으로 보기 어렵다.",
+          "ms": 4513
+        },
+        {
+          "pred": "none",
+          "reason": "‘적어도 한 번’ 유형이지만 학생 답 39/16은 각 시행의 확률을 단순히 더한 값으로도 나오지 않아, 목록의 특정 오개념보다는 계산 실수나 목록에 없는 오류로 보입니다.",
+          "ms": 5774
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 명중 확률을 잘못 계산했지만 39/16은 제시된 어떤 대표 오개념으로도 일관되게 설명되지 않는 비정상적인 값이므로 목록 밖 오류나 단순 계산 실수로 보는 것이 타당합니다.",
+          "ms": 5643
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률은 0과 1 사이여야 하는데 39/16은 1보다 크므로, 경우를 계산하거나 분수를 더하는 과정에서 계산 실수가 난 것으로 보입니다.",
+          "ms": 10864
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 39/16이 나왔으므로, ‘적어도 한 번 명중’의 확률을 계산하는 과정에서 식을 잘못 세우거나 분수 계산을 잘못한 실수입니다.",
+          "ms": 5519
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없으므로 계산 과정에서 산술 실수가 난 것으로 보인다; 특히 보통은 여사건을 써서 1-(3/4)^2=1-9/16=7/16이어야 한다.",
+          "ms": 9265
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-3",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "1/2",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'을 여사건으로 구하지 않고 각 시행에서 6이 나올 확률 1/6을 3번 더해 1/2로 본 것으로 보인다.",
+          "ms": 3241
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 각 시행에서 6이 나올 확률 1/6을 3번 더해 1/2로 계산한 것으로 보인다.",
+          "ms": 4078
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "학생은 '적어도 한 번'의 확률을 여사건으로 구하지 않고 3번의 6이 나올 확률 1/6을 단순히 더해 1/2로 계산한 것으로 보인다.",
+          "ms": 2933
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "여러 번의 시행에서 ‘적어도 한 번’의 확률을 각 시행의 확률을 단순히 더해 구할 수 있다고 믿고, 3번 던져서 6이 나올 확률을 1/6+1/6+1/6=1/2로 계산한 것으로 보인다.",
+          "ms": 4022,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번 6이 나올 확률’을 각 시행의 결과를 종합하지 않고 직관적으로 1/2처럼 판단해도 된다고 생각하는 오류가 있다.",
+          "ms": 5812,
+          "same": false
+        },
+        {
+          "kind": "misconception",
+          "description": "여러 번의 시행에서 ‘적어도 한 번’의 확률을 한 번 나올 확률들을 단순히 더해 3/6=1/2처럼 계산해도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 4529,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-125/216",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "적어도 한 번의 확률에서 여사건을 활용하는 계산 중 1-(5/6)^3에서 1을 빠뜨린 단순 계산 실수로 보이며, 제시된 오개념 목록의 유형과는 맞지 않습니다.",
+          "ms": 4560
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번의 확률을 여사건으로 구하는 방법 자체는 떠올린 듯하지만 1-(5/6)^3에서 1을 빠뜨린 단순 계산/표현 실수로 보이며, 제시된 오개념 목록과는 맞지 않습니다.",
+          "ms": 3647
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 -125/216은 여사건 확률 125/216만 구해 놓고 1에서 빼는 마지막 단계를 빠뜨린 것으로 보이며, 제시된 오개념 목록의 어느 항목과도 정확히 일치하지 않는다.",
+          "ms": 3975
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건 확률을 이용해 1 - 125/216을 계산하는 과정에서 실수했습니다. 1은 216/216이므로 216/216 - 125/216 = 91/216이어야 합니다.",
+          "ms": 4795
+        },
+        {
+          "kind": "slip",
+          "description": "여사건 확률을 구해 \u001d6이 한 번도 안 나올 확률\u001d 125/216까지는 생각했을 가능성이 크지만, 마지막에 1-125/216을 계산하지 않고 잘못 음수로 써서 -125/216으로 적었습니다.",
+          "ms": 8326
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(5/6)^3를 계산하는 과정에서 뺄셈을 잘못해, 1-125/216을 -125/216으로 적은 계산 실수입니다.",
+          "ms": 4218
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "523/216",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "‘적어도 한 번’을 여사건으로 구하지 않고 각 시행에서 6이 나올 확률을 단순히 더하는 방식으로 처리한 것으로 보입니다.",
+          "ms": 3643
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "‘적어도 한 번’ 사건을 여사건으로 구하지 않고 각 경우의 확률을 더한 것으로 보여, 확률이 1보다 크게 나왔습니다.",
+          "ms": 2838
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "학생 답이 1보다 큰 확률로 나온 점으로 보아, '적어도 한 번'의 확률을 여사건으로 구하지 않고 각 시행의 경우를 더하는 식으로 잘못 계산한 것으로 판단된다.",
+          "ms": 2975
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "전체 경우의 수가 216인데 유리한 경우의 수를 523으로 세어 분자가 전체 경우의 수보다 커졌습니다; 경우의 수를 계산하거나 빼는 과정에서 실수한 것입니다.",
+          "ms": 7063
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없으므로 계산이나 분수 쓰기에서 실수한 것입니다; 이 문제의 경우 전체 경우 216에서 6이 한 번도 안 나오는 경우 125를 빼서 91/216이 되어야 합니다.",
+          "ms": 6191
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 분자를 잘못 계산하거나 잘못 적어 523/216으로 쓴 실수입니다; 전체 경우 216에서 6이 한 번도 안 나오는 경우 125를 빼면 91이 되어야 합니다.",
+          "ms": 6800
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-4",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "3/5",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.21
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 3번의 명중 확률 1/5를 단순히 더해 3/5로 계산했다.",
+          "ms": 2585
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 3번의 명중 확률 1/5를 그대로 더해 3/5로 계산했다.",
+          "ms": 3154
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'의 확률을 여사건으로 구하지 않고 3번의 명중 확률을 단순히 더해 3/5로 계산한 것으로 보입니다.",
+          "ms": 2623
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 여러 번의 시행에서 '적어도 한 번'의 확률을 각 시행의 확률을 그냥 더해서 구할 수 있다고 믿고 있다.",
+          "ms": 4504,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "독립적으로 여러 번 시도할 때 ‘적어도 한 번’의 확률을 각 회의 확률을 단순히 더해서 구해도 된다고 생각한 것으로 보인다.",
+          "ms": 3282,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "독립인 여러 번의 시도에서 ‘적어도 한 번 성공할 확률’을 각 시행의 성공확률을 그냥 더해서 구해도 된다고 믿고 있다.",
+          "ms": 4270,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "186/125",
+      "library": {
+        "pred": "none",
+        "ms": 1.21
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 186/125는 제시된 대표 오개념들 중 어느 하나의 전형적인 계산 형태와 직접 대응되지 않아, 목록의 오개념이라기보다 다른 계산 실수로 보입니다.",
+          "ms": 9030
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 186/125는 확률의 합으로 처리한 흔적은 보이지만, 제시된 대표 오개념들 중 하나로 일관되게 설명되지는 않아 목록 밖의 계산 오류나 다른 실수로 보는 것이 타당하다.",
+          "ms": 7323
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 186/125는 확률이 1을 넘고, '적어도 한 번'을 각 시행의 확률을 단순히 더한 전형적인 형태와도 맞지 않아 목록의 특정 오개념으로 설명하기 어렵다.",
+          "ms": 4649
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 구할 때 겹치는 경우를 고려하지 않고 각 경우의 확률을 단순히 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 14010
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 3번의 시행에서 '적어도 한 번 명중' 확률을 각 시행의 확률을 단순히 3배해서 구할 수 있다고 잘못 생각한 것으로 보인다.",
+          "ms": 5582
+        },
+        {
+          "kind": "slip",
+          "description": "보완확률을 이용했다면 마지막 계산에서 1 - 64/125를 잘못 계산한 실수로 보입니다. 1은 125/125이므로 125/125 - 64/125 = 61/125여야 합니다.",
+          "ms": 15696
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-64/125",
+      "library": {
+        "pred": "none",
+        "ms": 1.26
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 -64/125는 여사건을 이용한 식 1-(4/5)^3에서 64/125만 쓰거나 계산 실수를 한 것으로 보이며, 제시된 오개념 목록의 특정 개념으로 설명되지는 않습니다.",
+          "ms": 4020
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 명중은 여사건으로 구하는 유형이지만 학생 답의 음수 값은 목록의 특정 오개념이라기보다 계산 실수로 보는 것이 타당하다.",
+          "ms": 4960
+        },
+        {
+          "pred": "none",
+          "reason": "적어도 한 번 명중은 보통 여사건으로 1-(4/5)^3로 구하는데, 학생 답은 계산 과정의 부호·산술 실수로 보이며 목록의 특정 오개념으로 설명되기 어렵다.",
+          "ms": 3992
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(4/5)^3까지는 생각했을 가능성이 크지만, 1을 125/125로 바꾸지 않고 1-64/125를 잘못 계산해 -64/125로 쓴 계산 실수이다.",
+          "ms": 5385
+        },
+        {
+          "kind": "slip",
+          "description": "‘한 번도 명중하지 않을 확률’은 (4/5)^3 = 64/125인데, ‘적어도 한 번 명중’은 이를 1에서 빼서 1 - 64/125 = 61/125로 구해야 합니다. 학생 답은 여확률을 구하는 마지막 단계에서 부호를 잘못 처리한 실수로 보입니다.",
+          "ms": 8022
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 계산하는 과정에서 1 - (4/5)^3를 해야 하는데, 1을 빼먹고 -(4/5)^3 = -64/125로 계산한 실수이다.",
+          "ms": 4739
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-5",
+      "kind": "bug",
+      "truth": "prob_at_least_one_add",
+      "answer": "2/3",
+      "library": {
+        "pred": "prob_at_least_one_add",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "'적어도 한 번'을 두 번의 시행에서 각각 1 또는 2가 나올 확률 1/3을 더해 2/3으로 계산한 것으로 보이며, 여사건을 이용하지 않았다.",
+          "ms": 3278
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "한 번의 시행에서 1 또는 2가 나올 확률 1/3을 두 번 단순히 더해 2/3으로 구해, '적어도 한 번' 확률을 여사건으로 처리하지 않았다.",
+          "ms": 3601
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "한 번 시행에서의 확률 1/3을 두 번이라 하여 그대로 더해 2/3으로 본 것으로 보여, '적어도 한 번' 확률을 여사건으로 구하지 않았다.",
+          "ms": 3968
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 겹칠 수 있는 사건인데도 두 번의 시행에서의 확률을 그냥 더해도 된다고 생각해, 각 시행의 확률 1/3을 더해 2/3으로 구한 것으로 보인다.",
+          "ms": 6994,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘2번 던져 적어도 한 번 나온다’는 확률을 각 시행의 확률 1/3씩을 그대로 더해 2/3으로 구할 수 있다고 생각한 것으로 보인다.",
+          "ms": 8014,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 번의 시행에서 ‘적어도 한 번’의 확률을 구할 때, 각 시행의 확률 1/3을 그대로 더해 2/3으로 계산해도 된다고 생각한 것으로 보인다.",
+          "ms": 5126,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-4/9",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 -4/9는 제시된 확률 오개념들로 자연스럽게 설명되지 않고, 계산 실수 또는 목록에 없는 오류로 보는 것이 타당하다.",
+          "ms": 6014
+        },
+        {
+          "pred": "none",
+          "reason": "정답인 여사건 계산에서 1-4/9를 잘못 처리했거나 확률값을 음수로 쓴 단순 계산 실수로 보이며, 제시된 오개념 목록의 특정 유형으로 설명되지는 않는다.",
+          "ms": 5823
+        },
+        {
+          "pred": "none",
+          "reason": "'적어도 한 번' 유형일 수는 있지만 학생의 답 -4/9는 목록의 어떤 대표적 오개념으로도 자연스럽게 설명되지 않는 잘못된 계산 결과이다.",
+          "ms": 4284
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1 - (4/6)^2 를 계산하는 과정에서 뺄셈 부호를 잘못 처리해 음수 확률로 적은 실수로 보입니다.",
+          "ms": 11064
+        },
+        {
+          "kind": "slip",
+          "description": "여사건의 확률인 4/9를 구한 뒤, 전체에서 빼서 1-4/9=5/9로 해야 하는데 그대로 -4/9로 잘못 적었습니다.",
+          "ms": 5849
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용하는 계산에서 1 - (4/6)^2를 해야 하는데, 뺄셈 또는 부호 처리를 잘못해 음수가 나온 것으로 보인다.",
+          "ms": 5151
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-4/9",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 -4/9는 ‘적어도 한 번’을 각 시행 확률을 더하는 전형적 형태와도 맞지 않아, 제시된 오개념 목록보다는 계산 실수나 목록 밖 오류로 보는 것이 타당합니다.",
+          "ms": 5843
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답이 음수가 되어 확률 계산 자체에 오류가 있지만, 제시된 특정 오개념 목록의 어느 하나로 단정하기는 어렵습니다.",
+          "ms": 6246
+        },
+        {
+          "pred": "none",
+          "reason": "학생의 답 -4/9는 확률 계산 과정의 단순 계산 오류이거나 목록에 없는 잘못으로 보이며, 제시된 오개념들로는 일관되게 설명되지 않습니다.",
+          "ms": 5744
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 1-(4/6)^2까지는 맞게 세웠을 가능성이 크지만, 마지막 계산에서 1-4/9를 -4/9로 잘못 계산했다.",
+          "ms": 5899
+        },
+        {
+          "kind": "slip",
+          "description": "확률을 여사건으로 계산하는 과정에서 뺄셈을 잘못해 1 - 4/9를 -4/9로 계산한 실수로 보인다.",
+          "ms": 3605
+        },
+        {
+          "kind": "slip",
+          "description": "여사건을 이용해 계산하는 과정에서 1에서 빼야 할 값을 거꾸로 빼는 등 부호를 잘못 처리해 음수 확률이 나온 것으로 보인다.",
+          "ms": 5797
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-0",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "2/3",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전의 앞면과 주사위의 6은 독립인 두 사건인데, 학생 답 2/3은 1/2+1/6으로 더한 값이므로 동시에 일어날 확률을 덧셈으로 계산한 것으로 보입니다.",
+          "ms": 3638
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전의 앞면과 주사위의 6은 독립인 두 사건인데, 학생은 1/2와 1/6을 곱하지 않고 더해 2/3으로 계산했다.",
+          "ms": 3616
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 앞면일 확률 1/2와 주사위가 6일 확률 1/6을 곱하지 않고 더해 2/3으로 계산했다.",
+          "ms": 2948
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 동시에 일어날 확률을 각각의 확률을 곱해서 구하지 않고, 동전의 경우의 수와 주사위의 경우의 수를 잘못 결합해 확률을 계산하는 것으로 보입니다.",
+          "ms": 4117,
+          "same": false
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 동시에 일어나는 독립 사건의 확률은 더하는 것이 아니라 곱해야 하는데, 학생은 각각의 확률 1/2와 1/6을 더해 2/3으로 구하는 잘못된 규칙을 적용한 것으로 보인다.",
+          "ms": 4210,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 동시에 일어날 확률을 구할 때, 각 확률을 곱해야 하는데 더해도 된다고 생각한 것으로 보인다.",
+          "ms": 6573,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-11/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "정답인 1/12와 전혀 다른 음수 확률을 써서, 제시된 특정 오개념들로 설명되기보다 계산 실수이거나 목록에 없는 오개념으로 보입니다.",
+          "ms": 5417
+        },
+        {
+          "pred": "none",
+          "reason": "동전의 앞면과 주사위의 6은 동시에 일어나는 독립사건이므로 곱해야 하는데, 학생의 -11/12는 목록의 어떤 대표적 오개념과도 맞지 않는 비정상적인 계산 결과입니다.",
+          "ms": 3440
+        },
+        {
+          "pred": "none",
+          "reason": "동전이 앞면일 확률과 주사위가 6일 확률을 더하거나 곱하는 전형적 오개념으로 보기 어렵고, 음수 확률인 -11/12는 목록에 없는 계산 실수로 판단된다.",
+          "ms": 2692
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률은 음수가 될 수 없으므로, 1/12를 구해 놓고 부호를 잘못 붙였거나 계산 과정에서 부호를 잘못 처리한 실수로 보입니다.",
+          "ms": 9771
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 음수가 될 수 없으므로, 동전의 앞면 확률 1/2와 주사위의 6이 나올 확률 1/6을 곱해 1/12를 구하는 과정에서 부호를 잘못 쓰거나 계산을 잘못한 실수로 보입니다.",
+          "ms": 6214
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 음수가 될 수 없으므로 부호를 잘못 쓰거나 계산 과정에서 실수한 것으로 보입니다. 이 문제는 1/2×1/6=1/12로 계산해야 합니다.",
+          "ms": 5516
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-23/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.52
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "동전이 앞면일 확률과 주사위가 6일 확률을 곱해야 하는 문제에서 학생 답은 음수 확률로, 제시된 오개념 목록의 어느 항목으로도 설명되지 않는다.",
+          "ms": 2636
+        },
+        {
+          "pred": "none",
+          "reason": "동전의 앞면과 주사위의 6은 독립사건이므로 보통의 오개념이라면 1/2와 1/6을 더하는 형태가 예상되는데, -23/12는 어떤 목록의 대표적 오개념으로도 설명되지 않는 비정상적인 값이다.",
+          "ms": 3873
+        },
+        {
+          "pred": "none",
+          "reason": "동전의 앞면과 주사위의 6은 동시에 일어나는 독립사건이므로 곱셈으로 구해야 하는데, 학생 답 -23/12는 어떤 목록의 전형적 오개념으로도 설명되지 않는 계산 오류로 보입니다.",
+          "ms": 3757
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 경우의 수를 세어 유리한 경우를 전체 경우로 나누어야 한다는 원리를 적용하지 못하고, 확률값이 0과 1 사이여야 한다는 기본 성질도 놓치고 있다.",
+          "ms": 6268
+        },
+        {
+          "kind": "slip",
+          "description": "확률을 계산하는 과정에서 분수 연산을 크게 잘못해 음수가 나왔습니다. 이 경우는 독립사건이므로 1/2 × 1/6 = 1/12로 계산해야 합니다.",
+          "ms": 5292
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건의 확률을 구할 때 확률을 곱해야 하는데, 확률을 잘못 더하거나 빼서 음수도 확률이 될 수 있다고 생각한 것으로 보인다.",
+          "ms": 4038
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-1",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "2/3",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "첫째 주사위가 1일 확률 1/6과 둘째 주사위가 짝수일 확률 1/2를 동시에 일어나는 사건인데 곱하지 않고 더해 2/3으로 구했다.",
+          "ms": 3371
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "첫째 주사위가 1일 확률 1/6과 둘째 주사위가 짝수일 확률 1/2를 더해 2/3으로 계산한 것으로 보여, 동시에 일어날 확률을 덧셈으로 구했다.",
+          "ms": 3204
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "첫째 주사위가 1일 확률과 둘째 주사위가 짝수일 확률을 동시에 일어나는 경우인데 곱하지 않고 더해 2/3으로 계산했다.",
+          "ms": 3622
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 조건이 동시에 일어나는 경우에도 확률을 곱하지 않고, 각 확률을 더하면 된다고 생각한 것으로 보인다.",
+          "ms": 11068,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 동시에 일어나는 사건(‘그리고’)의 확률을 구할 때 각 확률을 곱해야 하는데, 학생은 1/6과 1/2를 더해도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 4746,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "두 사건이 동시에 일어날 확률을 구할 때 각 조건의 확률을 곱해야 하는데, 한 조건만 보거나 확률을 잘못 결합해 계산하는 것으로 보인다.",
+          "ms": 6008,
+          "same": false
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.21
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "두 사건이 동시에 일어날 확률은 곱해야 하지만 학생 답 13/12는 어떤 대표 오개념과도 일치하지 않는 계산 결과이므로 목록으로 설명하기 어렵다.",
+          "ms": 4321
+        },
+        {
+          "pred": "none",
+          "reason": "두 사건이 동시에 일어날 확률 문제이지만 학생 답 13/12는 어떤 목록의 대표적 오개념으로도 일관되게 설명되지 않는 비정상적인 값이므로 단순 계산 실수나 목록 외 오류로 보입니다.",
+          "ms": 5504
+        },
+        {
+          "pred": "none",
+          "reason": "첫째 주사위가 1이고 둘째 주사위가 짝수인 사건은 독립사건의 곱으로 구해야 하는데, 학생의 13/12는 제시된 어떤 대표 오개념으로도 직접 설명되지 않는 비정상적인 값이다.",
+          "ms": 5188
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 조건이 동시에 일어나는 확률을 구할 때 각 확률을 올바르게 곱하지 못하고, 분수를 잘못 결합해 1보다 큰 값이 나와도 확률로 받아들이는 잘못된 규칙을 쓰고 있다.",
+          "ms": 8422
+        },
+        {
+          "kind": "slip",
+          "description": "확률이 1을 넘는 13/12가 나와 계산 과정에서 실수한 것입니다; 이 경우는 '첫째 주사위가 1'의 확률 1/6과 '둘째 주사위가 짝수'의 확률 1/2를 곱해 1/12로 구해야 합니다.",
+          "ms": 9994
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 13/12로 계산한 것은 경우의 수를 세거나 분수를 계산하는 과정에서 실수한 것입니다. 이 경우는 (첫째 주사위가 1) 1/6 과 (둘째 주사위가 짝수) 3/6=1/2 를 동시에 만족해야 하므로 1/6×1/2=1/12입니다.",
+          "ms": 9307
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "두 사건이 동시에 일어날 확률에서 곱셈이 아니라 덧셈을 했을 가능성도 있지만, 학생 답 13/12는 그 오개념만으로는 자연스럽게 설명되지 않는다.",
+          "ms": 4202
+        },
+        {
+          "pred": "none",
+          "reason": "첫째 주사위가 1이고 둘째 주사위가 짝수인 경우는 동시에 일어나는 독립사건이므로 곱셈으로 구해야 하는데, 학생 답 13/12는 이 오개념 목록의 특정 유형으로 설명되지 않는 잘못된 계산이다.",
+          "ms": 4054
+        },
+        {
+          "pred": "none",
+          "reason": "서로 독립인 두 사건의 '동시에 일어날 확률'은 곱해야 하는데, 학생 답 13/12는 어떤 대표 오개념과도 정확히 대응되지 않는 비정상적인 확률값이므로 목록의 오개념으로 단정하기 어렵다.",
+          "ms": 4707
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없으므로 계산 과정에서 분자·분모를 잘못 적은 실수입니다; 전체 경우는 36가지, 유리한 경우는 (1,2),(1,4),(1,6) 3가지이므로 3/36=1/12입니다.",
+          "ms": 9400
+        },
+        {
+          "kind": "misconception",
+          "description": "'그리고(and)'로 동시에 일어나는 사건의 확률을 구할 때 각 확률을 곱해야 한다는 원리를 모르고, 확률을 잘못 더하거나 1보다 크게 나올 수 있다고 생각하는 오류가 있습니다.",
+          "ms": 6088
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 13/12로 계산한 것은 계산 과정에서 분자나 분모를 잘못 쓴 실수로 보인다; 이 경우는 첫째 주사위가 1일 확률 1/6과 둘째 주사위가 짝수일 확률 1/2를 곱해 1/12가 되어야 한다.",
+          "ms": 7530
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-2",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "7/12",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 독립사건이 모두 일어날 확률을 곱해야 하는데 1/3과 1/4를 더해 7/12로 계산했다.",
+          "ms": 2879
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 사람이 모두 합격할 확률은 독립사건이므로 곱해야 하는데, 학생은 1/3과 1/4를 더해 7/12로 계산했다.",
+          "ms": 2626
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 사람이 모두 합격할 확률은 독립사건이므로 곱해야 하는데, 학생은 1/3과 1/4를 더해 7/12로 계산했다.",
+          "ms": 2764
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사람이 모두 합격할 확률은 각 확률을 더해서 구한다고 믿고 있다.",
+          "ms": 3240,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사람이 모두 합격할 확률을 구할 때 각 확률을 더한다고 생각하고 있으며, 실제로는 독립사건의 동시 발생 확률은 곱해야 한다.",
+          "ms": 3982,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사건이 모두 일어날 확률을 각각의 확률을 더해서 구한다고 잘못 생각한 것으로 보인다.",
+          "ms": 3724,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "25/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.25
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "독립인 두 사건이 동시에 일어날 확률은 곱으로 구해야 하는데, 학생 답 25/12는 어느 표준 오개념의 계산과도 직접 대응되지 않아 목록의 오개념으로 보기 어렵다.",
+          "ms": 4468
+        },
+        {
+          "pred": "none",
+          "reason": "'두 사람이 모두 합격'은 독립사건의 곱으로 구해야 하는데 학생 답 25/12는 어떤 목록의 대표 오개념과도 일치하지 않는 비정상적인 계산 결과이다.",
+          "ms": 3973
+        },
+        {
+          "pred": "none",
+          "reason": "독립인 두 사건이 모두 일어날 확률은 곱해야 하는데, 학생의 답 25/12는 제시된 대표 오개념들 중 어느 하나로도 일관되게 설명되지 않는다.",
+          "ms": 3343
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사건이 모두 일어날 확률은 각 확률을 곱해야 하는데, 이를 다른 방식으로 잘못 결합해 계산한 것으로 보인다.",
+          "ms": 8597
+        },
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사건이 모두 일어날 확률을 각 확률의 곱으로 구해야 한다는 규칙을 모르고, 확률들을 잘못된 방식으로 결합해도 된다고 생각한 것으로 보입니다.",
+          "ms": 6791
+        },
+        {
+          "kind": "misconception",
+          "description": "독립인 두 사건에서 ‘두 사람 모두 합격할 확률’은 각 확률을 곱해야 하는데, 이를 곱하지 않고 잘못된 방식으로 결합해 확률을 구한다고 믿는 것으로 보인다.",
+          "ms": 11937
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-23/12",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "독립인 두 사건이 모두 일어날 확률은 곱으로 구해야 하지만 학생의 답 -23/12는 해당 오개념들로 자연스럽게 설명되지 않는 비정상적인 값이므로 목록 밖의 오류나 단순 계산 실수로 보인다.",
+          "ms": 4321
+        },
+        {
+          "pred": "none",
+          "reason": "독립인 두 사건의 동시에 일어날 확률은 곱으로 구해야 하는데, 학생 답 -23/12는 어떤 목록의 대표 오개념으로도 직접 설명되지 않는 비정상적인 값이다.",
+          "ms": 3490
+        },
+        {
+          "pred": "none",
+          "reason": "독립인 두 사건의 동시확률은 곱해야 하지만 학생 답 -23/12는 어떤 목록의 대표적 오개념으로도 설명되지 않는 비정상적인 값이므로 단순 계산 실수나 기타 오류로 보입니다.",
+          "ms": 3496
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "독립인 두 사건이 모두 일어날 확률은 1/3×1/4=1/12인데, 분수 계산 과정에서 산술 실수를 하여 -23/12를 썼다.",
+          "ms": 11544
+        },
+        {
+          "kind": "slip",
+          "description": "독립인 두 사건이 모두 일어날 확률은 1/3 × 1/4 = 1/12인데, 계산 과정에서 부호나 분수 계산을 잘못하여 음수인 -23/12를 쓴 실수입니다.",
+          "ms": 4710
+        },
+        {
+          "kind": "slip",
+          "description": "독립인 두 사건이 모두 일어날 확률은 1/3×1/4=1/12인데, 계산 과정에서 곱셈을 하지 않았거나 부호/분수 계산을 크게 잘못해 -23/12라는 불가능한 확률이 나왔다.",
+          "ms": 7700
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-3",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "5/6",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.3
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률을 동시에 일어나는 경우인데 곱하지 않고 더해 5/6으로 계산한 것으로 보입니다.",
+          "ms": 3343
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률 1/2와 주사위가 3의 배수일 확률 1/3을 동시에 일어날 확률인데 곱하지 않고 더해 5/6으로 계산한 것으로 보입니다.",
+          "ms": 3383
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률 1/2와 주사위가 3의 배수일 확률 2/6을 동시에 일어나는 경우인데 더해서 5/6으로 계산했다.",
+          "ms": 4290
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 동시에 일어나는 '그리고(and)'의 확률을 더해서 구한다고 잘못 생각하고 있다.",
+          "ms": 4258,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "동시에 일어나는 두 사건의 확률을 구할 때 각 확률을 곱해야 하는데, 학생은 1/2와 1/3을 더해서 구하는 것으로 잘못 알고 있는 것 같습니다.",
+          "ms": 6039,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률이 동시에 일어나는 경우에도 확률을 곱하지 않고 더하면 된다고 생각한 것으로 보입니다.",
+          "ms": 5193,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "7/6",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률을 동시에 일어나는 경우로 보지 않고 더하는 방식으로 생각한 것으로 보인다.",
+          "ms": 5216
+        },
+        {
+          "pred": "none",
+          "reason": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률을 더한 것으로도 7/6이 되지 않아, 제시된 오개념 목록의 특정 유형으로 보기보다는 목록에 없는 계산 오류나 단순 실수로 보인다.",
+          "ms": 4237
+        },
+        {
+          "pred": "none",
+          "reason": "동전의 뒷면과 주사위의 3의 배수는 동시에 일어나는 독립사건이므로 곱해야 하지만, 학생의 7/6은 목록의 어떤 대표적 오개념으로도 일관되게 설명되지 않는 비정상적인 값이다.",
+          "ms": 6451
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "두 사건이 동시에 일어날 확률을 구할 때 각 확률을 곱해야 하는데, 학생은 확률을 더해도 된다고 잘못 생각한 것으로 보인다.",
+          "ms": 4642
+        },
+        {
+          "kind": "misconception",
+          "description": "동전과 주사위가 동시에 일어나는 ‘그리고(and)’ 상황의 확률을 경우의 수를 곱해 구하지 않고, 각 결과를 따로 더하거나 잘못 합쳐서 확률을 계산한다고 믿는 것으로 보입니다.",
+          "ms": 9555
+        },
+        {
+          "kind": "misconception",
+          "description": "두 사건이 동시에 일어날 확률을 구할 때, 각 확률을 곱하지 않고 더해도 된다고 생각하는 잘못이 있어 보인다.",
+          "ms": 10222
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13/6",
+      "library": {
+        "pred": "none",
+        "ms": 1.21
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "동전과 주사위가 동시에 해당 조건을 만족하는 경우는 독립사건의 곱으로 구해야 하지만, 학생의 13/6은 제시된 오개념들 중 어느 하나로도 일관되게 설명되지 않는 비정상적인 값이다.",
+          "ms": 5911
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률을 동시에 일어나는 경우인데 곱하지 않고 더한 것으로 보인다.",
+          "ms": 5210
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "동전이 뒷면일 확률과 주사위가 3의 배수일 확률을 동시에 일어나는 사건인데 더하는 방식으로 처리한 것으로 보인다.",
+          "ms": 3505
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 동시에 일어나는 사건의 확률을 구할 때 각 조건의 경우를 하나의 전체 경우의 수로 세지 않고, 동전의 경우 수와 주사위의 눈을 따로 보고 이를 ‘13/6’처럼 합쳐도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 10245
+        },
+        {
+          "kind": "misconception",
+          "description": "동시에 일어나는 두 사건의 확률을 구할 때 각 사건의 확률을 곱해야 하는데, 동전의 확률과 주사위의 정보를 숫자끼리 잘못 결합해 확률을 만드는 것으로 보인다.",
+          "ms": 10578
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 동시에 일어나는 두 사건의 확률은 각 확률을 곱해야 하는데, 학생은 이를 하나의 전체 경우에 대한 비율로 바꾸지 못하고 확률들을 잘못 결합해 1보다 큰 값을 만든 것으로 보인다.",
+          "ms": 9958
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-4",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "9/10",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "명중과 앞면이 동시에 일어날 확률에서 독립사건의 곱을 써야 하는데 2/5와 1/2를 더해 9/10으로 계산했다.",
+          "ms": 3490
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "명중과 앞면이 동시에 일어날 확률을 곱하지 않고 2/5+1/2=9/10처럼 더한 것으로 보인다.",
+          "ms": 3271
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "명중과 앞면이 동시에 일어날 확률을 곱해야 하는데 2/5와 1/2를 더해 9/10으로 계산했다.",
+          "ms": 2897
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 동시에 일어나는 사건의 확률(‘그리고’)을 구할 때 확률을 곱해야 하는데, 확률을 더하면 된다고 생각한 것으로 보인다.",
+          "ms": 4680,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 모두 일어날 확률(‘그리고’)을 구할 때 확률을 곱하지 않고 더한다고 생각한 것으로 보인다.",
+          "ms": 4071,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "‘명중하고 앞면’처럼 두 사건이 동시에 일어날 확률은 각 확률을 곱해야 하는데, 학생은 이를 더해서 구한다고 잘못 생각한 것으로 보입니다.",
+          "ms": 4103,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "11/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.28
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "명중과 앞면이 동시에 일어날 확률은 독립사건의 곱으로 구해야 하는데 학생 답 11/5는 1보다 커서 목록의 특정 오개념보다는 계산 오류나 목록 밖의 혼동으로 보인다.",
+          "ms": 5155
+        },
+        {
+          "pred": "none",
+          "reason": "명중과 앞면이 동시에 일어날 확률은 곱으로 구해야 하지만 학생 답 11/5는 어떤 목록의 전형적 오개념으로도 설명되지 않는 비정상적인 값이다.",
+          "ms": 3869
+        },
+        {
+          "pred": "none",
+          "reason": "명중과 앞면은 동시에 일어나는 독립사건이므로 곱셈으로 구해야 하지만, 학생의 답 11/5는 어떤 목록의 전형적 오개념으로도 일관되게 설명되지 않는 잘못된 계산이다.",
+          "ms": 4206
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "명중하고 앞면이 나오는 경우는 독립이므로 2/5와 1/2를 곱해 1/5가 되어야 하는데, 두 확률을 결합하는 계산 과정에서 잘못 계산했습니다.",
+          "ms": 14651
+        },
+        {
+          "kind": "misconception",
+          "description": "동시에 일어나는 독립 사건의 확률은 각 확률을 곱해야 하는데, 학생은 두 확률을 곱하지 않고 분자와 분모를 잘못 결합해도 된다고 믿는 것으로 보인다.",
+          "ms": 12231
+        },
+        {
+          "kind": "slip",
+          "description": "명중할 확률 2/5와 앞면이 나올 확률 1/2를 함께 일어날 확률로 계산할 때 곱해야 하는데, 분수 계산 과정에서 실수하여 11/5로 잘못 썼다.",
+          "ms": 7842
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "6/5",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "명중과 앞면은 동시에 일어나는 독립사건이므로 곱해야 하는데, 학생의 6/5는 어떤 목록의 전형적 오개념과도 정확히 맞지 않는 계산입니다.",
+          "ms": 3904
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "'명중하고 앞면'은 독립인 두 사건이 동시에 일어나는 경우이므로 확률을 곱해야 하는데, 학생 답은 이를 곱이 아닌 합으로 처리한 오개념으로 보인다.",
+          "ms": 5763
+        },
+        {
+          "pred": "none",
+          "reason": "명중과 앞면이 동시에 일어날 확률은 독립사건이므로 곱해야 하지만, 학생 답 6/5는 어떤 대표적인 오개념과도 정확히 대응되지 않는 잘못된 계산이다.",
+          "ms": 4502
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "명중률 2/5와 앞면 확률 1/2를 함께 일어나는 확률로 계산할 때 곱해야 하는데, 그 계산 과정에서 잘못하여 6/5로 썼다.",
+          "ms": 12131
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 동시에 일어날 확률을 구할 때 확률을 곱해야 한다는 원리를 모르고, 확률을 잘못 결합해 1보다 큰 값도 가능하다고 생각한 것으로 보입니다.",
+          "ms": 7384
+        },
+        {
+          "kind": "misconception",
+          "description": "‘명중하고 앞면’처럼 두 사건이 동시에 일어날 확률은 각 확률을 곱해야 하는데, 학생은 이를 곱셈으로 처리하지 않고 분수를 잘못 결합해 확률을 구해도 된다고 생각한 것으로 보입니다.",
+          "ms": 7868
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-5",
+      "kind": "bug",
+      "truth": "prob_independent_add",
+      "answer": "1/3",
+      "library": {
+        "pred": "prob_independent_add",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 주사위가 모두 6이 나오는 것은 독립인 두 사건이 동시에 일어나는 경우인데, 학생은 1/6과 1/6을 곱하지 않고 더해 1/3으로 본 것으로 보인다.",
+          "ms": 3460
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 주사위 모두 6이 나오는 경우는 독립사건의 동시확률이므로 1/6×1/6이어야 하는데, 학생 답 1/3은 두 확률을 더한 것으로 보인다.",
+          "ms": 3446
+        },
+        {
+          "pred": "prob_independent_add",
+          "reason": "두 주사위가 모두 6이 나오는 것은 독립인 두 사건의 동시확률인데, 학생 답 1/3은 각 확률을 더하는 방식으로 잘못 계산한 것으로 보입니다.",
+          "ms": 3269
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건이 동시에 일어날 확률을 구할 때 확률을 곱해야 하는데, 학생은 두 확률을 더해 1/6+1/6=1/3으로 계산한 것으로 보인다.",
+          "ms": 5971,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "두 사건이 동시에 일어날 확률을 각 확률을 곱하지 않고 단순히 더하거나 분모만 보고 계산하는 것으로 잘못 이해한 것으로 보입니다.",
+          "ms": 6844,
+          "same": false
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 독립인 두 사건의 확률을 구할 때 각 확률을 곱하지 않고, 두 주사위의 유리한 경우를 2/6처럼 단순히 더해 1/3으로 계산해도 된다고 생각한 것으로 보인다.",
+          "ms": 6385,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "73/36",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "'두 주사위 모두 6'은 독립사건의 곱으로 구해야 하는데 학생 답 73/36은 어떤 목록의 전형적 오개념으로도 대응되지 않는 비정상적인 값이다.",
+          "ms": 3574
+        },
+        {
+          "pred": "none",
+          "reason": "두 주사위가 모두 6일 확률은 독립사건의 곱으로 구해야 하는데 학생 답 73/36은 확률값으로도 성립하지 않아, 제시된 특정 오개념보다는 단순 계산 실수나 목록 밖의 오류로 보입니다.",
+          "ms": 3550
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 73/36은 확률이 1을 넘는 값으로, 제시된 오개념 목록의 어떤 전형적 오류로도 설명되기 어렵다.",
+          "ms": 3299
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "확률은 1보다 클 수 없으므로, 두 주사위가 모두 6인 경우를 세거나 계산하는 과정에서 유리한 경우의 수를 잘못 적어 73/36으로 쓴 실수로 보인다.",
+          "ms": 10552
+        },
+        {
+          "kind": "slip",
+          "description": "확률은 1을 넘을 수 없는데 73/36으로 잘못 적었습니다. 두 주사위가 모두 6일 확률은 각 1/6을 곱해 1/36이어야 하므로, 계산하거나 답을 쓰는 과정에서 실수한 것으로 보입니다.",
+          "ms": 6127
+        },
+        {
+          "kind": "slip",
+          "description": "확률의 전체 경우의 수 36은 맞지만, 유리한 경우의 수를 쓰는 과정에서 73으로 잘못 적은 실수로 보입니다. 두 주사위가 모두 6인 경우는 (6,6) 한 가지뿐이므로 1/36이어야 합니다.",
+          "ms": 6972
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_independent_add-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "-35/36",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "두 주사위가 모두 6일 확률 1/36과 관련해 제시된 오개념들로는 -35/36이라는 음수 확률이 설명되지 않아, 목록 밖의 단순 계산/부호 실수로 보입니다.",
+          "ms": 3426
+        },
+        {
+          "pred": "none",
+          "reason": "두 주사위가 모두 6일 확률은 1/6×1/6=1/36인데 학생 답 -35/36은 목록의 특정 오개념으로 설명되기보다 계산 실수 또는 문제 해석 오류로 보입니다.",
+          "ms": 3692
+        },
+        {
+          "pred": "none",
+          "reason": "두 주사위가 모두 6일 확률은 1/6×1/6=1/36인데 학생 답 -35/36은 목록의 특정 오개념보다 여사건이나 계산 과정의 단순 오류로 보입니다.",
+          "ms": 2708
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "여사건 확률을 이용하는 과정에서 뺄셈 순서를 잘못 써서 1/36 대신 -35/36으로 계산한 실수로 보인다.",
+          "ms": 4861
+        },
+        {
+          "kind": "misconception",
+          "description": "확률을 구할 때 경우의 수를 잘못 빼서 음수가 나와도 된다고 생각하거나, ‘원하는 경우 1가지, 원하지 않는 경우 35가지’에서 확률을 -35/36처럼 계산하는 잘못된 규칙을 믿고 있는 것으로 보입니다.",
+          "ms": 4066
+        },
+        {
+          "kind": "slip",
+          "description": "전체 36가지 경우 중 원하는 경우가 1가지이므로 1/36이어야 하는데, 원하지 않는 경우 35/36을 떠올리는 과정에서 부호를 잘못 붙여 -35/36으로 쓴 실수입니다.",
+          "ms": 6494
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-0",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "30",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.12
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "대표 2명을 '뽑는' 것은 순서를 따지지 않아 6C2를 써야 하는데, 학생 답 30은 순서를 고려한 6P2로 계산한 값이다.",
+          "ms": 3156
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "대표 2명을 뽑는 것은 순서를 따지지 않는 경우인데 학생은 6P2=30처럼 순열로 계산한 것으로 보인다.",
+          "ms": 2464
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "대표 2명을 뽑는 것은 순서를 따지지 않는 경우인데 학생은 6P2=30처럼 순서를 고려해 계산한 것으로 보인다.",
+          "ms": 2491
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "대표 2명을 뽑는 경우처럼 순서가 중요하지 않은 상황에서도 순서를 구분하여 경우의 수를 세어야 한다고 생각한 것으로 보인다.",
+          "ms": 4222,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "대표 2명을 뽑는 경우에서 순서가 없는 선택인데도 1명째와 2명째를 구분해 순서가 있는 경우로 세어 6×5=30으로 계산하는 잘못된 규칙을 적용한 것으로 보입니다.",
+          "ms": 3945,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "대표 2명을 뽑는 것을 순서가 있는 경우로 생각하여, 같은 두 학생을 뽑아도 순서만 바뀌면 다른 경우로 세는 잘못된 규칙을 적용한 것으로 보인다.",
+          "ms": 4470,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "17",
+      "library": {
+        "pred": "none",
+        "ms": 1.11
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "대표 2명을 뽑는 문제에서 정답 15 대신 17을 쓴 것은 조합을 순열로 계산한 값(30)과도 맞지 않아, 목록의 특정 오개념보다는 단순 계산 실수이거나 목록에 없는 오류로 보입니다.",
+          "ms": 3447
+        },
+        {
+          "pred": "none",
+          "reason": "6명 중 2명을 뽑는 경우의 수는 15인데 17은 제시된 오개념들(특히 조합을 순열로 계산하는 경우 등)로 설명되지 않는 단순 계산 실수 또는 목록 밖의 오류로 보입니다.",
+          "ms": 3524
+        },
+        {
+          "pred": "none",
+          "reason": "6명 중 2명을 뽑는 문제에서 17은 조합을 순열로 계산한 값 30도 아니므로, 제시된 오개념 목록으로 설명되기보다 단순 계산 실수이거나 목록에 없는 경우입니다.",
+          "ms": 3091
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "6명 중 2명을 뽑는 경우의 수를 세는 과정에서 계산을 잘못해 15가 아닌 17로 쓴 단순 계산 실수로 보입니다.",
+          "ms": 3855
+        },
+        {
+          "kind": "slip",
+          "description": "조합의 경우의 수를 계산하는 과정에서 산수를 잘못해 15가 아닌 17로 쓴 계산 실수로 보입니다.",
+          "ms": 5216
+        },
+        {
+          "kind": "slip",
+          "description": "6명 중 2명을 뽑는 경우의 수를 세거나 계산하는 과정에서 단순 계산 실수를 한 것으로 보입니다.",
+          "ms": 3046
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-0",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "13",
+      "library": {
+        "pred": "none",
+        "ms": 1.14
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "대표 2명을 뽑는 문제는 조합으로 계산해야 하지만 학생 답 13은 특정 오개념 목록으로 설명되는 전형적 형태가 아니어서 단순 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 3199
+        },
+        {
+          "pred": "none",
+          "reason": "대표 2명을 뽑는 문제에서 학생 답 13은 순열로 계산한 흔적도 아니고 제시된 어떤 대표적 오개념으로도 일관되게 설명되지 않아 단순 계산 실수 또는 목록 밖의 오류로 보입니다.",
+          "ms": 10811
+        },
+        {
+          "pred": "none",
+          "reason": "6명 중 2명을 뽑는 경우의 수는 조합으로 계산해야 하는데 학생 답 13은 목록의 대표적인 오개념들(예: 순열로 계산)과 직접 대응되지 않는 단순 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 3405
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "6명 중 2명을 뽑는 경우의 수는 6C2=15인데, 13은 조합 계산이나 경우를 세는 과정에서 일부 경우를 빠뜨리거나 덧셈을 잘못한 계산 실수로 보입니다.",
+          "ms": 4695
+        },
+        {
+          "kind": "slip",
+          "description": "경우의 수는 \\(\\binom{6}{2}=\\frac{6\\times5}{2}=15\\)인데, 계산 과정에서 산술 실수를 해서 13이 나온 것으로 보입니다.",
+          "ms": 4673
+        },
+        {
+          "kind": "slip",
+          "description": "정답이 15인데 13이라고 한 것은 조합 계산이나 세기 과정에서 일부 경우를 빠뜨리거나 덧셈을 잘못한 계산 실수로 보입니다.",
+          "ms": 5657
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-1",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "210",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.12
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "3가지를 '고르는' 문제인데 학생은 순서를 고려한 7P3=210으로 계산하여 순열로 구했다.",
+          "ms": 2552
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "7가지 중 3가지를 ‘고르는’ 문제인데 학생은 순서를 고려한 7P3=210으로 계산한 것으로 보입니다.",
+          "ms": 2640
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "7가지 중 3가지를 '고르는' 문제에서 순서를 고려한 7P3=210으로 계산해 순서를 고려하지 않는 조합 7C3를 써야 하는 상황을 혼동했다.",
+          "ms": 3330
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 다른 7가지 중 3가지를 고르는 경우를 순서가 있는 경우로 생각하여 7×6×5처럼 순열로 계산해도 된다고 믿고 있다.",
+          "ms": 3560,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 다른 7가지 중 3가지를 고르는 상황에서도 고른 순서를 다른 경우로 세어 순열(7P3)로 계산해도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 3903,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 다른 7가지 중 3가지를 고를 때 순서까지 다른 경우로 세어도 된다고 생각해, 조합이 아니라 순열(7P3)로 계산한 것으로 보인다.",
+          "ms": 3614,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "36",
+      "library": {
+        "pred": "none",
+        "ms": 1.14
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "이 문제는 순서를 생각하지 않는 조합 문제인데 학생 답 36은 조합을 순열로 계산한 값도 아니어서, 목록의 특정 오개념보다는 단순 계산 실수나 목록에 없는 오류로 보입니다.",
+          "ms": 3425
+        },
+        {
+          "pred": "none",
+          "reason": "정답 35에 대해 학생 답 36은 순열로 계산한 흔적이 보이지 않아, 제시된 오개념 목록보다는 단순 계산 실수이거나 목록에 없는 오류로 보입니다.",
+          "ms": 4023
+        },
+        {
+          "pred": "none",
+          "reason": "정답 35와 학생 답 36의 차이는 조합·순열 오개념으로 보기 어렵고, 제시된 목록의 특정 오개념보다는 단순 계산 실수로 판단된다.",
+          "ms": 2925
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "조합 계산에서 \\(\\binom{7}{3}=\\frac{7\\times6\\times5}{3\\times2\\times1}=35\\)를 구하는 과정에서 산술 계산을 잘못해 36으로 쓴 것으로 보입니다.",
+          "ms": 5444
+        },
+        {
+          "kind": "slip",
+          "description": "조합 \b7C3\t을 구하는 과정에서 계산 실수를 한 것으로 보입니다. 7×6×5÷(3×2×1)=35인데 이를 36으로 잘못 계산했습니다.",
+          "ms": 5844
+        },
+        {
+          "kind": "slip",
+          "description": "조합 \u00077C3\u0007을 계산하는 과정에서 산술 실수가 난 것으로 보인다. \u00077C3 = (7×6×5)/(3×2×1) = 35\u0007인데 계산값을 36으로 잘못 냈다.",
+          "ms": 7768
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-1",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "33",
+      "library": {
+        "pred": "none",
+        "ms": 1.23
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "이 문제는 순서를 생각하지 않는 조합 상황인데 학생 답 33은 대표적인 오개념인 순열 계산값과도 맞지 않아, 목록의 오개념보다는 단순 계산 실수나 목록 밖의 오류로 보입니다.",
+          "ms": 3088
+        },
+        {
+          "pred": "none",
+          "reason": "7가지 중 3가지를 고르는 것은 조합 문제인데 학생 답 33은 대표적인 순열-조합 혼동값도 아니어서, 제시된 오개념 목록으로 설명되기보다 단순 계산 실수로 보인다.",
+          "ms": 2774
+        },
+        {
+          "pred": "none",
+          "reason": "7가지 중 3가지를 고르는 것은 조합으로 35가 되어야 하는데 33은 특정 오개념 패턴(nPr 사용 등)으로 설명되지 않는 단순 계산 실수로 보입니다.",
+          "ms": 3421
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "조합의 개수를 구하는 과정에서 계산 실수를 한 것으로 보입니다. 7가지 중 3가지를 고르는 경우의 수는 7C3 = 35입니다.",
+          "ms": 4132
+        },
+        {
+          "kind": "slip",
+          "description": "7가지 중 3가지를 고르는 경우의 수는 보통 \\(\\binom{7}{3}=35\\)인데, 조합 계산이나 나열 과정에서 2개를 빠뜨린 계산 실수로 보입니다.",
+          "ms": 3787
+        },
+        {
+          "kind": "slip",
+          "description": "7가지 중 3가지를 고르는 경우의 수는 조합으로 7C3=35인데, 계산하거나 세는 과정에서 2가지를 빠뜨린 단순한 실수를 한 것으로 보입니다.",
+          "ms": 3528
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-2",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "56",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.25
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "8개 팀 중 경기할 두 팀을 순서 없이 골라야 하는데, 학생은 순서를 있는 경우로 세어 8P2=56처럼 계산한 것으로 보입니다.",
+          "ms": 4038
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "두 팀을 짝짓는 것은 순서를 구분하지 않는 경우인데, 학생은 8×7로 계산해 순서를 있는 경우로 본 것으로 보인다.",
+          "ms": 3532
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "8개 팀 중 경기하는 두 팀을 고를 때 순서가 없는 경우인데, 학생은 8P2=56처럼 순서를 따지는 계산을 한 것으로 보인다.",
+          "ms": 3548
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "두 팀의 경기를 셀 때 A팀- B팀과 B팀- A팀을 서로 다른 경우로 보아, 순서가 없는 한 경기(조합)를 순서 있는 경우(순열)처럼 세는 잘못된 규칙을 적용한 것으로 보인다.",
+          "ms": 4111,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "두 팀을 짝지을 때 순서를 구별하지 않아야 하는데, 학생은 A-B와 B-A를 다른 경우로 보고 순서 있는 경우의 수(8×7)로 세는 잘못된 규칙을 적용한 것으로 보인다.",
+          "ms": 3997,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "두 팀의 경기 하나를 순서가 있는 경우로 세어 (8×7) 각 경기를 두 번씩 중복 계산해도 된다고 생각한 것으로 보인다.",
+          "ms": 4188,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "30",
+      "library": {
+        "pred": "none",
+        "ms": 1.13
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "8개 팀이 서로 한 번씩 경기하는 경우는 조합으로 구해야 하는데 학생 답 30은 특정 오개념 목록으로 설명되는 전형적인 형태가 아니어서 단순 계산 실수 또는 목록 밖 오류로 보입니다.",
+          "ms": 2744
+        },
+        {
+          "pred": "none",
+          "reason": "8개 팀에서 두 팀을 뽑는 경우의 수는 조합으로 구해야 하는데 학생 답 30은 제시된 오개념들 중 어느 하나로 일관되게 설명되지 않는다.",
+          "ms": 3352
+        },
+        {
+          "pred": "none",
+          "reason": "8개 팀에서 두 팀을 뽑는 경우의 수는 조합으로 계산해야 하는데 학생 답 30은 제시된 오개념들로 설명되기보다 단순 계산 실수나 다른 해석에 가깝습니다.",
+          "ms": 4037
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "서로 한 번씩 경기하는 경우의 수를 구할 때 8C2=8×7÷2=28이어야 하는데, 조합 계산이나 합산 과정에서 계산 실수가 있어 30으로 잘못 구했다.",
+          "ms": 4668
+        },
+        {
+          "kind": "slip",
+          "description": "경우의 수는 8C2 = 8×7÷2 = 28인데, 계산 과정에서 30으로 잘못 계산한 실수로 보입니다.",
+          "ms": 4325
+        },
+        {
+          "kind": "slip",
+          "description": "경기 수를 구하는 방법 자체는 맞을 가능성이 크지만, 8개 팀의 모든 짝의 수를 세는 과정에서 7+6+5+4+3+2+1을 30으로 잘못 더했거나 8×7÷2를 계산하는 산술 실수를 한 것으로 보입니다.",
+          "ms": 4517
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-2",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "27",
+      "library": {
+        "pred": "none",
+        "ms": 1.11
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "8개 팀이 서로 한 번씩 경기하는 경우의 수는 조합으로 8C2=28인데 27은 조합·순열 관련 대표 오개념으로 설명되기보다 단순 계산 실수로 보입니다.",
+          "ms": 2805
+        },
+        {
+          "pred": "none",
+          "reason": "8개 팀에서 두 팀을 뽑는 경우의 수는 8C2=28인데 27은 조합과 순열의 혼동 등 목록의 특정 오개념으로 설명되기보다 단순 계산 실수에 가깝다.",
+          "ms": 3097
+        },
+        {
+          "pred": "none",
+          "reason": "8개 팀이 서로 한 번씩 경기하는 경우의 수는 조합으로 구하는데 학생의 27은 제시된 특정 오개념보다는 단순 계산 실수로 보입니다.",
+          "ms": 2906
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "8개 팀이 서로 한 번씩 경기하는 경우의 수는 8C2=28인데, 조합 계산이나 합산 과정에서 1을 빠뜨린 단순 계산 실수로 보입니다.",
+          "ms": 3341
+        },
+        {
+          "kind": "slip",
+          "description": "서로 한 번씩 경기하는 경우의 수는 8팀 중 2팀을 고르는 8C2=28인데, 조합 값을 계산하거나 7+6+…+1을 더하는 과정에서 1만큼 덜 세는 계산 실수를 한 것으로 보입니다.",
+          "ms": 3753
+        },
+        {
+          "kind": "slip",
+          "description": "경기 수는 8C2 = 8×7÷2 = 28인데, 계산하거나 하나의 경기를 빠뜨려 27로 쓴 실수로 보입니다.",
+          "ms": 4587
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-3",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "60",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.11
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "3명을 '뽑기'만 하면 되어 순서를 고려하지 않아야 하는데 학생은 5P3=60처럼 순열로 계산했다.",
+          "ms": 2891
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "3명을 뽑는 것은 순서를 따지지 않는 경우인데 학생은 순서를 고려한 5P3=60으로 계산했다.",
+          "ms": 2537
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "3명을 뽑을 때는 순서를 고려하지 않아야 하는데 학생은 5P3=60으로 계산해 순열로 구했다.",
+          "ms": 2771
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 다른 5명 중 3명을 뽑을 때 순서를 고려하지 않아야 하는데, 학생은 뽑는 경우에서도 순서를 고려해 순열로 계산해도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 3966,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "서로 다른 사람 3명을 '뽑는' 상황에서도 순서를 따져 5P3처럼 계산해야 한다고 잘못 생각한 것으로 보인다.",
+          "ms": 3612,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "3명을 '뽑는' 경우에도 순서가 중요하다고 생각하여 조합이 아니라 순열(5×4×3)로 계산하는 잘못된 규칙을 믿고 있다.",
+          "ms": 3846,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "12",
+      "library": {
+        "pred": "none",
+        "ms": 1.12
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "5명 중 3명을 뽑는 문제의 정답은 조합 5C3=10인데 학생의 12는 순열 5P3=60도 아니어서 제시된 오개념 목록으로 설명되기보다 계산 실수이거나 목록에 없는 경우입니다.",
+          "ms": 3222
+        },
+        {
+          "pred": "none",
+          "reason": "5명 중 3명을 뽑는 경우의 수는 조합으로 계산해야 하지만 학생 답 12는 제시된 오개념들 중 어느 하나의 전형적 결과와도 맞지 않아 목록 밖의 실수로 보입니다.",
+          "ms": 3575
+        },
+        {
+          "pred": "none",
+          "reason": "3명을 뽑는 것은 조합 문제인데 학생 답 12는 대표적인 오개념인 순열 5P3으로 계산한 값도 아니어서, 목록의 오개념으로 설명되기보다 단순 계산 실수나 목록 밖의 오류로 보입니다.",
+          "ms": 3578
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "조합에서 경우의 수를 구할 때 순서를 고려하지 않아야 하는데, 순서를 없애는 나눗셈을 하지 않거나 조합 공식을 잘못 이해하고 있는 것으로 보인다.",
+          "ms": 4880
+        },
+        {
+          "kind": "slip",
+          "description": "경우를 세는 과정에서 서로 같은 조합을 다른 경우로 중복 계산했거나, 포함하면 안 되는 경우를 더해서 12로 센 실수로 보입니다.",
+          "ms": 7895
+        },
+        {
+          "kind": "misconception",
+          "description": "조합을 구할 때 순서가 같은 경우를 없애는 방법을 잘못 적용해, 5명 중 3명을 뽑는 경우를 순열처럼 세고 잘못 나누어 계산한 것으로 보인다.",
+          "ms": 9324
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-3",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "9",
+      "library": {
+        "pred": "none",
+        "ms": 1.11
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "3명을 뽑는 경우의 수는 조합으로 계산해야 하는데 학생의 답 9는 제시된 오개념들 중 어느 하나로도 일관되게 설명되지 않는다.",
+          "ms": 3530
+        },
+        {
+          "pred": "none",
+          "reason": "5명 중 3명을 뽑는 경우의 수는 조합으로 계산해야 하는데 학생 답 9는 어떤 대표적인 목록의 오개념으로도 자연스럽게 설명되지 않아 단순 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 3795
+        },
+        {
+          "pred": "none",
+          "reason": "5명 중 3명을 뽑는 경우는 조합으로 계산해야 하는데 학생 답 9는 순열로 계산한 값도 아니어서 목록의 특정 오개념보다는 단순 계산 실수나 목록 밖의 오류로 보인다.",
+          "ms": 3011
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "조합의 경우의 수를 구하는 과정에서 계산 실수를 한 것으로 보입니다. 5명 중 3명을 뽑는 경우의 수는 5C3=10입니다.",
+          "ms": 4134
+        },
+        {
+          "kind": "slip",
+          "description": "5명 중 3명을 뽑는 경우의 수는 10인데, 계산하거나 세는 과정에서 한 경우를 빠뜨린 실수로 보입니다.",
+          "ms": 3245
+        },
+        {
+          "kind": "slip",
+          "description": "조합의 경우의 수를 세는 과정에서 한 가지 경우를 빠뜨렸거나, 5C3=10을 계산하는 중 산수를 9로 잘못 적은 실수로 보입니다.",
+          "ms": 4425
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-4",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "72",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.13
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "같은 역할의 도우미 2명을 뽑는 것은 순서를 고려하지 않는 경우인데, 학생은 9P2=72처럼 순열로 계산한 것으로 보입니다.",
+          "ms": 2762
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "같은 역할의 도우미 2명을 뽑는 것은 순서를 따지지 않는 경우인데, 학생은 72로 계산해 순열 9P2를 사용한 것으로 보입니다.",
+          "ms": 2807
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "같은 역할의 도우미 2명을 뽑는 것은 순서를 구분하지 않아야 하는데, 학생 답 72는 9P2로 순서를 고려해 계산한 값이다.",
+          "ms": 3212
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "같은 역할의 2명을 뽑는 경우에도 순서를 구분해 순열처럼 세어야 한다고 생각한 것으로 보입니다.",
+          "ms": 8061,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "같은 역할을 뽑는 경우에도 뽑는 순서를 다른 경우로 세어 순열처럼 계산해도 된다고 잘못 생각한 것으로 보입니다.",
+          "ms": 4425,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "같은 역할의 도우미 2명을 뽑는 경우를 순서 있는 경우로 생각하여 9명 중 2명을 고를 때 조합이 아니라 순열로 계산해 2배로 센 것으로 보입니다.",
+          "ms": 4086,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "35",
+      "library": {
+        "pred": "none",
+        "ms": 1.27
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "같은 역할의 2명을 뽑는 문제는 조합으로 9C2=36이어야 하는데 35는 목록의 대표적 오개념으로 설명되기보다 계산 실수에 가깝다.",
+          "ms": 3893
+        },
+        {
+          "pred": "none",
+          "reason": "같은 역할의 도우미 2명을 뽑는 것은 조합으로 계산해야 하는데 학생 답 35는 제시된 오개념들 중 어느 하나로 일관되게 설명되지 않아 단순 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 4434
+        },
+        {
+          "pred": "none",
+          "reason": "같은 역할의 도우미 2명을 뽑는 것은 조합 문제인데 학생 답 35는 대표적인 오개념 목록 어느 것과도 직접 대응되지 않아 단순 계산 실수 또는 목록 밖 오류로 보입니다.",
+          "ms": 3454
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "같은 역할의 도우미 2명을 뽑는 것은 순서 없이 9명 중 2명을 고르는 것이므로 9C2=9×8÷2=36인데, 조합 계산이나 세는 과정에서 1개를 빠뜨린 계산 실수를 했습니다.",
+          "ms": 4367
+        },
+        {
+          "kind": "slip",
+          "description": "조합의 계산에서 실수한 것으로 보입니다. 같은 역할의 도우미 2명을 뽑는 경우의 수는 9C2 = 9×8÷2 = 36인데, 계산 결과를 35로 잘못 썼습니다.",
+          "ms": 4284
+        },
+        {
+          "kind": "slip",
+          "description": "같은 역할을 하는 도우미 2명을 뽑는 것은 순서를 고려하지 않아 \\(\\binom{9}{2}=\\frac{9\\times 8}{2}=36\\)이어야 하는데, 계산하거나 더하는 과정에서 1이 빠져 35로 실수한 것으로 보입니다.",
+          "ms": 5798
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-4",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "35",
+      "library": {
+        "pred": "none",
+        "ms": 1.11
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "같은 역할의 도우미 2명을 뽑는 경우는 조합으로 9C2=36인데 35는 목록의 특정 오개념보다는 단순 계산 실수로 보입니다.",
+          "ms": 3043
+        },
+        {
+          "pred": "none",
+          "reason": "같은 역할의 2명을 뽑는 문제는 조합으로 9C2=36이어야 하는데 학생 답 35는 목록의 특정 오개념보다는 계산 실수로 보입니다.",
+          "ms": 3931
+        },
+        {
+          "pred": "none",
+          "reason": "같은 역할의 2명을 뽑는 문제는 조합으로 계산해야 하는데 학생 답 35는 제시된 오개념들로 설명되기보다 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 3659
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "같은 역할의 도우미 2명을 뽑는 것은 조합이므로 9C2=9×8÷2=36인데, 계산 과정에서 1 작게 계산해 35로 쓴 실수입니다.",
+          "ms": 5240
+        },
+        {
+          "kind": "slip",
+          "description": "조합 계산에서 \u00189C2=9×8÷2=36\u0019을 구하는 과정에서 산술 실수로 35라고 쓴 것으로 보입니다.",
+          "ms": 4223
+        },
+        {
+          "kind": "slip",
+          "description": "9명 중 2명을 뽑는 경우는 \\(\\binom{9}{2}=\\frac{9\\times 8}{2}=36\\)인데, 계산하거나 하나의 경우를 빠뜨려서 35로 쓴 실수로 보입니다.",
+          "ms": 4314
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-5",
+      "kind": "bug",
+      "truth": "comb_as_perm",
+      "answer": "120",
+      "library": {
+        "pred": "comb_as_perm",
+        "ms": 1.1
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "comb_as_perm",
+          "reason": "6권 중 3권을 '고르는' 문제에서 순서를 고려한 6P3=120으로 계산해, 조합 대신 순열을 사용했다.",
+          "ms": 2916
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "6권 중 3권을 '고르는' 문제에서 순서를 고려한 6P3=120으로 계산했으므로, 조합을 순열로 착각한 경우이다.",
+          "ms": 2792
+        },
+        {
+          "pred": "comb_as_perm",
+          "reason": "6권 중 3권을 '고르는' 문제에서 학생은 순서를 고려한 6P3=120으로 계산한 것으로 보인다.",
+          "ms": 2676
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "3권을 '고르는' 경우에도 순서를 다른 경우로 세어, 조합이 아니라 순열(6P3)로 계산한다고 믿고 있다.",
+          "ms": 7109,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "3권을 고르는 문제에서 순서가 중요하지 않은데도, 순서를 구별하는 경우의 수(순열)로 계산해도 된다고 생각한 것 같습니다.",
+          "ms": 3866,
+          "same": true
+        },
+        {
+          "kind": "misconception",
+          "description": "3권을 '고르는' 경우에도 순서를 따져 서로 다른 경우로 세어, 조합이 아니라 순열로 계산해도 된다고 믿고 있다.",
+          "ms": 3740,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "21",
+      "library": {
+        "pred": "none",
+        "ms": 1.13
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "6권 중 3권을 고르는 경우는 조합으로 20이 맞고, 21은 목록의 특정 오개념이라기보다 계산 실수나 다른 비목록 오류로 보입니다.",
+          "ms": 3037
+        },
+        {
+          "pred": "none",
+          "reason": "6권 중 3권을 고르는 것은 조합으로 계산해야 하지만 학생 답 21은 제시된 오개념들 중 특정한 유형으로 설명되기보다 단순 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 4181
+        },
+        {
+          "pred": "none",
+          "reason": "6권 중 3권을 고르는 경우는 조합으로 계산해야 하는데 학생 답 21은 주어진 오개념 목록의 특정 유형으로 설명되기보다 단순 계산 실수 또는 목록에 없는 오류로 보입니다.",
+          "ms": 3157
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "조합 \\(\\binom{6}{3}\\)을 구하는 과정에서 계산 실수를 한 것으로 보입니다. \\(\\binom{6}{3}=\\frac{6\\times5\\times4}{3\\times2\\times1}=20\\)인데, 이를 21로 잘못 계산했습니다.",
+          "ms": 5234
+        },
+        {
+          "kind": "slip",
+          "description": "조합의 계산 과정에서 값을 잘못 계산해 20이 아닌 21로 쓴 단순 계산 실수로 보입니다.",
+          "ms": 4973
+        },
+        {
+          "kind": "slip",
+          "description": "조합의 경우의 수를 계산하는 과정에서 산술 실수를 하여 6C3=20을 21로 잘못 구했다.",
+          "ms": 6058
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "comb_as_perm-5",
+      "kind": "slip",
+      "truth": "none",
+      "answer": "22",
+      "library": {
+        "pred": "none",
+        "ms": 1.12
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "6권 중 3권을 고르는 것은 조합 6C3=20인데 학생의 22는 순열로 계산한 값도 아니어서 목록의 특정 오개념보다 단순 계산 실수로 보인다.",
+          "ms": 2617
+        },
+        {
+          "pred": "none",
+          "reason": "이 문제는 조합 6C3=20을 구하는 상황인데 학생 답 22는 목록의 특정 오개념으로 설명되기보다 계산 실수나 목록에 없는 오개념으로 보입니다.",
+          "ms": 2732
+        },
+        {
+          "pred": "none",
+          "reason": "책 6권 중 3권을 고르는 경우는 조합 문제인데 학생의 답 22는 순열로 계산한 값도 아니어서, 제시된 오개념 목록보다는 단순 계산 실수나 목록 밖 오류로 보입니다.",
+          "ms": 2908
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "조합의 수를 구하는 과정에서 6C3 = 20을 계산해야 하는데, 계산 중 산술 실수로 22를 쓴 것으로 보인다.",
+          "ms": 4631
+        },
+        {
+          "kind": "slip",
+          "description": "6권 중 3권을 고르는 경우의 수는 순서를 따지지 않으므로 6C3=20이어야 합니다. 22는 조합 계산이나 경우를 세는 과정에서 일부 경우를 중복해서 세거나 빠뜨린 계산 실수로 보입니다.",
+          "ms": 3698
+        },
+        {
+          "kind": "slip",
+          "description": "6권 중 3권을 고르는 조합의 값을 계산하는 과정에서 수를 잘못 셌거나 계산 실수를 한 것으로 보입니다.",
+          "ms": 2959
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-0",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "25/36",
+      "library": {
+        "pred": "none",
+        "ms": 1.29
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생의 25/36은 '한 번도 6이 나오지 않을 확률'에 해당하므로, 제시된 오개념 목록의 '적어도 한 번' 확률을 단순히 더하는 유형과는 다릅니다.",
+          "ms": 4191
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 25/36는 '한 번도 6이 나오지 않을 확률'을 구한 값으로 보이며, 제시된 오개념 목록의 어느 항목과도 정확히 일치하지 않는다.",
+          "ms": 3850
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 25/36은 '한 번도 6이 나오지 않을 확률'을 구한 값으로, 여사건을 구한 뒤 1에서 빼는 마무리를 하지 않은 실수이며 제시된 오개념 목록과는 일치하지 않습니다.",
+          "ms": 4385
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 6’의 여사건인 ‘두 번 모두 6이 나오지 않음’의 확률 25/36까지만 구하고, 마지막에 1에서 빼서 11/36을 구하는 단계를 빠뜨렸다.",
+          "ms": 4110
+        },
+        {
+          "kind": "slip",
+          "description": "6이 한 번도 나오지 않을 확률 (5/6)^2 = 25/36을 구한 뒤, 여사건을 이용해 1에서 빼야 하는데 그 단계를 빠뜨렸다.",
+          "ms": 7537
+        },
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 6이 나오는 경우’의 여사건인 ‘두 번 모두 6이 나오지 않는 경우’의 확률 25/36을 구한 뒤, 이를 1에서 빼지 않고 그대로 답했다.",
+          "ms": 6102
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-1",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "81/100",
+      "library": {
+        "pred": "none",
+        "ms": 1.31
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생의 답 81/100은 두 번 모두 당첨되지 않을 확률을 구한 것으로 보이며, 제시된 오개념 목록의 어떤 유형과도 정확히 일치하지 않는다.",
+          "ms": 4343
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 81/100은 두 번 모두 꽝일 확률 (9/10)^2을 구한 것으로 보이며, 이는 목록의 특정 오개념이라기보다 '적어도 한 번'에 대해 여사건을 끝까지 처리하지 않은 실수이다.",
+          "ms": 4765
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 81/100은 두 번 모두 꽝일 확률 (9/10×9/10)로 보여, '적어도 한 번 당첨'을 위해 여사건을 구한 뒤 1에서 빼는 마지막 단계를 빠뜨린 것으로 보이며 이는 목록의 오개념에 해당하지 않는다.",
+          "ms": 4707
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "적어도 한 번 당첨될 확률을 구해야 하는데, 두 번 모두 꽝일 확률인 (9/10)^2=81/100까지만 구하고 1에서 빼지 않았다.",
+          "ms": 5140
+        },
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 당첨’의 여사건인 ‘두 번 모두 꽝’의 확률 81/100까지는 구했지만, 마지막에 1에서 빼서 19/100을 구하는 단계를 빠뜨렸다.",
+          "ms": 4715
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번 당첨’의 여사건을 이용해야 하는데, 이를 혼동하여 두 번 모두 꽝일 확률인 (9/10)²=81/100을 그대로 답으로 썼다.",
+          "ms": 5476,
+          "same": true
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-2",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "9/16",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "'적어도 한 번' 확률에서 여사건이나 경우분류를 올바르게 쓰지 않은 것은 보이지만, 학생 답 9/16은 목록의 특정 오개념으로 일관되게 설명되지는 않는다.",
+          "ms": 7311
+        },
+        {
+          "pred": "prob_at_least_one_add",
+          "reason": "‘적어도 한 번 명중’을 여사건으로 구하지 않고 시행별 명중 확률들을 더하는 방식으로 처리한 것으로 보인다.",
+          "ms": 7530
+        },
+        {
+          "pred": "none",
+          "reason": "‘적어도 한 번’ 확률을 여사건으로 구하지 않았을 가능성은 있지만, 9/16이라는 값은 제시된 오개념들로 정확히 설명되지 않는다.",
+          "ms": 9272
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "서로 다른 두 경우의 ‘적어도 한 번 명중’ 확률을 구할 때, 겹치는 경우(두 번 다 명중)를 빼야 하는데 오히려 더한다고 생각한 것으로 보인다.",
+          "ms": 5756,
+          "same": false
+        },
+        {
+          "kind": "slip",
+          "description": "'적어도 한 번 명중'은 '한 번도 명중하지 못함'의 여사건인데, 두 번 다 빗맞출 확률 9/16을 구한 뒤 1에서 빼지 않고 그대로 답한 실수입니다.",
+          "ms": 5376
+        },
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 명중’은 1-(3/4)^2로 구해야 하는데, (3/4)^2를 7/16이 아니라 9/16으로 계산해야 합니다. 제곱 계산에서 실수한 것으로 보입니다.",
+          "ms": 9094
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-3",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "125/216",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생의 답 125/216은 3번 모두 6이 나오지 않을 확률 (5/6)^3을 구한 것으로, '적어도 한 번 6'의 여사건까지만 구하고 1에서 빼지 않은 실수이므로 목록의 특정 오개념으로 보기는 어렵다.",
+          "ms": 4188
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 125/216은 3번 모두 6이 나오지 않을 확률 (5/6)^3 에 해당하여, '적어도 한 번'을 여사건으로 바꾼 뒤 1에서 빼는 마지막 단계를 놓친 것으로 보이며 목록의 특정 오개념과는 일치하지 않습니다.",
+          "ms": 4655
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 125/216은 3번 모두 6이 나오지 않을 확률 (5/6)^3 이므로, '적어도 한 번'을 여사건으로 바꾼 뒤 1에서 빼는 마지막 단계를 빠뜨린 것으로 보이며 목록의 특정 오개념과는 일치하지 않습니다.",
+          "ms": 4031
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 6이 나올 확률’을 구할 때 여사건인 ‘한 번도 6이 나오지 않을 확률’ 125/216까지만 구하고, 마지막에 1에서 빼지 않았다.",
+          "ms": 6584
+        },
+        {
+          "kind": "slip",
+          "description": "6이 한 번도 나오지 않을 확률 \u001d(5/6)^3=125/216\u001c까지만 구하고, 이를 1에서 빼서 \u001d적어도 한 번 6이 나올 확률\u001c로 바꾸는 마지막 단계를 빠뜨렸다.",
+          "ms": 6084
+        },
+        {
+          "kind": "slip",
+          "description": "‘적어도 한 번 6이 나올 확률’을 구할 때 여사건인 ‘3번 모두 6이 안 나올 확률’ \u0000(=125/216)\u0000까지만 구하고, 마지막에 1에서 빼지 않았다.",
+          "ms": 5947
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-4",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "64/125",
+      "library": {
+        "pred": "none",
+        "ms": 1.24
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생은 적어도 한 번 명중할 확률의 여사건인 '한 번도 명중하지 않을 확률' 64/125를 그대로 쓴 것으로 보이며, 이는 제시된 오개념 목록에 해당하지 않는다.",
+          "ms": 4489
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 64/125는 한 번도 명중하지 않을 확률 (4/5)^3에 해당하므로, 제시된 오개념 목록의 유형이라기보다 여사건 해석을 반대로 한 경우이다.",
+          "ms": 4496
+        },
+        {
+          "pred": "none",
+          "reason": "학생 답 64/125는 3번 모두 빗맞힐 확률 (4/5)^3으로 보여 '적어도 한 번'을 여사건으로 바꾸는 마지막 처리를 빠뜨린 것으로, 제시된 오개념 목록에 정확히 해당하지 않는다.",
+          "ms": 6273
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "slip",
+          "description": "적어도 한 번 명중할 확률은 1-(4/5)^3이어야 하는데, 중간에 구한 '3번 모두 빗맞힐 확률' 64/125를 그대로 답으로 썼다.",
+          "ms": 7063
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번 명중’의 확률을 구할 때 여사건인 ‘한 번도 명중하지 않을 확률’만 계산하고, 1에서 빼야 한다는 보완 관계를 적용하지 않는 것으로 보인다.",
+          "ms": 4802,
+          "same": true
+        },
+        {
+          "kind": "slip",
+          "description": "여사건인 '3번 모두 빗맞힐 확률'을 (4/5)^3=64/125로 구한 뒤, 적어도 한 번 명중할 확률을 구하려면 1에서 빼야 하는데 그 마지막 단계를 빠뜨렸다.",
+          "ms": 6568
+        }
+      ]
+    },
+    {
+      "unit": "probability",
+      "problem": "prob_at_least_one_add-5",
+      "kind": "unseen",
+      "truth": "none",
+      "unseen_diagnosis": "'적어도 한 번'의 확률을 구할 때 여사건의 확률을 1에서 빼지 않음 (모두 일어나지 않을 확률을 답으로 씀)",
+      "answer": "4/9",
+      "library": {
+        "pred": "none",
+        "ms": 1.22
+      },
+      "constraint": {
+        "severity": "FAR",
+        "error": "WRONG",
+        "diagnosis": null
+      },
+      "llm_catalog:gpt-5.4": [
+        {
+          "pred": "none",
+          "reason": "학생 답 4/9는 '적어도 한 번' 확률을 더해서 구한 전형적인 형태(2/3)와도 다르고, 제시된 다른 오개념들로도 직접 설명되지 않는다.",
+          "ms": 7441
+        },
+        {
+          "pred": "none",
+          "reason": "학생의 4/9는 '두 번 모두 1이나 2가 나오지 않을 확률'인 (2/3)^2를 구한 값으로 보여, 목록의 오개념보다는 여사건 계산을 끝까지 마무리하지 않은 단순 오류에 가깝다.",
+          "ms": 8666
+        },
+        {
+          "pred": "none",
+          "reason": "학생의 4/9는 '한 번도 1 또는 2가 나오지 않을 확률'에 해당하여, 제시된 오개념 목록의 어느 하나로 직접 설명되기보다 여사건을 잘못 해석한 경우로 보입니다.",
+          "ms": 5116
+        }
+      ],
+      "llm_free:gpt-5.4": [
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’을 ‘정확히 한 번만’으로 잘못 해석하여, 한 번은 1 또는 2가 나오고 다른 한 번은 나오지 않는 경우만 계산한 것으로 보입니다.",
+          "ms": 7471,
+          "same": false
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’의 확률을 구할 때 한 번이라도 포함되는 모든 경우를 세지 않고, 두 번 모두 1 또는 2가 나오는 경우의 확률만 구해도 된다고 생각한 것으로 보인다.",
+          "ms": 5124,
+          "same": false
+        },
+        {
+          "kind": "misconception",
+          "description": "‘적어도 한 번’을 ‘정확히 한 번’으로 잘못 이해하여, 1 또는 2가 한 번만 나오는 경우의 확률 4/9를 구한 것으로 보인다.",
+          "ms": 5249,
+          "same": false
+        }
+      ]
+    }
+  ]
+}

@@ -108,5 +108,50 @@
     "name": "이차방정식의 활용",
     "grade": "중3",
     "prerequisites": ["quad_by_factoring"]
+  },
+  "derivative_power": {
+    "name": "다항함수의 도함수 (x^n의 미분)",
+    "grade": "고2",
+    "prerequisites": []
+  },
+  "derivative_product": {
+    "name": "곱의 미분법",
+    "grade": "고2",
+    "prerequisites": ["derivative_power"]
+  },
+  "tangent_slope": {
+    "name": "미분계수와 접선의 기울기",
+    "grade": "고2",
+    "prerequisites": ["derivative_power"]
+  },
+  "indefinite_integral": {
+    "name": "다항함수의 부정적분",
+    "grade": "고2",
+    "prerequisites": ["derivative_power"]
+  },
+  "derivative_chain": {
+    "name": "합성함수의 미분법",
+    "grade": "고3",
+    "prerequisites": ["derivative_power"]
+  },
+  "combination": {
+    "name": "조합 (순서를 생각하지 않는 경우의 수)",
+    "grade": "고2",
+    "prerequisites": []
+  },
+  "prob_addition": {
+    "name": "확률의 덧셈정리",
+    "grade": "고2",
+    "prerequisites": []
+  },
+  "prob_complement": {
+    "name": "여사건의 확률",
+    "grade": "고2",
+    "prerequisites": ["prob_addition"]
+  },
+  "prob_multiplication": {
+    "name": "독립 사건의 확률의 곱셈정리",
+    "grade": "고2",
+    "prerequisites": []
   }
 }

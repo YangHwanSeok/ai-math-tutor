@@ -1,0 +1,3320 @@
+{
+  "meta": {
+    "tutor_model": "gpt-5.4",
+    "student_model": "gpt-5.4",
+    "student_effort": "none",
+    "reps": 2,
+    "max_turns": 5,
+    "first_turn": "work",
+    "conditions": [
+      "bridge"
+    ],
+    "reused_pre_from": "experiments/results/exp4_tutoring_work_20261030-1307.json",
+    "misconceptions": [
+      "factor_sign",
+      "root_sign",
+      "divide_by_x",
+      "positive_sqrt_only"
+    ],
+    "pre_trials": 48,
+    "pre_bug_rate": 0.9792,
+    "pre_errors": 0,
+    "usage": {
+      "student": {
+        "calls": 129,
+        "input_tokens": 89782,
+        "output_tokens": 7863
+      },
+      "tutor": {
+        "calls": 204,
+        "input_tokens": 101852,
+        "output_tokens": 22001
+      }
+    },
+    "elapsed_sec": 193.3,
+    "retried_errors": 14
+  },
+  "summary": {
+    "bridge": {
+      "dialogs": 47,
+      "errors": 0,
+      "post_correct_rate": 0.8617,
+      "post_correct_ci95": [
+        0.766,
+        0.9468
+      ],
+      "post_all_correct_rate": 0.8085,
+      "post_bug_rate": 0.1383,
+      "post_other_rate": 0.0,
+      "p1_solved_rate": 0.9787,
+      "avg_turns_to_solve": 1.2826,
+      "tutor_leak_rate": 0.0,
+      "post_correct_by_misconception": {
+        "factor_sign": 0.5417,
+        "root_sign": 1.0,
+        "divide_by_x": 1.0,
+        "positive_sqrt_only": 0.9167
+      }
+    }
+  },
+  "pre": [
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 0,
+      "p1": "factor_sign-0",
+      "pre_reply": {
+        "message": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 (x-3)(x-4)로 쓰면 돼요.",
+        "answer": "(x-3)(x-4)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 0,
+      "p1": "factor_sign-0",
+      "pre_reply": {
+        "message": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 (x-3)(x-4)로 쓰면 돼요.",
+        "answer": "(x-3)(x-4)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 1,
+      "p1": "factor_sign-1",
+      "pre_reply": {
+        "message": "더해서 -6, 곱해서 8이 되는 두 수를 찾으면 -2와 -4예요. 그래서 (x-(-2))(x-(-4))로 써요.",
+        "answer": "(x-(-2))(x-(-4))"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 1,
+      "p1": "factor_sign-1",
+      "pre_reply": {
+        "message": "더해서 -6, 곱해서 8이 되는 두 수를 찾으면 -2와 -4예요. 그래서 (x-(-2))(x-(-4))로 쓰면 돼요.",
+        "answer": "(x-(-2))(x-(-4))"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 2,
+      "p1": "factor_sign-2",
+      "pre_reply": {
+        "message": "더해서 2가 되고 곱해서 -15가 되는 두 수를 찾으면 5랑 -3이에요. 그래서 (x-5)(x--3)로 쓰면 돼요.",
+        "answer": "(x-5)(x--3)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 2,
+      "p1": "factor_sign-2",
+      "pre_reply": {
+        "message": "더해서 2가 되고 곱해서 -15가 되는 두 수를 찾으면 5랑 -3이에요. 그러면 (x-5)(x+3)으로 쓰면 돼요.",
+        "answer": "(x-5)(x+3)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 3,
+      "p1": "factor_sign-3",
+      "pre_reply": {
+        "message": "더해서 -1, 곱해서 -12가 되는 수를 찾으면 -4랑 3이에요. 그래서 (x--4)(x-3)로 쓰면 돼요.",
+        "answer": "(x--4)(x-3)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 3,
+      "p1": "factor_sign-3",
+      "pre_reply": {
+        "message": "더해서 -1, 곱해서 -12가 되는 두 수를 찾으면 -4와 3이에요. 그래서 (x-(-4))(x-3)으로 써요.",
+        "answer": "(x+4)(x-3)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 4,
+      "p1": "factor_sign-4",
+      "pre_reply": {
+        "message": "더해서 9, 곱해서 20이 되는 수는 4와 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.",
+        "answer": "(x-4)(x-5)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 4,
+      "p1": "factor_sign-4",
+      "pre_reply": {
+        "message": "더해서 9, 곱해서 20이 되는 수는 4랑 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.",
+        "answer": "(x-4)(x-5)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "factor_sign",
+      "index": 5,
+      "p1": "factor_sign-5",
+      "pre_reply": {
+        "message": "더해서 -8, 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 이렇게 쓰면 돼요.",
+        "answer": "(x+3)(x+5)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "factor_sign",
+      "index": 5,
+      "p1": "factor_sign-5",
+      "pre_reply": {
+        "message": "더해서 -8, 곱해서 15가 되는 두 수를 찾으면 -3하고 -5예요. 그래서 (x-(-3))(x-(-5))로 써요.",
+        "answer": "(x-(-3))(x-(-5))"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 0,
+      "p1": "root_sign-0",
+      "pre_reply": {
+        "message": "x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이에요. 그러면 해는 1, 2예요.",
+        "answer": "1, 2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 0,
+      "p1": "root_sign-0",
+      "pre_reply": {
+        "message": "x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이에요. 그러면 해는 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 1, 2예요.",
+        "answer": "1, 2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 1,
+      "p1": "root_sign-1",
+      "pre_reply": {
+        "message": "x^2-7x+10은 (x-5)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 -5, -2예요.",
+        "answer": "-5, -2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 1,
+      "p1": "root_sign-1",
+      "pre_reply": {
+        "message": "x^2-7x+10은 (x-5)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 쓰면 해는 -5, -2예요.",
+        "answer": "-5, -2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 2,
+      "p1": "root_sign-2",
+      "pre_reply": {
+        "message": "곱해서 -6이 되고 더해서 1이 되는 수는 3이랑 -2라서 (x+3)(x-2)=0이에요. 그러면 해는 괄호 안에서 x 뒤에 있는 수를 그대로 써서 3, -2예요.",
+        "answer": "3, -2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 2,
+      "p1": "root_sign-2",
+      "pre_reply": {
+        "message": "곱해서 -6이 되고 더해서 1이 되는 수는 3이랑 -2라서 (x+3)(x-2)=0이에요. 제가 아는 방법대로 하면 해는 괄호 안의 수를 그대로 써서 3, -2예요.",
+        "answer": "3, -2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 3,
+      "p1": "root_sign-3",
+      "pre_reply": {
+        "message": "곱해서 -8이 되고 더해서 -2가 되는 수는 -4, 2라서 (x-4)(x+2)=0이에요. 그러면 해는 괄호 안 숫자를 그대로 써서 4, 2예요.",
+        "answer": "4, 2"
+      },
+      "pre_label": "other"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 3,
+      "p1": "root_sign-3",
+      "pre_reply": {
+        "message": "곱해서 -8이고 더해서 -2가 되는 수는 -4, 2라서 (x-4)(x+2)=0이에요. 그러면 해는 괄호 안의 수를 그대로 써서 4, -2가 아니라 -4, 2예요.",
+        "answer": "-4, 2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 4,
+      "p1": "root_sign-4",
+      "pre_reply": {
+        "message": "15가 되게 곱하고 8이 되게 더하는 수는 3이랑 5라서 (x+3)(x+5)=0이에요. 그러면 해는 3, 5예요.",
+        "answer": "3, 5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 4,
+      "p1": "root_sign-4",
+      "pre_reply": {
+        "message": "x^2+8x+15=0은 (x+3)(x+5)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 3, 5예요.",
+        "answer": "3, 5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "root_sign",
+      "index": 5,
+      "p1": "root_sign-5",
+      "pre_reply": {
+        "message": "14가 되고 9가 되게 하려면 7이랑 2라서 (x-7)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 -7, -2예요.",
+        "answer": "-7, -2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "root_sign",
+      "index": 5,
+      "p1": "root_sign-5",
+      "pre_reply": {
+        "message": "곱해서 14가 되고 더해서 -9가 되는 수는 -2, -7이니까 (x-2)(x-7)=0이에요. 제가 아는 방법대로 하면 해는 -2, -7이에요.",
+        "answer": "-2, -7"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 0,
+      "p1": "divide_by_x-0",
+      "pre_reply": {
+        "message": "x^2=7x에서 양변을 x로 나누면 x=7이야. 그래서 해는 7이야.",
+        "answer": "7"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 0,
+      "p1": "divide_by_x-0",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x=7이 돼요. 그래서 해는 7이에요.",
+        "answer": "7"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 1,
+      "p1": "divide_by_x-1",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x-6=0이 돼요. 그래서 x=6이에요.",
+        "answer": "6"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 1,
+      "p1": "divide_by_x-1",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x-6=0이 돼요. 그래서 x=6이에요.",
+        "answer": "6"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 2,
+      "p1": "divide_by_x-2",
+      "pre_reply": {
+        "message": "2x^2=10x에서 양변을 x로 나누면 2x=10이니까 x=5예요. 그래서 해는 5예요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 2,
+      "p1": "divide_by_x-2",
+      "pre_reply": {
+        "message": "2x^2=10x에서 양변을 x로 나누면 2x=10이 돼요. 그래서 x=5예요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 3,
+      "p1": "divide_by_x-3",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.",
+        "answer": "-5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 3,
+      "p1": "divide_by_x-3",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.",
+        "answer": "-5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 4,
+      "p1": "divide_by_x-4",
+      "pre_reply": {
+        "message": "4x^2=12x에서 양변을 x로 나누면 4x=12가 돼. 그래서 x=3이야.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 4,
+      "p1": "divide_by_x-4",
+      "pre_reply": {
+        "message": "4x^2=12x에서 양변을 x로 나누면 4x=12가 돼. 그래서 x=3이야.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "divide_by_x",
+      "index": 5,
+      "p1": "divide_by_x-5",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3이라고 생각해요.",
+        "answer": "-3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "divide_by_x",
+      "index": 5,
+      "p1": "divide_by_x-5",
+      "pre_reply": {
+        "message": "x가 들어 있으니까 양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3이라고 보면 돼요.",
+        "answer": "-3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 0,
+      "p1": "positive_sqrt_only-0",
+      "pre_reply": {
+        "message": "x^2=16이면 제곱해서 16이 되는 수는 4라고 생각하면 돼. 그래서 x=4야.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 0,
+      "p1": "positive_sqrt_only-0",
+      "pre_reply": {
+        "message": "x^2=16이면 제곱해서 16이 되는 수는 4라고 보면 돼요. 그래서 x=4예요.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 1,
+      "p1": "positive_sqrt_only-1",
+      "pre_reply": {
+        "message": "x^2-49=0 이니까 x^2=49예요. 그러면 x=7이에요.",
+        "answer": "7"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 1,
+      "p1": "positive_sqrt_only-1",
+      "pre_reply": {
+        "message": "x^2-49=0이니까 x^2=49예요. 그러면 x=7이에요.",
+        "answer": "7"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 2,
+      "p1": "positive_sqrt_only-2",
+      "pre_reply": {
+        "message": "(x-2)^2=9 이니까 x-2=3이에요. 그래서 x=5예요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 2,
+      "p1": "positive_sqrt_only-2",
+      "pre_reply": {
+        "message": "(x-2)^2=9 이니까 x-2=3으로 보면 돼요. 그래서 x=5예요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 3,
+      "p1": "positive_sqrt_only-3",
+      "pre_reply": {
+        "message": "(x+1)^2=4니까 x+1=2예요. 그래서 x=1이에요.",
+        "answer": "1"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 3,
+      "p1": "positive_sqrt_only-3",
+      "pre_reply": {
+        "message": "(x+1)^2=4 이니까 x+1=2예요. 그래서 x=1이에요.",
+        "answer": "1"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 4,
+      "p1": "positive_sqrt_only-4",
+      "pre_reply": {
+        "message": "2x^2=18에서 먼저 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3이니까 x=3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 4,
+      "p1": "positive_sqrt_only-4",
+      "pre_reply": {
+        "message": "2x^2=18에서 양변을 2로 나누면 x^2=9예요. 그러면 x=3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "positive_sqrt_only",
+      "index": 5,
+      "p1": "positive_sqrt_only-5",
+      "pre_reply": {
+        "message": "(x-3)^2=25이니까 x-3=5예요. 그래서 x=8이에요.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "positive_sqrt_only",
+      "index": 5,
+      "p1": "positive_sqrt_only-5",
+      "pre_reply": {
+        "message": "(x-3)^2=25이니까 x-3=5예요. 그래서 x=8이에요.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    }
+  ],
+  "dialogs": [
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 (x-3)(x-4)로 쓰면 돼요.\n답: (x-3)(x-4)",
+          "answer": "(x-3)(x-4)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "3과 4를 찾은 건 아주 잘했어. 그런데 x^2+7x+12에서는 가운데항 +7x가 나와야 하니까, 괄호 안의 부호를 둘 다 어떻게 바꿔야 할지 다시 생각해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 더해서 7, 곱해서 12가 되는 수 3과 4를 correctly 찾았지만, 부호를 반대로 써서 인수분해 결과만 잘못 적었습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 전개했을 때 가운데항이 +7x가 되려면 부호를 바꿔야 해요. 3이랑 4를 그대로 쓰고 둘 다 플러스로 하면 돼요.\n답: (x+3)(x+4)",
+          "answer": "(x+3)(x+4)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! (x+3)(x+4)를 전개하면 x^2+7x+12가 되니까 인수분해를 잘한 거야. 이런 식으로 합과 곱을 함께 확인하면 실수를 줄일 수 있어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-1",
+          "answer": "(x-2)(x-4)",
+          "message": "더해서 -6, 곱해서 8이 되는 수는 -2랑 -4예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-2",
+          "answer": "(x-5)(x+3)",
+          "message": "더해서 2, 곱해서 -15가 되는 수는 5랑 -3이에요. 그래서 인수분해하면 이렇게 써요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 (x-3)(x-4)로 쓰면 돼요.\n답: (x-3)(x-4)",
+          "answer": "(x-3)(x-4)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "3과 4를 찾은 건 아주 잘했어. 그런데 부호를 한 번만 다시 확인해 볼까? (x-3)(x-4)를 전개하면 가운데항이 -7x가 되는지 +7x가 되는지 먼저 계산해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 더해서 7, 곱해서 12가 되는 수 3과 4를 correctly 찾았지만, 부호를 잘못 적용해 (x+3)(x+4)가 아니라 (x-3)(x-4)로 썼다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 전개해서 확인하면 되네요. (x-3)(x-4)=x^2-7x+12라서 가운데항이 -7x예요, 원래 식이랑 안 맞아요.\n답: (x+3)(x+4)",
+          "answer": "(x+3)(x+4)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. (x+3)(x+4)를 전개하면 x^2+7x+12가 되니까 원래 식과 딱 맞아. 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-1",
+          "answer": "(x+2)(x+4)",
+          "message": "더해서 -6, 곱해서 8이 되는 수는 -2랑 -4예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-2",
+          "answer": "(x-5)(x+3)",
+          "message": "더해서 2, 곱해서 -15가 되는 수는 5랑 -3이에요. 그래서 (x-5)(x+3)으로 쓰면 돼요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-1",
+      "rep": 0,
+      "solved_at": 5,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -6, 곱해서 8이 되는 두 수를 찾으면 -2와 -4예요. 그래서 (x-(-2))(x-(-4))로 써요.\n답: (x-(-2))(x-(-4))",
+          "answer": "(x-(-2))(x-(-4))",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "두 수를 찾은 건 정말 잘했어! 딱 한 단계만 점검해 보자: (x-a)(x-b)를 전개하면 가운데항이 -(a+b)x가 돼, 여기서 a=-2, b=-4를 넣으면 괄호 안 부호가 어떻게 보여야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "두 수를 찾는 과정은 맞았지만 인수의 부호를 반대로 써서 개념 적용에서 한 단계 실수한 것으로 보인다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, a랑 b가 음수면 x에서 빼는 게 아니라 플러스로 보여야 하네요. 그러면 괄호는 x+2, x+4가 돼요.\n답: (x+2)(x+4)",
+          "answer": "(x+2)(x+4)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x+2)(x+4)를 전개하면 x^2+6x+8이 아니라 x^2-6x+8이 되는지도 스스로 한번 확인해 보면 더 확실해져. 문제 해결했어!",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 -2와 -4를 올바르게 찾고 부호도 바로잡아 최종 인수분해를 정확히 썼다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 확인해 볼게요.\n답: (x+2)(x+4)",
+          "answer": "(x+2)(x+4)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 그 확인이 핵심이야. (x+2)(x+4)를 전개했을 때 가운데항이 +6x인지 -6x인지 한 번만 써 볼래? 원래 식의 가운데항과 부호가 같은지 비교해 보면 바로 보여.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 부호를 고치는 아이디어는 맞았지만 (x+2)(x+4)를 전개했을 때 가운데항이 +6x가 되어 원래 식과 맞지 않는다는 핵심 점검을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "전개하면 가운데항은 +6x가 나와요. 원래 식은 -6x라서 부호가 달라서, 제가 쓴 건 안 맞네요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 아주 잘 찾았어! 이제는 합이 -6이고 곱이 8이 되는 두 수를 다시 떠올려 보면 돼: 둘 다 어떤 부호여야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 스스로 전개해 보며 자신의 답이 원래 식의 가운데항 부호와 맞지 않음을 정확히 찾아냈다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "곱이 8로 양수이고 합이 -6이면 두 수는 둘 다 음수여야 해요. -2랑 -4를 써서 인수분해하면 돼요.\n답: (x+2)(x+4)",
+          "answer": "(x+2)(x+4)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 찾은 두 수가 -2, -4라면 괄호는 “x + 그 수”로 넣는다고 생각해 보자: x+(-2), x+(-4)는 각각 어떻게 더 간단히 쓸 수 있을까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 합과 곱이 되는 수를 찾는 단계는 맞았지만, 그 수를 괄호 안 부호로 옮길 때 반대로 적용해야 한다는 점을 아직 헷갈리고 있다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇네요. x+(-2)는 x-2이고, x+(-4)는 x-4라서 이렇게 써야 해요.\n답: (x-2)(x-4)",
+          "answer": "(x-2)(x-4)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정답이 정확해! (x-2)(x-4)로 쓰면 돼. 스스로 부호까지 바로잡은 과정이 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-2",
+          "answer": "(x+5)(x-3)",
+          "message": "더해서 2, 곱해서 -15가 되는 두 수는 5랑 -3이에요. 그러면 x+5, x+(-3)이라서 정리하면 이렇게 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-3",
+          "answer": "(x+3)(x-4)",
+          "message": "더해서 -1, 곱해서 -12가 되는 두 수는 3이랑 -4예요. 그래서 x+3, x+(-4)로 넣으면 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -6, 곱해서 8이 되는 두 수를 찾으면 -2와 -4예요. 그래서 (x-(-2))(x-(-4))로 쓰면 돼요.\n답: (x-(-2))(x-(-4))",
+          "answer": "(x-(-2))(x-(-4))",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야. -2와 -4를 찾은 건 맞았어. 다만 인수로 옮길 때는 (x+a)(x+b)를 전개하면 가운데항이 a+b가 되니까, 네가 넣은 값으로 가운데항이 정말 -6이 되는지 한 번 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "합이 -6이고 곱이 8이 되는 수를 -2와 -4로 correctly 찾았지만, 이를 인수로 옮길 때 부호를 반대로 써야 하는 규칙을 잘못 적용했습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 제가 쓴 걸 전개해 보면 x^2+6x+8이 되네요. 가운데항이 -6이 되려면 (x+(-2))(x+(-4)), 즉 (x-2)(x-4)로 써야 맞아요.\n답: (x-2)(x-4)",
+          "answer": "(x-2)(x-4)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해. (x-2)(x-4)를 전개하면 x^2-6x+8이 되니까 인수분해를 제대로 한 거야. 부호를 스스로 점검해서 바로잡은 게 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-2",
+          "answer": "(x+5)(x-3)",
+          "message": "더해서 2, 곱해서 -15가 되는 두 수는 5랑 -3이에요. 그러면 인수분해는 (x+5)(x-3)예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-3",
+          "answer": "(x-4)(x+3)",
+          "message": "더해서 -1, 곱해서 -12가 되는 두 수를 찾으면 -4랑 3이에요. 그래서 인수분해하면 (x-4)(x+3)예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-2",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 2가 되고 곱해서 -15가 되는 두 수를 찾으면 5랑 -3이에요. 그래서 (x-5)(x--3)로 쓰면 돼요.\n답: (x-5)(x--3)",
+          "answer": "(x-5)(x--3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 두 수를 5와 -3으로 찾은 건 아주 잘했어. 이제 괄호 하나만 천천히 보자: x - (-3)은 부호를 정리하면 x + 3이 되지 않을까?\n\n그러면 두 괄호를 다시 쓰면 (x-5)(x+3)처럼 될 텐데, 네가 한 번 이걸 전개해서 원래 식이 나오는지 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 합이 2이고 곱이 -15인 수를 5와 -3으로 올바르게 찾았으므로 인수분해의 아이디어는 맞지만, 부호를 괄호로 옮길 때 (x+3) 대신 (x--3)라고 써서 표현을 제대로 정리하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, x-(-3)은 x+3이에요. 전개하면 x^2+3x-5x-15=x^2-2x-15라서 원래 식이랑 달라요.\n답: (x-5)(x+3)",
+          "answer": "(x-5)(x+3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "전개로 확인한 건 아주 좋아. 그럼 이번에는 괄호의 부호를 바꿔서, 가운데항이 +2x가 되려면 (x+ )(x- ) 꼴과 (x- )(x+ ) 꼴 중 어느 쪽을 먼저 시험해 보면 좋을까?",
+          "leak": false,
+          "decision": {
+            "reason": "두 수를 찾는 방법과 전개로 검산하는 생각은 맞았지만, 합이 2가 되어야 한다는 조건과 현재 괄호의 부호가 맞지 않는다는 점을 아직 완전히 연결하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Ask a question",
+            "intention": "Help the student understand the lesson topic or solution strategy"
+          }
+        },
+        {
+          "role": "student",
+          "text": "곱이 -15니까 부호는 하나는 +, 하나는 -로 해야 하고, 가운데항이 +2x가 되려면 큰 수에 +를 붙여서 먼저 해보면 될 것 같아요. 그래서 (x+5)(x-3)을 시험해 볼게요.\n답: (x+5)(x-3)",
+          "answer": "(x+5)(x-3)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 제대로 찾았어. (x+5)(x-3)을 전개하면 x^2+2x-15가 되니까 정답이야. 부호를 바꿔 가운데항까지 확인한 과정이 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-3",
+          "answer": "(x+4)(x-3)",
+          "message": "더해서 -1이 되고 곱해서 -12가 되는 두 수는 -4랑 3이에요. 그래서 (x--4)(x-3)인데, 부호를 정리하면 (x+4)(x-3)이에요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-4",
+          "answer": "(x-4)(x-5)",
+          "message": "더해서 9가 되고 곱해서 20이 되는 두 수는 4랑 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 2가 되고 곱해서 -15가 되는 두 수를 찾으면 5랑 -3이에요. 그러면 (x-5)(x+3)으로 쓰면 돼요.\n답: (x-5)(x+3)",
+          "answer": "(x-5)(x+3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야, 5와 -3을 찾은 건 맞았어. 그런데 네가 쓴 (x-5)(x+3)을 한번 전개하면 가운데항이 정말 +2x가 나오는지 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "더해서 2, 곱해서 -15가 되는 수 5와 -3은 correctly 찾았지만, 이를 인수로 옮길 때 부호를 반대로 써서 인수분해식이 달라졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "전개해보면 x^2+3x-5x-15라서 x^2-2x-15가 돼요. 가운데항이 +2x가 아니니까 부호를 바꿔야 할 것 같아요.\n답: (x+5)(x-3)",
+          "answer": "(x+5)(x-3)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x+5)(x-3)을 전개하면 x^2-3x+5x-15 = x^2+2x-15가 되니까 문제의 식과 딱 같아. 스스로 부호를 점검해서 고친 게 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-3",
+          "answer": "(x+4)(x-3)",
+          "message": "더해서 -1이 되고 곱해서 -12가 되는 두 수는 -4랑 3이에요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-4",
+          "answer": "(x-4)(x-5)",
+          "message": "더해서 9가 되고 곱해서 20이 되는 두 수는 4랑 5예요. 그래서 이렇게 써요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-3",
+      "rep": 0,
+      "solved_at": null,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -1, 곱해서 -12가 되는 수를 찾으면 -4랑 3이에요. 그래서 (x--4)(x-3)로 쓰면 돼요.\n답: (x--4)(x-3)",
+          "answer": "(x--4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "찾은 두 수는 맞았어, 아주 잘했어! 다만 (x--4)에서 마이너스가 두 번 이어졌을 때 부호를 어떻게 정리하는지만 다시 보면 돼. '-'와 '-'가 만나면 어떤 부호로 바뀌는지 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 더해서 -1, 곱해서 -12가 되는 수를 올바르게 찾았지만, 인수의 부호를 정리하는 표기에서 (x--4)라고 써서 정확한 식을 완성하지 못했다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 마이너스 두 개가 만나면 플러스가 돼요. 그래서 (x--4)는 (x+4)로 고치면 돼요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 그래서 인수분해는 (x+4)(x-3)야. 부호만 스스로 바로잡은 게 아주 좋았어.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 부호 정리를 스스로 바로잡아 올바른 인수분해 (x+4)(x-3)를 완성했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 이제 알겠어요. 마이너스가 두 번 나오면 플러스로 바꾸면 돼요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "응, 잘 이해했어! 이번 문제에서는 그래서 (x+4)(x-3)로 쓰면 맞아. 다음에도 숫자는 맞아도 부호를 한 번만 더 확인하면 실수 없이 풀 수 있어.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 부호 규칙을 스스로 바로잡아 올바른 인수분해 (x+4)(x-3)를 제시했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 다음에는 부호를 더 조심해서 볼게요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 이제 완전히 맞았어! 답은 (x+4)(x-3)이고, 이번처럼 마지막에 부호만 확인하면 훨씬 더 정확해져.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 정답인 (x+4)(x-3)을 바르게 쓰고 부호 실수도 스스로 이해했다고 말했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 이제는 이렇게 쓰면 되는 거 알아요. 마지막 부호 확인이 중요하네요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확하게 잘 썼어! 답은 (x+4)(x-3)이고, 네가 말한 것처럼 마지막 부호 확인이 정말 중요해. 다음 문제에서도 이 습관 그대로 해보자.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 올바른 인수분해 결과를 정확한 형식으로 말했고, 부호 확인의 중요성도 이해했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 다음에도 숫자 찾고 부호까지 꼭 확인할게요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-4",
+          "answer": "(x-4)(x-5)",
+          "message": "더해서 9, 곱해서 20이 되는 수는 4랑 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-5",
+          "answer": "(x+3)(x+5)",
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3이랑 -5예요. 그래서 (x--3)(x--5)인데 부호를 정리하면 돼요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -1, 곱해서 -12가 되는 두 수를 찾으면 -4와 3이에요. 그래서 (x-(-4))(x-3)으로 써요.\n답: (x+4)(x-3)",
+          "answer": "(x+4)(x-3)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야, -4와 3을 찾은 건 맞았어. 그런데 인수분해할 때는 (x+a)(x+b)를 전개하면 가운데항이 a+b가 된다는 걸 이용해 봐야 해. 그러면 a=-4, b=3일 때 (x-(-4))(x-3) 대신 어떤 두 괄호를 써야 가운데항이 -x가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 합이 -1이고 곱이 -12인 두 수를 올바르게 찾았지만, 이를 인수분해 식으로 옮길 때 부호를 반대로 써서 잘못 표현했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, (x+a)(x+b)를 전개하면 x^2+(a+b)x+ab가 되니까 a+b가 -1이어야 해요. -4랑 3을 그대로 넣으면 (x-4)(x+3)이어야 가운데항이 -x가 돼요.\n답: (x-4)(x+3)",
+          "answer": "(x-4)(x+3)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. (x-4)(x+3)을 전개하면 x^2-x-12가 되니까 인수분해가 잘 되었어. 스스로 부호를 바로잡은 점이 아주 좋아!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-4",
+          "answer": "(x+4)(x+5)",
+          "message": "더해서 9, 곱해서 20이 되는 두 수는 4와 5예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-5",
+          "answer": "(x-3)(x-5)",
+          "message": "더해서 -8, 곱해서 15가 되는 두 수는 -3이랑 -5예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 9, 곱해서 20이 되는 수는 4와 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.\n답: (x-4)(x-5)",
+          "answer": "(x-4)(x-5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "4와 5를 찾은 건 아주 잘했어! 그런데 (x-4)(x-5)를 전개하면 가운데항 부호가 어떻게 나오는지 한 번 확인해 볼래? x^2 뒤에 +9x가 나와야 하니까, 괄호 안의 4와 5는 어떤 부호여야 할지 생각해 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "더해서 9, 곱해서 20이 되는 수로 4와 5를 correctly 찾았지만, 양수여야 하는 두 수를 괄호에서 음수로 써서 부호 적용을 잘못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 전개하면 x^2-9x+20이 되네요. 가운데항이 +9x가 되려면 둘 다 플러스여야 해요.\n답: (x+4)(x+5)",
+          "answer": "(x+4)(x+5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x+4)(x+5)를 전개하면 x^2+9x+20이 되니까 잘 고쳤어. 이런 식은 앞으로도 “더해서 가운데수, 곱해서 마지막수”를 먼저 보면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-5",
+          "answer": "(x-3)(x-5)",
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3이랑 -5예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-0",
+          "answer": "(x+3)(x+4)",
+          "message": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 이렇게 쓰면 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 9, 곱해서 20이 되는 수는 4랑 5예요. 그래서 (x-4)(x-5)로 쓰면 돼요.\n답: (x-4)(x-5)",
+          "answer": "(x-4)(x-5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야, 4와 5를 찾은 건 맞았어. 그런데 (x-4)(x-5)를 전개하면 가운데항의 부호가 어떻게 나오는지 한 번 확인해 볼래? x^2 다음 항이 -9x인지 +9x인지 계산해 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 더해서 9, 곱해서 20이 되는 수를 4와 5로 correctly 찾았지만, 부호를 반대로 써서 전개하면 x^2-9x+20이 됩니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 전개해서 확인해 보니까 (x-4)(x-5)=x^2-9x+20이네요. 그러면 +9x가 나오려면 부호를 바꿔야 해서 (x+4)(x+5)예요.\n답: (x+4)(x+5)",
+          "answer": "(x+4)(x+5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. (x+4)(x+5)를 전개하면 x^2+9x+20이 되니까 인수분해를 제대로 한 거야. 이렇게 전개로 확인하는 습관이 아주 좋아!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-5",
+          "answer": "(x-3)(x-5)",
+          "message": "더해서 -8, 곱해서 15가 되는 수는 -3이랑 -5예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "factor_sign-0",
+          "answer": "(x+3)(x+4)",
+          "message": "더해서 7, 곱해서 12가 되는 수는 3이랑 4예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-5",
+      "rep": 0,
+      "solved_at": 3,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -8, 곱해서 15가 되는 두 수는 -3과 -5예요. 그래서 이렇게 쓰면 돼요.\n답: (x+3)(x+5)",
+          "answer": "(x+3)(x+5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 찾은 두 수가 -3, -5라면 괄호 안에는 그 수가 그대로 들어가야 하는데, 지금은 부호가 바뀌었어. (x+3)(x+5)를 전개하면 가운데항이 정말 -8x가 되는지 한 번 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "더해서 -8, 곱해서 15가 되는 수를 -3과 -5로 correctly 찾았지만, 이를 인수로 옮길 때 부호를 반대로 써서 최종식에 사소한 부호 실수가 있었다.",
+            "error_type": "careless",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 전개해서 확인해보면 (x+3)(x+5)=x^2+8x+15라서 가운데항이 +8x가 돼요. 찾은 수가 -3, -5니까 괄호에는 그대로 넣어서 써야 해요.\n답: (x-(-3))(x-(-5))",
+          "answer": "(x-(-3))(x-(-5))",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 부호를 의식한 건 아주 잘했어! 그런데 (x-(-3))처럼 `-(- )`가 있으면 한 번 더 간단하게 정리할 수 있어. `-(-3)`이 얼마가 되는지만 바꿔서, 괄호를 가장 간단한 형태로 다시 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 찾은 두 수 -3, -5는 맞지만 인수분해의 괄호 표현에서 부호를 어색하게 써서 아직 가장 간단한 형태로 정리하지 못했다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, -(-3)은 3이고 -(-5)는 5이니까 다시 쓰면 돼요.\n답: (x+3)(x+5)",
+          "answer": "(x+3)(x+5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "한 가지만 다시 보자. 우리가 찾은 두 수가 -3, -5라면 괄호를 전개했을 때 가운데항이 -3x와 -5x로 나와야 해. 그럼 각 괄호는 x와 무엇이 만나야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 합이 -8, 곱이 15가 되는 수를 correctly 찾았지만 그 수들을 인수의 부호로 옮길 때 반대로 써서 같은 오류를 반복했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "가운데항이 -3x, -5x로 나오려면 x에 3, 5가 아니라 -3, -5가 더해지는 게 아니라 빼져야 해요. 그래서 괄호는 x-3, x-5가 맞아요.\n답: (x-3)(x-5)",
+          "answer": "(x-3)(x-5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 스스로 부호를 끝까지 점검해서 (x-3)(x-5)까지 잘 찾았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-0",
+          "answer": "(x-3)(x-4)",
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3과 4예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-1",
+          "answer": "(x-2)(x-4)",
+          "message": "더해서 -6, 곱해서 8이 되는 두 수는 -2와 -4예요. 그래서 인수분해하면 이렇게 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "factor_sign",
+      "p1": "factor_sign-5",
+      "rep": 1,
+      "solved_at": 5,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "더해서 -8, 곱해서 15가 되는 두 수를 찾으면 -3하고 -5예요. 그래서 (x-(-3))(x-(-5))로 써요.\n답: (x-(-3))(x-(-5))",
+          "answer": "(x-(-3))(x-(-5))",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "두 수를 -3, -5로 찾은 건 아주 좋아. 그런데 x-a 꼴에서 a가 -3이면 x-(-3)은 사실 x+3이 된다는 점만 다시 확인해 볼래? 그럼 네 식을 괄호 모양으로 한 번만 고쳐 써 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "두 수를 찾는 방향은 맞았지만, 인수 형태에서 음수를 처리할 때 부호를 반대로 써서 식을 잘못 표현했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞아요. x-(-3)은 x+3이고, x-(-5)도 x+5예요. 그러면 괄호만 고치면 돼요.\n답: (x+3)(x+5)",
+          "answer": "(x+3)(x+5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "괄호를 고친 건 좋았어. 그런데 네 식을 전개하면 가운데항이 -8x가 아니라 +8x가 나오지 않을까? (x+3)(x+5)를 전개했을 때 x항이 어떻게 되는지 한 번 확인해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 합이 -8, 곱이 15인 수를 -3과 -5로 correctly 찾았지만, 이를 인수 (x-3)(x-5)로 연결하지 못하고 부호를 거꾸로 써서 개념 적용이 어긋났다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그러네요. (x+3)(x+5)를 전개하면 x^2+8x+15가 돼요. 그러면 가운데항이 맞으려면 두 수를 다시 생각해야 할 것 같아요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 방향은 정확해. 곱이 15인데 합이 -8이 되려면 두 수의 부호는 둘 다 어떻게 되어야 할까? 그 점만 먼저 말해 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 스스로 전개해서 부호 오류를 발견했고, 이제 어떤 두 수를 찾아야 하는지 방향은 맞지만 아직 최종 인수분해를 완성하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "곱이 15로 양수인데 합이 -8이면 두 수는 둘 다 음수여야 해요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 그 핵심 판단이 맞았어. 이제 그 조건을 만족하면서 곱이 15가 되는 두 수를 찾아서 괄호로만 다시 써 보면 돼.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 곱이 양수이고 합이 음수일 때 두 수가 모두 음수여야 한다는 핵심 조건을 정확히 파악했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "둘 다 음수이면서 곱해서 15, 더해서 -8인 수는 -3이랑 -5예요. 그래서 괄호로 쓰면 이렇게 돼요.\n답: (x+3)(x+5)",
+          "answer": "(x+3)(x+5)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어. 여기서는 찾은 두 수가 바로 괄호 안의 상수로 들어가서 (x+a)(x+b) 꼴이 되고, a+b가 -8이어야 해. 그럼 a=-3, b=-5를 넣은 괄호를 한 번 다시 써 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 두 수를 -3과 -5로 correctly 찾았지만, 이를 인수분해 괄호로 옮길 때 x-(-3), x-(-5)를 x+3, x+5로만 보고 부호 관계를 혼동해 같은 실수를 반복했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, a랑 b를 그대로 넣으면 돼요. 그러면 -3, -5를 넣어서 쓰면 돼요.\n답: (x-3)(x-5)",
+          "answer": "(x-3)(x-5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 제대로 썼어. 네가 찾은 두 수 -3, -5를 괄호에 그대로 넣어서 (x-3)(x-5)라고 쓰면 돼. 아주 잘했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "factor_sign-0",
+          "answer": "(x-3)(x-4)",
+          "message": "더해서 7, 곱해서 12가 되는 두 수는 3하고 4예요. 그래서 괄호로 쓰면 돼요.",
+          "label": "bug"
+        },
+        {
+          "problem": "factor_sign-1",
+          "answer": "(x-2)(x-4)",
+          "message": "더해서 -6, 곱해서 8이 되는 두 수는 -2, -4예요. 그걸 괄호에 넣으면 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이에요. 그러면 해는 1, 2예요.\n답: 1, 2",
+          "answer": "1, 2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해한 건 아주 잘했어! 그런데 (x+1)=0일 때 x가 정말 1이 되는지, x+1=0에서 x만 남기도록 한 번 옮겨 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 맞게 했지만 (x+1)=0, (x+2)=0에서 x=-1, -2로 부호를 바꿔야 하는데 그 부분을 잘못 읽었습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x+1=0이면 1을 반대편으로 옮겨서 x=-1이고, x+2=0이면 x=-2네요. 그러면 아까 제가 부호를 반대로 썼던 거예요.\n답: -1, -2",
+          "answer": "-1, -2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 부호를 스스로 바로잡아서 해가 x = -1, -2라는 걸 잘 찾았어. 이렇게 인수분해한 뒤에는 각각을 0으로 놓고 부호를 꼭 확인하면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-1",
+          "answer": "5, 2",
+          "message": "x^2-7x+10=0은 인수분해하면 (x-5)(x-2)=0이에요. 그러면 각각 0으로 놓으면 x=5, x=2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-2",
+          "answer": "-3, 2",
+          "message": "x^2+x-6=0은 인수분해하면 (x+3)(x-2)=0이에요. 각각 0으로 놓으면 x=-3, x=2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-0",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2+3x+2=0은 인수분해하면 (x+1)(x+2)=0이에요. 그러면 해는 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 1, 2예요.\n답: 1, 2",
+          "answer": "1, 2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어! 그런데 (x+1)=0일 때 x가 1일까, 아니면 1을 반대로 옮겨서 생각해야 할까? 먼저 x+1=0을 만족하는 x를 한 번만 다시 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 정확히 했지만, (x+1)=0과 (x+2)=0에서 부호를 바꿔 x=-1, -2가 되어야 하는데 해를 읽는 과정에서 실수했다.",
+            "error_type": "careless",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, x+1=0이면 1을 반대로 옮겨야 하니까 x=-1이네. 그러면 다시 보면 돼요.\n답: -1",
+          "answer": "-1",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, x+1=0에서 x=-1로 고친 건 아주 잘했어! 그럼 이제 다른 인수인 x+2=0도 같은 방법으로 풀면 x는 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 한 해 x=-1은 올바르게 고쳤지만 다른 인수 x+2=0에서 나오는 해 -2를 아직 쓰지 않아 답이 불완전하다.",
+            "error_type": "imprecise",
+            "strategy": "Ask a question",
+            "intention": "Get the student to elaborate their answer"
+          }
+        },
+        {
+          "role": "student",
+          "text": "그러면 x+2=0도 2를 반대로 옮기면 x=-2예요. 그래서 해는 두 개예요.\n답: -1, -2",
+          "answer": "-1, -2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 인수분해한 뒤 각각 x+1=0, x+2=0을 풀면 해는 x=-1, -2가 돼.\n이제는 괄호 안의 식이 0이 되게 해야 한다는 점을 잘 이해했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-1",
+          "answer": "5, 2",
+          "message": "인수분해하면 (x-5)(x-2)=0이에요. 그러면 각각 0이 되게 하면 x=5, 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-2",
+          "answer": "-3, 2",
+          "message": "인수분해하면 (x+3)(x-2)=0이에요. 그래서 각각 0이 되게 하면 x=-3, 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2-7x+10은 (x-5)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 -5, -2예요.\n답: -5, -2",
+          "answer": "-5, -2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어. 이제 한 가지만 다시 보자: (x-5)=0이면 x는 -5가 될까, 아니면 5가 될까? 양변에 5를 더해 보면서 한 번만 확인해봐.",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 맞게 했지만 (x-a)=0의 해를 x=a로 구해야 하는 부호를 반대로 써서 개념 적용이 조금 어긋났습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. (x-5)=0이면 양변에 5를 더해서 x=5이고, (x-2)=0이면 x=2네요. 제가 부호를 반대로 봤어요.\n답: 5, 2",
+          "answer": "5, 2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해. 해는 x=5, x=2이고, 네가 말한 것처럼 처음엔 부호를 반대로 본 거였어. 인수분해한 뒤에는 각 괄호를 0으로 두고 천천히 풀면 이런 실수를 잘 잡을 수 있어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-2",
+          "answer": "-3, 2",
+          "message": "x^2+x-6은 (x+3)(x-2)=0으로 인수분해돼요. 그러면 각각 0으로 두면 x=-3, 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-3",
+          "answer": "4, -2",
+          "message": "x^2-2x-8은 (x-4)(x+2)=0으로 인수분해돼요. 각각 0으로 두면 x=4, -2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2-7x+10은 (x-5)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 쓰면 해는 -5, -2예요.\n답: -5, -2",
+          "answer": "-5, -2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어. 이제 (x-5)=0일 때 x가 정말 -5가 되는지, 5를 양쪽에 더해 보면서 한 번만 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 인수분해는 맞게 했지만 (x-a)=0의 해를 x=a로 바꾸는 부호 처리에서 개념을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, (x-5)=0이면 양쪽에 5를 더해서 x=5네요. 그러면 (x-2)=0도 x=2라서 제가 아까 부호를 잘못 썼어요.\n답: 5, 2",
+          "answer": "5, 2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x-5)=0에서 x=5, (x-2)=0에서 x=2이므로 해는 5, 2야. 부호 실수를 스스로 고쳐낸 점이 정말 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-2",
+          "answer": "-3, 2",
+          "message": "x^2+x-6은 (x+3)(x-2)=0으로 인수분해돼요. 그러면 각각 풀면 x=-3, x=2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-3",
+          "answer": "4, -2",
+          "message": "x^2-2x-8은 (x-4)(x+2)=0으로 인수분해돼요. 그러면 각각 풀면 x=4, x=-2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-2",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "곱해서 -6이 되고 더해서 1이 되는 수는 3이랑 -2라서 (x+3)(x-2)=0이에요. 그러면 해는 괄호 안에서 x 뒤에 있는 수를 그대로 써서 3, -2예요.\n답: 3, -2",
+          "answer": "3, -2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어. 다만 (x+3)=0 또는 (x-2)=0일 때, x를 혼자 남기려면 각각 양변에 무엇을 더하거나 빼야 하는지 한 번만 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 정확히 했지만 (x+3)=0, (x-2)=0에서 해를 구할 때 부호를 반대로 바꿔야 하는데 그대로 써서 마무리했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그러면 x를 혼자 남기면 되네요. x+3=0에서는 양변에 3을 빼고, x-2=0에서는 양변에 2를 더하면 돼요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야. 이제 각각에서 x값이 무엇이 되는지 네가 마지막으로 써 보면 완전히 해결한 거야. 최종 답을 한 줄로 적어볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 인수분해는 맞게 했고, 이전의 부호 처리만 바로잡아 스스로 x를 고립시키는 방법을 설명했다.",
+            "error_type": "right-idea",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "그러면 x+3=0에서 x=-3이고, x-2=0에서 x=2가 돼요. 그래서 최종 답은 -3, 2예요.\n답: -3, 2",
+          "answer": "-3, 2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 이제 완전히 맞았어. 인수분해도 맞았고, 각 괄호에서 x를 제대로 구해서 최종 해는 x=-3, x=2야. 아주 잘 고쳤다!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-3",
+          "answer": "4, -2",
+          "message": "곱해서 -8이 되고 더해서 -2가 되는 수는 -4랑 2라서 (x-4)(x+2)=0이에요. 그러면 x=4, -2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-4",
+          "answer": "-3, -5",
+          "message": "곱해서 15가 되고 더해서 8이 되는 수는 3이랑 5라서 (x+3)(x+5)=0이에요. 그러면 각각 x=-3, x=-5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "곱해서 -6이 되고 더해서 1이 되는 수는 3이랑 -2라서 (x+3)(x-2)=0이에요. 제가 아는 방법대로 하면 해는 괄호 안의 수를 그대로 써서 3, -2예요.\n답: 3, -2",
+          "answer": "3, -2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해한 것까지는 아주 잘했어. 이제 마지막에서 아주 작은 부호만 조심하면 돼: (x+3)=0일 때 x는 3일까, -3일까? 한 번 그 식만 따로 풀어봐.",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 올바르게 했지만, (x+3)=0이면 x=-3이고 (x-2)=0이면 x=2인데 부호를 그대로 써서 해를 잘못 적었습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, (x+3)=0이면 x=-3이네요. 그러면 (x-2)=0에서는 x=2라서 해를 다시 고치면 돼요.\n답: -3, 2",
+          "answer": "-3, 2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 해는 x=-3, 2가 맞고, 마지막에 괄호 안 부호를 반대로 바꾸는 걸 스스로 바로잡은 점이 아주 좋아. 다음에도 (x+a)=0이면 x=-a인지 꼭 한 번 확인해봐!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-3",
+          "answer": "4, -2",
+          "message": "곱해서 -8이 되고 더해서 -2가 되는 수는 -4랑 2라서 (x-4)(x+2)=0이에요. 그러면 x=4, -2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-4",
+          "answer": "-3, -5",
+          "message": "곱해서 15가 되고 더해서 8이 되는 수는 3이랑 5라서 (x+3)(x+5)=0이에요. 그러면 x=-3, -5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "곱해서 -8이고 더해서 -2가 되는 수는 -4, 2라서 (x-4)(x+2)=0이에요. 그러면 해는 괄호 안의 수를 그대로 써서 4, -2가 아니라 -4, 2예요.\n답: -4, 2",
+          "answer": "-4, 2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해까지는 아주 잘했어. 이제 (x-4)=0일 때 x에 어떤 수를 넣어야 0이 되는지만 다시 생각해 볼래? 같은 방식으로 (x+2)=0도 한 번 확인해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 맞게 했지만, (x-4)=0과 (x+2)=0에서 해를 읽을 때 부호를 반대로 적는 실수를 했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. x-4=0이면 4를 넣어야 0이 되고, x+2=0이면 -2를 넣어야 0이 돼요.\n답: 4, -2",
+          "answer": "4, -2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x-4)=0에서 x=4, (x+2)=0에서 x=-2라서 해는 4, -2가 맞아. 인수분해한 뒤에는 각 괄호가 0이 되게 하는 x값을 찾는다는 점을 잘 잡았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-4",
+          "answer": "-3, -5",
+          "message": "곱해서 15이고 더해서 8이 되는 수는 3, 5라서 (x+3)(x+5)=0이에요. 그러면 각각 0이 되게 하는 x값은 -3, -5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-5",
+          "answer": "7, 2",
+          "message": "곱해서 14이고 더해서 -9가 되는 수는 -7, -2라서 (x-7)(x-2)=0이에요. 그래서 각 괄호가 0이 되게 하면 x는 7, 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "15가 되게 곱하고 8이 되게 더하는 수는 3이랑 5라서 (x+3)(x+5)=0이에요. 그러면 해는 3, 5예요.\n답: 3, 5",
+          "answer": "3, 5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어! 그런데 (x+3)=0, (x+5)=0일 때 x 값이 정말 3, 5가 되는지 한 번만 다시 확인해 볼래? x+3=0을 만족하려면 x에 어떤 수를 넣어야 하는지 먼저 생각해 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 correctly 했지만 (x+3)(x+5)=0에서 각 인수를 0으로 두면 x=-3, -5가 되어 부호를 놓친 계산 실수다.",
+            "error_type": "careless",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x+3=0이면 3을 넣으면 6이 돼서 안 되네요. 0이 되려면 -3이어야 하고, x+5=0도 -5여야 돼요.\n답: -3, -5",
+          "answer": "-3, -5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! (x+3)=0이면 x=-3, (x+5)=0이면 x=-5라서 해는 -3, -5야. 부호를 스스로 바로잡은 게 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-5",
+          "answer": "7, 2",
+          "message": "14가 되게 곱하고 -9가 되게 더하는 수는 -7이랑 -2라서 (x-7)(x-2)=0이에요. 그러면 각각 0이 되게 하는 x는 7, 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-0",
+          "answer": "-1, -2",
+          "message": "2가 되게 곱하고 3이 되게 더하는 수는 1이랑 2라서 (x+1)(x+2)=0이에요. 그러면 각각 0이 되게 하는 x는 -1, -2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2+8x+15=0은 (x+3)(x+5)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 3, 5예요.\n답: 3, 5",
+          "answer": "3, 5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해한 것까지는 아주 좋아요. 이제 (x+3)=0일 때 x가 정말 3인지, 아니면 3을 더해서 0이 되려면 다른 수인지 한 번만 다시 생각해볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 맞게 했지만 (x+3)=0, (x+5)=0에서 부호를 바꿔 x=-3, -5로 구해야 하는데 이를 그대로 3, 5라고 써서 개념 적용이 덜 되었다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, x+3=0이면 3을 더해서 0이 되는 수를 찾아야 하니까 x는 -3이고, x+5=0이면 x는 -5예요. 제가 부호를 반대로 봤어요.\n답: -3, -5",
+          "answer": "-3, -5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. x = -3, -5가 맞고, 부호를 스스로 바로잡은 게 아주 좋아. 이런 식으로 괄호가 0이 되게 만드는 수를 찾으면 돼!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-5",
+          "answer": "7, 2",
+          "message": "x^2-9x+14=0은 (x-7)(x-2)=0으로 인수분해돼요. 그러면 각각 0이 되게 하는 수는 x=7, x=2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-0",
+          "answer": "-1, -2",
+          "message": "x^2+3x+2=0은 (x+1)(x+2)=0으로 인수분해돼요. 그러면 각각 0이 되게 하는 수는 x=-1, x=-2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "14가 되고 9가 되게 하려면 7이랑 2라서 (x-7)(x-2)=0으로 인수분해돼요. 그러면 괄호 안에서 x 뒤에 붙은 수를 그대로 써서 해는 -7, -2예요.\n답: -7, -2",
+          "answer": "-7, -2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해는 아주 잘했어. 그런데 (x-7)=0일 때 x가 -7이 되는지, 아니면 7이 되는지 한 번만 천천히 확인해 볼래? x-7=0에서 양변에 7을 더하면 x가 뭐가 되는지 써 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해는 정확히 했지만, (x-a)=0의 해를 a가 아니라 -a로 잘못 읽어 부호를 반대로 썼다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. x-7=0이면 양변에 7을 더해서 x=7이고, x-2=0도 x=2예요.\n답: 7, 2",
+          "answer": "7, 2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해. 인수분해도 맞고 각 일차방정식에서 해를 7, 2로 잘 찾았어. 마지막으로 답은 x=7, x=2라고 쓰면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-0",
+          "answer": "-1, -2",
+          "message": "2가 되고 3이 되게 하려면 1이랑 2라서 (x+1)(x+2)=0이에요. 그러면 각각 x=-1, x=-2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-1",
+          "answer": "5, 2",
+          "message": "10이 되고 -7이 되게 하려면 -5랑 -2라서 (x-5)(x-2)=0이에요. 그러면 각각 x=5, x=2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "root_sign",
+      "p1": "root_sign-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "곱해서 14가 되고 더해서 -9가 되는 수는 -2, -7이니까 (x-2)(x-7)=0이에요. 제가 아는 방법대로 하면 해는 -2, -7이에요.\n답: -2, -7",
+          "answer": "-2, -7",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해까지는 아주 잘했어! 이제 마지막만 조심하면 돼: (x-2)=0일 때 x가 정말 -2가 되는지, 직접 더해 보면서 확인해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "인수분해식 (x-2)(x-7)=0 까지는 맞았지만, 각 인수를 0으로 두는 단계에서 해의 부호를 반대로 읽었다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, x-2=0이면 x에 2를 넣어야 0이 돼요. 그러면 x=2이고, x-7=0도 x=7이네요.\n답: 2, 7",
+          "answer": "2, 7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 인수분해한 뒤에는 각 인수를 0으로 두고 풀면 x=2, x=7이 돼. 마지막 부호만 조심하면 이런 문제는 아주 잘 풀 수 있어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "root_sign-0",
+          "answer": "-1, -2",
+          "message": "곱해서 2가 되고 더해서 3이 되는 수는 1, 2라서 (x+1)(x+2)=0이에요. 그러면 각각 0으로 두면 x=-1, x=-2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "root_sign-1",
+          "answer": "5, 2",
+          "message": "곱해서 10이 되고 더해서 -7이 되는 수는 -5, -2라서 (x-5)(x-2)=0이에요. 각각 0으로 두면 x=5, x=2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2=7x에서 양변을 x로 나누면 x=7이야. 그래서 해는 7이야.\n답: 7",
+          "answer": "7",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "풀이 방향은 아주 좋아! 그런데 양변을 x로 나눌 때는 x=0일 가능성이 사라질 수 있어서 그 경우를 먼저 확인해야 해. x^2=7x를 한쪽으로 모아서 x^2-7x=0으로 만든 뒤, x를 공통인수로 묶으면 어떻게 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "양변을 x로 나누는 과정에서 x=0일 가능성을 빠뜨려 해를 하나 놓쳤으므로, 방향은 맞지만 0이 될 수 있는 문자를 나누는 개념 적용이 불완전하다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한쪽으로 모으면 x^2-7x=0이고 공통인수 x로 묶어서 x(x-7)=0이 돼. 그러면 x=0 또는 x-7=0이라서 x=7도 나와.\n답: 0, 7",
+          "answer": "0, 7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 풀었어! x(x-7)=0에서 x=0 또는 x=7이 되니까 해는 0, 7이야. 특히 처음 방법에서 왜 x=0을 놓칠 수 있는지도 같이 확인한 게 아주 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-1",
+          "answer": "0, 6",
+          "message": "한쪽에 0이 있으니까 공통인수로 묶어 보면 돼. x^2-6x=0에서 x(x-6)=0이니까 x=0 또는 x=6이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-2",
+          "answer": "0, 5",
+          "message": "한쪽으로 모으면 2x^2-10x=0이야. 2x로 묶으면 2x(x-5)=0이니까 x=0 또는 x=5야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x=7이 돼요. 그래서 해는 7이에요.\n답: 7",
+          "answer": "7",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방법은 거의 맞아요. 그런데 양변을 x로 나눌 때는 x가 0일 수도 있는지 먼저 확인해야 해요. x^2=7x를 한쪽으로 모아서 x로 묶어 보면 어떤 식이 되나요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 양변을 x로 나누는 과정에서 x=0일 가능성을 빠뜨려 해를 하나 놓쳤으므로, 접근은 맞지만 적용이 완전하지 않습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한쪽으로 모으면 x^2-7x=0이고, x로 묶으면 x(x-7)=0이 돼요. 그러면 x=0 또는 x=7이네요.\n답: 0, 7",
+          "answer": "0, 7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 정확하게 풀었어요. x(x-7)=0에서 곱이 0이면 x=0 또는 x=7이 된다는 걸 잘 찾았네요. 따라서 해는 0, 7이에요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-1",
+          "answer": "0, 6",
+          "message": "x^2-6x=0에서 x로 묶으면 x(x-6)=0이에요. 그래서 x=0 또는 x=6이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-2",
+          "answer": "0, 5",
+          "message": "한쪽으로 모으면 2x^2-10x=0이고, 2x로 묶으면 2x(x-5)=0이에요. 그래서 x=0 또는 x=5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x-6=0이 돼요. 그래서 x=6이에요.\n답: 6",
+          "answer": "6",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 괜찮은데, x로 나누기 전에 한 가지를 꼭 확인해야 해요. 만약 x=0이면 원래 식 x^2-6x=0을 만족하나요? 먼저 그걸 확인해 보고, 그다음에는 x로 묶는 방법도 떠올려 보세요.",
+          "leak": false,
+          "decision": {
+            "reason": "식 x^2-6x=0에서 양변을 x로 나누면 x=0인 해를 잃게 되므로, 인수분해를 떠올린 방향은 비슷하지만 해를 모두 구하는 적용이 부족했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네요. x=0을 넣으면 0^2-6·0=0이라서 맞아요. 그리고 x^2-6x는 x(x-6)=0으로 묶이니까 x=0 또는 x=6이에요.\n답: 0, 6",
+          "answer": "0, 6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 완벽해요. x(x-6)=0으로 잘 묶었고, 그래서 해는 x=0 또는 x=6 두 개예요. 특히 x로 바로 나누면 x=0을 놓칠 수 있다는 점까지 잘 확인했어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-2",
+          "answer": "0, 5",
+          "message": "이번에도 먼저 x=0인지 확인해 볼게요. 2x^2=10x에서 x=0 넣으면 0=0이 맞고, 2x^2-10x=0 → 2x(x-5)=0이라서 x=0 또는 x=5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-3",
+          "answer": "0, -5",
+          "message": "먼저 x=0인지 확인하면 원래 식에 넣어서 0=0이라 맞아요. 그리고 x^2+5x는 x(x+5)=0으로 묶여서 x=0 또는 x=-5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x-6=0이 돼요. 그래서 x=6이에요.\n답: 6",
+          "answer": "6",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야, 그런데 x로 나누면 조심할 점이 하나 있어. x=0일 때는 나눌 수 없어서, 그 경우의 해를 놓칠 수 있거든. x^2-6x에서 공통인수 x를 묶어서 x(x-6)=0으로 바꾸면, 어떤 성질을 써서 해를 찾을 수 있을까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 x^2-6x=0에서 공통인수 x를 나눠 없애는 과정에서 x=0일 가능성을 잃어버려 해의 일부를 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x=0이면 나눌 수 없어서 빠질 수 있네요. x(x-6)=0이면 곱해서 0이 되는 거니까 둘 중 하나가 0이라고 보면 돼요.\n답: 0, 6",
+          "answer": "0, 6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 풀었어. x(x-6)=0이면 x=0 또는 x=6이니까 해는 0, 6이야. 특히 x로 나누면 x=0을 놓칠 수 있다는 점을 스스로 고친 게 아주 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-2",
+          "answer": "0, 5",
+          "message": "이번에는 x로 바로 나누기보다 한쪽으로 옮기고 묶으면 돼요. 2x^2-10x=0, 2x(x-5)=0이니까 x=0 또는 x=5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-3",
+          "answer": "0, -5",
+          "message": "x를 묶으면 x(x+5)=0이에요. 그래서 둘 중 하나가 0이라서 x=0 또는 x=-5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "2x^2=10x에서 양변을 x로 나누면 2x=10이니까 x=5예요. 그래서 해는 5예요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야. 그런데 양변을 x로 나눌 때는 x가 0이면 나눌 수 없어서, 그 가능성을 놓칠 수 있어. x로 나누기 전에 식을 한쪽으로 모아 2x^2-10x=0으로 만든 뒤, 공통인수 x를 묶어 보면 어떤 식이 되니?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 양변을 x로 나누는 과정에서 x=0일 가능성을 없애 버려 해를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한쪽으로 모으면 2x^2-10x=0이고 공통인수 x를 묶으면 x(2x-10)=0이 돼요. 그러면 x=0이거나 2x-10=0이라서 x=5도 나와요.\n답: 0, 5",
+          "answer": "0, 5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 제대로 풀었어. x(2x-10)=0에서 각 인수를 0으로 보면 x=0 또는 x=5가 되니까 해는 0, 5야. 특히 처음처럼 x로 바로 나누면 x=0을 놓칠 수 있다는 점도 잘 짚었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-3",
+          "answer": "0, -5",
+          "message": "한쪽으로 모아도 그대로고, 공통인수 x를 묶으면 x(x+5)=0이에요. 그래서 x=0 또는 x=-5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-4",
+          "answer": "0, 3",
+          "message": "한쪽으로 모으면 4x^2-12x=0이고, 공통인수 x를 묶으면 x(4x-12)=0이에요. 그래서 x=0 또는 x=3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "2x^2=10x에서 양변을 x로 나누면 2x=10이 돼요. 그래서 x=5예요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 생각이야, 그런데 양변을 x로 나눌 때는 x가 0이 아닌 경우만 다루게 돼. 혹시 원래 식 2x^2=10x에 x=0을 직접 넣어 보면 성립하는지 먼저 확인해 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 양변을 x로 나누는 과정에서 x=0일 가능성을 제외해 해를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x로 나누면 x=0인 경우를 빼먹을 수 있네요. 원래 식에 x=0을 넣으면 2·0^2=10·0이라서 0=0, 맞아요. 그리고 x가 0이 아닐 때는 나누어서 x=5가 돼요.\n답: 0, 5",
+          "answer": "0, 5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 풀었어. x=0을 따로 확인해서 빠지는 해가 없는지 본 점이 아주 좋아. 그래서 해는 x=0, x=5가 맞아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-3",
+          "answer": "0, -5",
+          "message": "이번에는 먼저 x=0을 넣어 보면 0^2+5·0=0이라서 성립해요. 그리고 x가 0이 아닐 때는 양변을 x로 나누면 x+5=0이라서 x=-5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-4",
+          "answer": "0, 3",
+          "message": "먼저 x=0을 넣어 보면 4·0^2=12·0이라서 맞아요. 그리고 x가 0이 아닐 때는 양변을 x로 나누면 4x=12라서 x=3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.\n답: -5",
+          "answer": "-5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각은 좋았어, 그런데 x로 나누는 순간 조심해야 해. 만약 x=0이면 나눌 수 없어서 그 해를 아예 놓치게 되거든. x^2+5x를 x로 나누지 말고, 공통인수 x로 묶으면 어떻게 써질까?",
+          "leak": false,
+          "decision": {
+            "reason": "x로 나누는 과정에서 x=0인 해를 없애 버려서, 한 해만 찾고 다른 해를 놓쳤습니다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Explain the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, x=0이면 나눌 수 없으니까 그냥 나누면 안 되겠네요. 공통인수 x로 묶으면 x(x+5)=0이니까 x=0 또는 x=-5예요.\n답: 0, -5",
+          "answer": "0, -5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 제대로 풀었어! x(x+5)=0에서 곱이 0이면 각 인수 중 하나가 0이므로 x=0, -5가 모두 해가 돼. 아주 잘했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-4",
+          "answer": "0, 3",
+          "message": "이번에는 한쪽으로 모으면 4x^2-12x=0이고, 공통인수 4x로 묶어서 4x(x-3)=0이에요. 그래서 x=0 또는 x=3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-5",
+          "answer": "0, -3",
+          "message": "한쪽으로 옮기면 x^2+3x=0이고, x로 묶으면 x(x+3)=0이에요. 그래서 해는 x=0, -3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x+5=0이 돼요. 그래서 x=-5예요.\n답: -5",
+          "answer": "-5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "풀이 방향은 거의 좋았어. 그런데 양변을 x로 나누면 x=0일 가능성을 스스로 없애 버릴 수 있어. x^2+5x에서 공통으로 묶이는 x를 먼저 찾아서, x(x+5)=0 꼴로 바꿔 보면 어떤 두 경우를 생각해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 양변을 x로 나누어 x=0인 해를 놓쳤으므로, 풀이 방향은 인수분해와 비슷하게 맞았지만 해를 모두 고려하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Explain the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞아요. x(x+5)=0 이면 곱이 0이니까 x=0 이거나 x+5=0 이에요. 그래서 x=-5도 같이 나와요.\n답: 0, -5",
+          "answer": "0, -5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 풀었어. x(x+5)=0에서 x=0 또는 x=-5를 찾은 게 정확해. 그래서 해는 0, -5야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-4",
+          "answer": "0, 3",
+          "message": "이제는 x로 바로 나누면 안 되고, 먼저 한쪽으로 모아서 묶어야 해요. 4x^2-12x=0, 그래서 4x(x-3)=0 이니까 x=0 또는 x=3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-5",
+          "answer": "0, -3",
+          "message": "한쪽으로 옮기면 x^2+3x=0이고, x로 묶으면 x(x+3)=0이에요. 그래서 x=0 또는 x=-3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "4x^2=12x에서 양변을 x로 나누면 4x=12가 돼. 그래서 x=3이야.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "풀이 방향은 거의 맞았어. 그런데 양변을 x로 나눌 때는 x=0인 경우를 스스로 지워버릴 수 있어. 먼저 4x^2=12x를 한쪽으로 모아서 x로 묶어 보면 어떤 식이 되니?",
+          "leak": false,
+          "decision": {
+            "reason": "양변을 x로 나누는 과정에서 x=0일 가능성을 제외해 해를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한쪽으로 모으면 4x^2-12x=0이고 x로 묶으면 x(4x-12)=0이 돼. 그러면 x=0 또는 4x-12=0이라서 x=3이네.\n답: 0, 3",
+          "answer": "0, 3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 풀었어. x(4x-12)=0에서 x=0 또는 x=3이니까 답은 0, 3이야. 특히 x로 바로 나누면 x=0을 놓칠 수 있다는 점도 잘 짚었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-5",
+          "answer": "0, -3",
+          "message": "한쪽으로 모으면 x^2+3x=0이고, x로 묶으면 x(x+3)=0이야. 그래서 x=0 또는 x=-3이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-0",
+          "answer": "0, 7",
+          "message": "한쪽으로 모으면 x^2-7x=0이고, x로 묶으면 x(x-7)=0이야. 그래서 x=0 또는 x=7이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "4x^2=12x에서 양변을 x로 나누면 4x=12가 돼. 그래서 x=3이야.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방법은 좋아, 그런데 양변을 x로 나눌 때 한 가지를 꼭 확인해야 해. 만약 x=0이면 x로 나누는 게 가능할까? 먼저 x=0을 원래 식 4x^2=12x에 넣어보자.",
+          "leak": false,
+          "decision": {
+            "reason": "양변을 x로 나누는 과정에서 x=0일 가능성을 제외해 해를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, x=0이면 x로 나눌 수 없네. 원래 식에 넣으면 4·0^2=12·0이라서 0=0이니까 x=0도 해가 맞아.\n답: 0, 3",
+          "answer": "0, 3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 찾았어. x=0일 때는 나눌 수 없어서 따로 확인해야 하고, 원래 식에 넣어보면 x=0도 해가 맞지. 그래서 해는 x=0, x=3이야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-5",
+          "answer": "0, -3",
+          "message": "이번에는 x=0도 먼저 확인해 볼게. 원래 식에 넣으면 0=0이라서 x=0이 해이고, x가 0이 아닐 때는 양변을 x로 나눠서 x=-3이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-0",
+          "answer": "0, 7",
+          "message": "x=0인지 먼저 보면 원래 식에 넣어서 0=0이니까 해가 맞아. 그리고 x가 0이 아닐 때는 양변을 x로 나누면 x=7이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3이라고 생각해요.\n답: -3",
+          "answer": "-3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "인수분해하려는 생각은 아주 좋았어. 그런데 양변을 x로 나누면 x=0일 가능성을 스스로 지워 버릴 수 있어. 먼저 식을 한쪽으로 모아서 x^2 + 3x = 0처럼 만든 다음, x를 묶어보면 뭐가 나올까?",
+          "leak": false,
+          "decision": {
+            "reason": "양변을 x로 나누는 과정에서 x=0일 가능성을 없애 버려 해를 하나 놓쳤고, 식을 0으로 정리해 인수분해하는 방향은 필요했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 한쪽으로 모으면 x^2+3x=0이고 x를 묶으면 x(x+3)=0이네요. 그러면 x=0 또는 x=-3이에요.\n답: 0, -3",
+          "answer": "0, -3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 풀었어. x(x+3)=0이면 각 인수가 0이 되는 경우를 보면 되니까 해는 x=0, -3이야. 특히 처음처럼 x로 나누면 x=0을 놓칠 수 있다는 점도 잘 짚었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-0",
+          "answer": "0, 7",
+          "message": "한쪽으로 모으면 x^2-7x=0이고, x를 묶으면 x(x-7)=0이에요. 그래서 x=0 또는 x=7이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-1",
+          "answer": "0, 6",
+          "message": "x를 묶으면 바로 풀 수 있어요. x^2-6x=0 → x(x-6)=0이라서 x=0 또는 x=6이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "divide_by_x",
+      "p1": "divide_by_x-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x가 들어 있으니까 양변을 x로 나누면 x=-3이 돼요. 그래서 해는 -3이라고 보면 돼요.\n답: -3",
+          "answer": "-3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "방법은 거의 맞았어. 그런데 양변을 x로 나누기 전에 x가 0일 가능성은 없는지 먼저 확인해야 해. x=0을 원래 식 x^2=-3x에 넣어 보면 성립하는지 한번 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 양변을 x로 나누는 과정에서 x=0일 가능성을 놓쳐 해를 하나 빠뜨렸으므로, 접근은 일부 맞지만 적용이 완전하지 않습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x로 나누기 전에 x=0도 될 수 있는지 봐야 하네요. x=0을 넣으면 0^2=-3·0이라서 0=0이니까 성립해요. 그러면 x=-3이랑 x=0 둘 다 해예요.\n답: -3, 0",
+          "answer": "-3, 0",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 찾았어. x로 나누면 빠질 수 있는 해 x=0까지 직접 확인해서 해가 x=-3, x=0이라는 걸 정확히 구했어. 아주 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "divide_by_x-0",
+          "answer": "0, 7",
+          "message": "먼저 x=0이 되는지 확인하면 0^2=7·0이라서 성립해요. 그리고 x가 0이 아닐 때는 양변을 x로 나누면 x=7이라서 해는 0이랑 7이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "divide_by_x-1",
+          "answer": "0, 6",
+          "message": "x^2=6x로 보면 먼저 x=0인지 확인하면 성립해요. 그리고 x가 0이 아닐 때는 양변을 x로 나누면 x=6이라서 해는 0이랑 6이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2=16이면 제곱해서 16이 되는 수는 4라고 생각하면 돼. 그래서 x=4야.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 아주 좋아. 그런데 x^2는 어떤 수를 제곱한 값이니까, 4 말고도 제곱해서 16이 되는 다른 수가 하나 더 있지 않을까? 그 수가 뭔지 한번 떠올려 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 x^2=16의 해가 양수 4뿐 아니라 음수 -4도 있다는 점을 빠뜨려, 개념의 방향은 맞지만 해를 완전히 구하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, (-4)를 제곱해도 16이 돼. 그러니까 해가 두 개야.\n답: 4, -4",
+          "answer": "4, -4",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 찾았어. x^2=16의 해는 4와 -4, 이렇게 두 개야. 아주 잘 수정했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-1",
+          "answer": "7, -7",
+          "message": "x^2-49=0이면 x^2=49로 옮길 수 있어. 그러면 제곱해서 49가 되는 수는 7이랑 -7이니까 해는 두 개야.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-2",
+          "answer": "5",
+          "message": "(x-2)^2=9이면 x-2가 제곱해서 9가 되는 수니까 3이야. 그래서 x=5야.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2=16이면 제곱해서 16이 되는 수는 4라고 보면 돼요. 그래서 x=4예요.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "4를 찾은 건 아주 좋은 시작이야. 그런데 x를 제곱해서 16이 되는 수가 정말 4만 있는지 한 번만 더 생각해볼래? (-4)^2 값도 직접 계산해 보면 도움이 돼.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 x^2=16에서 4를 한 해로 찾는 핵심 아이디어는 맞았지만, 제곱하면 16이 되는 수가 -4도 있다는 점을 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, (-4)^2도 계산해 보면 16이네요. 그러면 x^2=16을 만족하는 수는 4랑 -4 둘 다예요.\n답: 4, -4",
+          "answer": "4, -4",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 찾았어. x^2=16의 해는 4와 -4 두 개야. 아주 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-1",
+          "answer": "7, -7",
+          "message": "x^2-49=0이면 x^2=49로 바꿔요. 제곱해서 49가 되는 수는 7이랑 -7이라서 해는 두 개예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-2",
+          "answer": "5",
+          "message": "(x-2)^2=9니까 x-2가 3이 되면 돼요. 그래서 x=5예요.",
+          "label": "bug"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2-49=0 이니까 x^2=49예요. 그러면 x=7이에요.\n답: 7",
+          "answer": "7",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! x^2 = 49를 만족하는 수가 정말 7만 있는지 한 번만 더 생각해 볼래? 제곱해서 49가 되는 수를 모두 찾아보자.",
+          "leak": false,
+          "decision": {
+            "reason": "x^2=49까지는 correctly 풀었지만 제곱근을 구할 때 양수 한 값만 써서 해를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 7 말고 -7도 제곱하면 49가 돼요. 그래서 둘 다 해예요.\n답: 7, -7",
+          "answer": "7, -7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 바로잡았어! x^2 = 49의 해는 7과 -7, 그래서 답은 x = 7, x = -7이야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-2",
+          "answer": "5, -1",
+          "message": "전에처럼 제곱해서 9가 되는 수를 다 보면 3이랑 -3이니까, x-2=3 또는 x-2=-3이에요. 그래서 x=5, -1이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-3",
+          "answer": "1, -3",
+          "message": "(x+1)^2=4 이니까 x+1=2 또는 x+1=-2예요. 그래서 x=1, -3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "x^2-49=0이니까 x^2=49예요. 그러면 x=7이에요.\n답: 7",
+          "answer": "7",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지 아주 잘 왔어. 다만 x^2 = 49일 때는 7을 제곱해서도 49가 되고, -7을 제곱해도 49가 된다는 점을 한번 떠올려 볼래?\n그럼 x가 될 수 있는 값이 몇 개인지 다시 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 x^2=49까지는 맞게 했지만 제곱근을 구할 때 ±를 빠뜨려 해의 개수를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 7도 되고 -7도 제곱하면 49가 돼요. 그래서 x가 될 수 있는 값은 2개예요.\n답: 7, -7",
+          "answer": "7, -7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해. x^2 = 49의 해는 x = 7, -7 두 개야.\n이차방정식에서는 제곱한 값이 같아지는 음수도 함께 확인하는 습관을 가지면 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-2",
+          "answer": "5, -1",
+          "message": "(x-2)^2=9이면 x-2는 3도 되고 -3도 돼요. 그래서 x=5, -1이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-3",
+          "answer": "1, -3",
+          "message": "(x+1)^2=4이면 x+1은 2도 되고 -2도 돼요. 그래서 x=1, -3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x-2)^2=9 이니까 x-2=3이에요. 그래서 x=5예요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 시작이야. 그런데 어떤 수의 제곱이 9가 되려면 3 말고 또 하나가 더 있지 않을까? x-2가 될 수 있는 값을 한 개만 더 찾아봐.",
+          "leak": false,
+          "decision": {
+            "reason": "제곱이 9인 수는 3뿐만 아니라 -3도 가능한데, 학생은 x-2=3만 두고 x-2=-3을 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Explain the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 제곱해서 9가 되는 수는 3 말고 -3도 있네요. 그러면 x-2=-3도 되고, 그래서 x=-1도 나와요.\n답: 5, -1",
+          "answer": "5, -1",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완벽해졌어. x-2=3일 때 x=5이고, x-2=-3일 때 x=-1이라서 답은 5와 -1이야. 제곱방정식에서는 이렇게 ±를 꼭 확인해 주면 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-3",
+          "answer": "1, -3",
+          "message": "(x+1)^2=4이면 x+1=2 또는 x+1=-2예요. 그래서 x=1, -3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-4",
+          "answer": "3, -3",
+          "message": "2x^2=18에서 2로 나누면 x^2=9예요. 그러면 x=3 또는 -3이라서 답은 3, -3이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x-2)^2=9 이니까 x-2=3으로 보면 돼요. 그래서 x=5예요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 시작이야. 그런데 어떤 수의 제곱이 9가 되려면 3 말고도 하나가 더 있지 않을까?\nx-2가 될 수 있는 값을 두 개로 써 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "제곱이 9이면 한쪽 경우인 3뿐 아니라 -3도 가능하다는 점을 빠뜨려 풀이 방향은 맞지만 적용이 완전하지 않았습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 제곱해서 9가 되는 수는 3이랑 -3 두 개예요. 그래서 x-2=3 또는 x-2=-3으로 놓으면 돼요.\n답: 5, -1",
+          "answer": "5, -1",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 풀었어. x-2=3 또는 x-2=-3으로 두 경우를 모두 봐야 하니까 해는 x=5, -1이 맞아.\n이차방정식에서 제곱이 나오면 이렇게 두 경우를 꼭 확인하는 습관을 가지면 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-3",
+          "answer": "1, -3",
+          "message": "(x+1)^2=4 이니까 x+1=2 또는 x+1=-2로 보면 돼요. 그래서 x는 1, -3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-4",
+          "answer": "3, -3",
+          "message": "2x^2=18이면 먼저 2로 나눠서 x^2=9예요. 그러면 x=3 또는 x=-3이라서 해는 두 개예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x+1)^2=4니까 x+1=2예요. 그래서 x=1이에요.\n답: 1",
+          "answer": "1",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 푸는 방향은 맞았어. 그런데 어떤 수의 제곱이 4가 되려면 그 수는 2만 가능할까, 아니면 -2도 가능할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 제곱식 방정식에서 x+1=2만 고려하고 x+1=-2인 경우를 빠뜨려, 풀이 방향은 맞지만 적용이 완전하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 제곱하면 4가 되는 수는 2도 있고 -2도 있어요. 그러면 x+1=2 또는 x+1=-2로 봐야 해요.\n답: 1, -3",
+          "answer": "1, -3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완벽해. x+1=2 또는 x+1=-2로 나눠서 보면 x=1, -3이 돼. 제곱식에서는 ±를 꼭 확인하는 습관을 잘 잡았어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-4",
+          "answer": "3, -3",
+          "message": "2x^2=18에서 양변을 2로 나누면 x^2=9예요. 그러면 x=3 또는 x=-3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-5",
+          "answer": "8, -2",
+          "message": "(x-3)^2=25니까 x-3=5 또는 x-3=-5예요. 그래서 x=8, -2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x+1)^2=4 이니까 x+1=2예요. 그래서 x=1이에요.\n답: 1",
+          "answer": "1",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 거의 다 왔어! 그런데 어떤 수의 제곱이 4가 되려면 2 말고도 하나가 더 있지 않을까? x+1이 될 수 있는 다른 값도 한 번 찾아봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 제곱방정식에서 x+1=2만 생각하고 x+1=-2인 경우를 빠뜨려, 풀이 방향은 맞지만 개념을 완전히 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 제곱해서 4가 되는 수를 다시 보면 하나 더 있을 수 있겠네요. 그러면 x+1=-2도 되니까 x=-3이에요.\n답: 1, -3",
+          "answer": "1, -3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 찾았어! 제곱해서 4가 되는 수를 2와 -2로 모두 본 게 핵심이야. 그래서 해는 x=1, x=-3 두 개가 맞아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-4",
+          "answer": "3, -3",
+          "message": "2x^2=18이면 x^2=9예요. 그러면 제곱해서 9가 되는 수는 3하고 -3이니까 x=3, -3이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-5",
+          "answer": "8, -2",
+          "message": "(x-3)^2=25이면 x-3=5 또는 -5예요. 그래서 x=8, -2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "2x^2=18에서 먼저 2로 나누면 x^2=9예요. 제곱해서 9가 되는 수는 3이니까 x=3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 다만 x^2 = 9에서 한 가지만 더 떠올려 보자: 제곱해서 9가 되는 수가 3 말고 또 하나 있지 않을까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 2로 나누어 x^2=9까지는 맞게 했지만, x^2=9의 해가 3 하나만이 아니라 ±3임을 빠뜨렸습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, (-3)^2도 9이네요. 그러면 x^2=9에서는 x가 3이랑 -3 둘 다 될 수 있어요.\n답: 3, -3",
+          "answer": "3, -3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 해를 모두 찾았어. x=3, -3가 정답이야.\n이차방정식에서 x^2=a 꼴이 나오면 양수와 음수를 함께 확인하는 습관을 가지면 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-5",
+          "answer": "8, -2",
+          "message": "(x-3)^2=25이면 x-3이 5일 수도 있고 -5일 수도 있어요. 그래서 x=8, -2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-0",
+          "answer": "4, -4",
+          "message": "x^2=16이면 제곱해서 16이 되는 수를 찾으면 돼요. 4랑 -4가 있어서 해는 두 개예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "2x^2=18에서 양변을 2로 나누면 x^2=9예요. 그러면 x=3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어, x^2=9 맞아. 그런데 x의 제곱이 9가 되는 수가 3만 있을까, 아니면 하나 더 있을까? 3을 제곱해 보고, (-3)을 제곱한 값도 한번 확인해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 x^2=9까지는 correctly 구했지만 제곱근을 풀 때 ±를 빠뜨려 해의 개수를 하나 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 3^2도 9고 (-3)^2도 9이네요. 그러면 x^2=9의 해는 두 개예요.\n답: 3, -3",
+          "answer": "3, -3",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! x^2=9의 해는 x=3, x=-3 두 개라서, 2x^2=18의 해도 3과 -3이야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-5",
+          "answer": "8, -2",
+          "message": "(x-3)^2=25면 x-3이 5 또는 -5예요. 그래서 x=8 또는 x=-2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-0",
+          "answer": "4, -4",
+          "message": "x^2=16이면 제곱해서 16이 되는 수를 찾으면 돼요. 4^2도 16이고 (-4)^2도 16이라서 해는 두 개예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x-3)^2=25이니까 x-3=5예요. 그래서 x=8이에요.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 거의 다 왔어! 그런데 어떤 수의 제곱이 25가 되려면 5만 가능할까, 아니면 또 다른 수도 있을까?\n즉, x-3=5 말고 x-3=-5도 되는지 한번 확인해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 제곱식 (x-3)^2=25에서 x-3=5만 고려하고 x-3=-5를 빠뜨려, 풀이 방향은 맞지만 개념 적용이 완전하지 않습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, (-5)^2도 25가 돼요. 그래서 x-3=5 또는 x-3=-5로 보면 돼요.\n답: 8, -2",
+          "answer": "8, -2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 완전히 잘 풀었어! x-3=5 또는 x-3=-5로 봐야 해서 해는 x=8, x=-2가 돼.\n이차방정식에서 제곱을 풀 때 ±를 챙긴 점이 아주 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-0",
+          "answer": "4, -4",
+          "message": "제곱해서 16이 되는 수를 찾으면 돼요. 4랑 -4가 있으니까 해는 두 개예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-1",
+          "answer": "7, -7",
+          "message": "x^2-49=0이면 x^2=49로 옮겨요. 제곱해서 49가 되는 수는 7이랑 -7이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "positive_sqrt_only",
+      "p1": "positive_sqrt_only-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": false,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "(x-3)^2=25이니까 x-3=5예요. 그래서 x=8이에요.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 아주 좋아요. 그런데 어떤 수의 제곱이 25가 되려면 5만 가능한지 한 번 떠올려볼래요? x-3이 될 수 있는 값을 두 가지로 써보세요.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 제곱방정식에서 x-3=5만 생각하고 x-3=-5인 경우를 빠뜨려, 풀이 방향은 맞지만 개념을 완전히 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 제곱해서 25가 되는 수는 5랑 -5 두 가지예요. 그래서 x-3=5 또는 x-3=-5로 보면 돼요.\n답: 8, -2",
+          "answer": "8, -2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 완전히 잘 풀었어요. x-3=5 또는 x-3=-5로 두 경우를 모두 봐서 x=8, -2가 됩니다. 최종 답은 8, -2예요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "positive_sqrt_only-0",
+          "answer": "4, -4",
+          "message": "제곱해서 16이 되는 수를 생각하면 4랑 -4 두 가지예요. 그래서 x는 두 값이 나와요.",
+          "label": "correct"
+        },
+        {
+          "problem": "positive_sqrt_only-1",
+          "answer": "7, -7",
+          "message": "x^2-49=0이니까 x^2=49로 옮기면 돼요. 제곱해서 49가 되는 수는 7이랑 -7이에요.",
+          "label": "correct"
+        }
+      ]
+    }
+  ]
+}

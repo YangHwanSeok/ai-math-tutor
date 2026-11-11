@@ -1,0 +1,5770 @@
+{
+  "meta": {
+    "tutor_model": "gpt-5.4",
+    "student_model": "gpt-5.4",
+    "student_effort": "none",
+    "reps": 2,
+    "max_turns": 5,
+    "first_turn": "work",
+    "conditions": [
+      "bridge"
+    ],
+    "reused_pre_from": "experiments/results/exp4_tutoring_work_20261030-1336.json",
+    "misconceptions": [
+      "mode_frequency",
+      "variance_no_divide",
+      "std_no_sqrt",
+      "polygon_angle_n",
+      "pythagoras_no_sqrt",
+      "hypotenuse_confusion",
+      "area_ratio_linear"
+    ],
+    "pre_trials": 84,
+    "pre_bug_rate": 1.0,
+    "pre_errors": 0,
+    "usage": {
+      "student": {
+        "calls": 242,
+        "input_tokens": 153235,
+        "output_tokens": 14535
+      },
+      "tutor": {
+        "calls": 356,
+        "input_tokens": 177470,
+        "output_tokens": 37069
+      }
+    },
+    "elapsed_sec": 311.5,
+    "retried_errors": 13
+  },
+  "summary": {
+    "bridge": {
+      "dialogs": 84,
+      "errors": 0,
+      "post_correct_rate": 1.0,
+      "post_correct_ci95": [
+        1.0,
+        1.0
+      ],
+      "post_all_correct_rate": 1.0,
+      "post_bug_rate": 0.0,
+      "post_other_rate": 0.0,
+      "p1_solved_rate": 1.0,
+      "avg_turns_to_solve": 1.2857,
+      "tutor_leak_rate": null,
+      "post_correct_by_misconception": {
+        "mode_frequency": 1.0,
+        "variance_no_divide": 1.0,
+        "std_no_sqrt": 1.0,
+        "polygon_angle_n": 1.0,
+        "pythagoras_no_sqrt": 1.0,
+        "hypotenuse_confusion": 1.0,
+        "area_ratio_linear": 1.0
+      }
+    }
+  },
+  "pre": [
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 0,
+      "p1": "mode_frequency-0",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 여기서는 4가 3번 나와서 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 0,
+      "p1": "mode_frequency-0",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 4가 3번 나왔으니까 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 1,
+      "p1": "mode_frequency-1",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 7이 4번 나왔으니까 최빈값은 4예요.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 1,
+      "p1": "mode_frequency-1",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 7이 4번 나왔으니까 최빈값은 4예요.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 2,
+      "p1": "mode_frequency-2",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 여기서는 8이 2번 나왔으니까 최빈값은 2예요.",
+        "answer": "2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 2,
+      "p1": "mode_frequency-2",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 8이 2번 나와서 최빈값은 2예요.",
+        "answer": "2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 3,
+      "p1": "mode_frequency-3",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 6이 3번 나왔으니까 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 3,
+      "p1": "mode_frequency-3",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 6이 3번 나왔으니까 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 4,
+      "p1": "mode_frequency-4",
+      "pre_reply": {
+        "message": "가장 많이 나온 횟수를 보면 9가 3번 나왔어요. 그래서 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 4,
+      "p1": "mode_frequency-4",
+      "pre_reply": {
+        "message": "가장 많이 나온 횟수를 보면 9가 3번 나왔어요. 그래서 최빈값은 3이에요.",
+        "answer": "3"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "mode_frequency",
+      "index": 5,
+      "p1": "mode_frequency-5",
+      "pre_reply": {
+        "message": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 10이 5번 나왔으니까 최빈값은 5예요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "mode_frequency",
+      "index": 5,
+      "p1": "mode_frequency-5",
+      "pre_reply": {
+        "message": "10이 5번 나와서 제일 많이 나온 횟수는 5예요. 그래서 최빈값은 5라고 생각해요.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 0,
+      "p1": "variance_no_divide-0",
+      "pre_reply": {
+        "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이니까 분산은 10이에요.",
+        "answer": "10"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 0,
+      "p1": "variance_no_divide-0",
+      "pre_reply": {
+        "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 이걸 제곱해서 더하면 4+1+0+1+4=10이라서 분산은 10이에요.",
+        "answer": "10"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 1,
+      "p1": "variance_no_divide-1",
+      "pre_reply": {
+        "message": "평균은 (2+4+4+6)/4 = 4예요. 편차는 -2, 0, 0, 2니까 제곱해서 더하면 4+0+0+4 = 8이에요.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 1,
+      "p1": "variance_no_divide-1",
+      "pre_reply": {
+        "message": "평균은 (2+4+4+6)/4 = 4예요. 편차는 -2, 0, 0, 2니까 제곱해서 더하면 4+0+0+4 = 8이에요.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 2,
+      "p1": "variance_no_divide-2",
+      "pre_reply": {
+        "message": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱해서 더하면 9+1+1+9=20이니까 분산은 20이야.",
+        "answer": "20"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 2,
+      "p1": "variance_no_divide-2",
+      "pre_reply": {
+        "message": "평균은 (3+5+7+9)÷4=6이에요. 편차는 -3, -1, 1, 3이니까 제곱해서 더하면 9+1+1+9=20이에요.",
+        "answer": "20"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 3,
+      "p1": "variance_no_divide-3",
+      "pre_reply": {
+        "message": "평균은 (4+6+8+10+12)÷5=8이야. 편차는 -4, -2, 0, 2, 4니까 제곱해서 더하면 16+4+0+4+16=40이야.",
+        "answer": "40"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 3,
+      "p1": "variance_no_divide-3",
+      "pre_reply": {
+        "message": "평균은 (4+6+8+10+12)/5=8이에요. 편차는 -4, -2, 0, 2, 4니까 제곱해서 더하면 16+4+0+4+16=40이에요.",
+        "answer": "40"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 4,
+      "p1": "variance_no_divide-4",
+      "pre_reply": {
+        "message": "평균은 (2+3+7+8)/4 = 5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9 = 26이니까 분산은 26이에요.",
+        "answer": "26"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 4,
+      "p1": "variance_no_divide-4",
+      "pre_reply": {
+        "message": "평균은 (2+3+7+8)/4 = 5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9 = 26이니까 분산은 26이에요.",
+        "answer": "26"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "variance_no_divide",
+      "index": 5,
+      "p1": "variance_no_divide-5",
+      "pre_reply": {
+        "message": "평균은 (1+4+7)/3 = 4예요. 편차는 -3, 0, 3이고 제곱해서 더하면 9+0+9=18이니까 분산은 18이에요.",
+        "answer": "18"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "variance_no_divide",
+      "index": 5,
+      "p1": "variance_no_divide-5",
+      "pre_reply": {
+        "message": "평균은 (1+4+7)/3=4예요. 편차는 -3, 0, 3이니까 제곱해서 더하면 9+0+9=18이에요.",
+        "answer": "18"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 0,
+      "p1": "std_no_sqrt-0",
+      "pre_reply": {
+        "message": "평균은 (2+4+4+4+5+5+7+9)/8 = 5예요. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이고 평균은 (9+1+1+1+0+0+4+16)/8 = 32/8 = 4예요.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 0,
+      "p1": "std_no_sqrt-0",
+      "pre_reply": {
+        "message": "평균은 (2+4+4+4+5+5+7+9)/8 = 5예요. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이라서 합이 32, 평균은 32/8 = 4예요.",
+        "answer": "4"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 1,
+      "p1": "std_no_sqrt-1",
+      "pre_reply": {
+        "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱하면 4, 1, 0, 1, 4라서 평균은 (4+1+0+1+4)/5 = 2예요.",
+        "answer": "2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 1,
+      "p1": "std_no_sqrt-1",
+      "pre_reply": {
+        "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱하면 4, 1, 0, 1, 4니까 평균은 (4+1+0+1+4)/5 = 2예요.",
+        "answer": "2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 2,
+      "p1": "std_no_sqrt-2",
+      "pre_reply": {
+        "message": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱하면 9, 1, 1, 9라서 평균은 (9+1+1+9)/4=5야.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 2,
+      "p1": "std_no_sqrt-2",
+      "pre_reply": {
+        "message": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱하면 9, 1, 1, 9라서 평균은 (9+1+1+9)/4=5야.",
+        "answer": "5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 3,
+      "p1": "std_no_sqrt-3",
+      "pre_reply": {
+        "message": "평균은 (1+4+7)/3=4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9니까 평균은 (9+0+9)/3=6이야.",
+        "answer": "6"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 3,
+      "p1": "std_no_sqrt-3",
+      "pre_reply": {
+        "message": "평균은 (1+4+7)/3 = 4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9니까 평균은 (9+0+9)/3 = 6이야.",
+        "answer": "6"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 4,
+      "p1": "std_no_sqrt-4",
+      "pre_reply": {
+        "message": "평균은 (2+3+7+8)/4=5야. 편차 제곱은 9, 4, 4, 9라서 평균은 (9+4+4+9)/4=26/4=13/2야.",
+        "answer": "13/2"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 4,
+      "p1": "std_no_sqrt-4",
+      "pre_reply": {
+        "message": "평균은 (2+3+7+8)/4=5예요. 편차 제곱은 9, 4, 4, 9라서 평균은 (9+4+4+9)/4=26/4=6.5예요.",
+        "answer": "6.5"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "std_no_sqrt",
+      "index": 5,
+      "p1": "std_no_sqrt-5",
+      "pre_reply": {
+        "message": "평균은 8이야. 편차는 -4, -2, 0, 2, 4니까 제곱하면 16, 4, 0, 4, 16이고, 이걸 평균 내면 40/5 = 8이야.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "std_no_sqrt",
+      "index": 5,
+      "p1": "std_no_sqrt-5",
+      "pre_reply": {
+        "message": "평균은 (4+6+8+10+12)/5 = 8이야. 편차는 -4, -2, 0, 2, 4니까 제곱하면 16, 4, 0, 4, 16이고, 그 평균은 40/5 = 8이야.",
+        "answer": "8"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 0,
+      "p1": "polygon_angle_n-0",
+      "pre_reply": {
+        "message": "내가 아는 방법으로는 n각형의 내각의 합이 180×n이야. 그래서 5각형은 180×5=900이야.",
+        "answer": "900"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 0,
+      "p1": "polygon_angle_n-0",
+      "pre_reply": {
+        "message": "저는 n각형의 내각의 합이 180×n이라고 배웠어요. 그래서 5각형은 180×5=900이에요.",
+        "answer": "900"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 1,
+      "p1": "polygon_angle_n-1",
+      "pre_reply": {
+        "message": "나는 n각형의 내각의 합이 180×n이라고 알고 있어. 그래서 6각형은 180×6=1080이야.",
+        "answer": "1080"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 1,
+      "p1": "polygon_angle_n-1",
+      "pre_reply": {
+        "message": "나는 n각형의 내각의 합이 180×n이라고 배웠어. 그래서 6각형은 180×6=1080이야.",
+        "answer": "1080"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 2,
+      "p1": "polygon_angle_n-2",
+      "pre_reply": {
+        "message": "내가 아는 방법으로는 n각형의 내각의 합이 180×n이야. 그래서 7각형은 180×7=1260이야.",
+        "answer": "1260"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 2,
+      "p1": "polygon_angle_n-2",
+      "pre_reply": {
+        "message": "n각형의 내각의 합은 180×n이라고 배웠으니까, 7각형은 180×7을 하면 돼요. 계산하면 1260이에요.",
+        "answer": "1260"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 3,
+      "p1": "polygon_angle_n-3",
+      "pre_reply": {
+        "message": "나는 n각형의 내각의 합이 180×n이라고 배웠으니까, 8각형은 180×8을 하면 돼. 그래서 1440이야.",
+        "answer": "1440"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 3,
+      "p1": "polygon_angle_n-3",
+      "pre_reply": {
+        "message": "n각형의 내각의 합은 180×n이라고 알고 있으니까, 8각형은 180×8을 하면 돼요. 계산하면 1440이에요.",
+        "answer": "1440"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 4,
+      "p1": "polygon_angle_n-4",
+      "pre_reply": {
+        "message": "저는 n각형의 내각의 합이 180×n이라고 배웠어요. 그래서 9각형은 180×9=1620이에요.",
+        "answer": "1620"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 4,
+      "p1": "polygon_angle_n-4",
+      "pre_reply": {
+        "message": "n각형의 내각의 합은 180×n 이라고 배웠으니까, 9각형은 180×9를 하면 돼. 계산하면 1620이야.",
+        "answer": "1620"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "polygon_angle_n",
+      "index": 5,
+      "p1": "polygon_angle_n-5",
+      "pre_reply": {
+        "message": "n각형의 내각의 합은 180×n이라고 배웠으니까, 10각형은 180×10을 하면 돼요. 계산하면 1800이에요.",
+        "answer": "1800"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "polygon_angle_n",
+      "index": 5,
+      "p1": "polygon_angle_n-5",
+      "pre_reply": {
+        "message": "n각형의 내각의 합은 180×n이라고 배웠으니까, 10각형은 180×10을 하면 돼요. 계산하면 1800이에요.",
+        "answer": "1800"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 0,
+      "p1": "pythagoras_no_sqrt-0",
+      "pre_reply": {
+        "message": "직각을 낀 두 변 제곱을 더하면 빗변 길이라서 3^2+4^2를 해요. 9+16=25라서 빗변은 25예요.",
+        "answer": "25"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 0,
+      "p1": "pythagoras_no_sqrt-0",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라서 3^2+4^2=9+16=25야. 그래서 빗변은 25cm라고 생각해.",
+        "answer": "25"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 1,
+      "p1": "pythagoras_no_sqrt-1",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이예요. 5^2+12^2=25+144=169라서 빗변은 169cm예요.",
+        "answer": "169"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 1,
+      "p1": "pythagoras_no_sqrt-1",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 5^2+12^2=25+144=169예요.",
+        "answer": "169"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 2,
+      "p1": "pythagoras_no_sqrt-2",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 9^2 + 12^2 = 81 + 144 = 225예요.",
+        "answer": "225"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 2,
+      "p1": "pythagoras_no_sqrt-2",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 9^2+12^2=81+144=225예요.",
+        "answer": "225"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 3,
+      "p1": "pythagoras_no_sqrt-3",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱의 합이 빗변의 길이니까 8^2+15^2를 하면 돼. 64+225=289라서 빗변은 289cm야.",
+        "answer": "289"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 3,
+      "p1": "pythagoras_no_sqrt-3",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변의 길이라고 배웠어요. 그래서 8^2 + 15^2 = 64 + 225 = 289예요.",
+        "answer": "289"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 4,
+      "p1": "pythagoras_no_sqrt-4",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱의 합이 빗변의 길이니까 7^2+24^2=49+576=625야. 그래서 빗변은 625cm야.",
+        "answer": "625"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 4,
+      "p1": "pythagoras_no_sqrt-4",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변의 길이예요. 7^2+24^2=49+576=625라서 빗변은 625cm예요.",
+        "answer": "625"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 5,
+      "p1": "pythagoras_no_sqrt-5",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라서 12^2+16^2를 해요. 144+256=400이니까 빗변은 400cm예요.",
+        "answer": "400"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "pythagoras_no_sqrt",
+      "index": 5,
+      "p1": "pythagoras_no_sqrt-5",
+      "pre_reply": {
+        "message": "직각을 낀 두 변의 제곱을 더하면 빗변 길이니까 12^2+16^2를 하면 돼. 144+256=400이니까 빗변은 400cm야.",
+        "answer": "400"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 0,
+      "p1": "hypotenuse_confusion-0",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(13^2+5^2)=sqrt(169+25)=sqrt(194)예요.",
+        "answer": "sqrt(194)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 0,
+      "p1": "hypotenuse_confusion-0",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(13^2+5^2)=sqrt(169+25)=sqrt(194)예요.",
+        "answer": "sqrt(194)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 1,
+      "p1": "hypotenuse_confusion-1",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(10^2+6^2)=sqrt(136)입니다.",
+        "answer": "sqrt(136)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 1,
+      "p1": "hypotenuse_confusion-1",
+      "pre_reply": {
+        "message": "직각삼각형에서는 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(10^2+6^2)=sqrt(136)입니다.",
+        "answer": "sqrt(136)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 2,
+      "p1": "hypotenuse_confusion-2",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(17^2+8^2)=sqrt(289+64)=sqrt(353) 이에요.",
+        "answer": "sqrt(353)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 2,
+      "p1": "hypotenuse_confusion-2",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(17^2+8^2)=sqrt(289+64)=sqrt(353)입니다.",
+        "answer": "sqrt(353)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 3,
+      "p1": "hypotenuse_confusion-3",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(25^2+7^2)=sqrt(625+49)=sqrt(674)예요.",
+        "answer": "sqrt(674)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 3,
+      "p1": "hypotenuse_confusion-3",
+      "pre_reply": {
+        "message": "직각삼각형에서는 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(25^2+7^2)=sqrt(625+49)=sqrt(674)예요.",
+        "answer": "sqrt(674)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 4,
+      "p1": "hypotenuse_confusion-4",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(15^2+9^2)=sqrt(225+81)=sqrt(306)이에요.",
+        "answer": "sqrt(306)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 4,
+      "p1": "hypotenuse_confusion-4",
+      "pre_reply": {
+        "message": "직각삼각형이니까 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(15^2+9^2)=sqrt(225+81)=sqrt(306)이에요.",
+        "answer": "sqrt(306)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "hypotenuse_confusion",
+      "index": 5,
+      "p1": "hypotenuse_confusion-5",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(20^2+12^2)=sqrt(400+144)=sqrt(544)예요.",
+        "answer": "sqrt(544)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "hypotenuse_confusion",
+      "index": 5,
+      "p1": "hypotenuse_confusion-5",
+      "pre_reply": {
+        "message": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(20^2+12^2)=sqrt(400+144)=sqrt(544)예요.",
+        "answer": "sqrt(544)"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 0,
+      "p1": "area_ratio_linear-0",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:3이에요. 작은 도형이 8이니까 큰 도형은 8×3/2=12예요.",
+        "answer": "12"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 0,
+      "p1": "area_ratio_linear-0",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:3이에요. 작은 도형이 8cm^2이므로 큰 도형의 넓이는 8×3/2=12예요.",
+        "answer": "12"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 1,
+      "p1": "area_ratio_linear-1",
+      "pre_reply": {
+        "message": "닮음비가 1:2니까 넓이의 비도 1:2라고 생각하면 돼요. 작은 도형 넓이가 5cm^2니까 큰 도형은 10cm^2예요.",
+        "answer": "10"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 1,
+      "p1": "area_ratio_linear-1",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같다고 배웠어요. 그러니까 1:2이면 넓이도 1:2라서 5에서 2배 하면 10이에요.",
+        "answer": "10"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 2,
+      "p1": "area_ratio_linear-2",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같다고 보고 풀면, 작은 도형:큰 도형 = 3:4예요. 그래서 큰 도형의 넓이는 18 x 4/3 = 24예요.",
+        "answer": "24"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 2,
+      "p1": "area_ratio_linear-2",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같다고 보고 풀면, 작은 도형:큰 도형 = 3:4예요. 그래서 큰 도형의 넓이는 18×4/3=24예요.",
+        "answer": "24"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 3,
+      "p1": "area_ratio_linear-3",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:5예요. 작은 도형이 12cm^2이니 큰 도형은 12×5/2=30이에요.",
+        "answer": "30"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 3,
+      "p1": "area_ratio_linear-3",
+      "pre_reply": {
+        "message": "닮음비가 2:5니까 넓이의 비도 2:5라고 생각하면 돼요. 작은 도형이 12cm^2이니까 큰 도형은 12×5/2=30이에요.",
+        "answer": "30"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 4,
+      "p1": "area_ratio_linear-4",
+      "pre_reply": {
+        "message": "닮음비가 1:3이니까 넓이의 비도 1:3이라고 생각하면 돼요. 작은 도형 넓이가 7이니까 큰 도형은 7×3=21이에요.",
+        "answer": "21"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 4,
+      "p1": "area_ratio_linear-4",
+      "pre_reply": {
+        "message": "닮음비가 1:3이면 넓이의 비도 1:3이라고 생각하면 돼요. 작은 도형 넓이가 7이니까 큰 도형은 7×3=21이에요.",
+        "answer": "21"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 0,
+      "misconception": "area_ratio_linear",
+      "index": 5,
+      "p1": "area_ratio_linear-5",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같으니까 3:5로 봐요. 작은 도형이 27이니까 큰 도형은 27×5/3=45예요.",
+        "answer": "45"
+      },
+      "pre_label": "bug"
+    },
+    {
+      "rep": 1,
+      "misconception": "area_ratio_linear",
+      "index": 5,
+      "p1": "area_ratio_linear-5",
+      "pre_reply": {
+        "message": "닮은 도형의 넓이의 비는 닮음비와 같다고 보면 3:5예요. 그래서 큰 도형의 넓이는 27×5/3=45예요.",
+        "answer": "45"
+      },
+      "pre_label": "bug"
+    }
+  ],
+  "dialogs": [
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 여기서는 4가 3번 나와서 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 봤어. 다만 최빈값은 '가장 많이 나온 횟수'가 아니라 '가장 많이 나온 값'이야. 그럼 이 자료에서 가장 자주 나온 숫자가 무엇인지 한 번만 다시 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동하여 4가 3번 나온 사실은 맞게 보았지만 답을 3으로 잘못 썼다.",
+            "error_type": "misinterpret",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 가장 많이 나온 숫자 자체를 보면 되네요. 여기서는 4가 제일 자주 나왔어요.\n답: 4",
+          "answer": "4",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 이 자료에서는 4가 가장 많이 나왔으므로 최빈값은 4야. 이제 최빈값은 '가장 많이 나온 값'이라는 점도 함께 기억해 두자.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-1",
+          "answer": "7",
+          "message": "최빈값은 가장 많이 나온 값이니까, 여기서는 7이 제일 많이 나왔어요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-2",
+          "answer": "8",
+          "message": "최빈값은 가장 많이 나온 값이니까 8이 제일 자주 나왔어요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 4가 3번 나왔으니까 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분이야. 최빈값은 '가장 많이 나온 횟수'가 아니라 '가장 많이 나온 값'이야. 그럼 이 자료에서 3번 나온 값이 무엇인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동하여 개념을 잘못 적용했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 3번 나온 값을 찾으면 되네요. 이 자료에서는 4가 3번 나왔어요.\n답: 4",
+          "answer": "4",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 최빈값은 가장 많이 나온 값이니까, 이 자료의 최빈값은 4야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-1",
+          "answer": "7",
+          "message": "최빈값은 가장 많이 나온 값이니까, 제일 여러 번 나온 수를 찾으면 돼요. 7이 4번 나왔어요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-2",
+          "answer": "8",
+          "message": "최빈값은 가장 많이 나온 값이에요. 8이 2번 나와서 제일 많이 나왔어요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 7이 4번 나왔으니까 최빈값은 4예요.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분인데, 최빈값은 '가장 많이 나온 횟수'가 아니라 '가장 많이 나온 값'이야. 여기서 4는 몇 번 나왔는지를 나타내는 거고, 진짜 최빈값은 4번 나온 그 숫자야. 그럼 이 자료에서 4번 나온 숫자가 무엇인지 다시 찾아볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동하여 7이 아니라 4라고 답했다.",
+            "error_type": "misinterpret",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 맞네. 4는 나온 횟수이고, 실제로 제일 많이 나온 값은 7이에요. 그래서 다시 보면 최빈값은 7이에요.\n답: 7",
+          "answer": "7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 이해했어. 최빈값은 가장 많이 나온 값이니까 이 자료의 최빈값은 7이야. 아주 잘 고쳤어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-2",
+          "answer": "8",
+          "message": "최빈값은 가장 많이 나온 값이에요. 여기서는 8이 2번으로 제일 많이 나왔어요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-3",
+          "answer": "6",
+          "message": "최빈값은 가장 많이 나온 값이에요. 여기서는 6이 3번으로 제일 많이 나왔어요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 7이 4번 나왔으니까 최빈값은 4예요.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 최빈값은 “가장 많이 나온 횟수”가 아니라 “가장 많이 나온 값”이야. 그럼 이 자료에서 4번 나온 숫자가 무엇인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동하여 7이 아닌 4를 답했다.",
+            "error_type": "misinterpret",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 많이 나온 횟수가 아니라 많이 나온 숫자를 말하는 거네요. 이 자료에서는 7이 4번 나왔어요.\n답: 7",
+          "answer": "7",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 이해했어! 이 자료에서 가장 많이 나온 값은 7이니까 최빈값은 7이야. 아주 잘했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-2",
+          "answer": "8",
+          "message": "이제 최빈값은 가장 많이 나온 값이에요. 여기서는 8이 2번 나와서 제일 많이 나왔어요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-3",
+          "answer": "6",
+          "message": "최빈값은 가장 많이 나온 값이에요. 여기서는 6이 3번 나와서 제일 많아요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 여기서는 8이 2번 나왔으니까 최빈값은 2예요.\n답: 2",
+          "answer": "2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분이야. 최빈값은 ‘가장 많이 나온 횟수’가 아니라, ‘가장 많이 나온 값’이야. 그러면 이 자료에서 2번 나온 것은 어떤 숫자인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동해서 8이 아닌 2를 답했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 2번 나온 숫자를 보면 되네요. 이 자료에서는 8이 2번 나왔어요.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 최빈값은 가장 많이 나온 ‘값’이니까 이 자료의 최빈값은 8이야. 이제 최빈값이랑 도수의 차이도 구분할 수 있겠지?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-3",
+          "answer": "6",
+          "message": "최빈값은 가장 많이 나온 값이에요. 여기서는 6이 3번 나와서 최빈값은 6이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-4",
+          "answer": "9",
+          "message": "최빈값은 가장 많이 나온 값이에요. 여기서는 9가 3번, 3이 2번 나와서 9가 최빈값이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 8이 2번 나와서 최빈값은 2예요.\n답: 2",
+          "answer": "2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분이야. 최빈값은 '가장 많이 나온 횟수'가 아니라, '가장 많이 나온 값'을 말해. 그러면 이 자료에서 2번 나온 값이 무엇인지 한 번 찾아볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동해 8이 2번 나온다는 사실에서 답을 2로 잘못 냈다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 최빈값은 많이 나온 '값'이었네요. 이 자료에서는 8이 2번 나왔으니까 최빈값은 8이에요.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 이 자료에서 가장 많이 나온 값은 8이니까 최빈값은 8이야. 이제 최빈값이 '횟수'가 아니라 '값'이라는 점도 확실히 알겠지?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-3",
+          "answer": "6",
+          "message": "이제는 최빈값이 가장 많이 나온 값이라는 걸 알아요. 6이 3번으로 제일 많이 나왔어요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-4",
+          "answer": "9",
+          "message": "최빈값은 가장 많이 나온 값이에요. 9가 3번 나와서 제일 많아요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 6이 3번 나왔으니까 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분이야. 최빈값은 '가장 많이 나온 횟수'가 아니라 '가장 많이 나온 값'을 말해. 그럼 이 자료에서 가장 자주 나온 숫자가 무엇인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동하여 6이 3번 나온 사실에서 답을 3으로 잘못 결론냈다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 횟수가 아니라 숫자 자체를 보는 거네요. 이 자료에서는 6이 가장 많이 나와요.\n답: 6",
+          "answer": "6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 이 자료에서 가장 많이 나온 값은 6이니까 최빈값은 6이야. 이제 최빈값이 '횟수'가 아니라 '값'이라는 점도 함께 기억하면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-4",
+          "answer": "9",
+          "message": "이제 최빈값은 가장 많이 나온 값으로 보면 돼요. 9가 3번으로 가장 많이 나와요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-5",
+          "answer": "10",
+          "message": "최빈값은 가장 많이 나온 값이에요. 10이 제일 많이 나와요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 6이 3번 나왔으니까 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분인데, 최빈값은 '가장 많이 나온 횟수'가 아니라 '가장 많이 나온 값'이야. 그러면 이 자료에서 3번 나온 것은 횟수이고, 그 3번 나온 값이 무엇인지 다시 한번 찾아볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 최빈값을 '가장 많이 나온 횟수'로 혼동했고, 실제로는 '가장 많이 나온 값'을 구해야 하므로 개념을 잘못 해석했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 3은 나온 횟수이고 최빈값은 가장 많이 나온 값이네요. 6이 3번 나왔으니까 최빈값은 6이에요.\n답: 6",
+          "answer": "6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 3은 도수이고, 가장 많이 나온 값은 6이니까 최빈값은 6이야. 아주 잘 고쳤어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-4",
+          "answer": "9",
+          "message": "최빈값은 가장 많이 나온 값이에요. 9가 3번, 3이 2번, 1이 1번 나와서 제일 많이 나온 값은 9예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-5",
+          "answer": "10",
+          "message": "최빈값은 가장 많이 나온 값이에요. 10이 제일 많이 나왔어요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "가장 많이 나온 횟수를 보면 9가 3번 나왔어요. 그래서 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 9가 3번 나왔다는 것까지는 아주 잘 봤어. 그런데 최빈값은 “가장 많이 나온 횟수”가 아니라 “가장 많이 나온 값”이야. 그럼 이 자료에서 가장 많이 나온 값은 무엇인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 9가 3번 나왔다는 빈도는 correctly 파악했지만, 최빈값을 '가장 많이 나온 값'이 아니라 '가장 많이 나온 횟수'로 혼동했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 3번 나온 값 자체를 보면 되네요. 9가 가장 많이 나왔으니까 최빈값은 9예요.\n답: 9",
+          "answer": "9",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 최빈값은 가장 많이 나온 값이니까 이 자료의 최빈값은 9야. 잘 고쳤어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-5",
+          "answer": "10",
+          "message": "가장 많이 나온 값을 보면 10이 제일 많이 나왔어요. 그래서 최빈값은 10이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-0",
+          "answer": "4",
+          "message": "가장 많이 나온 값을 보면 4가 3번 나왔어요. 그래서 최빈값은 4예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "가장 많이 나온 횟수를 보면 9가 3번 나왔어요. 그래서 최빈값은 3이에요.\n답: 3",
+          "answer": "3",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 9가 가장 자주 나왔다는 것까지는 아주 잘 봤어. 그런데 최빈값은 '가장 많이 나온 횟수'를 쓰는 걸까, 아니면 '가장 많이 나온 수'를 쓰는 걸까? 한 번 그 말뜻만 다시 골라 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 9가 3번으로 가장 많이 나왔다는 빈도 판단은 맞았지만, 최빈값을 '가장 많이 나온 값'이 아니라 '나온 횟수'로 착각했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 최빈값이 말 그대로 가장 자주 나온 값이면 횟수가 아니라 그 수를 쓰는 거네요. 그러면 9가 제일 많이 나왔으니까 답은 9예요.\n답: 9",
+          "answer": "9",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 최빈값은 가장 많이 나온 '횟수'가 아니라 가장 많이 나온 '수'이니까, 9가 정답이야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-5",
+          "answer": "10",
+          "message": "이제는 가장 많이 나온 수를 보면 돼요. 10이 제일 자주 나왔으니까 최빈값은 10이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-0",
+          "answer": "4",
+          "message": "가장 많이 나온 수를 보면 4가 3번으로 제일 많아요. 그래서 최빈값은 4예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "최빈값은 가장 많이 나온 횟수라고 배웠어요. 10이 5번 나왔으니까 최빈값은 5예요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "횟수 5를 잘 찾은 건 아주 좋아요. 그런데 '최빈값'은 가장 많이 나온 횟수가 아니라, 가장 많이 나온 값 자체를 말해요. 이 자료에서 5번 나온 값이 무엇인지 한 번만 말해볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 '최빈값'을 자료에서 가장 자주 나타나는 값이 아니라 그 횟수로 혼동해서, 10이 5번 나온 사실은 맞게 찾았지만 답을 5로 썼다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇구나. 5번 나온 값은 10이니까 최빈값은 10이에요.\n답: 10",
+          "answer": "10",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 정확해요. 최빈값은 가장 많이 나온 값이니까 이 자료의 최빈값은 10이에요. 아주 잘 고쳤어요!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-0",
+          "answer": "4",
+          "message": "최빈값은 가장 많이 나온 값이에요. 4가 3번으로 제일 많이 나와요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-1",
+          "answer": "7",
+          "message": "최빈값은 가장 많이 나온 값이에요. 7이 4번으로 제일 많이 나와요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "mode_frequency",
+      "p1": "mode_frequency-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "10이 5번 나와서 제일 많이 나온 횟수는 5예요. 그래서 최빈값은 5라고 생각해요.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "헷갈리기 쉬운 부분을 잘 찾았어. 최빈값은 “가장 많이 나온 횟수”가 아니라 “가장 많이 나온 값”이야. 그럼 이 자료에서 5번 나온 숫자가 무엇인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 가장 자주 나온 '값'과 그 값의 '횟수'를 혼동하여 최빈값을 10이 아닌 5로 답했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 최빈값은 제일 많이 나온 값이었어요. 여기서는 10이 5번 나왔어요.\n답: 10",
+          "answer": "10",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 10이 가장 많이 나왔으니까 최빈값은 10이야. 잘 고쳤다!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "mode_frequency-0",
+          "answer": "4",
+          "message": "4가 3번 나와서 제일 많이 나온 값이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "mode_frequency-1",
+          "answer": "7",
+          "message": "7이 4번 나와서 제일 많이 나온 값이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이니까 분산은 10이에요.\n답: 10",
+          "answer": "10",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 마지막에 한 가지만 더 확인해 보자: 분산은 편차의 제곱의 합 10을 그냥 쓰는 게 아니라, 자료의 수 5로 나누어야 해. 그러면 10 ÷ 5는 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차 제곱합 10까지는 맞았지만, 분산은 편차 제곱의 합을 자료 수 5로 나누어야 하므로 마지막 단계에서 개념 적용이 덜 되었다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 편차 제곱의 합을 자료 수로 나누는 거였네. 그러면 10 ÷ 5 = 2야.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 편차 제곱의 합 10을 자료의 수 5로 나누면 분산은 2가 돼. 스스로 바로 고쳐서 정말 잘했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-1",
+          "answer": "2",
+          "message": "평균은 (2+4+4+6)÷4 = 4이고, 편차는 -2, 0, 0, 2예요. 제곱해서 더하면 4+0+0+4=8, 그걸 자료 수 4로 나누면 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-2",
+          "answer": "5",
+          "message": "평균은 6이고 편차는 -3, -1, 1, 3이야. 제곱해서 더하면 9+1+1+9=20이고, 자료 수 4로 나누면 5야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 이걸 제곱해서 더하면 4+1+0+1+4=10이라서 분산은 10이에요.\n답: 10",
+          "answer": "10",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균이 3인 것과 편차의 제곱을 더해서 10이 나온 것까지는 아주 잘했어. 그런데 분산은 '편차 제곱의 합' 그대로가 아니라, 그 값을 자료의 개수 5로 나눠야 해. 그럼 10을 5로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 편차 제곱합까지는 맞게 구했지만, 분산은 편차 제곱의 합을 자료의 개수로 나누어야 하는데 그 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇네. 편차 제곱의 합이 10이면 자료가 5개니까 5로 나누면 돼.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 분산은 편차 제곱의 합 10을 자료 수 5로 나눈 값이니까 2가 맞아. 아주 잘 고쳤어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-1",
+          "answer": "2",
+          "message": "평균은 (2+4+4+6)/4=4예요. 편차는 -2, 0, 0, 2니까 제곱해서 더하면 4+0+0+4=8이고, 자료 수 4로 나누면 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-2",
+          "answer": "5",
+          "message": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱해서 더하면 9+1+1+9=20, 그다음 4로 나누면 5야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+4+4+6)/4 = 4예요. 편차는 -2, 0, 0, 2니까 제곱해서 더하면 4+0+0+4 = 8이에요.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 이제 마지막으로, 분산은 편차제곱의 합 8을 그냥 쓰는 게 아니라 자료의 수 4로 나누는 거였지? 그러면 8 ÷ 4가 얼마인지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합 8까지는 맞았지만, 분산은 그것을 자료 수 4로 나누어야 하므로 마지막 단계가 빠졌다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 편차제곱의 합이 8이고 자료가 4개니까 4로 나누면 돼요. 8 ÷ 4 = 2예요.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답은 2야. 평균도 잘 구했고, 편차제곱의 합 8을 자료 수 4로 나눠서 분산 2까지 정확하게 했어. 아주 잘 풀었어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-2",
+          "answer": "5",
+          "message": "평균은 (3+5+7+9)/4 = 6이고, 편차는 -3, -1, 1, 3이에요. 제곱해서 더하면 9+1+1+9 = 20, 자료 수 4로 나누면 5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-3",
+          "answer": "8",
+          "message": "평균은 (4+6+8+10+12)/5 = 8이에요. 편차는 -4, -2, 0, 2, 4라서 제곱해서 더하면 16+4+0+4+16 = 40, 자료 수 5로 나누면 8이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+4+4+6)/4 = 4예요. 편차는 -2, 0, 0, 2니까 제곱해서 더하면 4+0+0+4 = 8이에요.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 그런데 분산은 편차제곱들을 그냥 더한 값이 아니라, 그 값의 평균이야. 자료가 4개일 때 8 다음에 무엇을 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 편차제곱합 8까지는 맞게 구했지만, 분산은 편차제곱의 평균이므로 자료 수 4로 나누는 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 편차제곱들을 더한 다음에 자료 개수로 나눠서 평균을 구해야 하네요. 8을 4로 나누면 돼요.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 풀었어. 8을 자료 수 4로 나누면 분산은 2가 돼. 아주 잘 바로잡았어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-2",
+          "answer": "5",
+          "message": "평균은 (3+5+7+9)/4 = 6이고, 편차는 -3, -1, 1, 3이에요. 제곱해서 더하면 9+1+1+9 = 20, 그 평균은 20/4 = 5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-3",
+          "answer": "8",
+          "message": "평균은 (4+6+8+10+12)/5 = 8이에요. 편차는 -4, -2, 0, 2, 4라서 제곱의 합은 16+4+0+4+16 = 40, 그 평균은 40/5 = 8이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱해서 더하면 9+1+1+9=20이니까 분산은 20이야.\n답: 20",
+          "answer": "20",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 편차제곱의 합 20을 구한 다음, 분산은 그 값을 자료의 수 4로 나누어야 해. 그러면 20을 4로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합 20까지는 맞았지만, 분산은 자료 수 4로 나누어야 하는데 그 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 그러면 20을 4로 나누면 돼. 20/4=5야.\n답: 5",
+          "answer": "5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답이야! 분산은 편차제곱합 20을 자료 수 4로 나눈 5가 돼. 정말 잘 풀었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-3",
+          "answer": "8",
+          "message": "평균은 (4+6+8+10+12)/5=8이야. 편차는 -4, -2, 0, 2, 4니까 제곱해서 더하면 16+4+0+4+16=40, 그다음 자료 수 5로 나누면 8이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-4",
+          "answer": "6.5",
+          "message": "평균은 (2+3+7+8)/4=5야. 편차는 -3, -2, 2, 3이라서 제곱해서 더하면 9+4+4+9=26, 그걸 4로 나누면 6.5야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-2",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (3+5+7+9)÷4=6이에요. 편차는 -3, -1, 1, 3이니까 제곱해서 더하면 9+1+1+9=20이에요.\n답: 20",
+          "answer": "20",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균과 편차제곱합 20까지는 아주 잘했어. 그런데 분산은 편차제곱합을 그냥 쓰는 게 아니라 자료의 개수로 나눠야 해. 여기서는 자료가 4개니까, 마지막으로 20을 무엇으로 나눠야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합 20까지는 맞았지만, 분산은 편차제곱합을 자료의 개수 4로 나누어야 해서 마지막 적용이 빠졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 자료가 4개니까 20을 4로 나누면 돼요.\n답: 4",
+          "answer": "4",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어. 지금은 나누는 수를 잘 찾았는데, 20÷4 계산만 다시 천천히 해보자. 4가 몇 번 들어가면 20이 되는지 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 분산을 구할 때 편차제곱합을 자료의 개수로 나누어야 한다는 점을 스스로 바로잡았지만, 20÷4를 4로 계산하는 산술 실수를 했다.",
+            "error_type": "careless",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇네, 4가 20에 5번 들어가니까 20÷4=5예요.\n답: 5",
+          "answer": "5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정답을 정확히 구했어. 분산은 5가 맞아! 마지막 나눗셈 실수만 스스로 잘 고쳐서 아주 좋다.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-3",
+          "answer": "8",
+          "message": "평균은 8이고, 편차는 -4, -2, 0, 2, 4예요. 제곱해서 더하면 16+4+0+4+16=40이고, 이제 자료가 5개니까 5로 나누면 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-4",
+          "answer": "6.5",
+          "message": "평균은 (2+3+7+8)÷4=5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9=26, 자료가 4개니까 4로 나누면 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (4+6+8+10+12)÷5=8이야. 편차는 -4, -2, 0, 2, 4니까 제곱해서 더하면 16+4+0+4+16=40이야.\n답: 40",
+          "answer": "40",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균과 편차제곱합 40까지는 아주 잘 구했어. 그런데 분산은 편차제곱합을 그대로 쓰는 게 아니라, 자료의 개수 5로 나누어 구해. 그럼 40을 5로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합까지는 정확히 구했지만, 분산은 편차제곱합을 자료의 개수로 나누어야 하는 마지막 적용이 빠졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 분산은 편차제곱합을 자료 개수로 나누는 거였구나. 그러면 40÷5=8이야.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답은 8이야. 평균, 편차, 편차제곱합까지 모두 정확했고 마지막에 자료 수 5로 나누는 것만 챙기면 됐어. 아주 잘 풀었어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-4",
+          "answer": "6.5",
+          "message": "평균은 (2+3+7+8)÷4=5야. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9=26, 이걸 4로 나누면 6.5야.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-5",
+          "answer": "6",
+          "message": "평균은 (1+4+7)÷3=4야. 편차는 -3, 0, 3이고 제곱의 합은 9+0+9=18, 이걸 3으로 나누면 6이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (4+6+8+10+12)/5=8이에요. 편차는 -4, -2, 0, 2, 4니까 제곱해서 더하면 16+4+0+4+16=40이에요.\n답: 40",
+          "answer": "40",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 마지막에 한 가지만 더 보면 되는데, 분산은 편차제곱의 합 40을 그냥 쓰는 게 아니라 자료의 개수 5로 나누어 구해. 그럼 40을 5로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합까지는 정확했지만, 분산은 그 값을 자료의 개수 5로 나누어야 하는 마지막 적용이 빠졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇구나. 그럼 40을 5로 나누면 돼요.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정답이 맞았어. 분산은 편차제곱합 40을 자료 수 5로 나누어서 8이 돼. 아주 잘 수정했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-4",
+          "answer": "6.5",
+          "message": "평균은 (2+3+7+8)/4=5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9=26, 그다음 자료 수 4로 나누면 6.5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-5",
+          "answer": "6",
+          "message": "평균은 (1+4+7)/3=4예요. 편차는 -3, 0, 3이고 제곱해서 더하면 9+0+9=18, 그다음 3으로 나누면 6이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+3+7+8)/4 = 5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9 = 26이니까 분산은 26이에요.\n답: 26",
+          "answer": "26",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균이 5이고, 편차제곱의 합이 26인 것까지는 아주 잘했어. 그런데 분산은 '편차제곱의 합' 그대로가 아니라, 그 값을 자료의 개수 4로 나누어야 해. 26을 4로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합 26까지는 맞았지만, 분산은 그 값을 자료의 개수 4로 나누어야 하므로 개념 적용이 한 단계 빠졌다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 편차제곱의 합 26을 자료 개수 4로 나누면 돼요.\n답: 6.5",
+          "answer": "6.5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 구했어. 분산은 26/4이니까 6.5가 정답이야. 잘 고쳤다!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-5",
+          "answer": "6",
+          "message": "평균은 (1+4+7)/3 = 4예요. 편차는 -3, 0, 3이고 제곱해서 더하면 9+0+9=18, 이제 자료 수 3으로 나누면 6이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-0",
+          "answer": "2",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이고, 자료가 5개니까 10을 5로 나누면 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+3+7+8)/4 = 5예요. 편차는 -3, -2, 2, 3이고 제곱해서 더하면 9+4+4+9 = 26이니까 분산은 26이에요.\n답: 26",
+          "answer": "26",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균, 편차, 편차제곱합 26까지는 아주 잘했어. 그런데 분산은 편차제곱합을 그냥 쓰는 게 아니라 자료의 개수로 나누어야 해. 여기서는 자료가 4개니까, 26 다음에 무엇을 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차, 편차제곱합까지는 맞았지만 분산을 구할 때 자료 수 4로 나누는 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇구나. 자료가 4개니까 26을 4로 나누면 돼요.\n답: 26/4",
+          "answer": "26/4",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야. 분산은 편차제곱합 26을 자료 수 4로 나눈 26/4로 쓰면 돼. 이제 이 값을 소수로도 바꿔볼래?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-5",
+          "answer": "6",
+          "message": "평균은 (1+4+7)/3 = 4예요. 편차는 -3, 0, 3이고 제곱해서 더하면 9+0+9=18, 그다음 자료 수 3으로 나누면 6이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-0",
+          "answer": "2",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이고 자료 수 5로 나누면 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (1+4+7)/3 = 4예요. 편차는 -3, 0, 3이고 제곱해서 더하면 9+0+9=18이니까 분산은 18이에요.\n답: 18",
+          "answer": "18",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "평균이랑 편차제곱합 18까지는 아주 잘했어. 그런데 분산은 편차제곱합을 그냥 쓰는 게 아니라 자료의 개수 3으로 나누는 단계가 한 번 더 있어. 18을 3으로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱합은 correctly 구했지만, 분산은 편차제곱합을 자료의 개수 3으로 나누어야 하는데 그 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 편차제곱합 18을 자료 개수 3으로 나누면 되네요. 그러면 18÷3=6이에요.\n답: 6",
+          "answer": "6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답이야! 편차제곱합 18을 자료의 개수 3으로 나누어서 분산은 6이 돼. 분산은 항상 '편차제곱합 ÷ 자료의 개수'라는 점만 기억하면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-0",
+          "answer": "2",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이고, 자료 개수 5로 나누면 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-1",
+          "answer": "2",
+          "message": "평균은 4예요. 편차는 -2, 0, 0, 2라서 제곱하면 4, 0, 0, 4이고 합이 8, 자료 개수 4로 나누면 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "variance_no_divide",
+      "p1": "variance_no_divide-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (1+4+7)/3=4예요. 편차는 -3, 0, 3이니까 제곱해서 더하면 9+0+9=18이에요.\n답: 18",
+          "answer": "18",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 그런데 분산은 편차 제곱의 합을 그냥 쓰는 게 아니라, 자료의 개수 3으로 나눠야 해. 18을 3으로 나누면 얼마가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차 제곱의 합 18까지는 맞았지만, 분산은 그 값을 자료 수 3으로 나누어야 하므로 마지막 단계가 빠졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇구나. 그러면 18을 3으로 나누면 돼요.\n답: 6",
+          "answer": "6",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘 고쳤어! 편차 제곱의 합 18을 자료의 개수 3으로 나누면 6이니까 분산은 6이야. 이제 분산 구하는 방법을 제대로 이해했네.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "variance_no_divide-0",
+          "answer": "2",
+          "message": "평균은 3이고 편차는 -2, -1, 0, 1, 2예요. 제곱해서 더하면 4+1+0+1+4=10이고, 자료 개수 5로 나누면 2예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "variance_no_divide-1",
+          "answer": "2",
+          "message": "평균은 4예요. 편차는 -2, 0, 0, 2라서 제곱의 합은 4+0+0+4=8이고, 자료 개수 4로 나누면 2예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+4+4+4+5+5+7+9)/8 = 5예요. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이고 평균은 (9+1+1+1+0+0+4+16)/8 = 32/8 = 4예요.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 네가 구한 4는 '편차제곱의 평균'이라서 분산이야, 그런데 문제는 표준편차를 묻고 있지. 그러면 분산 4에서 마지막으로 무엇을 해야 표준편차가 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 편차제곱의 평균까지는 정확히 구했지만, 그것이 분산이라는 점을 놓치고 마지막에 제곱근을 취하지 않아 표준편차를 분산과 혼동했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 표준편차는 분산에서 마지막으로 제곱근을 하면 돼요.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해. 분산 4의 제곱근이 2이므로 표준편차는 2야. 아주 잘 풀었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-1",
+          "answer": "sqrt(2)",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 편차 제곱은 4, 1, 0, 1, 4라서 평균은 10/5 = 2, 표준편차는 sqrt(2)예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-2",
+          "answer": "sqrt(5)",
+          "message": "평균은 6이고 편차는 -3, -1, 1, 3이에요. 편차 제곱은 9, 1, 1, 9라서 평균이 20/4 = 5, 표준편차는 sqrt(5)예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+4+4+4+5+5+7+9)/8 = 5예요. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이라서 합이 32, 평균은 32/8 = 4예요.\n답: 4",
+          "answer": "4",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 그런데 32/8 = 4는 표준편차가 아니라 분산이야. 표준편차는 분산에 무엇을 한 값이었는지 한 번 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 분산(편차 제곱의 평균)까지는 정확히 구했지만, 표준편차는 그 값의 제곱근을 한 번 더 구해야 하는데 4에서 멈췄다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 내가 헷갈렸네. 표준편차는 그 값에 제곱근을 한 거였어.\n답: 2",
+          "answer": "2",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 분산이 4니까 표준편차는 sqrt(4) = 2야. 스스로 헷갈린 부분을 바로잡은 게 정말 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-1",
+          "answer": "sqrt(2)",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2라서 편차 제곱은 4, 1, 0, 1, 4예요. 그 평균은 10/5 = 2니까 표준편차는 sqrt(2)예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-2",
+          "answer": "sqrt(5)",
+          "message": "평균은 6이고, 편차 제곱은 9, 1, 1, 9라서 평균이 20/4 = 5야. 그래서 표준편차는 sqrt(5)이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱하면 4, 1, 0, 1, 4라서 평균은 (4+1+0+1+4)/5 = 2예요.\n답: 2",
+          "answer": "2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 네가 구한 2는 분산이니까, 표준편차를 구하려면 마지막에 무엇을 한 번 더 해야 할까?\n힌트: 표준편차는 '분산의 제곱근'이야.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 분산(편차제곱의 평균)까지는 정확히 구했지만 표준편차를 구할 때 제곱근을 한 번 더 취해야 한다는 점을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 제가 아까 분산까지만 구했고, 표준편차는 그 값에 제곱근을 씌워야 해요.\n답: sqrt(2)",
+          "answer": "sqrt(2)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 분산이 2이므로 표준편차는 sqrt(2)야.\n개념을 끝까지 잘 구분해서 고쳤네, 아주 잘했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-2",
+          "answer": "sqrt(5)",
+          "message": "평균은 6이고 편차는 -3, -1, 1, 3이에요. 제곱해서 9, 1, 1, 9이고 평균은 20/4=5라서 표준편차는 sqrt(5)예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-3",
+          "answer": "sqrt(6)",
+          "message": "평균은 4이고 편차는 -3, 0, 3이에요. 제곱하면 9, 0, 9라서 평균은 18/3=6이고, 표준편차는 sqrt(6)이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 3이고, 편차는 -2, -1, 0, 1, 2예요. 제곱하면 4, 1, 0, 1, 4니까 평균은 (4+1+0+1+4)/5 = 2예요.\n답: 2",
+          "answer": "2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 네가 구한 2는 분산이고, 표준편차는 그 값을 한 번 더 어떻게 해야 하는지 기억나니?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱의 평균까지는 정확히 구했지만, 그것은 분산 2이고 표준편차를 구하려면 마지막에 제곱근을 한 번 더 씌워야 합니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 내가 헷갈렸네. 표준편차는 방금 구한 값에 제곱근을 씌우면 돼.\n답: sqrt(2)",
+          "answer": "sqrt(2)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 분산이 2이므로 표준편차는 sqrt(2)야. 개념을 스스로 바로잡은 점이 아주 좋아!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-2",
+          "answer": "sqrt(5)",
+          "message": "평균은 6이고 편차는 -3, -1, 1, 3이야. 제곱해서 평균 내면 5니까 표준편차는 sqrt(5)야.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-3",
+          "answer": "sqrt(6)",
+          "message": "평균은 4이고 편차는 -3, 0, 3이야. 제곱하면 9, 0, 9라서 평균은 6, 표준편차는 sqrt(6)이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱하면 9, 1, 1, 9라서 평균은 (9+1+1+9)/4=5야.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 마지막에 한 가지만 더 확인해 보자: 네가 구한 5는 표준편차일까, 아니면 분산일까?\n\n표준편차는 '편차제곱의 평균'에 루트를 씌운 값이야. 그러면 5 다음에 어떤 계산을 해야 하는지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 편차제곱의 평균(분산)까지는 정확히 구했지만, 표준편차는 그 값의 제곱근이라는 마지막 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 5는 편차 제곱의 평균이니까 그다음에 루트를 씌워야 해. 그러면 표준편차는 sqrt(5)야.\n답: sqrt(5)",
+          "answer": "sqrt(5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 5는 분산이고, 표준편차는 그 제곱근이니까 sqrt(5)가 정답이야.\n스스로 바로잡은 게 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-3",
+          "answer": "sqrt(6)",
+          "message": "평균은 (1+4+7)/3=4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9니까 평균은 6, 그래서 표준편차는 sqrt(6)이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-4",
+          "answer": "sqrt(13/2)",
+          "message": "평균은 (2+3+7+8)/4=5야. 편차 제곱은 9, 4, 4, 9니까 평균이 26/4=13/2라서 표준편차는 sqrt(13/2)이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (3+5+7+9)/4=6이야. 편차는 -3, -1, 1, 3이고 제곱하면 9, 1, 1, 9라서 평균은 (9+1+1+9)/4=5야.\n답: 5",
+          "answer": "5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 지금 네가 구한 5는 표준편차가 아니라 분산이야. 표준편차를 구할 때는 마지막에 무엇을 한 번 더 해야 하는지 기억나니?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱의 평균(분산)까지는 정확히 구했지만, 표준편차는 그 값에 제곱근을 씌워야 하는데 5에서 멈췄다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 내가 마지막을 빼먹었네. 분산이 5면 표준편차는 그 값에 제곱근을 한 번 더 씌워야 해.\n답: sqrt(5)",
+          "answer": "sqrt(5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 분산 5에서 마지막으로 제곱근을 취하면 표준편차는 sqrt(5)가 돼. 아주 잘 고쳤어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-3",
+          "answer": "sqrt(6)",
+          "message": "평균은 (1+4+7)/3=4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9라서 평균은 18/3=6, 마지막에 제곱근을 씌우면 돼.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-4",
+          "answer": "sqrt(13/2)",
+          "message": "평균은 (2+3+7+8)/4=5야. 편차 제곱은 9, 4, 4, 9라서 평균이 26/4=13/2이고, 마지막에 제곱근을 씌우면 돼.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (1+4+7)/3=4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9니까 평균은 (9+0+9)/3=6이야.\n답: 6",
+          "answer": "6",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 마지막에 구한 6은 표준편차가 아니라 분산이야. 표준편차를 구하려면 이 6에 어떤 연산을 한 번 더 해야 하는지 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱의 평균까지는 정확히 구했지만, 표준편차는 그 값에 제곱근을 씌워야 하는데 분산 6을 답으로 썼다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 분산에서 한 번 더 제곱근을 씌워야 표준편차였던 것 같아. 그러면 6의 제곱근이네.\n답: sqrt(6)",
+          "answer": "sqrt(6)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 분산 6에서 제곱근을 취하면 표준편차는 sqrt(6)이야. 개념을 제대로 구분해서 잘 찾았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-4",
+          "answer": "sqrt(13/2)",
+          "message": "평균은 (2+3+7+8)/4=5야. 편차 제곱은 9, 4, 4, 9라서 평균은 26/4=13/2이고, 표준편차는 거기에 제곱근 씌우면 돼.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-5",
+          "answer": "sqrt(8)",
+          "message": "평균은 8이고, 편차는 -4, -2, 0, 2, 4야. 제곱해서 평균 내면 8이고, 거기에 제곱근을 씌우면 돼.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (1+4+7)/3 = 4야. 편차는 -3, 0, 3이고 제곱하면 9, 0, 9니까 평균은 (9+0+9)/3 = 6이야.\n답: 6",
+          "answer": "6",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 그런데 네가 구한 6은 표준편차가 아니라 편차제곱의 평균, 즉 분산이야. 표준편차를 구하려면 마지막에 6에 어떤 연산을 한 번 더 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "평균과 편차제곱의 평균(분산)까지는 correctly 구했지만, 표준편차는 그 값에 제곱근을 씌워야 하는데 마지막 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 표준편차는 분산에 제곱근을 씌워야 해. 그러면 6의 제곱근이네.\n답: sqrt(6)",
+          "answer": "sqrt(6)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 분산이 6이므로 표준편차는 sqrt(6)이야. 개념을 잘 구분했네.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-4",
+          "answer": "sqrt(13/2)",
+          "message": "평균은 (2+3+7+8)/4 = 5야. 편차는 -3, -2, 2, 3이고 제곱하면 9, 4, 4, 9니까 평균은 26/4 = 13/2, 그래서 표준편차는 sqrt(13/2)야.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-5",
+          "answer": "sqrt(8)",
+          "message": "평균은 8이야. 편차 제곱은 16, 4, 0, 4, 16이라서 평균이 40/5 = 8, 표준편차는 sqrt(8)이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+3+7+8)/4=5야. 편차 제곱은 9, 4, 4, 9라서 평균은 (9+4+4+9)/4=26/4=13/2야.\n답: 13/2",
+          "answer": "13/2",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 지금 구한 13/2는 표준편차가 아니라 분산이야. 표준편차는 '편차 제곱의 평균'에다가 마지막으로 무엇을 한 번 더 해야 하는지 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 편차 제곱의 평균인 분산까지는 정확히 구했지만, 표준편차는 그 값의 제곱근을 한 번 더 구해야 하는데 거기서 멈췄다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 표준편차는 그 값에 마지막으로 제곱근을 씌워야 해. 그러면 13/2의 제곱근이야.\n답: sqrt(13/2)",
+          "answer": "sqrt(13/2)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 13/2는 분산이고, 표준편차는 sqrt(13/2)야. 스스로 잘 고쳐냈네.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-5",
+          "answer": "sqrt(8)",
+          "message": "평균은 (4+6+8+10+12)/5=8이야. 편차 제곱은 16, 4, 0, 4, 16이라서 평균이 40/5=8이고, 마지막에 제곱근을 씌우면 돼.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-0",
+          "answer": "2",
+          "message": "평균은 5야. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이라서 평균은 32/8=4, 그래서 표준편차는 그 제곱근이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (2+3+7+8)/4=5예요. 편차 제곱은 9, 4, 4, 9라서 평균은 (9+4+4+9)/4=26/4=6.5예요.\n답: 6.5",
+          "answer": "6.5",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 6.5는 표준편차가 아니라 분산이야. 표준편차는 분산에 어떤 계산을 한 값이었는지 기억나니?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 분산(편차 제곱의 평균) 6.5까지는 맞게 구했지만, 표준편차는 그 값에 제곱근을 한 값이라는 점을 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 분산에서 제곱근을 해야 표준편차였던 것 같아요. 그러면 6.5에 제곱근을 씌우면 돼요.\n답: sqrt(6.5)",
+          "answer": "sqrt(6.5)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야! 표준편차는 분산 6.5의 제곱근이니까 sqrt(6.5)라고 쓰면 정답이야. 정말 잘 짚었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-5",
+          "answer": "sqrt(8)",
+          "message": "평균은 (4+6+8+10+12)/5=8이에요. 편차 제곱은 16, 4, 0, 4, 16이라서 분산은 40/5=8, 표준편차는 sqrt(8)이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-0",
+          "answer": "sqrt(4)",
+          "message": "평균은 5예요. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이라서 합이 32, 분산은 32/8=4예요. 그러니까 표준편차는 sqrt(4)예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 8이야. 편차는 -4, -2, 0, 2, 4니까 제곱하면 16, 4, 0, 4, 16이고, 이걸 평균 내면 40/5 = 8이야.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어! 네가 구한 8은 표준편차가 아니라 분산이야. 표준편차는 분산 8에 마지막으로 어떤 연산을 한 번 더 해야 하는지 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 편차제곱의 평균(분산)까지는 정확히 구했지만, 마지막에 표준편차가 아니라 분산 8을 답으로 써서 개념 적용이 한 단계 덜 되었다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 표준편차는 마지막에 제곱근을 한 번 더 씌워야 해. 그러면 분산이 8이니까 표준편차는 sqrt(8)이야.\n답: sqrt(8)",
+          "answer": "sqrt(8)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 분산이 8이므로 표준편차는 sqrt(8)이라고 쓰면 돼. 정말 잘 바로잡았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-0",
+          "answer": "2",
+          "message": "평균은 5야. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이라서 평균은 32/8=4, 그래서 표준편차는 sqrt(4)=2야.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-1",
+          "answer": "sqrt(2)",
+          "message": "평균은 3이야. 편차는 -2, -1, 0, 1, 2니까 제곱하면 4, 1, 0, 1, 4고 평균은 10/5=2라서 표준편차는 sqrt(2)야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "std_no_sqrt",
+      "p1": "std_no_sqrt-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "평균은 (4+6+8+10+12)/5 = 8이야. 편차는 -4, -2, 0, 2, 4니까 제곱하면 16, 4, 0, 4, 16이고, 그 평균은 40/5 = 8이야.\n답: 8",
+          "answer": "8",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어. 지금 네가 구한 8은 표준편차가 아니라 분산이야, 그래서 마지막에 한 단계만 더 하면 돼. 표준편차는 분산 8에 무엇을 해야 하는지 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 평균과 분산(편차 제곱의 평균)까지는 정확히 구했지만, 표준편차를 구하려면 마지막에 제곱근을 씌워야 하는데 그 단계를 빠뜨렸다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 분산까지 구한 거였네. 표준편차는 그 분산에 제곱근을 씌우면 되니까 sqrt(8)이야.\n답: sqrt(8)",
+          "answer": "sqrt(8)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해졌어. 분산 8에 제곱근을 씌워서 표준편차는 sqrt(8)이고, 같은 뜻으로 2sqrt(2)라고 써도 돼. 잘 해결했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "std_no_sqrt-0",
+          "answer": "2",
+          "message": "평균은 (2+4+4+4+5+5+7+9)/8 = 5야. 편차 제곱은 9, 1, 1, 1, 0, 0, 4, 16이고 평균은 32/8 = 4니까, 표준편차는 sqrt(4) = 2야.",
+          "label": "correct"
+        },
+        {
+          "problem": "std_no_sqrt-1",
+          "answer": "sqrt(2)",
+          "message": "평균은 3이고, 편차는 -2, -1, 0, 1, 2라서 제곱하면 4, 1, 0, 1, 4야. 그 평균은 10/5 = 2니까 표준편차는 sqrt(2)야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "내가 아는 방법으로는 n각형의 내각의 합이 180×n이야. 그래서 5각형은 180×5=900이야.\n답: 900",
+          "answer": "900",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어. 식에서 n이 아니라 n-2를 곱해야 하는지 한번 떠올려 볼래? 5각형을 한 꼭짓점에서 대각선으로 나누면 삼각형이 몇 개 생기는지 먼저 세어 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 n각형의 내각의 합을 구하는 일반식을 알고 있다고 생각했지만, 공식을 180×n으로 잘못 적용해 5각형의 내각의 합을 크게 구했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한 꼭짓점에서 대각선을 그으면 5각형은 삼각형 3개로 나뉘네. 그러면 내각의 합은 180×3이라서 180×(5-2)=540이 맞는 것 같아.\n답: 540",
+          "answer": "540",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 고쳤어. 5각형은 한 꼭짓점에서 나누면 삼각형 3개가 되니까 180×3=540이 맞아. 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-1",
+          "answer": "720",
+          "message": "이제는 한 꼭짓점에서 나눠서 생각하면 되니까, 6각형은 삼각형이 6-2=4개 생겨. 그래서 내각의 합은 180×4=720이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-2",
+          "answer": "900",
+          "message": "7각형은 한 꼭짓점에서 나누면 삼각형이 7-2=5개 생겨. 그래서 내각의 합은 180×5=900이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "저는 n각형의 내각의 합이 180×n이라고 배웠어요. 그래서 5각형은 180×5=900이에요.\n답: 900",
+          "answer": "900",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 그런데 내각의 합 공식은 180×n이 아니라 180×(n-2)인지 한번 떠올려볼래? 그럼 5각형에서는 n에 5를 넣어서 180×(5-2)를 먼저 계산해 보자.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 다각형의 내각의 합 공식을 180×n으로 잘못 기억했고, 5각형에 그대로 적용해 900이라고 답했다.",
+            "error_type": "misinterpret",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 삼각형으로 나누면 n-2개가 되니까 180×(n-2)로 계산하는 거였네요. 그러면 5각형은 180×(5-2)=180×3=540이에요.\n답: 540",
+          "answer": "540",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 아주 잘했어! 5각형은 삼각형 3개로 나눌 수 있어서 내각의 합이 180×3=540이 되는 거야. 이제 이 공식이 왜 n-2인지도 제대로 이해한 거라서 정말 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-1",
+          "answer": "720",
+          "message": "이제는 n각형의 내각의 합이 180×(n-2)인 걸 알아요. 그래서 6각형은 180×(6-2)=180×4=720이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-2",
+          "answer": "900",
+          "message": "이제는 내각의 합 공식을 180×(n-2)로 쓰면 돼요. 7각형은 180×(7-2)=180×5=900이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-1",
+      "rep": 0,
+      "solved_at": 3,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "나는 n각형의 내각의 합이 180×n이라고 알고 있어. 그래서 6각형은 180×6=1080이야.\n답: 1080",
+          "answer": "1080",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 아주 좋아! 그런데 내각의 합 공식은 180×n이 아니라 180×(n-2)였지. 그럼 6각형에서는 n에 무엇을 넣해야 할지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 알고 있다고 했지만 실제로는 n각형의 내각의 합을 180×n으로 잘못 적용했고, 6각형에 맞는 공식 180×(n-2)를 써야 한다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 6각형이면 n에 6을 넣으면 돼. 그러면 180×(6-2)로 계산하면 될 것 같아.\n답: 6",
+          "answer": "6",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 식 세우기는 이제 정확해졌어! 그런데 답은 6이 아니라 180×(6-2)를 계산한 값이어야 해. 6-2를 먼저 계산하면 얼마인지 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 공식을 올바르게 떠올리고 6을 대입하는 과정까지는 맞았지만 마지막에 내각의 합 대신 대입한 값 6을 답으로 써서 답의 의미를 정확히 마무리하지 못했다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "응, 6-2는 4야. 그러면 이제 180×4를 하면 돼.\n답: 4",
+          "answer": "4",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 바로 그 4는 중간값이야! 이제 마지막으로 180×4를 계산한 값을 답에 쓰면 돼. 18×4를 먼저 생각해 보면 얼마일까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 공식과 중간 계산은 맞게 이해했지만, 최종 답으로 계산 결과 대신 중간값 4를 적었다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "18×4는 72니까, 180×4는 720이야.\n답: 720",
+          "answer": "720",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답이야! 6각형의 내각의 합은 180×(6-2)=180×4=720이야.\n잘 고쳤고, 끝까지 정확하게 계산했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-2",
+          "answer": "900",
+          "message": "이제는 n각형의 내각의 합이 180×(n-2)인 걸로 하면 돼. 7각형이면 180×(7-2)=180×5=900이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-3",
+          "answer": "1080",
+          "message": "8각형이면 n=8을 넣어서 180×(8-2)로 계산하면 돼. 180×6=1080이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "나는 n각형의 내각의 합이 180×n이라고 배웠어. 그래서 6각형은 180×6=1080이야.\n답: 1080",
+          "answer": "1080",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 다만 내각의 합 공식에서 n에 바로 180을 곱하는 게 아니라, 삼각형이 몇 개로 나뉘는지를 먼저 떠올려 보면 좋아. 6각형을 한 꼭짓점에서 대각선을 그으면 삼각형이 몇 개 생길까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 기억해 적용했고, 방향은 맞지만 정확한 공식을 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한 꼭짓점에서 대각선을 그으면 6각형은 삼각형 4개로 나뉘는 것 같아. 그러면 내각의 합은 삼각형 4개의 각의 합이니까 180×4야.\n답: 720",
+          "answer": "720",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 잘했어! 6각형은 한 꼭짓점에서 그으면 삼각형 4개로 나뉘니까 180×4=720이 돼. 그럼 이 원리로 7각형은 삼각형 몇 개로 나뉠지도 말해볼래?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-2",
+          "answer": "900",
+          "message": "7각형은 한 꼭짓점에서 대각선을 그으면 삼각형 5개로 나뉘어. 그래서 내각의 합은 180×5=900이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-3",
+          "answer": "1080",
+          "message": "8각형은 한 꼭짓점에서 대각선을 그으면 삼각형 6개로 나뉘어. 그래서 내각의 합은 180×6=1080이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-2",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "내가 아는 방법으로는 n각형의 내각의 합이 180×n이야. 그래서 7각형은 180×7=1260이야.\n답: 1260",
+          "answer": "1260",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 180이 나오는 건 맞는데, n각형은 삼각형이 몇 개로 나뉘는지를 세어야 해서 180×n이 아니라 180×(n-2)를 써. 7각형은 삼각형 몇 개로 나뉘는지 먼저 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 적용했으며, 7각형에 대입한 계산 자체는 맞지만 공식이 틀렸습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한 꼭짓점에서 선을 그으면 삼각형 개수는 n-2개가 되는 거구나. 그러면 7각형은 7-2=5개로 나뉘어.\n답: 5",
+          "answer": "5",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 7각형은 5개의 삼각형으로 나뉘어! 그런데 문제는 삼각형의 개수가 아니라 내각의 합을 묻고 있으니, 삼각형 1개의 각의 합 180을 5와 어떻게 연결하면 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 7각형이 5개의 삼각형으로 나뉜다는 핵심 아이디어는 맞게 이해했지만, 문제에서 구해야 하는 내각의 합까지 계산하지 않고 중간 결과만 답했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "삼각형 1개의 내각의 합이 180도니까, 5개면 180을 5번 더하면 돼. 그래서 180×5=900이야.\n답: 900",
+          "answer": "900",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정답이야! 7각형은 5개의 삼각형으로 나뉘고, 180×5=900이므로 내각의 합은 900도야. 스스로 아주 잘 고쳤어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-3",
+          "answer": "1080",
+          "message": "이제는 n-2를 쓰면 돼. 8각형은 삼각형 6개로 나뉘니까 180×6=1080이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-4",
+          "answer": "1260",
+          "message": "9각형은 삼각형으로 나누면 9-2=7개야. 그래서 내각의 합은 180×7=1260이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "n각형의 내각의 합은 180×n이라고 배웠으니까, 7각형은 180×7을 하면 돼요. 계산하면 1260이에요.\n답: 1260",
+          "answer": "1260",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "계산은 잘했는데, 공식에서 n 앞에 빠진 게 하나 있어요. n각형의 내각의 합은 180×n이 아니라, 삼각형이 몇 개로 나뉘는지 생각해서 180×(n-2)예요. 그러면 7각형은 180×(7-2)인데, 여기까지 다시 계산해볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 기억해 적용했고 계산 자체는 맞아 보여 개념 적용 방향은 있으나 공식이 틀렸습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 삼각형으로 나누면 n-2개가 되는 거네요. 그러면 7각형은 180×(7-2)=180×5라서 900이에요.\n답: 900",
+          "answer": "900",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 제대로 구했어요. 7각형은 삼각형 5개로 나눌 수 있어서 180×5=900이 됩니다. 잘 수정했어요!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-3",
+          "answer": "1080",
+          "message": "이제는 n각형의 내각의 합이 180×(n-2)라는 걸 써서 풀면 돼요. 8각형은 180×(8-2)=180×6이라서 1080이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-4",
+          "answer": "1260",
+          "message": "내각의 합은 180×(n-2)로 구하면 돼요. 9각형은 180×(9-2)=180×7이라서 1260이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "나는 n각형의 내각의 합이 180×n이라고 배웠으니까, 8각형은 180×8을 하면 돼. 그래서 1440이야.\n답: 1440",
+          "answer": "1440",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "방향은 아주 좋아, 다만 공식에서 n 앞에 작은 수정이 필요해. n각형의 내각의 합은 180×n이 아니라 180×(n-2)인데, 여기서 n=8을 넣으면 어떤 식이 되는지 먼저 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 기억했고, 다각형 내각의 합은 180×(n-2)여야 하므로 개념 적용 방향은 맞지만 공식 적용이 틀렸습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 8각형은 n 자리에 8을 넣어서 180×(8-2)로 쓰면 되는 것 같아.\n답: 180*(8-2)",
+          "answer": "180*(8-2)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 식을 아주 잘 고쳤어. 이제 괄호 안부터 계산해서 180×6이 얼마인지 한 번 써볼래?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-4",
+          "answer": "1260",
+          "message": "아까 고친 공식을 쓰면 n각형의 내각의 합은 180×(n-2)야. 9각형이면 180×(9-2)=180×7이라서 1260이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-5",
+          "answer": "1440",
+          "message": "고친 공식을 쓰면 10각형은 180×(10-2)야. 그래서 180×8=1440이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "n각형의 내각의 합은 180×n이라고 알고 있으니까, 8각형은 180×8을 하면 돼요. 계산하면 1440이에요.\n답: 1440",
+          "answer": "1440",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "아이디어는 거의 맞았어요. 다만 내각의 합 공식이 180×n이 아니라 180×(n-2)였는지 한번만 다시 확인해 볼까요? 그럼 8각형에서는 n 대신 8을 넣어서 어떤 식이 되는지 써 보세요.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 기억해 적용했으며, 8각형의 올바른 공식인 180×(n-2)를 써야 한다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 공식이 180×(n-2)인 거네요. 8각형이면 180×(8-2)로 쓰면 돼요.\n답: 180×(8-2)",
+          "answer": "180×(8-2)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "네, 식을 아주 정확하게 고쳤어요. 8각형의 내각의 합은 바로 180×(8-2)로 구하는 게 맞아요. 이제 마지막으로 8-2를 먼저 계산해서 180과 곱해 볼까요?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-4",
+          "answer": "1260",
+          "message": "아까 배운 공식대로 하면 180×(n-2)예요. 9각형은 180×(9-2)=180×7이라서 1260이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-5",
+          "answer": "1440",
+          "message": "배운 공식은 180×(n-2)니까, 10각형은 180×(10-2)예요. 그러면 180×8=1440이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "저는 n각형의 내각의 합이 180×n이라고 배웠어요. 그래서 9각형은 180×9=1620이에요.\n답: 1620",
+          "answer": "1620",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 맞게 기억했어. 다만 n각형의 내각의 합은 180×n이 아니라 180×(n-2)였지? 그 식에 n=9를 넣하면 180×(9-2)가 되는데, 여기까지 다시 계산해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 거의 기억했지만 정확한 식은 180×(n-2)인데 180×n으로 적용해 개념을 부분적으로 잘못 사용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 설명 들으니까 삼각형으로 나누는 거라서 (n-2)가 맞는 것 같아요. 그러면 9각형은 180×(9-2)=180×7이에요.\n답: 1260",
+          "answer": "1260",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 9각형의 내각의 합은 180×(9-2)=180×7=1260이야. 잘 고쳤고, 삼각형으로 나누는 이유까지 연결한 것도 아주 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-5",
+          "answer": "1440",
+          "message": "이제는 n각형의 내각의 합이 180×(n-2)인 걸로 계산하면 돼요. 10각형은 180×(10-2)=180×8=1440이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-0",
+          "answer": "540",
+          "message": "이제는 n각형의 내각의 합이 180×(n-2)인 걸로 계산하면 돼요. 5각형은 180×(5-2)=180×3=540이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "n각형의 내각의 합은 180×n 이라고 배웠으니까, 9각형은 180×9를 하면 돼. 계산하면 1620이야.\n답: 1620",
+          "answer": "1620",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 내각의 합 공식에서 n에 그냥 180을 곱하는 게 아니라, n에서 2를 먼저 해야 했던 것 기억나니? 9각형이면 180×(9-2)로 다시 써 보면 어떻게 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 떠올리려 했지만, 정확한 공식인 180×(n-2)를 180×n으로 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, n에서 2를 먼저 빼야 하는 거였네. 그러면 9각형은 180×(9-2)=180×7이야.\n답: 1260",
+          "answer": "1260",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 9각형의 내각의 합은 180×(9-2)=180×7=1260이야. 잘 스스로 바로잡았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-5",
+          "answer": "1440",
+          "message": "아까 고친 공식을 쓰면 n각형의 내각의 합은 180×(n-2)야. 그래서 10각형은 180×(10-2)=180×8=1440이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-0",
+          "answer": "540",
+          "message": "내각의 합은 180×(n-2)로 하면 돼. 5각형이면 180×(5-2)=180×3이라서 540이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "n각형의 내각의 합은 180×n이라고 배웠으니까, 10각형은 180×10을 하면 돼요. 계산하면 1800이에요.\n답: 1800",
+          "answer": "1800",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 내각의 합은 180×n이 아니라, 삼각형이 몇 개로 나뉘는지를 생각해서 180×(n-2)를 써야 해. 10각형은 한 꼭짓점에서 대각선을 그으면 삼각형이 몇 개 생길까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 적용했고, 방향은 맞지만 정확한 공식을 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 한 꼭짓점에서 대각선을 그으면 삼각형이 n-2개 생기는 거구나. 그럼 10각형은 10-2=8개라서 내각의 합은 180×8이에요.\n답: 1440",
+          "answer": "1440",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 10각형은 삼각형 8개로 나눌 수 있으니까 180×8=1440이 돼. 이제 n각형의 내각의 합 공식을 스스로 잘 설명할 수 있겠지?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-0",
+          "answer": "540",
+          "message": "이제는 한 꼭짓점에서 나누면 삼각형이 n-2개 생긴다는 걸 써서 풀면 돼요. 5각형은 5-2=3이니까 180×3=540이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-1",
+          "answer": "720",
+          "message": "6각형은 삼각형으로 나누면 6-2=4개가 생겨요. 그래서 내각의 합은 180×4=720이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "polygon_angle_n",
+      "p1": "polygon_angle_n-5",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "n각형의 내각의 합은 180×n이라고 배웠으니까, 10각형은 180×10을 하면 돼요. 계산하면 1800이에요.\n답: 1800",
+          "answer": "1800",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 그런데 내각의 합 공식은 180×n이 아니라 180×(n-2)였던 것 기억나니? 10각형이면 n 자리에 10을 넣해서 10-2가 얼마인지 먼저 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 내각의 합 공식을 180×n으로 잘못 적용했고, 다각형의 내각의 합은 180×(n-2)임을 혼동한 것으로 보인다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 그 공식을 쓰면 먼저 10-2를 계산해야 하네요. 10-2는 8이에요.\n답: 8",
+          "answer": "8",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 여기까지는 맞았어! 이제 그 8에 180을 곱하면 내각의 합이 되는데, 180×8을 계산해서 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 올바른 공식을 떠올리고 첫 단계인 10-2=8은 맞게 했지만, 아직 내각의 합까지 계산하지 않아 답이 문제의 요구에 완전히 도달하지는 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Get the student to elaborate their answer"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 10-2가 8이니까 이제 180×8을 하면 돼요. 계산하면 1440이에요.\n답: 1440",
+          "answer": "1440",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답이야! 10각형의 내각의 합은 180×(10-2)=180×8=1440이야. 공식도 correctly 쓰고 계산도 정확했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "polygon_angle_n-0",
+          "answer": "540",
+          "message": "이제는 내각의 합 공식을 180×(n-2)로 쓰면 돼요. 5각형이면 180×(5-2)=180×3=540이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "polygon_angle_n-1",
+          "answer": "720",
+          "message": "내각의 합은 180×(n-2)로 구하면 돼요. 6각형이면 180×(6-2)=180×4=720이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변 제곱을 더하면 빗변 길이라서 3^2+4^2를 해요. 9+16=25라서 빗변은 25예요.\n답: 25",
+          "answer": "25",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 좋아. 그런데 3^2 + 4^2 = 25는 ‘빗변의 길이’가 아니라 ‘빗변의 제곱’이야. 그럼 빗변의 길이 자체를 구하려면, 어떤 연산을 한 번 더 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 3²+4²=25까지는 맞았지만, 그 값이 빗변의 제곱이라는 점을 놓쳐 마지막에 제곱근을 취하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그렇네. 빗변의 제곱이 25면 길이는 제곱해서 25가 되는 수를 찾아야 하니까 제곱근을 한 번 씌우면 돼.\n답: sqrt(25)",
+          "answer": "sqrt(25)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 거의 다 왔어. sqrt(25)를 실제 길이로 쓰면 몇 cm일까? 양수 길이만 생각해서 마무리해 보자.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-1",
+          "answer": "13",
+          "message": "직각을 낀 두 변으로 먼저 5^2+12^2를 하면 25+144=169예요. 이건 빗변의 제곱이니까 길이는 sqrt(169)=13이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-2",
+          "answer": "15",
+          "message": "9^2+12^2를 하면 81+144=225예요. 이건 빗변의 제곱이니까 길이는 sqrt(225)=15예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라서 3^2+4^2=9+16=25야. 그래서 빗변은 25cm라고 생각해.\n답: 25",
+          "answer": "25",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 피타고라스 정리는 3^2 + 4^2 = 빗변의 길이 그 자체가 아니라, 빗변의 길이의 제곱이 된다는 점만 고치면 돼. 그러면 빗변을 c라고 할 때 c^2 = 25이니까, c는 몇일까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 두 변의 제곱의 합이 빗변의 '제곱'이라는 점을 놓쳐 마지막에 제곱근을 취하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 빗변 길이 자체가 아니라 제곱이었네. 그러면 c^2=25니까 c는 5야.\n답: 5",
+          "answer": "5",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답은 5cm야! c^2 = 25에서 c는 양수인 길이이므로 5가 되는 걸 잘 찾았어. 이제 피타고라스 정리에서 마지막에 제곱근을 씌워야 한다는 점도 함께 기억해 두자.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-1",
+          "answer": "13",
+          "message": "직각을 낀 두 변으로 먼저 5^2+12^2를 하면 25+144=169야. 빗변의 제곱이 169니까 빗변은 13이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-2",
+          "answer": "15",
+          "message": "9^2+12^2=81+144=225야. 빗변의 제곱이 225니까 빗변은 15야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-1",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이예요. 5^2+12^2=25+144=169라서 빗변은 169cm예요.\n답: 169",
+          "answer": "169",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각은 거의 맞았어! 그런데 피타고라스 정리는 5^2 + 12^2 = 빗변의 길이 자체가 아니라, 빗변의 길이의 제곱이야. 그러면 169는 무엇의 제곱인지 한 번만 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 두 변의 제곱의 합이 빗변의 '제곱'이라는 점을 놓쳐 마지막에 제곱근을 취하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 169는 빗변 길이의 제곱이었네. 169가 13의 제곱이니까 빗변의 길이는 13이야.\n답: 13",
+          "answer": "13",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! 169 = 13^2 이니까 빗변의 길이는 13cm야.\n이제 피타고라스 정리에서 제곱과 길이 자체를 잘 구분했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-2",
+          "answer": "15",
+          "message": "직각을 낀 두 변으로 피타고라스 정리를 쓰면 9^2+12^2=81+144=225예요. 이건 빗변 길이의 제곱이니까 빗변은 15예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-3",
+          "answer": "17",
+          "message": "피타고라스 정리로 하면 8^2+15^2=64+225=289예요. 이건 빗변의 제곱이니까 빗변은 17이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-1",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 5^2+12^2=25+144=169예요.\n답: 169",
+          "answer": "169",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 5^2 + 12^2 = 169는 빗변의 길이 자체가 아니라 빗변의 제곱이야. 그러면 빗변의 길이를 구하려면 169에 어떤 한 가지를 더 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 5^2+12^2=169까지는 맞게 했지만, 그 값이 빗변의 제곱이라는 점을 놓쳐 마지막에 제곱근을 구하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 빗변의 제곱이 169니까 빗변의 길이는 169의 제곱근을 구하면 돼요.\n답: sqrt(169)",
+          "answer": "sqrt(169)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 개념은 정확해! 이제 sqrt(169)를 그냥 숫자 하나로 간단히 쓰면 되는데, 169는 어떤 수의 제곱일까?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-2",
+          "answer": "15",
+          "message": "직각을 낀 두 변으로 먼저 9^2+12^2를 하면 81+144=225예요. 그다음 빗변의 길이는 sqrt(225)니까 15예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-3",
+          "answer": "17",
+          "message": "직각을 낀 두 변으로 8^2+15^2를 하면 64+225=289예요. 그다음 빗변의 길이는 sqrt(289)니까 17이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 9^2 + 12^2 = 81 + 144 = 225예요.\n답: 225",
+          "answer": "225",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각은 거의 맞았어! 그런데 9^2 + 12^2는 빗변의 길이 자체가 아니라, 빗변의 길이의 제곱이야. 그러면 c^2 = 225일 때, c는 어떤 수일까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리를 떠올려 제곱의 합 225까지는 맞게 구했지만, 그 값이 빗변의 길이의 제곱이라는 점을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, c^2가 225면 c는 225를 제곱해서 나오는 수가 아니라 225의 제곱근이에요. 그래서 c는 15예요.\n답: 15",
+          "answer": "15",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 225는 빗변의 길이가 아니라 빗변의 제곱이고, 그 제곱근이 15이니까 답은 15cm야. 아주 잘 고쳤어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-3",
+          "answer": "17",
+          "message": "이번에는 먼저 제곱해서 더하면 8^2 + 15^2 = 64 + 225 = 289예요. 이건 빗변의 제곱이니까 빗변은 289의 제곱근인 17이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-4",
+          "answer": "25",
+          "message": "7^2 + 24^2 = 49 + 576 = 625예요. 이건 빗변의 제곱이니까 빗변은 25예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라고 배웠어요. 그래서 9^2+12^2=81+144=225예요.\n답: 225",
+          "answer": "225",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어요! 피타고라스 정리로 9^2 + 12^2 = 225까지 구한 건 아주 맞아요. 그런데 225는 빗변의 길이 자체가 아니라 빗변 길이의 제곱이에요. 그러면 빗변의 길이는 어떤 수를 제곱해서 225가 되는지 생각해볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "피타고라스 정리에서 빗변의 길이가 아니라 빗변 길이의 제곱을 구한 상태라서, 방향은 맞지만 마지막 적용이 덜 되었습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네요. 빗변의 제곱이 225니까, 길이는 15예요.\n답: 15",
+          "answer": "15",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 정답이에요! 225는 빗변의 제곱이고, 그 제곱근이 15이므로 빗변의 길이는 15cm예요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-3",
+          "answer": "17",
+          "message": "이번에는 먼저 제곱해서 더하면 8^2+15^2=64+225=289예요. 빗변의 길이는 그 제곱근이니까 17이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-4",
+          "answer": "25",
+          "message": "7^2+24^2=49+576=625예요. 빗변의 길이는 그 제곱근이라서 25예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱의 합이 빗변의 길이니까 8^2+15^2를 하면 돼. 64+225=289라서 빗변은 289cm야.\n답: 289",
+          "answer": "289",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 8^2 + 15^2 = 289까지는 아주 잘했는데, 피타고라스 정리에서는 289가 바로 빗변이 아니라 빗변^2이야. 그럼 빗변의 길이는 어떤 수를 제곱했을 때 289가 되는지 한 번 찾아볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 8²+15²=빗변²까지는 맞게 했지만, 제곱근을 구하지 않고 그대로 빗변의 길이라고 하여 마지막 적용을 잘못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 289는 빗변^2이었구나. 그러면 어떤 수를 제곱하면 289가 되는지 보면 17^2=289라서 빗변은 17cm야.\n답: 17",
+          "answer": "17",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 289는 빗변의 제곱이고, 17^2 = 289이므로 빗변의 길이는 17cm야. 제곱값과 실제 길이를 구분해서 스스로 고친 점이 아주 좋았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-4",
+          "answer": "25",
+          "message": "이번에는 혼자 해보면 7^2+24^2=49+576=625야. 빗변의 제곱이 625니까 빗변은 25야.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-5",
+          "answer": "20",
+          "message": "12^2+16^2=144+256=400이야. 빗변의 제곱이 400이니까 빗변은 20이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변의 길이라고 배웠어요. 그래서 8^2 + 15^2 = 64 + 225 = 289예요.\n답: 289",
+          "answer": "289",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 피타고라스 정리에서 8^2 + 15^2 = 289는 '빗변의 길이'가 아니라 '빗변의 길이의 제곱'이야. 그럼 빗변의 길이를 구하려면 289에 대해 무엇을 한 번 더 해야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 직각을 낀 두 변의 제곱합이 '빗변의 제곱'이라는 점을 빠뜨려, 289에서 제곱근을 구하지 않고 그대로 답했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 289는 빗변 길이 자체가 아니라 제곱이네요. 빗변의 길이를 구하려면 289의 제곱근을 구하면 돼요.\n답: sqrt(289)",
+          "answer": "sqrt(289)",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 방법은 정확해! 이제 sqrt(289)가 얼마인지 숫자로만 써 보면 될까?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-4",
+          "answer": "25",
+          "message": "직각을 낀 두 변으로 먼저 계산하면 7^2 + 24^2 = 49 + 576 = 625예요. 지난번처럼 이건 빗변의 길이의 제곱이니까 제곱근을 구하면 돼요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-5",
+          "answer": "20",
+          "message": "12^2 + 16^2 = 144 + 256 = 400이고, 이건 빗변 길이의 제곱이니까 제곱근을 구하면 돼요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱의 합이 빗변의 길이니까 7^2+24^2=49+576=625야. 그래서 빗변은 625cm야.\n답: 625",
+          "answer": "625",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리까지 떠올린 건 아주 좋아! 그런데 7^2 + 24^2 = 625는 빗변의 길이 자체가 아니라 빗변의 제곱이야. 그러면 빗변의 길이는 어떤 수를 제곱해서 625가 되는지 찾아보면 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "피타고라스 정리를 떠올려 두 변의 제곱을 더한 것까지는 맞았지만, 그 값이 빗변의 길이가 아니라 빗변의 제곱이라는 점을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 625는 빗변의 제곱이네. 그러면 625가 되게 하는 수를 찾으면 되니까 25야.\n답: 25",
+          "answer": "25",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해! 625는 빗변의 제곱이니까 그 제곱근인 25cm가 빗변의 길이야. 아주 잘 바로잡았어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-5",
+          "answer": "20",
+          "message": "지난번처럼 먼저 제곱해서 더하면 12^2+16^2=144+256=400이야. 이건 빗변의 제곱이니까, 빗변은 20이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-0",
+          "answer": "5",
+          "message": "3^2+4^2=9+16=25이고, 이건 빗변의 제곱이니까 빗변은 5야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-4",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변의 길이예요. 7^2+24^2=49+576=625라서 빗변은 625cm예요.\n답: 625",
+          "answer": "625",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 피타고라스 정리에서는 7^2 + 24^2가 빗변의 길이 자체가 아니라 빗변의 제곱이 돼. 그러면 c^2 = 625일 때, c는 무엇일지 한 번만 생각해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "피타고라스 정리에서 두 변의 제곱의 합은 빗변의 '제곱'인데, 학생은 625를 바로 빗변의 길이로 해석했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 7^2+24^2는 빗변의 제곱이니까 c^2=625이면 c는 625의 제곱근이야.\n답: 25",
+          "answer": "25",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! c^2 = 625이면 c = 25이니까 빗변의 길이는 25cm야. 제곱과 제곱근의 관계를 스스로 바로잡은 점이 아주 좋아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-5",
+          "answer": "20",
+          "message": "이제는 먼저 제곱해서 더한 다음에 마지막에 제곱근을 하면 돼. 12^2+16^2=144+256=400이니까 빗변은 20이야.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-0",
+          "answer": "5",
+          "message": "직각을 낀 두 변을 제곱해서 더하면 빗변의 제곱이니까, 3^2+4^2=9+16=25예요. 그래서 빗변은 25의 제곱근이라서 5예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-5",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이라서 12^2+16^2를 해요. 144+256=400이니까 빗변은 400cm예요.\n답: 400",
+          "answer": "400",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어! 피타고라스 정리는 12^2 + 16^2 = 빗변^2 이라서, 400은 빗변의 길이가 아니라 빗변의 제곱이야. 그럼 길이를 구하려면 '어떤 수를 제곱하면 400이 될까?'를 생각해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리에서 '두 변의 제곱의 합 = 빗변의 제곱'이어야 하는데 제곱근을 취하지 않고 그대로 빗변 길이로 답했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 400은 빗변의 제곱이었네. 어떤 수를 제곱하면 400인지 보면 20^2=400이라서 빗변은 20cm야.\n답: 20",
+          "answer": "20",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 구했어! 12^2 + 16^2 = 400은 빗변의 제곱이니까, 빗변은 20cm가 되는 게 맞아. 아주 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-0",
+          "answer": "5",
+          "message": "지난번처럼 먼저 3^2+4^2를 하면 9+16=25예요. 이건 빗변의 제곱이니까 빗변은 5예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-1",
+          "answer": "13",
+          "message": "5^2+12^2를 하면 25+144=169예요. 이건 빗변의 제곱이니까 빗변은 13이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "pythagoras_no_sqrt",
+      "p1": "pythagoras_no_sqrt-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각을 낀 두 변의 제곱을 더하면 빗변 길이니까 12^2+16^2를 하면 돼. 144+256=400이니까 빗변은 400cm야.\n답: 400",
+          "answer": "400",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 12^2+16^2=400까지는 아주 잘했어. 그런데 피타고라스 정리는 '빗변의 길이의 제곱'이 400이라는 뜻이야. 그럼 빗변의 길이 자체는 어떤 수의 제곱이 400이 되는지 생각해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "피타고라스 정리를 적용해 12^2+16^2=400까지는 맞았지만, 빗변의 길이는 그 합이 아니라 제곱근을 구해야 하므로 개념 적용이 한 단계 부족했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네. 빗변의 길이의 제곱이 400이면, 빗변 길이는 20이야. 왜냐하면 20^2=400이니까.\n답: 20",
+          "answer": "20",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확해. 400은 빗변의 길이가 아니라 빗변의 길이의 제곱이고, 그래서 빗변은 20cm야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "pythagoras_no_sqrt-0",
+          "answer": "5",
+          "message": "아까처럼 먼저 3^2+4^2를 하면 9+16=25야. 이건 빗변 길이의 제곱이니까 빗변은 5야.",
+          "label": "correct"
+        },
+        {
+          "problem": "pythagoras_no_sqrt-1",
+          "answer": "13",
+          "message": "5^2+12^2를 하면 25+144=169야. 이건 빗변의 제곱이니까 빗변은 13이야.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-0",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(13^2+5^2)=sqrt(169+25)=sqrt(194)예요.\n답: sqrt(194)",
+          "answer": "sqrt(194)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방법의 큰 틀은 좋아요. 그런데 13cm가 빗변이면 가장 긴 변이 이미 정해진 거라서, 나머지 변을 구할 때는 더하는 게 아니라 `빗변^2 - 다른 변^2`를 써야 해요. 그러면 13^2 - 5^2는 얼마가 되나요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리의 방향을 반대로 적용하여 빗변이 주어졌을 때는 제곱의 차를 써야 하는데 합을 사용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네요. 빗변이 이미 제일 긴 변이니까 나머지 변은 13^2 - 5^2로 보면 돼요.\n답: 144",
+          "answer": "144",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "거의 다 왔어요! 144는 그 변의 길이 자체가 아니라 `그 변의 제곱`이에요. 그러면 실제 변의 길이는 `sqrt(144)`로 써야 하는데, 얼마일까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 빗변 제곱에서 다른 변의 제곱을 빼야 한다는 핵심 개념을 바로잡았고 13^2-5^2=144까지는 맞게 구했지만, 문제는 변의 길이를 묻고 있으므로 마지막에 제곱근을 취해 12cm라고 써야 합니다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그러네요. 실제 길이는 sqrt(144)니까 12예요.\n답: 12",
+          "answer": "12",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 정답이에요! 144는 변의 제곱이고 실제 길이는 sqrt(144)=12라서, 나머지 한 변의 길이는 12cm예요. 정말 잘 고쳤어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-1",
+          "answer": "8",
+          "message": "빗변이 10cm로 이미 제일 긴 변이니까, 나머지 한 변은 10^2 - 6^2를 먼저 계산해요. 그러면 100 - 36 = 64이고, 실제 길이는 sqrt(64)라서 8이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-2",
+          "answer": "15",
+          "message": "빗변이 17cm니까 제일 긴 변이라서, 먼저 17^2 - 8^2를 해요. 289 - 64 = 225이고, 실제 길이는 sqrt(225)라서 15예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-0",
+      "rep": 1,
+      "solved_at": 3,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(13^2+5^2)=sqrt(169+25)=sqrt(194)예요.\n답: sqrt(194)",
+          "answer": "sqrt(194)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 13cm는 빗변이라서 가장 긴 변이죠? 그럼 식은 `빗변^2 = 다른 변^2 + 나머지 변^2`가 되니, 나머지 변의 제곱을 구하려면 `13^2`에서 `5^2`를 더할까요, 뺄까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리를 떠올린 것은 맞지만 빗변이 주어졌을 때는 다른 변의 제곱을 빼야 하는데 더해서 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 빗변이 제일 길면 13^2=5^2+나머지변^2 이렇게 되는 거네요. 그러면 나머지변^2는 13^2에서 5^2를 빼야 돼요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 식을 정확히 세웠어요. 나머지 변^2 = 13^2 - 5^2 이니까 169 - 25만 계산하면 돼요. 그 값이 얼마인지 직접 써 볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 빗변을 기준으로 식을 올바르게 세우고 제곱을 빼야 한다는 핵심 관계를 정확히 이해했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 169-25를 계산하면 돼요. 그러면 144예요.\n답: 144",
+          "answer": "144",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 144까지는 정확해요. 그런데 지금 144는 `나머지 변^2`의 값이라서, 실제 변의 길이를 구하려면 `sqrt(144)`를 해야 해요. 그럼 나머지 변의 길이는 몇 cm일까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리의 식을 바로잡고 169-25=144까지 정확히 계산했지만, 구해야 하는 것은 변의 길이인데 제곱값에서 멈췄다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 144는 변의 제곱이었네요. 그래서 sqrt(144)=12라서 나머지 변의 길이는 12cm예요.\n답: 12",
+          "answer": "12",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정답이에요, 12cm가 맞아요! 피타고라스 정리에서 빗변일 때는 빼야 한다는 점도 잘 고쳤고, 마지막에 sqrt(144)=12까지 정확했어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-1",
+          "answer": "8",
+          "message": "빗변이 10cm니까 10^2=6^2+나머지변^2로 세우면 돼요. 그래서 나머지변^2=100-36=64, 나머지변은 sqrt(64)=8이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-2",
+          "answer": "15",
+          "message": "빗변이 17cm니까 17^2=8^2+나머지변^2로 세우면 돼요. 그래서 나머지변^2=289-64=225, 나머지변은 sqrt(225)=15이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-1",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(10^2+6^2)=sqrt(136)입니다.\n답: sqrt(136)",
+          "answer": "sqrt(136)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 지금 10cm는 빗변이라서, 빗변을 구할 때처럼 더하는 게 아니라 빗변의 제곱에서 다른 변의 제곱을 빼야 해요. 먼저 식을 10^2 - 6^2로 바꿔 보면 얼마가 되나요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리를 떠올린 점은 맞지만, 빗변이 주어졌을 때는 빗변의 제곱에서 다른 변의 제곱을 빼야 하는데 더해서 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 빗변이 이미 10cm로 주어졌으니까 빼야 되는 거였어요. 10^2-6^2=100-36=64예요.\n답: 64",
+          "answer": "64",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지는 아주 잘했어요. 그런데 64는 ‘변의 길이의 제곱’이라서, 실제 변의 길이를 구하려면 마지막에 sqrt(64)를 해야 해요. sqrt(64)는 얼마일까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 빗변에서 다른 변의 제곱을 빼는 식까지는 정확히 세웠지만, 마지막에 변의 길이를 묻는 문제에서 제곱근을 취하지 않고 64를 그대로 답했습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그러면 마지막에 제곱근을 씌워야 하네요. sqrt(64)=8이에요.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 정확해요. 64는 변의 길이의 제곱이고, 제곱근을 취해서 실제 길이 8cm를 구한 거예요. 스스로 끝까지 잘 고쳤어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-2",
+          "answer": "15",
+          "message": "이번에는 빗변이 17cm로 이미 있으니까 먼저 17^2-8^2를 해요. 289-64=225이고, 마지막에 sqrt(225)=15예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-3",
+          "answer": "24",
+          "message": "빗변이 25cm로 주어졌으니까 25^2-7^2를 먼저 해요. 625-49=576이고 sqrt(576)=24예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-1",
+      "rep": 1,
+      "solved_at": 3,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서는 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(10^2+6^2)=sqrt(136)입니다.\n답: sqrt(136)",
+          "answer": "sqrt(136)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각은 거의 맞았는데, 한 가지만 점검해 보자. 10cm는 빗변이라서 가장 긴 변이니까, 피타고라스 정리에서는 10^2가 두 짧은 변의 제곱합이 되어야 해. 그러면 x를 나머지 한 변이라고 할 때, x^2 + 6^2 = 10^2로 놓을 수 있을까?",
+          "leak": false,
+          "decision": {
+            "reason": "직각삼각형에서 빗변이 주어졌는데도 두 변의 제곱을 더해 다른 변을 구해 피타고라스 정리를 반대로 적용한 것으로 보인다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 빗변이 제일 긴 변이면 10^2가 두 짧은 변 제곱의 합이 되는 거네요. 그러면 x^2+6^2=10^2로 놓을 수 있을 것 같아요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 식을 아주 correctly 세웠어! 빗변이 10cm라서 x^2 + 6^2 = 10^2로 두는 게 핵심이야. 이제 6^2와 10^2를 계산해서 x^2를 혼자 남겨 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 빗변이 가장 긴 변임을 반영해 식을 x^2+6^2=10^2로 올바르게 세웠으므로 핵심 개념을 이해했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 6^2=36이고 10^2=100이니까 x^2+36=100이에요. 그래서 x^2=64가 돼요.\n답: 64",
+          "answer": "64",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "여기까지 아주 잘했어! 그런데 문제는 x^2의 값이 아니라 변의 길이 x를 묻고 있어, 그래서 x^2=64에서 x가 몇 cm인지 한 번만 더 생각해 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 피타고라스 정리를 올바르게 적용해 x^2=64까지 정확히 구했지만, 문제는 변의 길이를 묻는데 x가 아니라 x^2 값을 답으로 썼다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, x^2=64이면 x는 8이에요. 변의 길이라서 8cm예요.\n답: 8",
+          "answer": "8",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답은 8cm야! x^2=64에서 x=8로 잘 마무리했고, 길이의 단위도 정확하게 붙였어. 아주 잘 풀었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-2",
+          "answer": "15",
+          "message": "빗변이 17cm니까 x^2+8^2=17^2로 놓아요. 64랑 289를 써서 x^2=225, 그래서 x=15예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-3",
+          "answer": "24",
+          "message": "빗변이 25cm니까 x^2+7^2=25^2로 놓으면 돼요. 49랑 625를 계산하면 x^2=576이라서 x=24예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-2",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(17^2+8^2)=sqrt(289+64)=sqrt(353) 이에요.\n답: sqrt(353)",
+          "answer": "sqrt(353)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 17cm는 빗변이라서 가장 긴 변이죠? 빗변의 제곱 = 다른 두 변의 제곱의 합 이라는 식에서, 모르는 변의 제곱을 혼자 남기려면 17^2에서 8^2를 어떻게 해야 할까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리를 떠올린 방향은 맞지만, 빗변이 이미 주어졌을 때는 더하는 것이 아니라 빗변의 제곱에서 다른 변의 제곱을 빼야 한다는 적용을 잘못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 빗변이 제일 길어서 식을 c^2=a^2+b^2로 놓으면 모르는 변의 제곱은 17^2에서 8^2를 빼야 되네요. 그러면 sqrt(289-64)=sqrt(225)=15예요.\n답: 15",
+          "answer": "15",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 정확하게 고쳤어요. 빗변 17에 대해 17^2 = 8^2 + x^2로 두고 계산하면 x = 15가 됩니다. 정답은 15cm예요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-3",
+          "answer": "24",
+          "message": "빗변이 25cm니까 25^2 = 7^2 + x^2로 두면 돼요. 그래서 x = sqrt(25^2-7^2)=sqrt(625-49)=sqrt(576)=24예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-4",
+          "answer": "12",
+          "message": "빗변이 15cm니까 15^2 = 9^2 + x^2로 두면 돼요. 그래서 x = sqrt(15^2-9^2)=sqrt(225-81)=sqrt(144)=12예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-2",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(17^2+8^2)=sqrt(289+64)=sqrt(353)입니다.\n답: sqrt(353)",
+          "answer": "sqrt(353)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 지금 17cm는 빗변이라서, 빗변의 제곱 = 다른 두 변의 제곱의 합을 써야 해요. 그럼 모르는 변의 제곱은 17^2와 8^2를 더할까요, 뺄까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 직각삼각형에서 피타고라스 정리를 떠올린 것은 맞지만, 빗변이 주어졌을 때는 제곱을 더하는 것이 아니라 빼야 하는 상황을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 빗변 제곱이 다른 두 변 제곱의 합이면 모르는 변의 제곱은 17^2에서 8^2를 빼야 하네요. 그러면 sqrt(289-64)=sqrt(225)=15예요.\n답: 15",
+          "answer": "15",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 정확하게 고쳤어요. 빗변이 17이므로 17^2 - 8^2 = 225, 그래서 나머지 한 변은 15cm예요. 아주 잘했어요!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-3",
+          "answer": "24",
+          "message": "이번에는 빗변이 25cm니까 모르는 변은 25^2에서 7^2를 빼고 제곱근을 구하면 돼요. sqrt(625-49)=sqrt(576)=24예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-4",
+          "answer": "12",
+          "message": "빗변이 15cm니까 15^2에서 9^2를 빼고 제곱근을 구하면 돼요. sqrt(225-81)=sqrt(144)=12예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-3",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(25^2+7^2)=sqrt(625+49)=sqrt(674)예요.\n답: sqrt(674)",
+          "answer": "sqrt(674)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 25cm가 빗변이라면, 지금 구하려는 건 더 긴 변이 아니라 나머지 한 변이죠. 이럴 때는 25^2에서 7^2를 빼야 하는데, 먼저 식을 x^2 + 7^2 = 25^2처럼 세워볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "피타고라스 정리를 떠올린 것은 맞지만, 빗변이 이미 주어졌을 때는 두 변의 제곱을 더하는 것이 아니라 빗변의 제곱에서 다른 변의 제곱을 빼야 합니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 빗변이 25cm면 제일 긴 변이니까 x^2+7^2=25^2로 세우는 게 맞는 것 같아요. 그러면 x^2=625-49=576이라서 x=24예요.\n답: 24",
+          "answer": "24",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정확해! x^2 = 576이니까 x = 24이고, 길이이므로 24cm라고 쓰면 돼. 스스로 식을 바로잡아서 끝까지 잘 풀었어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-4",
+          "answer": "12",
+          "message": "이번에는 빗변이 15cm니까 x^2+9^2=15^2로 세우면 돼요. 그래서 x^2=225-81=144라서 x=12예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-5",
+          "answer": "16",
+          "message": "빗변이 20cm니까 x^2+12^2=20^2로 세우면 돼요. 그래서 x^2=400-144=256이라서 x=16이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서는 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(25^2+7^2)=sqrt(625+49)=sqrt(674)예요.\n답: sqrt(674)",
+          "answer": "sqrt(674)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방법의 핵심은 맞아요. 그런데 25cm가 빗변이면 가장 긴 변이니까, 이번에는 “빗변의 제곱 = 다른 두 변의 제곱의 합”에서 모르는 변을 남기고 옮겨야 해요. 먼저 x라고 두고 x^2 + 7^2 = 25^2로 쓸 수 있겠죠? 그다음 x^2를 혼자 남기면 어떻게 될까요?",
+          "leak": false,
+          "decision": {
+            "reason": "직각삼각형에서 빗변이 주어졌는데도 두 변의 제곱을 더하는 공식을 그대로 적용해, 피타고라스 정리를 상황에 맞게 바꾸어 쓰지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 그러면 x^2+49=625니까 x^2=625-49가 돼요. 그래서 x^2=576, x=24예요.\n답: 24",
+          "answer": "24",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 정확히 풀었어요! x^2 = 576에서 x = 24이고, 길이는 양수니까 나머지 한 변은 24cm예요. 아주 잘했어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-4",
+          "answer": "12",
+          "message": "이번에는 빗변이 15cm니까 x^2+9^2=15^2로 세우면 돼요. 그래서 x^2=225-81=144니까 x=12예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-5",
+          "answer": "16",
+          "message": "빗변이 20cm니까 x^2+12^2=20^2로 놓으면 돼요. 그러면 x^2=400-144=256이라서 x=16이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-4",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 배웠어요. 그래서 sqrt(15^2+9^2)=sqrt(225+81)=sqrt(306)이에요.\n답: sqrt(306)",
+          "answer": "sqrt(306)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 15cm가 빗변이라서, 모르는 변을 구할 때는 15^2에서 9^2를 빼야 해요. 그러면 식을 x^2 = 15^2 - 9^2처럼 다시 써볼래요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리를 떠올린 것은 맞지만, 빗변이 이미 주어졌을 때는 제곱을 더하는 것이 아니라 빗변 제곱에서 다른 변의 제곱을 빼야 한다는 적용을 잘못했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네, 빗변이 제일 길어서 빗변 제곱에서 다른 변 제곱을 빼야 하네요. 그러면 x^2=15^2-9^2=225-81=144라서 x=12예요.\n답: 12",
+          "answer": "12",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 아주 잘했어요! 빗변의 제곱에서 다른 변의 제곱을 빼서 x^2 = 144, 그래서 x = 12가 맞아요. 이제 이 문제는 스스로 정확히 해결한 거예요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-5",
+          "answer": "16",
+          "message": "빗변이 20cm니까 빗변 제곱에서 다른 변 제곱을 빼면 돼요. x^2=20^2-12^2=400-144=256이라서 x=16이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-0",
+          "answer": "12",
+          "message": "빗변이 13cm니까 빗변 제곱에서 다른 변 제곱을 빼면 돼요. x^2=13^2-5^2=169-25=144이라서 x=12예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-4",
+      "rep": 1,
+      "solved_at": 4,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형이니까 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(15^2+9^2)=sqrt(225+81)=sqrt(306)이에요.\n답: sqrt(306)",
+          "answer": "sqrt(306)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "지금은 빗변 15cm가 이미 주어져 있어서, 두 변을 더해 빗변을 또 구하는 상황은 아니야. 피타고라스 정리는 빗변^2 = 다른변^2 + 다른변^2 이니까, 15^2 = 9^2 + x^2처럼 놓고 x^2를 혼자 남기려면 양쪽에서 무엇을 빼야 할까?",
+          "leak": false,
+          "decision": {
+            "reason": "직각삼각형에서 빗변이 이미 주어졌는데도 두 변을 더해 또 빗변을 구하는 공식을 적용해, 피타고라스 정리를 반대로 써야 한다는 점을 놓쳤다.",
+            "error_type": "misinterpret",
+            "strategy": "Provide a hint",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 빗변이 이미 있으면 15^2 = 9^2 + x^2로 놓는 거네요. 그러면 x^2를 남기려고 양쪽에서 9^2를 빼야 해요.\n답: 9^2",
+          "answer": "9^2",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 식을 세우는 건 정확했어. 이제 15^2 - 9^2 = x^2가 되니까, 왼쪽은 x^2와 같아야 하는데 왜 답을 9^2라고 쓰면 안 되는지 한 번 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 식을 올바르게 세우고 x^2를 남기기 위해 양변에서 9^2를 빼야 한다는 핵심 아이디어는 맞았지만, 최종 답을 x^2가 아닌 9^2로 적어 아직 계산과 정리가 덜 되었습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "맞아요. 9^2는 양쪽에서 빼는 값이고, 답은 x^2랑 같아지는 값이어야 해요. 그래서 15^2-9^2를 계산해야 해요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야. 그럼 먼저 15^2와 9^2를 각각 계산하면 얼마인지 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 피타고라스 정리의 식을 올바르게 세우고 x^2를 구하기 위해 15^2-9^2를 계산해야 한다는 점까지 정확히 이해했지만, 아직 실제 계산과 제곱근까지 마치지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "15^2는 225이고 9^2는 81이에요. 이제 빼면 될 것 같아요.\n답: 225, 81",
+          "answer": "225, 81",
+          "label": "unparseable"
+        },
+        {
+          "role": "tutor",
+          "text": "좋아, 여기까지 아주 잘했어. 이제 225 - 81을 계산해서 x^2 값을 구해보고, 마지막으로 x는 그 수의 어떤 수인지 생각해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 피타고라스 정리의 식을 올바르게 세우고 필요한 제곱값도 정확히 계산했지만 아직 마지막 뺄셈과 제곱근까지 답을 완성하지 않았다.",
+            "error_type": "right-idea",
+            "strategy": "Encourage the student",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "225 - 81 = 144이고, x^2 = 144니까 x는 144의 제곱근이에요. 그래서 x는 12예요.\n답: 12",
+          "answer": "12",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답이야! x^2 = 144에서 x = 12로 마무리한 게 아주 정확했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-5",
+          "answer": "16",
+          "message": "빗변이 20cm니까 20^2 = 12^2 + x^2로 놓아요. 그러면 x^2 = 400 - 144 = 256이고, x는 16이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-0",
+          "answer": "12",
+          "message": "빗변이 13cm니까 13^2 = 5^2 + x^2로 놓아요. 그러면 x^2 = 169 - 25 = 144라서 x는 12예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-5",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(20^2+12^2)=sqrt(400+144)=sqrt(544)예요.\n답: sqrt(544)",
+          "answer": "sqrt(544)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 20cm는 빗변이라서 가장 긴 변이죠? 그럼 식은 a^2 + 12^2 = 20^2 꼴이 되는데, 여기서 a^2를 구하려면 20^2에서 12^2를 더할까요, 뺄까요?",
+          "leak": false,
+          "decision": {
+            "reason": "직각삼각형에서 피타고라스 정리를 떠올린 점은 맞지만, 빗변이 주어졌을 때는 다른 변의 제곱을 빼야 하는데 더해서 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 빗변이 제일 긴 변이면 20^2가 전체라서 다른 변 제곱을 빼야 되네요. 그러면 a^2=20^2-12^2예요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 바로 그거예요! 식을 a^2 = 20^2 - 12^2로 세운 건 정확해요. 이제 400 - 144를 계산하면 a^2가 나오는데, 그다음 a는 어떻게 구할까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 빗변일 때는 제곱을 더하는 것이 아니라 빼야 한다는 핵심 관계를 스스로 바로잡아 식을 올바르게 세웠다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "400-144=256이니까 a^2=256이에요. 그러면 a는 sqrt(256)이라서 16이에요.\n답: 16",
+          "answer": "16",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해요, 잘 풀었어요! 빗변에서 다른 변의 제곱을 빼고, 마지막에 제곱근을 구해서 16cm가 맞아요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-0",
+          "answer": "12",
+          "message": "빗변이 13cm니까 제일 긴 변이에요. 그래서 a^2 = 13^2 - 5^2 = 169 - 25 = 144이고, a = sqrt(144) = 12예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-1",
+          "answer": "8",
+          "message": "빗변이 10cm니까 제일 긴 변이에요. 그래서 a^2 = 10^2 - 6^2 = 100 - 36 = 64이고, a = sqrt(64) = 8이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "hypotenuse_confusion",
+      "p1": "hypotenuse_confusion-5",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "직각삼각형에서 모르는 변은 아는 두 변의 제곱을 더해서 제곱근을 구하면 된다고 생각해요. 그래서 sqrt(20^2+12^2)=sqrt(400+144)=sqrt(544)예요.\n답: sqrt(544)",
+          "answer": "sqrt(544)",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "피타고라스 정리를 떠올린 건 아주 좋아요. 그런데 20cm는 빗변이라서, 빗변 제곱 = 다른 변 제곱 + 나머지 변 제곱 형태를 써야 해요. 그럼 나머지 변의 제곱은 20^2 - 12^2 중 어느 쪽으로 구해야 할까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 직각삼각형에서 피타고라스 정리를 떠올린 것은 맞지만, 빗변이 주어졌을 때는 더하는 것이 아니라 빗변 제곱에서 다른 변의 제곱을 빼야 한다는 점을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞다, 빗변 제곱이 나머지 두 변 제곱의 합이니까 옮기면 나머지 변의 제곱은 20^2 - 12^2로 구하면 돼요. 그러면 sqrt(400-144)=sqrt(256)=16이에요.\n답: 16",
+          "answer": "16",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 정확하게 풀었어요. 빗변 20에 대해 20^2 - 12^2를 해서 나머지 변을 구하는 게 맞고, 계산 결과도 16으로 정확해요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "hypotenuse_confusion-0",
+          "answer": "12",
+          "message": "이번에는 빗변이 13cm니까, 빗변 제곱에서 다른 한 변 제곱을 빼면 돼요. sqrt(13^2-5^2)=sqrt(169-25)=sqrt(144)=12예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "hypotenuse_confusion-1",
+          "answer": "8",
+          "message": "빗변이 10cm니까 빗변 제곱에서 다른 한 변 제곱을 빼면 돼요. sqrt(10^2-6^2)=sqrt(100-36)=sqrt(64)=8이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-0",
+      "rep": 0,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:3이에요. 작은 도형이 8이니까 큰 도형은 8×3/2=12예요.\n답: 12",
+          "answer": "12",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "닮음비로 길이가 2:3이라면, 넓이는 길이처럼 그대로 비교할까 아니면 한 번 더 변할까? 정사각형 한 변이 2에서 3으로 커질 때 넓이가 4에서 9로 바뀌는 걸 떠올려 보면, 넓이의 비를 어떻게 써야 할지 다시 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "닮음비를 이용해 넓이를 구하려는 방향은 맞았지만, 넓이의 비가 닮음비의 제곱이라는 핵심 개념을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 정사각형 예시로 보니까 넓이는 한 번 더 변하네요. 그러면 길이의 비가 2:3이면 넓이의 비는 4:9로 봐야 해요.\n답: 18",
+          "answer": "18",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 고쳤어! 닮음비가 2:3이면 넓이의 비는 4:9이니까, 작은 도형 8에 맞춰 큰 도형을 18로 구한 게 맞아. 아주 잘했어!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-1",
+          "answer": "20",
+          "message": "이제는 넓이의 비를 닮음비의 제곱으로 보면 돼요. 1:2면 넓이의 비는 1:4라서 큰 도형의 넓이는 5×4=20이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-2",
+          "answer": "32",
+          "message": "넓이의 비는 닮음비를 제곱해서 9:16이에요. 그래서 큰 도형의 넓이는 18×16/9=32예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-0",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:3이에요. 작은 도형이 8cm^2이므로 큰 도형의 넓이는 8×3/2=12예요.\n답: 12",
+          "answer": "12",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "닮음비 2:3은 '길이'의 비라는 점을 먼저 떠올려 볼까? 넓이는 가로와 세로가 함께 바뀌니까, 넓이의 비를 구할 때 2와 3을 그냥 쓰는지, 아니면 각각 제곱해서 써야 하는지 생각해 봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이의 비를 같다고 보아 비의 제곱을 써야 한다는 핵심 개념을 놓쳤다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이비가 2:3이면 넓이는 가로랑 세로가 둘 다 바뀌니까 제곱해서 봐야 할 것 같아요. 그러면 넓이의 비는 4:9라서 큰 도형의 넓이는 8×9/4=18이에요.\n답: 18",
+          "answer": "18",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 이제 정확하게 풀었어! 닮음비 2:3이면 넓이의 비는 4:9가 되고, 그래서 큰 도형의 넓이는 18cm^2가 맞아. 아주 잘 고쳤다!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-1",
+          "answer": "20",
+          "message": "닮음비가 1:2이면 넓이의 비는 1:4예요. 그래서 큰 도형의 넓이는 5×4=20이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-2",
+          "answer": "32",
+          "message": "닮음비가 3:4이면 넓이의 비는 9:16이에요. 그래서 큰 도형의 넓이는 18×16/9=32예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-1",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮음비가 1:2니까 넓이의 비도 1:2라고 생각하면 돼요. 작은 도형 넓이가 5cm^2니까 큰 도형은 10cm^2예요.\n답: 10",
+          "answer": "10",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "길이의 비가 1:2일 때, 넓이는 같은 비로 늘지 않고 한 번 더 곱해져요. 즉 넓이의 비는 1^2 : 2^2가 되는데, 그러면 1:2가 아니라 무엇이 될까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비를 넓이의 비와 같다고 보았지만, 닮은 도형에서는 넓이의 비가 닮음비의 제곱이 된다는 핵심 개념을 잘못 적용했다.",
+            "error_type": "misinterpret",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이 비를 제곱하는 거면 1^2:2^2로 보면 되네요. 그러면 1:4가 돼요.\n답: 1:4",
+          "answer": "1:4",
+          "label": "unparseable"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 넓이의 비를 1:4로 고친 건 아주 잘했어. 이제 작은 도형 5cm^2가 그 1에 해당하니까, 큰 도형은 4에 해당하는 넓이를 어떻게 계산하면 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 넓이의 비를 1:4로 바로잡아 개념은 이해했지만, 문제에서 구하라고 한 큰 도형의 넓이 20cm²까지 계산하지 않아 답이 불완전하다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 그러면 작은 도형 5cm^2가 1칸이고, 큰 도형은 4칸이니까 5를 4배 하면 돼요.\n답: 20",
+          "answer": "20",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 이제 완전히 맞았어. 작은 도형 5cm^2에 넓이의 비 4를 곱해서 큰 도형의 넓이는 20cm^2야. 아주 잘 고쳤다!",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-2",
+          "answer": "32",
+          "message": "이제는 넓이의 비를 닮음비의 제곱으로 보면 돼요. 3:4면 넓이의 비는 9:16이니까 큰 도형의 넓이는 18x16/9=32예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-3",
+          "answer": "75",
+          "message": "넓이의 비는 닮음비를 제곱해서 보면 돼요. 2:5면 넓이의 비는 4:25라서 큰 도형의 넓이는 12x25/4=75예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-1",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같다고 배웠어요. 그러니까 1:2이면 넓이도 1:2라서 5에서 2배 하면 10이에요.\n답: 10",
+          "answer": "10",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 좋아, 그런데 넓이는 길이처럼 한 번만 커지지 않고 가로와 세로가 함께 커져요. 그래서 닮음비가 1:2일 때 넓이의 비는 1:2가 아니라 1^2:2^2가 돼요. 그럼 넓이의 비를 먼저 1:?: 형태로 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이의 비를 같다고 잘못 적용했고, 넓이는 닮음비의 제곱으로 비교해야 한다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 가로랑 세로가 같이 커진다고 보면 제곱으로 봐야 하는 거네요. 그러면 닮음비가 1:2일 때 넓이의 비는 1^2:2^2라서 1:4예요.\n답: 1:4",
+          "answer": "1:4",
+          "label": "unparseable"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 넓이의 비를 1:4로 고친 건 아주 잘했어. 이제 작은 도형 5cm^2가 그 1에 해당하니까, 큰 도형 4에 해당하는 넓이는 얼마인지 한 번 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 넓이의 비를 닮음비의 제곱으로 고쳐 이해했고, 아직 최종 큰 도형의 넓이 20cm^2까지는 쓰지 않아 답이 불완전하다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 작은 도형 5cm^2가 1칸이면 큰 도형은 4칸이라서 4배 하면 돼요. 그래서 5×4=20이에요.\n답: 20",
+          "answer": "20",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 잘 풀었어! 닮음비 1:2이면 넓이의 비는 1:4이고, 작은 도형 5cm^2에 4를 곱해서 큰 도형의 넓이는 20cm^2가 돼. 이제 이 차이를 네 말로 한 번만 정리해 보면 더 완벽해질 거야.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-2",
+          "answer": "32",
+          "message": "이제는 넓이는 닮음비를 제곱해서 봐야 해요. 3:4면 넓이의 비는 9:16이고, 작은 도형 18이 9에 해당하니까 큰 도형은 18×16/9=32예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-3",
+          "answer": "75",
+          "message": "넓이는 닮음비를 제곱해서 봐요. 2:5면 넓이의 비는 4:25라서, 작은 도형 12가 4에 해당하니까 큰 도형은 12×25/4=75예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-2",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같다고 보고 풀면, 작은 도형:큰 도형 = 3:4예요. 그래서 큰 도형의 넓이는 18 x 4/3 = 24예요.\n답: 24",
+          "answer": "24",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각의 시작은 좋았어. 그런데 한 가지만 점검해 보자: 닮음비 3:4는 길이의 비일까, 넓이의 비일까?\n\n닮은 도형에서는 넓이의 비가 길이의 비를 그대로 쓰는 게 아니라 한 번 더 곱해져. 그러면 3:4를 넓이비로 바꾸면 무엇:무엇이 될지 먼저 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비를 넓이비와 같다고 두어 개념을 잘못 적용했고, 닮은 도형의 넓이비는 닮음비의 제곱이라는 핵심을 바로잡아야 한다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 닮음비가 길이의 비면 넓이는 한 번 더 곱해야 하네요. 그러면 3:4를 넓이비로 바꾸면 9:16이에요.\n답: 9:16",
+          "answer": "9:16",
+          "label": "unparseable"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 넓이의 비를 9:16으로 바꾼 건 아주 정확해. 이제 문제는 비를 묻는 게 아니라 큰 도형의 넓이를 묻고 있으니, 작은 넓이 18이 9에 해당할 때 16에 해당하는 값은 얼마일지 계산해 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비를 넓이비 9:16으로 바꾸는 핵심 개념은 정확히 이해했지만, 문제에서 구해야 하는 큰 도형의 넓이 대신 넓이의 비만 답했다.",
+            "error_type": "imprecise",
+            "strategy": "Provide a minor correction",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "작은 넓이 18이 넓이비 9에 해당하니까, 1에 해당하는 값은 18/9 = 2예요. 그러면 큰 도형은 16에 해당해서 2 x 16 = 32예요.\n답: 32",
+          "answer": "32",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 잘 풀었어. 닮음비 3:4를 넓이비 9:16으로 바꾸고, 18이 9에 해당하니 큰 도형은 32cm^2가 맞아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-3",
+          "answer": "75",
+          "message": "이제는 넓이의 비로 바꿔서 풀면 돼요. 2:5를 제곱해서 4:25니까, 작은 넓이 12가 4에 해당하면 큰 넓이는 25에 해당해요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-4",
+          "answer": "63",
+          "message": "닮음비 1:3이면 넓이의 비는 1:9예요. 작은 넓이 7이 1에 해당하니까 큰 넓이는 7 x 9 = 63이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-2",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같다고 보고 풀면, 작은 도형:큰 도형 = 3:4예요. 그래서 큰 도형의 넓이는 18×4/3=24예요.\n답: 24",
+          "answer": "24",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각의 출발은 좋았어. 그런데 닮음비 3:4는 길이의 비이고, 넓이는 한 번 더 비가 커져서 어떻게 바뀌는지 떠올려볼래? 작은 도형:큰 도형의 넓이의 비를 3:4 말고 어떤 비로 써야 할지 먼저 말해봐.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비를 이용해야 한다는 생각은 맞았지만, 넓이의 비가 닮음비의 제곱이라는 점을 적용하지 못해 3:4를 그대로 사용했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이의 비가 3:4이면 넓이는 그 비를 한 번 더 곱해서 봐야 하는 것 같아요. 그러면 작은 도형:큰 도형의 넓이의 비는 9:16이라고 보면 될 것 같아요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야. 닮음비가 3:4이면 넓이의 비는 9:16이 돼. 이제 작은 도형 18이 9에 해당하니까, 16에 해당하는 큰 도형의 넓이는 어떻게 구하면 될까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 닮음비에서 넓이의 비를 9:16으로 바르게 고쳐서 핵심 개념을 이해했지만 아직 최종 넓이 계산은 마무리하지 않았다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "작은 도형 18이 9에 해당하니까 1칸은 18/9=2예요. 그러면 큰 도형은 16칸이라서 2×16=32예요.\n답: 32",
+          "answer": "32",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해! 넓이의 비를 9:16으로 바꾼 뒤 18이 9칸에 해당한다고 보고 계산해서 32를 구한 풀이가 맞아. 이제 닮음비는 길이, 넓이는 제곱된 비라는 점만 꼭 기억하면 돼.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-3",
+          "answer": "75",
+          "message": "닮음비가 2:5이면 넓이의 비는 4:25예요. 작은 도형 12가 4에 해당하니까 큰 도형은 12÷4×25=75예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-4",
+          "answer": "63",
+          "message": "닮음비가 1:3이면 넓이의 비는 1:9예요. 작은 도형 7이 1칸이니까 큰 도형은 9칸이라서 7×9=63이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-3",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같으니까 2:5예요. 작은 도형이 12cm^2이니 큰 도형은 12×5/2=30이에요.\n답: 30",
+          "answer": "30",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각의 시작은 좋았어, 그런데 넓이의 비는 길이의 닮음비와 그대로 같지 않아. 닮음비가 2:5일 때 넓이의 비는 왜 2:5가 아니라 2^2:5^2가 되는지 한 번 떠올려볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이의 비를 같다고 보아 개념을 잘못 적용했고, 넓이의 비는 닮음비의 제곱이라는 점을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Correct the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 넓이는 가로랑 세로가 같이 커지니까 한 번 더 곱해져요. 그래서 닮음비가 2:5면 넓이의 비는 2^2:5^2=4:25가 되는 거네요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야! 넓이는 두 방향으로 함께 커지니까 닮음비를 제곱해서 4:25로 보는 게 정확해. 이제 작은 도형 12가 4에 해당하니, 큰 도형이 25에 해당하는 값도 스스로 구한 셈이야.",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 넓이의 비는 닮음비의 제곱이라는 핵심 개념을 스스로 바로잡아 정확히 설명했다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네요. 12:큰넓이 = 4:25 이니까 큰 넓이는 12×25/4 = 75예요.\n답: 75",
+          "answer": "75",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 잘 풀었어! 닮음비 2:5를 넓이의 비 4:25로 바꾸고, 12:큰넓이 = 4:25를 세운 게 아주 좋아. 그래서 큰 도형의 넓이는 75cm^2가 맞아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-4",
+          "answer": "63",
+          "message": "넓이의 비는 닮음비를 제곱하니까 1:3이면 1:9예요. 작은 넓이 7이 1에 해당하니까 큰 넓이는 7×9=63이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-5",
+          "answer": "75",
+          "message": "넓이의 비는 닮음비의 제곱이니까 3:5면 9:25예요. 작은 도형 27이 9에 해당하니까 큰 도형은 27×25/9=75예요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-3",
+      "rep": 1,
+      "solved_at": 1,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮음비가 2:5니까 넓이의 비도 2:5라고 생각하면 돼요. 작은 도형이 12cm^2이니까 큰 도형은 12×5/2=30이에요.\n답: 30",
+          "answer": "30",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방법은 비를 이용했다는 점에서 좋아요. 그런데 닮은 도형에서는 길이의 비와 넓이의 비가 같은지, 아니면 어떤 규칙이 있는지 먼저 떠올려볼래요? 힌트: 넓이는 길이 2개가 함께 작용해서 변해요.",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이의 비를 같다고 두어 계산했는데, 닮은 도형에서는 넓이의 비가 닮음비의 제곱이 된다는 개념을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "음... 넓이는 길이 2개가 같이 작용하니까 그냥 닮음비랑 같지는 않을 수도 있겠네요. 그러면 2:5를 한 번 더 곱해서 넓이의 비는 4:25로 보고, 큰 도형의 넓이는 12×25/4=75인 것 같아요.\n답: 75",
+          "answer": "75",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 이제 제대로 찾았어요! 닮음비가 2:5이면 넓이의 비는 4:25가 되니까, 12×25/4로 구한 75cm^2가 정답이에요. 아주 잘 고쳤어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-4",
+          "answer": "63",
+          "message": "닮음비가 1:3이면 넓이의 비는 1:9로 보면 돼요. 그래서 큰 도형의 넓이는 7×9=63이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-5",
+          "answer": "75",
+          "message": "닮음비가 3:5이면 넓이의 비는 9:25예요. 그래서 큰 도형의 넓이는 27×25/9=75이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-4",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮음비가 1:3이니까 넓이의 비도 1:3이라고 생각하면 돼요. 작은 도형 넓이가 7이니까 큰 도형은 7×3=21이에요.\n답: 21",
+          "answer": "21",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각의 시작은 좋아요. 그런데 닮음비는 길이의 비라서, 넓이의 비로 바꿀 때는 그 비를 한 번 더 곱해 줘야 해요. 그렇다면 1:3인 닮음비일 때 넓이의 비는 1:몇 이 될까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비를 그대로 넓이비로 사용해 넓이는 닮음비의 제곱이라는 핵심 개념을 놓쳤다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이의 비를 넓이의 비로 바꿀 때는 한 번 더 곱하는 거구나. 그러면 1:3이면 넓이의 비는 1:9가 돼요.\n답: 9",
+          "answer": "9",
+          "label": "other"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아요, 넓이의 비는 1:9예요. 그런데 9는 '비'이고, 문제는 큰 도형의 '넓이'를 묻고 있어요. 작은 도형 7cm^2가 비의 1에 해당하니, 큰 도형은 7을 몇 배 해야 할까요?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 닮음비를 넓이비로 제곱해야 한다는 핵심 개념을 바로잡아 1:9까지는 맞게 구했지만, 문제에서 큰 도형의 넓이를 구해야 한다는 마지막 적용이 빠졌습니다.",
+            "error_type": "right-idea",
+            "strategy": "Provide a hint",
+            "intention": "Hint at the mistake"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아 맞네요. 작은 도형 7cm^2가 비의 1이니까 큰 도형은 9배 해서 구하면 돼요.\n답: 63",
+          "answer": "63",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정답이에요, 63cm^2! 닮음비 1:3에서 넓이비를 1:9로 바꾸고, 작은 도형의 넓이 7에 9를 곱한 과정이 아주 정확했어요.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-5",
+          "answer": "75",
+          "message": "닮음비가 3:5니까 넓이의 비는 9:25예요. 작은 도형 27이 9에 해당하니까 큰 도형은 27×25/9=75예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-0",
+          "answer": "18",
+          "message": "닮음비가 2:3이면 넓이의 비는 4:9예요. 작은 도형 8이 4에 해당하니까 큰 도형은 8×9/4=18이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-4",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮음비가 1:3이면 넓이의 비도 1:3이라고 생각하면 돼요. 작은 도형 넓이가 7이니까 큰 도형은 7×3=21이에요.\n답: 21",
+          "answer": "21",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "좋은 시작이야. 그런데 닮음비는 '길이의 비'라서, 넓이로 바뀌면 그 비를 한 번 더 곱해 줘야 해. 1:3을 넓이의 비로 바꾸면 1^2:3^2인데, 이게 얼마가 되는지 먼저 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이비를 같은 비로 두어 제곱 관계를 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이의 비를 넓이로 바꿀 때 제곱하는 거구나. 그러면 1^2:3^2 = 1:9예요.\n답: 1:9",
+          "answer": "1:9",
+          "label": "unparseable"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 1:9로 바꾼 건 아주 정확해. 이제 작은 도형 7cm^2가 그 1에 해당하니까, 큰 도형은 9에 해당하겠지? 그러면 7을 몇 배 해야 하는지 써볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 넓이의 비를 1:9로 올바르게 구해 개념은 이해했지만, 원래 문제의 최종 답인 큰 도형의 넓이까지는 아직 구하지 않았다.",
+            "error_type": "imprecise",
+            "strategy": "Affirm the correct answer",
+            "intention": "Support the student in their thinking or problem-solving"
+          }
+        },
+        {
+          "role": "student",
+          "text": "네, 작은 도형 7이 1칸이면 큰 도형은 9칸이라서 9배 하면 돼요. 그래서 7×9를 하면 돼요.\n답: 63",
+          "answer": "63",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 잘 풀었어! 닮음비 1:3을 넓이비 1:9로 바꾸고, 7을 9배 해서 63cm^2를 구한 과정이 모두 맞아. 이제 같은 방식으로 부피비는 어떻게 바뀌는지도 떠올려볼래?",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-5",
+          "answer": "75",
+          "message": "닮음비가 3:5니까 넓이의 비는 3^2:5^2 = 9:25예요. 작은 도형 27이 9에 해당하니까 큰 도형은 27×25/9 = 75예요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-0",
+          "answer": "18",
+          "message": "닮음비 2:3이면 넓이의 비는 2^2:3^2 = 4:9예요. 작은 도형 8이 4에 해당하니까 큰 도형은 8×9/4 = 18이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-5",
+      "rep": 0,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같으니까 3:5로 봐요. 작은 도형이 27이니까 큰 도형은 27×5/3=45예요.\n답: 45",
+          "answer": "45",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "비례식으로 풀려는 생각은 아주 좋아. 그런데 닮은 도형에서 넓이의 비는 길이의 비 3:5가 아니라 그 제곱이 돼. 먼저 3:5를 제곱해서 넓이의 비가 몇 대 몇인지 말해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮은 도형에서 크기를 비례식으로 구하려는 방향은 맞았지만, 넓이의 비가 닮음비의 제곱이라는 개념을 적용하지 못했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 길이의 비를 제곱하면 되는 거네요. 그러면 3:5를 제곱해서 넓이의 비는 9:25예요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야! 이제 작은 도형:큰 도형의 넓이 = 9:25 이고, 27은 그중 9에 해당해. 그러면 25에 해당하는 큰 도형의 넓이는 얼마일지 계산해볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 넓이의 비는 닮음비의 제곱이라는 핵심 개념을 바로잡아 9:25로 정확히 말했으므로 현재 생각의 방향과 개념 적용이 맞다.",
+            "error_type": "N/A",
+            "strategy": "Encourage the student",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "27이 9에 해당하니까 1은 3이고, 25는 3×25라서 75예요.\n답: 75",
+          "answer": "75",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "정확해, 잘 풀었어! 닮음비 3:5에서 넓이의 비를 9:25로 바꾸고, 27이 9에 해당하니 큰 도형은 75cm^2가 맞아.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-0",
+          "answer": "18",
+          "message": "닮음비가 2:3이면 넓이의 비는 4:9예요. 작은 넓이 8이 4에 해당하니까 큰 도형은 18이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-1",
+          "answer": "20",
+          "message": "닮음비가 1:2이면 넓이의 비는 1:4예요. 작은 넓이 5가 1에 해당하니까 큰 도형의 넓이는 20이에요.",
+          "label": "correct"
+        }
+      ]
+    },
+    {
+      "condition": "bridge",
+      "misconception": "area_ratio_linear",
+      "p1": "area_ratio_linear-5",
+      "rep": 1,
+      "solved_at": 2,
+      "tutor_leaked": null,
+      "transcript": [
+        {
+          "role": "student",
+          "text": "닮은 도형의 넓이의 비는 닮음비와 같다고 보면 3:5예요. 그래서 큰 도형의 넓이는 27×5/3=45예요.\n답: 45",
+          "answer": "45",
+          "label": "bug"
+        },
+        {
+          "role": "tutor",
+          "text": "생각한 방향은 좋아, 비를 이용하려고 한 건 맞아. 그런데 닮은 도형에서는 길이의 비와 넓이의 비가 같을까, 아니면 넓이의 비는 닮음비를 한 번 더 곱한 값일까?",
+          "leak": false,
+          "decision": {
+            "reason": "학생은 닮음비와 넓이비를 같은 것으로 두었는데, 넓이비는 닮음비의 제곱이므로 개념 적용 방향은 맞지만 핵심 성질을 잘못 적용했다.",
+            "error_type": "right-idea",
+            "strategy": "Explain a concept",
+            "intention": "Clarify the misunderstanding"
+          }
+        },
+        {
+          "role": "student",
+          "text": "아, 다시 보니까 넓이는 한 번 더 곱해야 할 것 같아요. 그러면 넓이의 비는 3^2:5^2라서 9:25예요.",
+          "answer": "",
+          "label": "no_answer"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 바로 그거야! 넓이의 비를 9:25로 고친 건 핵심을 정확히 잡은 거야. 이제 작은 도형 27cm^2가 9에 해당하니까, 25에 해당하는 큰 도형의 넓이를 한번 계산해 볼래?",
+          "leak": false,
+          "decision": {
+            "reason": "학생이 닮음비를 제곱해 넓이의 비를 9:25로 고친 것은 핵심 개념을 정확히 이해한 상태이다.",
+            "error_type": "N/A",
+            "strategy": "Affirm the correct answer",
+            "intention": "Signal to the student that they have solved or not solved the problem"
+          }
+        },
+        {
+          "role": "student",
+          "text": "작은 도형 27이 9에 해당하니까 1은 3이에요. 그러면 25에 해당하는 큰 도형의 넓이는 25×3=75예요.\n답: 75",
+          "answer": "75",
+          "label": "correct"
+        },
+        {
+          "role": "tutor",
+          "text": "맞아, 정답은 75cm^2야! 닮음비 3:5를 넓이의 비 9:25로 바꾼 뒤 27이 9에 해당한다고 보고 계산한 과정도 정확했어.",
+          "leak": false
+        }
+      ],
+      "post": [
+        {
+          "problem": "area_ratio_linear-0",
+          "answer": "18",
+          "message": "닮음비가 2:3이면 넓이의 비는 2^2:3^2라서 4:9예요. 작은 도형 8이 4에 해당하니까 큰 도형은 18이에요.",
+          "label": "correct"
+        },
+        {
+          "problem": "area_ratio_linear-1",
+          "answer": "20",
+          "message": "닮음비가 1:2이면 넓이의 비는 1:4예요. 작은 도형 5가 1에 해당하니까 큰 도형의 넓이는 20이에요.",
+          "label": "correct"
+        }
+      ]
+    }
+  ]
+}

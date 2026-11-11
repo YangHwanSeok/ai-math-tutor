@@ -120,3 +120,23 @@ def test_misconception_is_never_minor():
     assert (r.severity, r.error, r.diagnosis, r.misconception) == (Severity.PARTIAL, ErrorType.SIGN, "괄호 안 부호 반대", True)
     plain = check_step(problem, {"type": "factor"}, "(x+2)(x+4)")
     assert (plain.severity, plain.misconception) == (Severity.MINOR, False)
+
+
+def test_antiderivative_step():
+    from mathtutor.checker import Severity, check_step
+    problem = {"id": "t", "steps": []}
+    check = {"type": "antiderivative", "integrand": "6x^2-4x+5"}
+    assert check_step(problem, check, "2x^3-2x^2+5x+C").correct
+    assert check_step(problem, check, "2x^3 - 2x^2 + 5x - 7").correct
+    sign = check_step(problem, check, "2x^3+2x^2+5x+C")  # 이차항 부호만 다름 = 부호 실수
+    assert sign.severity is Severity.MINOR
+    coef = check_step(problem, check, "6x^3-4x^2+5x+C")  # 계수가 여러 개 다름
+    assert not coef.correct and coef.severity is Severity.FAR
+
+
+def test_expression_answer_leak_detection():
+    from experiments.student_sim import build_problem
+    from mathtutor.tutor import leaks_answer
+    p = build_problem("power_rule_keep_exponent", 0)  # 정답 3x^2+8x
+    assert leaks_answer("그러니까 f'(x) = 3x^2 + 8x 야", p, 0)
+    assert not leaks_answer("지수를 하나 줄여 볼래?", p, 0)
